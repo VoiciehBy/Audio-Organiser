@@ -32,3 +32,17 @@ C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\policy.2.0.taglib
 C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\taglib-sharp.dll
 C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\policy.2.0.taglib-sharp.config
 C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.CopyComplete
+D:\projekt_ao2\A_O\Audio_Organiser\bin\Debug\Audio_Organiser.exe.config
+D:\projekt_ao2\A_O\Audio_Organiser\bin\Debug\Audio_Organiser.exe
+D:\projekt_ao2\A_O\Audio_Organiser\bin\Debug\Audio_Organiser.pdb
+D:\projekt_ao2\A_O\Audio_Organiser\bin\Debug\policy.2.0.taglib-sharp.dll
+D:\projekt_ao2\A_O\Audio_Organiser\bin\Debug\taglib-sharp.dll
+D:\projekt_ao2\A_O\Audio_Organiser\bin\Debug\policy.2.0.taglib-sharp.config
+D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.csprojAssemblyReference.cache
+D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.MainWindow.resources
+D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.Properties.Resources.resources
+D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.GenerateResource.cache
+D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.CoreCompileInputs.cache
+D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.CopyComplete
+D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.exe
+D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.pdb
