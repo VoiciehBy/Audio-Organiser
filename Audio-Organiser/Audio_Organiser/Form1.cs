@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,8 @@ namespace Audio_Organiser
     public partial class MainWindow : Form
     {
         DatabaseMusicDataContext DatabaseDC = new DatabaseMusicDataContext();
-        System.Media.SoundPlayer playa;
+        private AudioPlayer player = new AudioPlayer();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -59,22 +61,6 @@ namespace Audio_Organiser
         {
             MessageBox.Show("Do not work yet.");
         }
-        private void playButton_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.FileName = "";
-            openFileDialog1.ShowDialog();      
-            if (openFileDialog1.FileName != "")
-            {
-                string source = openFileDialog1.FileName;
-                playa = new System.Media.SoundPlayer(@source);
-                playa.Play();
-            }
-        }
-
-        private void stopButton_Click(object sender, EventArgs e)
-        {
-            playa.Stop();
-        }
 
         private void listBoxUtwory_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -96,6 +82,41 @@ namespace Audio_Organiser
 
                 LoadMusic();
             }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog sofd = new OpenFileDialog())
+            {
+                sofd.Filter = "Pliki .mp3|*.mp3|Pliki .wav|*.wav";
+                if (sofd.ShowDialog() == DialogResult.OK)
+                {
+                    player.open(sofd.FileName);
+                }
+            }
+        }
+
+        private void buttonPlay_Click(object sender, EventArgs e)
+        {
+            //tu potrzebna kolumna ze sciezka i ja wyciac albo inaczej to wykminic
+            //player.open(listBoxUtwory.SelectedItem.ToString());
+            player.volume(VolumeBar.Value);
+            player.play();
+        }
+
+        private void buttonPause_Click(object sender, EventArgs e)
+        {
+            player.pause();
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            player.stop();
+        }
+
+        private void VolumeBar_Scroll(object sender, EventArgs e)
+        {
+            player.volume(VolumeBar.Value);
         }
     }
 }

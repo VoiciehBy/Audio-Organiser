@@ -36,24 +36,31 @@
             this.xdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.albumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBox = new System.Windows.Forms.TextBox();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.playButton = new System.Windows.Forms.Button();
-            this.stopButton = new System.Windows.Forms.Button();
             this.listBoxUtwory = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.player_top = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonPlay = new System.Windows.Forms.Button();
+            this.buttonPause = new System.Windows.Forms.Button();
+            this.buttonNext = new System.Windows.Forms.Button();
+            this.buttonPrevious = new System.Windows.Forms.Button();
+            this.buttonStop = new System.Windows.Forms.Button();
+            this.VolumeBar = new System.Windows.Forms.TrackBar();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VolumeBar)).BeginInit();
             this.SuspendLayout();
             // 
             // vScrollBard
@@ -87,20 +94,20 @@
             this.songToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xdToolStripMenuItem});
             this.songToolStripMenuItem.Name = "songToolStripMenuItem";
-            this.songToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.songToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.songToolStripMenuItem.Text = "Song";
             this.songToolStripMenuItem.Click += new System.EventHandler(this.songToolStripMenuItem_Click);
             // 
             // xdToolStripMenuItem
             // 
             this.xdToolStripMenuItem.Name = "xdToolStripMenuItem";
-            this.xdToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
+            this.xdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xdToolStripMenuItem.Text = "xd";
             // 
             // albumToolStripMenuItem
             // 
             this.albumToolStripMenuItem.Name = "albumToolStripMenuItem";
-            this.albumToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.albumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.albumToolStripMenuItem.Text = "Album";
             this.albumToolStripMenuItem.Click += new System.EventHandler(this.albumToolStripMenuItem_Click);
             // 
@@ -111,38 +118,9 @@
             this.searchBox.Size = new System.Drawing.Size(170, 20);
             this.searchBox.TabIndex = 3;
             // 
-            // logo
-            // 
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(0, 443);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(138, 127);
-            this.logo.TabIndex = 4;
-            this.logo.TabStop = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // playButton
-            // 
-            this.playButton.Location = new System.Drawing.Point(21, 176);
-            this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(75, 23);
-            this.playButton.TabIndex = 5;
-            this.playButton.Text = "Play";
-            this.playButton.UseVisualStyleBackColor = true;
-            this.playButton.Click += new System.EventHandler(this.playButton_Click);
-            // 
-            // stopButton
-            // 
-            this.stopButton.Location = new System.Drawing.Point(21, 282);
-            this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(75, 23);
-            this.stopButton.TabIndex = 6;
-            this.stopButton.Text = "Stop";
-            this.stopButton.UseVisualStyleBackColor = true;
-            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
             // 
             // listBoxUtwory
             // 
@@ -200,13 +178,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(291, 79);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(57, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 11;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(57, 29);
@@ -220,6 +191,13 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(231, 20);
             this.textBox3.TabIndex = 13;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(57, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(231, 20);
+            this.textBox1.TabIndex = 11;
             // 
             // button1
             // 
@@ -240,18 +218,112 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // player_top
+            // 
+            this.player_top.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.player_top.Location = new System.Drawing.Point(2, 23);
+            this.player_top.Name = "player_top";
+            this.player_top.Size = new System.Drawing.Size(135, 29);
+            this.player_top.TabIndex = 14;
+            // 
+            // logo
+            // 
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(0, 443);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(138, 127);
+            this.logo.TabIndex = 4;
+            this.logo.TabStop = false;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(13, 112);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(58, 26);
+            this.buttonSearch.TabIndex = 15;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // buttonPlay
+            // 
+            this.buttonPlay.Location = new System.Drawing.Point(13, 144);
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.Size = new System.Drawing.Size(58, 23);
+            this.buttonPlay.TabIndex = 16;
+            this.buttonPlay.Text = "Play";
+            this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+            // 
+            // buttonPause
+            // 
+            this.buttonPause.Location = new System.Drawing.Point(13, 173);
+            this.buttonPause.Name = "buttonPause";
+            this.buttonPause.Size = new System.Drawing.Size(58, 24);
+            this.buttonPause.TabIndex = 17;
+            this.buttonPause.Text = "Pause";
+            this.buttonPause.UseVisualStyleBackColor = true;
+            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
+            // 
+            // buttonNext
+            // 
+            this.buttonNext.Location = new System.Drawing.Point(13, 203);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(58, 24);
+            this.buttonNext.TabIndex = 18;
+            this.buttonNext.Text = "Next";
+            this.buttonNext.UseVisualStyleBackColor = true;
+            // 
+            // buttonPrevious
+            // 
+            this.buttonPrevious.Location = new System.Drawing.Point(13, 233);
+            this.buttonPrevious.Name = "buttonPrevious";
+            this.buttonPrevious.Size = new System.Drawing.Size(58, 24);
+            this.buttonPrevious.TabIndex = 19;
+            this.buttonPrevious.Text = "Previous";
+            this.buttonPrevious.UseVisualStyleBackColor = true;
+            // 
+            // buttonStop
+            // 
+            this.buttonStop.Location = new System.Drawing.Point(13, 263);
+            this.buttonStop.Name = "buttonStop";
+            this.buttonStop.Size = new System.Drawing.Size(58, 24);
+            this.buttonStop.TabIndex = 20;
+            this.buttonStop.Text = "Stop";
+            this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
+            // 
+            // VolumeBar
+            // 
+            this.VolumeBar.LargeChange = 100;
+            this.VolumeBar.Location = new System.Drawing.Point(13, 303);
+            this.VolumeBar.Maximum = 1000;
+            this.VolumeBar.Name = "VolumeBar";
+            this.VolumeBar.Size = new System.Drawing.Size(104, 45);
+            this.VolumeBar.SmallChange = 10;
+            this.VolumeBar.TabIndex = 21;
+            this.VolumeBar.TickFrequency = 10;
+            this.VolumeBar.Value = 1000;
+            this.VolumeBar.Scroll += new System.EventHandler(this.VolumeBar_Scroll);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(817, 568);
+            this.Controls.Add(this.VolumeBar);
+            this.Controls.Add(this.buttonStop);
+            this.Controls.Add(this.buttonPrevious);
+            this.Controls.Add(this.buttonNext);
+            this.Controls.Add(this.buttonPause);
+            this.Controls.Add(this.buttonPlay);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.player_top);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.listBoxUtwory);
-            this.Controls.Add(this.stopButton);
-            this.Controls.Add(this.playButton);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.menuStrip);
@@ -264,9 +336,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VolumeBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,8 +356,6 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button playButton;
-        private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.ToolStripMenuItem xdToolStripMenuItem;
         private System.Windows.Forms.ListBox listBoxUtwory;
         private System.Windows.Forms.Label label1;
@@ -296,6 +367,14 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel player_top;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonPlay;
+        private System.Windows.Forms.Button buttonPause;
+        private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Button buttonPrevious;
+        private System.Windows.Forms.Button buttonStop;
+        private System.Windows.Forms.TrackBar VolumeBar;
     }
 }
 
