@@ -12,10 +12,21 @@ namespace Audio_Organiser
 {
     public partial class MainWindow : Form
     {
+        DatabaseMusicDataContext DatabaseDC = new DatabaseMusicDataContext();
         System.Media.SoundPlayer playa;
         public MainWindow()
         {
             InitializeComponent();
+            LoadMusic();
+        }
+
+        private void LoadMusic()
+        {
+            listBoxUtwory.Items.Clear();
+            foreach(Song s in DatabaseDC.Song)
+            {
+                listBoxUtwory.Items.Add(s);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,6 +74,28 @@ namespace Audio_Organiser
         private void stopButton_Click(object sender, EventArgs e)
         {
             playa.Stop();
+        }
+
+        private void listBoxUtwory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var f = TagLib.File.Create(openFileDialog1.FileName);
+                Song newSong = new Song();
+                newSong.Artist = f.Tag.FirstAlbumArtist;
+                newSong.Title = f.Tag.Title;
+                newSong.Path = openFileDialog1.FileName;
+
+                DatabaseDC.Song.InsertOnSubmit(newSong);
+                DatabaseDC.SubmitChanges();
+
+                LoadMusic();
+            }
         }
     }
 }
