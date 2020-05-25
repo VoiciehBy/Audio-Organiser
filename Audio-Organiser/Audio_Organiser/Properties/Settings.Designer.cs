@@ -33,5 +33,16 @@ namespace Audio_Organiser.Properties {
                 return ((string)(this["muzykaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\projekt_ao2\\baza\\muzyka.md" +
+            "f;Integrated Security=True;Connect Timeout=30")]
+        public string muzykaConnectionString1 {
+            get {
+                return ((string)(this["muzykaConnectionString1"]));
+            }
+        }
     }
 }
