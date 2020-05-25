@@ -11,7 +11,7 @@ namespace Audio_Organiser
         public override string ToString()
         {
 
-            var f = TagLib.File.Create(Path);
+            var f = TagLib.File.Create(path);
 
             return f.Tag.FirstAlbumArtist + " - " + f.Tag.Title + " from " + f.Tag.Album;
         }

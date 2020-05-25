@@ -35,17 +35,8 @@
             this.songToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.albumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.listBoxUtwory = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.player_top = new System.Windows.Forms.Panel();
@@ -57,17 +48,39 @@
             this.buttonPrevious = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
             this.VolumeBar = new System.Windows.Forms.TrackBar();
+            this.listViewSongs = new System.Windows.Forms.ListView();
+            this.file = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.artist = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.album = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.year = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.genre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBoxArtist = new System.Windows.Forms.TextBox();
+            this.textBoxAlbum = new System.Windows.Forms.TextBox();
+            this.labelGenre = new System.Windows.Forms.Label();
+            this.labelYear = new System.Windows.Forms.Label();
+            this.labelAlbum = new System.Windows.Forms.Label();
+            this.textBoxFile = new System.Windows.Forms.TextBox();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
+            this.labelArtist = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelFile = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxYear = new System.Windows.Forms.TextBox();
+            this.textBoxGenre = new System.Windows.Forms.TextBox();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.path = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeBar)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // vScrollBard
             // 
-            this.vScrollBard.Location = new System.Drawing.Point(800, 10);
+            this.vScrollBard.Location = new System.Drawing.Point(1151, 23);
             this.vScrollBard.Name = "vScrollBard";
-            this.vScrollBard.Size = new System.Drawing.Size(16, 560);
+            this.vScrollBard.Size = new System.Drawing.Size(16, 753);
             this.vScrollBard.TabIndex = 0;
             // 
             // menuStrip
@@ -76,7 +89,7 @@
             this.addToolStripMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(817, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1167, 24);
             this.menuStrip.TabIndex = 2;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -94,123 +107,40 @@
             this.songToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xdToolStripMenuItem});
             this.songToolStripMenuItem.Name = "songToolStripMenuItem";
-            this.songToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.songToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.songToolStripMenuItem.Text = "Song";
             this.songToolStripMenuItem.Click += new System.EventHandler(this.songToolStripMenuItem_Click);
             // 
             // xdToolStripMenuItem
             // 
             this.xdToolStripMenuItem.Name = "xdToolStripMenuItem";
-            this.xdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xdToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
             this.xdToolStripMenuItem.Text = "xd";
             // 
             // albumToolStripMenuItem
             // 
             this.albumToolStripMenuItem.Name = "albumToolStripMenuItem";
-            this.albumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.albumToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.albumToolStripMenuItem.Text = "Album";
             this.albumToolStripMenuItem.Click += new System.EventHandler(this.albumToolStripMenuItem_Click);
-            // 
-            // searchBox
-            // 
-            this.searchBox.Location = new System.Drawing.Point(620, 5);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(170, 20);
-            this.searchBox.TabIndex = 3;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // listBoxUtwory
-            // 
-            this.listBoxUtwory.FormattingEnabled = true;
-            this.listBoxUtwory.Location = new System.Drawing.Point(186, 52);
-            this.listBoxUtwory.Name = "listBoxUtwory";
-            this.listBoxUtwory.Size = new System.Drawing.Size(423, 147);
-            this.listBoxUtwory.TabIndex = 7;
-            this.listBoxUtwory.SelectedIndexChanged += new System.EventHandler(this.listBoxUtwory_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Autor";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Tytuł";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Ścieżka";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.76543F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.23457F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(186, 371);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(291, 79);
-            this.tableLayoutPanel1.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(57, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 20);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(57, 55);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 20);
-            this.textBox3.TabIndex = 13;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(57, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 11;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(298, 479);
+            this.button1.Location = new System.Drawing.Point(495, 610);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
+            this.button1.Text = "Edytuj";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(347, 240);
+            this.button2.Location = new System.Drawing.Point(436, 263);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -229,7 +159,7 @@
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(0, 443);
+            this.logo.Location = new System.Drawing.Point(-1, 649);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(138, 127);
             this.logo.TabIndex = 4;
@@ -306,12 +236,208 @@
             this.VolumeBar.Value = 1000;
             this.VolumeBar.Scroll += new System.EventHandler(this.VolumeBar_Scroll);
             // 
+            // listViewSongs
+            // 
+            this.listViewSongs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this.path,
+            this.file,
+            this.artist,
+            this.title,
+            this.album,
+            this.year,
+            this.genre});
+            this.listViewSongs.FullRowSelect = true;
+            this.listViewSongs.GridLines = true;
+            this.listViewSongs.HideSelection = false;
+            this.listViewSongs.Location = new System.Drawing.Point(235, 48);
+            this.listViewSongs.MultiSelect = false;
+            this.listViewSongs.Name = "listViewSongs";
+            this.listViewSongs.Size = new System.Drawing.Size(480, 179);
+            this.listViewSongs.TabIndex = 22;
+            this.listViewSongs.UseCompatibleStateImageBehavior = false;
+            this.listViewSongs.View = System.Windows.Forms.View.Details;
+            this.listViewSongs.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewSongs_ItemSelectionChanged);
+            // 
+            // file
+            // 
+            this.file.DisplayIndex = 0;
+            this.file.Text = "Nazwa pliku";
+            this.file.Width = 95;
+            // 
+            // artist
+            // 
+            this.artist.DisplayIndex = 2;
+            this.artist.Text = "Wykonawca albumu";
+            this.artist.Width = 117;
+            // 
+            // title
+            // 
+            this.title.DisplayIndex = 3;
+            this.title.Text = "Tytuł";
+            this.title.Width = 77;
+            // 
+            // album
+            // 
+            this.album.DisplayIndex = 4;
+            this.album.Text = "Album";
+            this.album.Width = 70;
+            // 
+            // year
+            // 
+            this.year.DisplayIndex = 5;
+            this.year.Text = "Rok";
+            this.year.Width = 48;
+            // 
+            // genre
+            // 
+            this.genre.DisplayIndex = 6;
+            this.genre.Text = "Gatunek";
+            this.genre.Width = 74;
+            // 
+            // textBoxArtist
+            // 
+            this.textBoxArtist.Location = new System.Drawing.Point(149, 33);
+            this.textBoxArtist.Name = "textBoxArtist";
+            this.textBoxArtist.Size = new System.Drawing.Size(230, 20);
+            this.textBoxArtist.TabIndex = 12;
+            // 
+            // textBoxAlbum
+            // 
+            this.textBoxAlbum.Location = new System.Drawing.Point(149, 93);
+            this.textBoxAlbum.Name = "textBoxAlbum";
+            this.textBoxAlbum.Size = new System.Drawing.Size(230, 20);
+            this.textBoxAlbum.TabIndex = 17;
+            // 
+            // labelGenre
+            // 
+            this.labelGenre.AutoSize = true;
+            this.labelGenre.Location = new System.Drawing.Point(3, 150);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(48, 13);
+            this.labelGenre.TabIndex = 16;
+            this.labelGenre.Text = "Gatunek";
+            // 
+            // labelYear
+            // 
+            this.labelYear.AutoSize = true;
+            this.labelYear.Location = new System.Drawing.Point(3, 120);
+            this.labelYear.Name = "labelYear";
+            this.labelYear.Size = new System.Drawing.Size(27, 13);
+            this.labelYear.TabIndex = 15;
+            this.labelYear.Text = "Rok";
+            // 
+            // labelAlbum
+            // 
+            this.labelAlbum.AutoSize = true;
+            this.labelAlbum.Location = new System.Drawing.Point(3, 90);
+            this.labelAlbum.Name = "labelAlbum";
+            this.labelAlbum.Size = new System.Drawing.Size(36, 13);
+            this.labelAlbum.TabIndex = 14;
+            this.labelAlbum.Text = "Album";
+            // 
+            // textBoxFile
+            // 
+            this.textBoxFile.Location = new System.Drawing.Point(149, 3);
+            this.textBoxFile.Name = "textBoxFile";
+            this.textBoxFile.Size = new System.Drawing.Size(230, 20);
+            this.textBoxFile.TabIndex = 11;
+            // 
+            // textBoxTitle
+            // 
+            this.textBoxTitle.Location = new System.Drawing.Point(149, 63);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(230, 20);
+            this.textBoxTitle.TabIndex = 13;
+            // 
+            // labelArtist
+            // 
+            this.labelArtist.AutoSize = true;
+            this.labelArtist.Location = new System.Drawing.Point(3, 30);
+            this.labelArtist.Name = "labelArtist";
+            this.labelArtist.Size = new System.Drawing.Size(104, 13);
+            this.labelArtist.TabIndex = 9;
+            this.labelArtist.Text = "Wykonawca albumu";
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(3, 60);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(32, 13);
+            this.labelTitle.TabIndex = 10;
+            this.labelTitle.Text = "Tytuł";
+            // 
+            // labelFile
+            // 
+            this.labelFile.AutoSize = true;
+            this.labelFile.Location = new System.Drawing.Point(3, 0);
+            this.labelFile.Name = "labelFile";
+            this.labelFile.Size = new System.Drawing.Size(65, 13);
+            this.labelFile.TabIndex = 8;
+            this.labelFile.Text = "Nazwa pliku";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.3812F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.6188F));
+            this.tableLayoutPanel1.Controls.Add(this.labelFile, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelTitle, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelArtist, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxTitle, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxFile, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelAlbum, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.labelYear, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.labelGenre, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxAlbum, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxArtist, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxGenre, 1, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(346, 406);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(383, 182);
+            this.tableLayoutPanel1.TabIndex = 11;
+            // 
+            // textBoxYear
+            // 
+            this.textBoxYear.Location = new System.Drawing.Point(149, 123);
+            this.textBoxYear.Name = "textBoxYear";
+            this.textBoxYear.Size = new System.Drawing.Size(231, 20);
+            this.textBoxYear.TabIndex = 18;
+            // 
+            // textBoxGenre
+            // 
+            this.textBoxGenre.Location = new System.Drawing.Point(149, 153);
+            this.textBoxGenre.Name = "textBoxGenre";
+            this.textBoxGenre.Size = new System.Drawing.Size(230, 20);
+            this.textBoxGenre.TabIndex = 19;
+            // 
+            // id
+            // 
+            this.id.DisplayIndex = 7;
+            this.id.Text = "Id";
+            this.id.Width = 0;
+            // 
+            // path
+            // 
+            this.path.Text = "Scieżka";
+            this.path.Width = 0;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(817, 568);
+            this.ClientSize = new System.Drawing.Size(1167, 775);
+            this.Controls.Add(this.listViewSongs);
             this.Controls.Add(this.VolumeBar);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonPrevious);
@@ -323,9 +449,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.listBoxUtwory);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.vScrollBard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -336,10 +460,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeBar)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,19 +476,10 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenu;
         private System.Windows.Forms.ToolStripMenuItem songToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem albumToolStripMenuItem;
-        private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem xdToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBoxUtwory;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel player_top;
@@ -375,6 +490,28 @@
         private System.Windows.Forms.Button buttonPrevious;
         private System.Windows.Forms.Button buttonStop;
         private System.Windows.Forms.TrackBar VolumeBar;
+        private System.Windows.Forms.ListView listViewSongs;
+        private System.Windows.Forms.ColumnHeader artist;
+        private System.Windows.Forms.ColumnHeader title;
+        private System.Windows.Forms.ColumnHeader album;
+        private System.Windows.Forms.ColumnHeader year;
+        private System.Windows.Forms.ColumnHeader genre;
+        private System.Windows.Forms.ColumnHeader file;
+        private System.Windows.Forms.TextBox textBoxArtist;
+        private System.Windows.Forms.TextBox textBoxAlbum;
+        private System.Windows.Forms.Label labelGenre;
+        private System.Windows.Forms.Label labelYear;
+        private System.Windows.Forms.Label labelAlbum;
+        private System.Windows.Forms.TextBox textBoxFile;
+        private System.Windows.Forms.TextBox textBoxTitle;
+        private System.Windows.Forms.Label labelArtist;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelFile;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox textBoxYear;
+        private System.Windows.Forms.TextBox textBoxGenre;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader path;
     }
 }
 

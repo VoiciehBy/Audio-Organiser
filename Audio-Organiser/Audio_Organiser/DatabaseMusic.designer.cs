@@ -36,7 +36,7 @@ namespace Audio_Organiser
     #endregion
 		
 		public DatabaseMusicDataContext() : 
-				base(global::Audio_Organiser.Properties.Settings.Default.muzykaConnectionString1, mappingSource)
+				base(global::Audio_Organiser.Properties.Settings.Default.muzykaConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -80,26 +80,42 @@ namespace Audio_Organiser
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private int _id;
 		
-		private string _Artist;
+		private string _file;
 		
-		private string _Title;
+		private string _artist;
 		
-		private string _Path;
+		private string _title;
+		
+		private string _album;
+		
+		private System.Nullable<int> _year;
+		
+		private string _genre;
+		
+		private string _path;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnArtistChanging(string value);
-    partial void OnArtistChanged();
-    partial void OnTitleChanging(string value);
-    partial void OnTitleChanged();
-    partial void OnPathChanging(string value);
-    partial void OnPathChanged();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnfileChanging(string value);
+    partial void OnfileChanged();
+    partial void OnartistChanging(string value);
+    partial void OnartistChanged();
+    partial void OntitleChanging(string value);
+    partial void OntitleChanged();
+    partial void OnalbumChanging(string value);
+    partial void OnalbumChanged();
+    partial void OnyearChanging(System.Nullable<int> value);
+    partial void OnyearChanged();
+    partial void OngenreChanging(string value);
+    partial void OngenreChanged();
+    partial void OnpathChanging(string value);
+    partial void OnpathChanged();
     #endregion
 		
 		public Song()
@@ -107,82 +123,162 @@ namespace Audio_Organiser
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
 		{
 			get
 			{
-				return this._Id;
+				return this._id;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._id != value))
 				{
-					this.OnIdChanging(value);
+					this.OnidChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Artist", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
-		public string Artist
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[file]", Storage="_file", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
+		public string file
 		{
 			get
 			{
-				return this._Artist;
+				return this._file;
 			}
 			set
 			{
-				if ((this._Artist != value))
+				if ((this._file != value))
 				{
-					this.OnArtistChanging(value);
+					this.OnfileChanging(value);
 					this.SendPropertyChanging();
-					this._Artist = value;
-					this.SendPropertyChanged("Artist");
-					this.OnArtistChanged();
+					this._file = value;
+					this.SendPropertyChanged("file");
+					this.OnfileChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Title
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_artist", DbType="NVarChar(20)")]
+		public string artist
 		{
 			get
 			{
-				return this._Title;
+				return this._artist;
 			}
 			set
 			{
-				if ((this._Title != value))
+				if ((this._artist != value))
 				{
-					this.OnTitleChanging(value);
+					this.OnartistChanging(value);
 					this.SendPropertyChanging();
-					this._Title = value;
-					this.SendPropertyChanged("Title");
-					this.OnTitleChanged();
+					this._artist = value;
+					this.SendPropertyChanged("artist");
+					this.OnartistChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Path", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Path
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="NVarChar(30)")]
+		public string title
 		{
 			get
 			{
-				return this._Path;
+				return this._title;
 			}
 			set
 			{
-				if ((this._Path != value))
+				if ((this._title != value))
 				{
-					this.OnPathChanging(value);
+					this.OntitleChanging(value);
 					this.SendPropertyChanging();
-					this._Path = value;
-					this.SendPropertyChanged("Path");
-					this.OnPathChanged();
+					this._title = value;
+					this.SendPropertyChanged("title");
+					this.OntitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_album", DbType="NVarChar(20)")]
+		public string album
+		{
+			get
+			{
+				return this._album;
+			}
+			set
+			{
+				if ((this._album != value))
+				{
+					this.OnalbumChanging(value);
+					this.SendPropertyChanging();
+					this._album = value;
+					this.SendPropertyChanged("album");
+					this.OnalbumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_year", DbType="Int")]
+		public System.Nullable<int> year
+		{
+			get
+			{
+				return this._year;
+			}
+			set
+			{
+				if ((this._year != value))
+				{
+					this.OnyearChanging(value);
+					this.SendPropertyChanging();
+					this._year = value;
+					this.SendPropertyChanged("year");
+					this.OnyearChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_genre", DbType="NVarChar(20)")]
+		public string genre
+		{
+			get
+			{
+				return this._genre;
+			}
+			set
+			{
+				if ((this._genre != value))
+				{
+					this.OngenreChanging(value);
+					this.SendPropertyChanging();
+					this._genre = value;
+					this.SendPropertyChanged("genre");
+					this.OngenreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_path", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string path
+		{
+			get
+			{
+				return this._path;
+			}
+			set
+			{
+				if ((this._path != value))
+				{
+					this.OnpathChanging(value);
+					this.SendPropertyChanging();
+					this._path = value;
+					this.SendPropertyChanged("path");
+					this.OnpathChanged();
 				}
 			}
 		}

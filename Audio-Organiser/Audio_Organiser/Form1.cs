@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,10 +25,18 @@ namespace Audio_Organiser
 
         private void LoadMusic()
         {
-            listBoxUtwory.Items.Clear();
+            listViewSongs.Items.Clear();
             foreach(Song s in DatabaseDC.Song)
             {
-                listBoxUtwory.Items.Add(s);
+                ListViewItem item = new ListViewItem(s.id.ToString());
+                item.SubItems.Add(s.path);
+                item.SubItems.Add(s.file);
+                item.SubItems.Add(s.artist);
+                item.SubItems.Add(s.title);
+                item.SubItems.Add(s.album);
+                item.SubItems.Add(s.year.ToString());
+                item.SubItems.Add(s.genre);
+                listViewSongs.Items.Add(item);
             }
         }
 
@@ -62,20 +71,19 @@ namespace Audio_Organiser
             MessageBox.Show("Do not work yet.");
         }
 
-        private void listBoxUtwory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 var f = TagLib.File.Create(openFileDialog1.FileName);
                 Song newSong = new Song();
-                newSong.Artist = f.Tag.FirstAlbumArtist;
-                newSong.Title = f.Tag.Title;
-                newSong.Path = openFileDialog1.FileName;
+                newSong.file = Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
+                newSong.artist = f.Tag.FirstAlbumArtist;
+                newSong.title = f.Tag.Title;
+                newSong.album = f.Tag.Album;
+                newSong.year = (int?)f.Tag.Year;
+                newSong.genre = f.Tag.FirstGenre;
+                newSong.path = openFileDialog1.FileName;
 
                 DatabaseDC.Song.InsertOnSubmit(newSong);
                 DatabaseDC.SubmitChanges();
@@ -117,6 +125,31 @@ namespace Audio_Organiser
         private void VolumeBar_Scroll(object sender, EventArgs e)
         {
             player.volume(VolumeBar.Value);
+        }
+
+        private void listViewSongs_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if (listViewSongs.SelectedItems.Count > 0)
+            {
+                textBoxFile.Text = listViewSongs.SelectedItems[0].SubItems[2].Text;
+                textBoxArtist.Text = listViewSongs.SelectedItems[0].SubItems[3].Text;
+                textBoxTitle.Text = listViewSongs.SelectedItems[0].SubItems[4].Text;
+                textBoxAlbum.Text = listViewSongs.SelectedItems[0].SubItems[5].Text;
+                textBoxYear.Text = listViewSongs.SelectedItems[0].SubItems[6].Text;
+                textBoxGenre.Text = listViewSongs.SelectedItems[0].SubItems[7].Text;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (listViewSongs.SelectedItems.Count > 0)
+            {
+                DatabaseDC.ExecuteCommand("UPDATE Song SET [file]='" + textBoxFile.Text + "', artist='" + textBoxArtist.Text + "', title='" + textBoxTitle.Text + "', album='" + textBoxAlbum.Text + "', year='" + textBoxYear.Text + "', genre='" + textBoxGenre.Text + "' WHERE id='" + listViewSongs.SelectedItems[0].SubItems[0].Text + "';");
+            }
+            DatabaseDC.SubmitChanges();
+            DatabaseDC = null;
+            DatabaseDC = new DatabaseMusicDataContext();
+            LoadMusic();
         }
     }
 }
