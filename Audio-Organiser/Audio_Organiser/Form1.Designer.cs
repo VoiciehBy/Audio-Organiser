@@ -68,8 +68,9 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelFile = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxYear = new System.Windows.Forms.TextBox();
             this.textBoxGenre = new System.Windows.Forms.TextBox();
+            this.textBoxYear = new System.Windows.Forms.TextBox();
+            this.buttonDel = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeBar)).BeginInit();
@@ -140,7 +141,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(436, 263);
+            this.button2.Location = new System.Drawing.Point(495, 264);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -252,10 +253,10 @@
             this.listViewSongs.FullRowSelect = true;
             this.listViewSongs.GridLines = true;
             this.listViewSongs.HideSelection = false;
-            this.listViewSongs.Location = new System.Drawing.Point(235, 48);
+            this.listViewSongs.Location = new System.Drawing.Point(205, 48);
             this.listViewSongs.MultiSelect = false;
             this.listViewSongs.Name = "listViewSongs";
-            this.listViewSongs.Size = new System.Drawing.Size(480, 179);
+            this.listViewSongs.Size = new System.Drawing.Size(870, 179);
             this.listViewSongs.TabIndex = 22;
             this.listViewSongs.UseCompatibleStateImageBehavior = false;
             this.listViewSongs.View = System.Windows.Forms.View.Details;
@@ -263,7 +264,6 @@
             // 
             // id
             // 
-            this.id.DisplayIndex = 7;
             this.id.Text = "Id";
             this.id.Width = 0;
             // 
@@ -274,39 +274,33 @@
             // 
             // file
             // 
-            this.file.DisplayIndex = 0;
             this.file.Text = "Nazwa pliku";
-            this.file.Width = 95;
+            this.file.Width = 340;
             // 
             // artist
             // 
-            this.artist.DisplayIndex = 2;
             this.artist.Text = "Wykonawca albumu";
-            this.artist.Width = 117;
+            this.artist.Width = 138;
             // 
             // title
             // 
-            this.title.DisplayIndex = 3;
             this.title.Text = "Tytuł";
-            this.title.Width = 77;
+            this.title.Width = 105;
             // 
             // album
             // 
-            this.album.DisplayIndex = 4;
             this.album.Text = "Album";
-            this.album.Width = 70;
+            this.album.Width = 100;
             // 
             // year
             // 
-            this.year.DisplayIndex = 5;
             this.year.Text = "Rok";
-            this.year.Width = 48;
+            this.year.Width = 50;
             // 
             // genre
             // 
-            this.genre.DisplayIndex = 6;
             this.genre.Text = "Gatunek";
-            this.genre.Width = 74;
+            this.genre.Width = 129;
             // 
             // textBoxArtist
             // 
@@ -405,8 +399,8 @@
             this.tableLayoutPanel1.Controls.Add(this.labelGenre, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.textBoxAlbum, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBoxArtist, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.textBoxGenre, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(346, 406);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -419,13 +413,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(383, 182);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
-            // textBoxYear
-            // 
-            this.textBoxYear.Location = new System.Drawing.Point(149, 123);
-            this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(231, 20);
-            this.textBoxYear.TabIndex = 18;
-            // 
             // textBoxGenre
             // 
             this.textBoxGenre.Location = new System.Drawing.Point(149, 153);
@@ -433,12 +420,30 @@
             this.textBoxGenre.Size = new System.Drawing.Size(230, 20);
             this.textBoxGenre.TabIndex = 19;
             // 
+            // textBoxYear
+            // 
+            this.textBoxYear.Location = new System.Drawing.Point(149, 123);
+            this.textBoxYear.Name = "textBoxYear";
+            this.textBoxYear.Size = new System.Drawing.Size(230, 20);
+            this.textBoxYear.TabIndex = 20;
+            // 
+            // buttonDel
+            // 
+            this.buttonDel.Location = new System.Drawing.Point(680, 264);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(75, 23);
+            this.buttonDel.TabIndex = 23;
+            this.buttonDel.Text = "Usuń";
+            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1167, 775);
+            this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.listViewSongs);
             this.Controls.Add(this.VolumeBar);
             this.Controls.Add(this.buttonStop);
@@ -510,10 +515,11 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelFile;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBoxYear;
         private System.Windows.Forms.TextBox textBoxGenre;
         private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ColumnHeader path;
+        private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.TextBox textBoxYear;
     }
 }
 

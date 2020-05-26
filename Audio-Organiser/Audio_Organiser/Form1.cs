@@ -73,22 +73,27 @@ namespace Audio_Organiser
 
         private void button2_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "Music Files(*.mp3; *.wav)|*.mp3; *.wav";
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                var f = TagLib.File.Create(openFileDialog1.FileName);
-                Song newSong = new Song();
-                newSong.file = Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
-                newSong.artist = f.Tag.FirstAlbumArtist;
-                newSong.title = f.Tag.Title;
-                newSong.album = f.Tag.Album;
-                newSong.year = (int?)f.Tag.Year;
-                newSong.genre = f.Tag.FirstGenre;
-                newSong.path = openFileDialog1.FileName;
+                string s = Path.GetExtension(openFileDialog1.FileName);
+                if (s == ".mp3" || s == ".wav")
+                {
+                    var f = TagLib.File.Create(openFileDialog1.FileName);
+                    Song newSong = new Song();
+                    newSong.file = Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
+                    newSong.artist = f.Tag.Performers[0];
+                    newSong.title = f.Tag.Title;
+                    newSong.album = f.Tag.Album;
+                    newSong.year = (int?)f.Tag.Year;
+                    newSong.genre = f.Tag.FirstGenre;
+                    newSong.path = openFileDialog1.FileName;
+                    DatabaseDC.Song.InsertOnSubmit(newSong);
+                    DatabaseDC.SubmitChanges();
 
-                DatabaseDC.Song.InsertOnSubmit(newSong);
-                DatabaseDC.SubmitChanges();
-
-                LoadMusic();
+                    LoadMusic();
+                }
+                else MessageBox.Show("Zły format pliku. Tylko mp3 i wav.");
             }
         }
 
@@ -196,13 +201,72 @@ namespace Audio_Organiser
         {
             if (listViewSongs.SelectedItems.Count > 0)
             {
-                DatabaseDC.ExecuteCommand("UPDATE Song SET [file]='" + textBoxFile.Text + "', artist='" + textBoxArtist.Text + "', title='" + textBoxTitle.Text + "', album='" + textBoxAlbum.Text + "', year='" + textBoxYear.Text + "', genre='" + textBoxGenre.Text + "' WHERE id='" + listViewSongs.SelectedItems[0].SubItems[0].Text + "';");
+                Refresh();
+                string pathh = listViewSongs.SelectedItems[0].SubItems[1].Text;
+                string path2 = pathh.Remove(pathh.LastIndexOf("\\") + 1) + textBoxFile.Text + Path.GetExtension(pathh);
+                //var fi = new FileInfo(pathh);
+                //var fi2 = new FileInfo(path2);
+                if (!File.Exists(path2) || pathh == path2)
+                {
+                    if (File.Exists(pathh))
+                    {
+                        var f = TagLib.File.Create(pathh);
+                        //f.Tag.Performers[0] = textBoxArtist.Text;
+                        f.Tag.Performers = null;
+                        f.Tag.Performers = new [] {textBoxArtist.Text};
+                        f.Tag.Title = textBoxTitle.Text;
+                        f.Tag.Album = textBoxAlbum.Text;
+                        f.Tag.Year = (uint)Int32.Parse(textBoxYear.Text);
+                        f.Tag.Genres = null;
+                        f.Tag.Genres = new[] { textBoxGenre.Text };
+                        f.Save();
+
+                        if (pathh != path2) File.Move(pathh, path2);
+                        MessageBox.Show(pathh + path2);
+                    }
+                    else MessageBox.Show("Plik o ścieżce zapisanej w bazie nie istnieje. "+pathh+path2);
+                    DatabaseDC.ExecuteCommand("UPDATE Song SET [file]=N'" + textBoxFile.Text + "', artist=N'" + textBoxArtist.Text + "', title=N'" + textBoxTitle.Text + "', album=N'" + textBoxAlbum.Text + "', year='" + textBoxYear.Text + "', genre=N'" + textBoxGenre.Text + "', path=N'" + path2 + "' WHERE id='" + listViewSongs.SelectedItems[0].SubItems[0].Text + "';");
+                }
+                else
+                {
+                    if(File.Exists(pathh)) MessageBox.Show("Plik o podanej nazwie docelowej już istnieje.");
+                    else MessageBox.Show("Plik o ścieżce zapisanej w bazie nie istnieje oraz plik o podanej nazwie docelowej już istnieje.");
+                    DatabaseDC.ExecuteCommand("UPDATE Song SET artist=N'" + textBoxArtist.Text + "', title=N'" + textBoxTitle.Text + "', album=N'" + textBoxAlbum.Text + "', year='" + textBoxYear.Text + "', genre=N'" + textBoxGenre.Text + "' WHERE id='" + listViewSongs.SelectedItems[0].SubItems[0].Text + "';");
+                }
+                DatabaseDC.SubmitChanges();
+                DatabaseDC = null;
+                DatabaseDC = new DatabaseMusicDataContext();
+                LoadMusic();
+                textBoxFile.Text = "";
+                textBoxArtist.Text = "";
+                textBoxTitle.Text = "";
+                textBoxAlbum.Text = "";
+                textBoxYear.Text = "";
+                textBoxGenre.Text = "";
             }
-            DatabaseDC.SubmitChanges();
-            DatabaseDC = null;
-            DatabaseDC = new DatabaseMusicDataContext();
-            LoadMusic();
         }
 
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            if (listViewSongs.SelectedItems.Count > 0)
+            {
+                if (MessageBox.Show("Jesteś pewien?", "Ostrzeżenie",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
+                    MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    DatabaseDC.ExecuteCommand("DELETE FROM Song WHERE id='" + listViewSongs.SelectedItems[0].SubItems[0].Text + "';");
+                }
+                DatabaseDC.SubmitChanges();
+                DatabaseDC = null;
+                DatabaseDC = new DatabaseMusicDataContext();
+                LoadMusic();
+                textBoxFile.Text = "";
+                textBoxArtist.Text = "";
+                textBoxTitle.Text = "";
+                textBoxAlbum.Text = "";
+                textBoxYear.Text = "";
+                textBoxGenre.Text = "";
+            }
+        }
     }
 }
