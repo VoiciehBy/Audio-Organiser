@@ -46,3 +46,17 @@ D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.CoreCompileI
 D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.CopyComplete
 D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.exe
 D:\projekt_ao2\A_O\Audio_Organiser\obj\Debug\Audio_Organiser.pdb
+D:\teste2\Audio-Organiser\Audio_Organiser\bin\Debug\Audio_Organiser.exe.config
+D:\teste2\Audio-Organiser\Audio_Organiser\bin\Debug\Audio_Organiser.exe
+D:\teste2\Audio-Organiser\Audio_Organiser\bin\Debug\Audio_Organiser.pdb
+D:\teste2\Audio-Organiser\Audio_Organiser\bin\Debug\policy.2.0.taglib-sharp.dll
+D:\teste2\Audio-Organiser\Audio_Organiser\bin\Debug\taglib-sharp.dll
+D:\teste2\Audio-Organiser\Audio_Organiser\bin\Debug\policy.2.0.taglib-sharp.config
+D:\teste2\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.csprojAssemblyReference.cache
+D:\teste2\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.MainWindow.resources
+D:\teste2\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.Properties.Resources.resources
+D:\teste2\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.GenerateResource.cache
+D:\teste2\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.CoreCompileInputs.cache
+D:\teste2\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.CopyComplete
+D:\teste2\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.exe
+D:\teste2\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.pdb
