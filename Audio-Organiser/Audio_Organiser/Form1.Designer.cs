@@ -49,6 +49,8 @@
             this.buttonStop = new System.Windows.Forms.Button();
             this.VolumeBar = new System.Windows.Forms.TrackBar();
             this.listViewSongs = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.path = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.file = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.artist = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -68,8 +70,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxYear = new System.Windows.Forms.TextBox();
             this.textBoxGenre = new System.Windows.Forms.TextBox();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.path = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeBar)).BeginInit();
@@ -203,6 +203,7 @@
             this.buttonNext.TabIndex = 18;
             this.buttonNext.Text = "Next";
             this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // buttonPrevious
             // 
@@ -212,6 +213,7 @@
             this.buttonPrevious.TabIndex = 19;
             this.buttonPrevious.Text = "Previous";
             this.buttonPrevious.UseVisualStyleBackColor = true;
+            this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
             // 
             // buttonStop
             // 
@@ -258,6 +260,17 @@
             this.listViewSongs.UseCompatibleStateImageBehavior = false;
             this.listViewSongs.View = System.Windows.Forms.View.Details;
             this.listViewSongs.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewSongs_ItemSelectionChanged);
+            // 
+            // id
+            // 
+            this.id.DisplayIndex = 7;
+            this.id.Text = "Id";
+            this.id.Width = 0;
+            // 
+            // path
+            // 
+            this.path.Text = "Scieżka";
+            this.path.Width = 0;
             // 
             // file
             // 
@@ -419,17 +432,6 @@
             this.textBoxGenre.Name = "textBoxGenre";
             this.textBoxGenre.Size = new System.Drawing.Size(230, 20);
             this.textBoxGenre.TabIndex = 19;
-            // 
-            // id
-            // 
-            this.id.DisplayIndex = 7;
-            this.id.Text = "Id";
-            this.id.Width = 0;
-            // 
-            // path
-            // 
-            this.path.Text = "Scieżka";
-            this.path.Width = 0;
             // 
             // MainWindow
             // 

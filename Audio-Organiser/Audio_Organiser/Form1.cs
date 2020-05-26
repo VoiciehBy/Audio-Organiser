@@ -92,6 +92,7 @@ namespace Audio_Organiser
             }
         }
 
+        //do usuniecia?
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog sofd = new OpenFileDialog())
@@ -106,10 +107,18 @@ namespace Audio_Organiser
 
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            //tu potrzebna kolumna ze sciezka i ja wyciac albo inaczej to wykminic
-            //player.open(listBoxUtwory.SelectedItem.ToString());
-            player.volume(VolumeBar.Value);
-            player.play();
+            if (listViewSongs.SelectedIndices.Count <= 0) return;
+
+            if (File.Exists(listViewSongs.SelectedItems[0].SubItems[1].Text))
+            {
+                player.open(listViewSongs.SelectedItems[0].SubItems[1].Text);
+                player.volume(VolumeBar.Value);
+                player.play();
+            }
+            else
+            {
+                //nie ma pliku w tej sciezce
+            }
         }
 
         private void buttonPause_Click(object sender, EventArgs e)
@@ -125,6 +134,49 @@ namespace Audio_Organiser
         private void VolumeBar_Scroll(object sender, EventArgs e)
         {
             player.volume(VolumeBar.Value);
+        }
+
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            int select = listViewSongs.SelectedIndices[0];
+            select++;
+            int last = listViewSongs.Items.Count;
+            if (select == last) return;
+            
+            player.stop();
+            listViewSongs.Items[select].Selected = true;
+
+            if (File.Exists(listViewSongs.SelectedItems[0].SubItems[1].Text))
+            {
+                player.open(listViewSongs.SelectedItems[0].SubItems[1].Text);
+                player.volume(VolumeBar.Value);
+                player.play();
+            }
+            else
+            {
+                //nie ma pliku w tej sciezce
+            }
+        }
+
+        private void buttonPrevious_Click(object sender, EventArgs e)
+        {
+            int select = listViewSongs.SelectedIndices[0];
+            select--;
+            if (select < 0) return;
+
+            player.stop();
+            listViewSongs.Items[select].Selected = true;
+            
+            if (File.Exists(listViewSongs.SelectedItems[0].SubItems[1].Text))
+            {
+               player.open(listViewSongs.SelectedItems[0].SubItems[1].Text);
+               player.volume(VolumeBar.Value);
+               player.play();
+            }
+            else
+            {
+                //nie ma pliku w tej sciezce
+            }
         }
 
         private void listViewSongs_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -151,5 +203,6 @@ namespace Audio_Organiser
             DatabaseDC = new DatabaseMusicDataContext();
             LoadMusic();
         }
+
     }
 }

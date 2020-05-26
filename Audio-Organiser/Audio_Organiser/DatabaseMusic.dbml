@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="muzyka" Class="DatabaseMusicDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Rafal\Desktop\Shit\Inż\baza\muzyka.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="Audio_Organiser.Properties.Settings" SettingsPropertyName="muzykaConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\teste2\Audio-Organiser\baza\muzyka.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="Audio_Organiser.Properties.Settings" SettingsPropertyName="muzykaConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Song" Member="Song">
     <Type Name="Song">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="[file]" Member="file" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
-      <Column Name="artist" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="title" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="album" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="[file]" Member="file" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="artist" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="album" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
       <Column Name="year" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="genre" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="genre" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
       <Column Name="path" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
