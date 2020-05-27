@@ -9,24 +9,32 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//player
+using NAudio.Wave;
+using NAudio.Wave.SampleProviders;
 
 namespace Audio_Organiser
 {
     public partial class MainWindow : Form
     {
         DatabaseMusicDataContext DatabaseDC = new DatabaseMusicDataContext();
-        private AudioPlayer player = new AudioPlayer();
+        //player
+        private WaveOutEvent outputDevice;
+        private AudioFileReader audioFile;
+        bool playing = false;
+        bool muted = false;
 
         public MainWindow()
         {
             InitializeComponent();
+            timer.Start();
             LoadMusic();
         }
 
         private void LoadMusic()
         {
             listViewSongs.Items.Clear();
-            foreach(Song s in DatabaseDC.Song)
+            foreach (Song s in DatabaseDC.Song)
             {
                 ListViewItem item = new ListViewItem(s.id.ToString());
                 item.SubItems.Add(s.path);
@@ -51,10 +59,10 @@ namespace Audio_Organiser
         }
 
         private void songToolStripMenuItem_Click(object sender, EventArgs e)
-         {
+        {
             openFileDialog1.InitialDirectory = @"Biblioteki\Muzyka";
             openFileDialog1.FileName = "";
-            openFileDialog1.ShowDialog();     
+            openFileDialog1.ShowDialog();
             if (openFileDialog1.FileName != "")
             {
                 string source = openFileDialog1.FileName;
@@ -74,7 +82,7 @@ namespace Audio_Organiser
         private void button2_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Music Files(*.mp3; *.wav)|*.mp3; *.wav";
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string s = Path.GetExtension(openFileDialog1.FileName);
                 if (s == ".mp3" || s == ".wav")
@@ -97,28 +105,18 @@ namespace Audio_Organiser
             }
         }
 
-        //do usuniecia?
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog sofd = new OpenFileDialog())
-            {
-                sofd.Filter = "Pliki .mp3|*.mp3|Pliki .wav|*.wav";
-                if (sofd.ShowDialog() == DialogResult.OK)
-                {
-                    player.open(sofd.FileName);
-                }
-            }
-        }
-
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             if (listViewSongs.SelectedIndices.Count <= 0) return;
 
             if (File.Exists(listViewSongs.SelectedItems[0].SubItems[1].Text))
             {
-                player.open(listViewSongs.SelectedItems[0].SubItems[1].Text);
-                player.volume(VolumeBar.Value);
-                player.play();
+                //play
+                PlaySong();
+                //info
+                UpdatePlayerInfo(audioFile.FileName, listViewSongs.SelectedItems[0].SubItems[1].Text);
+                //okladka
+                LoadCoverArt(audioFile.FileName, listViewSongs.SelectedItems[0].SubItems[1].Text);
             }
             else
             {
@@ -128,60 +126,189 @@ namespace Audio_Organiser
 
         private void buttonPause_Click(object sender, EventArgs e)
         {
-            player.pause();
+            outputDevice?.Stop();
+            //
+            playing = false;
         }
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
-            player.stop();
+            StopSong();
         }
 
-        private void VolumeBar_Scroll(object sender, EventArgs e)
+        private void volumeBar_Scroll(object sender, EventArgs e)
         {
-            player.volume(VolumeBar.Value);
+            if (outputDevice == null) return;
+            if (muted == false)
+            {
+                outputDevice.Volume = volumeBar.Value / 100f; //Volume to float od 0.0 do 1.0, więc dzielimy przez 100
+            }
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            int select = listViewSongs.SelectedIndices[0];
-            select++;
-            int last = listViewSongs.Items.Count;
-            if (select == last) return;
-            
-            player.stop();
-            listViewSongs.Items[select].Selected = true;
+            if (listViewSongs.SelectedIndices.Count != 0) //zwraca 0 jak nic nie zaznaczymy
+            {
+                int select = listViewSongs.SelectedIndices[0];
+                select++;
+                int last = listViewSongs.Items.Count;
+                if (select == last) return;
 
-            if (File.Exists(listViewSongs.SelectedItems[0].SubItems[1].Text))
-            {
-                player.open(listViewSongs.SelectedItems[0].SubItems[1].Text);
-                player.volume(VolumeBar.Value);
-                player.play();
-            }
-            else
-            {
-                //nie ma pliku w tej sciezce
+                StopSong();
+                listViewSongs.Items[select].Selected = true;
+
+                if (File.Exists(listViewSongs.SelectedItems[0].SubItems[1].Text))
+                {
+                    //play
+                    PlaySong();
+                    //info
+                    UpdatePlayerInfo(audioFile.FileName, listViewSongs.SelectedItems[0].SubItems[1].Text);
+                    //okladka
+                    LoadCoverArt(audioFile.FileName, listViewSongs.SelectedItems[0].SubItems[1].Text);
+                }
+                else
+                {
+                    //nie ma pliku w tej sciezce
+                }
             }
         }
 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
-            int select = listViewSongs.SelectedIndices[0];
-            select--;
-            if (select < 0) return;
-
-            player.stop();
-            listViewSongs.Items[select].Selected = true;
-            
-            if (File.Exists(listViewSongs.SelectedItems[0].SubItems[1].Text))
+            if (listViewSongs.SelectedIndices.Count != 0) //zwraca 0 jak nic nie zaznaczymy
             {
-               player.open(listViewSongs.SelectedItems[0].SubItems[1].Text);
-               player.volume(VolumeBar.Value);
-               player.play();
+                int select = listViewSongs.SelectedIndices[0];
+                select--;
+                if (select < 0) return;
+
+                StopSong();
+                listViewSongs.Items[select].Selected = true;
+
+                if (File.Exists(listViewSongs.SelectedItems[0].SubItems[1].Text))
+                {
+                    //play
+                    PlaySong();
+                    //info
+                    UpdatePlayerInfo(audioFile.FileName, listViewSongs.SelectedItems[0].SubItems[1].Text);
+                    //okladka
+                    LoadCoverArt(audioFile.FileName, listViewSongs.SelectedItems[0].SubItems[1].Text);
+                }
+                else
+                {
+                    //nie ma pliku w tej sciezce
+                }
+            }
+        }
+
+        private void PlaySong()
+        {
+            if (outputDevice == null)
+            {
+                outputDevice = new WaveOutEvent();
+            }
+            if (audioFile == null)
+            {
+                audioFile = new AudioFileReader(listViewSongs.SelectedItems[0].SubItems[1].Text);
+                outputDevice.Init(audioFile);
+            }
+            //
+            playing = true;
+            outputDevice.Play();
+            currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+        }
+
+        private void UpdatePlayerInfo(string pf, string hf)
+        {
+            if (pf == hf)
+            {
+                currentArtist.Text = listViewSongs.SelectedItems[0].SubItems[4].Text;
+                currentSong.Text = listViewSongs.SelectedItems[0].SubItems[3].Text;
+            }
+        }
+
+        private void StopSong()
+        {
+            outputDevice?.Stop();
+            if (outputDevice != null)
+            {
+                outputDevice.Dispose();
+                outputDevice = null;
+            }
+            if (audioFile != null)
+            {
+                audioFile.Dispose();
+                audioFile = null;
+            }
+            //
+            playing = false;
+        }
+
+        private void LoadCoverArt(string pf, string hf) //pf = playing file, hf = highlighted file 
+        {
+            if (pf == hf)
+            {
+                TagLib.File file = TagLib.File.Create(hf);
+                var mStream = new MemoryStream();
+                var firstPicture = file.Tag.Pictures.FirstOrDefault();
+                if (firstPicture != null)
+                {
+                    byte[] pData = firstPicture.Data.Data;
+                    mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
+                    var temp = new Bitmap(mStream, false);
+                    mStream.Dispose();
+                    //resize do rozmiaru (...,x_px,y_px)
+                    Bitmap bm = ResizeBMP(temp, 100, 100);
+
+                    coverPictureBox.Image = bm;
+                }
+                else
+                {
+                    Image img = Properties.Resources.icon;
+                    Bitmap bm = ResizeBMP((Bitmap)img, 100, 100);
+                    coverPictureBox.Image = bm;
+                    //brak okladki w mp3
+                }
+            }
+        }
+
+        private Bitmap ResizeBMP(Bitmap bmp, int width, int height)
+        {
+            Bitmap res = new Bitmap(width, height);
+            using (Graphics g = Graphics.FromImage(res))
+            {
+                g.DrawImage(bmp, 0, 0, width, height);
+            }
+            return res;
+        }
+
+        private void buttonMute_Click(object sender, EventArgs e)
+        {
+            if (outputDevice == null) return;
+            if (muted == false)
+            {
+                outputDevice.Volume = 0;
+                muted = true;
             }
             else
             {
-                //nie ma pliku w tej sciezce
+                outputDevice.Volume = volumeBar.Value / 100f; //Volume to float od 0.0 do 1.0, więc dzielimy przez 100
+                muted = false;
             }
+        }
+
+        private void buttonAutoplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLoopList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLoopSong_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void listViewSongs_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -267,6 +394,19 @@ namespace Audio_Organiser
                 textBoxYear.Text = "";
                 textBoxGenre.Text = "";
             }
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (playing == true)
+            {
+                currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
+            }
+        }
+
+        private void currentLength_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
