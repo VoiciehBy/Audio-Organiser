@@ -55,5 +55,16 @@ namespace Audio_Organiser.Properties {
                 return ((string)(this["muzykaConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\teste2\\Audio-Organiser-mas" +
+            "ter_newest\\baza\\muzyka.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string muzykaConnectionString3 {
+            get {
+                return ((string)(this["muzykaConnectionString3"]));
+            }
+        }
     }
 }
