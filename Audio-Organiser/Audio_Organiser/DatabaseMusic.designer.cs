@@ -143,7 +143,7 @@ namespace Audio_Organiser
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[file]", Storage="_file", DbType="NVarChar(120) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[file]", Storage="_file", DbType="NVarChar(60) NOT NULL", CanBeNull=false)]
 		public string file
 		{
 			get
@@ -163,7 +163,7 @@ namespace Audio_Organiser
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_artist", DbType="NVarChar(120)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_artist", DbType="NVarChar(20)")]
 		public string artist
 		{
 			get
@@ -183,7 +183,7 @@ namespace Audio_Organiser
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="NVarChar(120)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="NVarChar(30)")]
 		public string title
 		{
 			get
@@ -203,7 +203,7 @@ namespace Audio_Organiser
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_album", DbType="NVarChar(120)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_album", DbType="NVarChar(20)")]
 		public string album
 		{
 			get
@@ -243,7 +243,7 @@ namespace Audio_Organiser
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_genre", DbType="NVarChar(120)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_genre", DbType="NVarChar(20)")]
 		public string genre
 		{
 			get

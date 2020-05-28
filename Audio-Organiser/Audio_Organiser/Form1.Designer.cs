@@ -37,11 +37,15 @@
             this.solidColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.steelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lightSkyBlueStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.greenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.redToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lightSkyBlueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lightSteelBlueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paoloVeronesesGreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lightSalmonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mistyRoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.texture0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.texture1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.texture2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button1 = new System.Windows.Forms.Button();
@@ -89,9 +93,6 @@
             this.genre = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.buttonDel2 = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
-            this.texture0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.texture1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.texture3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -142,10 +143,11 @@
             this.solidColorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.whiteToolStripMenuItem,
             this.steelToolStripMenuItem,
-            this.lightSkyBlueStripMenuItem,
-            this.blueToolStripMenuItem,
-            this.greenToolStripMenuItem,
-            this.redToolStripMenuItem});
+            this.lightSkyBlueToolStripMenuItem,
+            this.lightSteelBlueToolStripMenuItem,
+            this.paoloVeronesesGreenToolStripMenuItem,
+            this.lightSalmonToolStripMenuItem,
+            this.mistyRoseToolStripMenuItem});
             this.solidColorToolStripMenuItem.Name = "solidColorToolStripMenuItem";
             this.solidColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.solidColorToolStripMenuItem.Text = "Solid Color";
@@ -153,54 +155,82 @@
             // whiteToolStripMenuItem
             // 
             this.whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            this.whiteToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.whiteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.whiteToolStripMenuItem.Text = "White";
             this.whiteToolStripMenuItem.Click += new System.EventHandler(this.whiteToolStripMenuItem_Click);
             // 
             // steelToolStripMenuItem
             // 
             this.steelToolStripMenuItem.Name = "steelToolStripMenuItem";
-            this.steelToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.steelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.steelToolStripMenuItem.Text = "Steel";
             this.steelToolStripMenuItem.Click += new System.EventHandler(this.steelToolStripMenuItem_Click);
             // 
-            // lightSkyBlueStripMenuItem
+            // lightSkyBlueToolStripMenuItem
             // 
-            this.lightSkyBlueStripMenuItem.Name = "lightSkyBlueStripMenuItem";
-            this.lightSkyBlueStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.lightSkyBlueStripMenuItem.Text = "Light Sky Blue";
-            this.lightSkyBlueStripMenuItem.Click += new System.EventHandler(this.lightSkyBlueStripMenuItem_Click);
+            this.lightSkyBlueToolStripMenuItem.Name = "lightSkyBlueToolStripMenuItem";
+            this.lightSkyBlueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lightSkyBlueToolStripMenuItem.Text = "Light Sky Blue";
+            this.lightSkyBlueToolStripMenuItem.Click += new System.EventHandler(this.lightSkyBlueToolStripMenuItem_Click);
             // 
-            // blueToolStripMenuItem
+            // lightSteelBlueToolStripMenuItem
             // 
-            this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
-            this.blueToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.blueToolStripMenuItem.Text = "Blue";
-            this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
+            this.lightSteelBlueToolStripMenuItem.Name = "lightSteelBlueToolStripMenuItem";
+            this.lightSteelBlueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lightSteelBlueToolStripMenuItem.Text = "Light Steel Blue";
+            this.lightSteelBlueToolStripMenuItem.Click += new System.EventHandler(this.lightSteelBlueToolStripMenuItem_Click);
             // 
-            // greenToolStripMenuItem
+            // paoloVeronesesGreenToolStripMenuItem
             // 
-            this.greenToolStripMenuItem.Name = "greenToolStripMenuItem";
-            this.greenToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.greenToolStripMenuItem.Text = "Green";
-            this.greenToolStripMenuItem.Click += new System.EventHandler(this.greenToolStripMenuItem_Click);
+            this.paoloVeronesesGreenToolStripMenuItem.Name = "paoloVeronesesGreenToolStripMenuItem";
+            this.paoloVeronesesGreenToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.paoloVeronesesGreenToolStripMenuItem.Text = "Paolo Veronese\'s Green";
+            this.paoloVeronesesGreenToolStripMenuItem.Click += new System.EventHandler(this.paoloVeronesesGreenToolStripMenuItem_Click);
             // 
-            // redToolStripMenuItem
+            // lightSalmonToolStripMenuItem
             // 
-            this.redToolStripMenuItem.Name = "redToolStripMenuItem";
-            this.redToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.redToolStripMenuItem.Text = "Red";
-            this.redToolStripMenuItem.Click += new System.EventHandler(this.redToolStripMenuItem_Click);
+            this.lightSalmonToolStripMenuItem.Name = "lightSalmonToolStripMenuItem";
+            this.lightSalmonToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.lightSalmonToolStripMenuItem.Text = "Light Salmon";
+            this.lightSalmonToolStripMenuItem.Click += new System.EventHandler(this.lightSalmonToolStripMenuItem_Click);
+            // 
+            // mistyRoseToolStripMenuItem
+            // 
+            this.mistyRoseToolStripMenuItem.Name = "mistyRoseToolStripMenuItem";
+            this.mistyRoseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mistyRoseToolStripMenuItem.Text = "Misty Rose";
+            this.mistyRoseToolStripMenuItem.Click += new System.EventHandler(this.mistyRoseToolStripMenuItem_Click);
             // 
             // textureToolStripMenuItem
             // 
             this.textureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.texture0ToolStripMenuItem,
             this.texture1ToolStripMenuItem,
-            this.texture3ToolStripMenuItem});
+            this.texture2ToolStripMenuItem});
             this.textureToolStripMenuItem.Name = "textureToolStripMenuItem";
             this.textureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.textureToolStripMenuItem.Text = "Texture";
+            // 
+            // texture0ToolStripMenuItem
+            // 
+            this.texture0ToolStripMenuItem.Name = "texture0ToolStripMenuItem";
+            this.texture0ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.texture0ToolStripMenuItem.Text = "Texture0";
+            this.texture0ToolStripMenuItem.Click += new System.EventHandler(this.texture0ToolStripMenuItem_Click);
+            // 
+            // texture1ToolStripMenuItem
+            // 
+            this.texture1ToolStripMenuItem.Name = "texture1ToolStripMenuItem";
+            this.texture1ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.texture1ToolStripMenuItem.Text = "Texture1";
+            this.texture1ToolStripMenuItem.Click += new System.EventHandler(this.texture1ToolStripMenuItem_Click);
+            // 
+            // texture2ToolStripMenuItem
+            // 
+            this.texture2ToolStripMenuItem.Name = "texture2ToolStripMenuItem";
+            this.texture2ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.texture2ToolStripMenuItem.Text = "Texture2";
+            this.texture2ToolStripMenuItem.Click += new System.EventHandler(this.texture2ToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -658,27 +688,7 @@
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(170, 20);
             this.searchBox.TabIndex = 35;
-            // 
-            // texture0ToolStripMenuItem
-            // 
-            this.texture0ToolStripMenuItem.Name = "texture0ToolStripMenuItem";
-            this.texture0ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.texture0ToolStripMenuItem.Text = "Texture0";
-            this.texture0ToolStripMenuItem.Click += new System.EventHandler(this.texture0ToolStripMenuItem_Click);
-            // 
-            // texture1ToolStripMenuItem
-            // 
-            this.texture1ToolStripMenuItem.Name = "texture1ToolStripMenuItem";
-            this.texture1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.texture1ToolStripMenuItem.Text = "Texture1";
-            this.texture1ToolStripMenuItem.Click += new System.EventHandler(this.texture1ToolStripMenuItem_Click);
-            // 
-            // texture3ToolStripMenuItem
-            // 
-            this.texture3ToolStripMenuItem.Name = "texture3ToolStripMenuItem";
-            this.texture3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.texture3ToolStripMenuItem.Text = "Texture3";
-            this.texture3ToolStripMenuItem.Click += new System.EventHandler(this.texture3ToolStripMenuItem_Click);
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // MainWindow
             // 
@@ -722,15 +732,6 @@
 
         private System.Windows.Forms.VScrollBar vScrollBard;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem solidColorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem whiteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem steelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lightSkyBlueStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem blueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem greenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
@@ -777,11 +778,25 @@
         private BrightIdeasSoftware.OLVColumn year;
         private BrightIdeasSoftware.OLVColumn genre;
         private System.Windows.Forms.Button buttonDel2;
-        private System.Windows.Forms.TextBox searchBox;
+
+        //VRB
+        private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem solidColorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem whiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem steelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lightSkyBlueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lightSteelBlueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paoloVeronesesGreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lightSalmonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem texture0ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem texture1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem texture3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem texture2ToolStripMenuItem;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.ToolStripMenuItem mistyRoseToolStripMenuItem;
+        //VRB
+
     }
 }
 
