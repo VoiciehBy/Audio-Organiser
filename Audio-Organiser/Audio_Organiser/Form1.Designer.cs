@@ -69,18 +69,17 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.currentArtist = new System.Windows.Forms.Label();
             this.currentSong = new System.Windows.Forms.Label();
-            this.buttonMute = new System.Windows.Forms.Button();
-            this.buttonAutoplay = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.buttonLoopList = new System.Windows.Forms.Button();
             this.buttonLoopSong = new System.Windows.Forms.Button();
+            this.buttonAutoplay = new System.Windows.Forms.Button();
+            this.buttonMute = new System.Windows.Forms.Button();
             this.coverPictureBox = new System.Windows.Forms.PictureBox();
             this.buttonStop = new System.Windows.Forms.Button();
             this.buttonPrevious = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPause = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.logo = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.objectListViewSongs = new BrightIdeasSoftware.ObjectListView();
             this.id = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.path = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -95,13 +94,14 @@
             this.buttonAdd2 = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewSongs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -437,35 +437,35 @@
             this.currentSong.Size = new System.Drawing.Size(150, 13);
             this.currentSong.TabIndex = 28;
             // 
-            // buttonMute
+            // panel1
             // 
-            this.buttonMute.FlatAppearance.BorderSize = 0;
-            this.buttonMute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMute.Image = global::Audio_Organiser.Properties.Resources.previous;
-            this.buttonMute.Location = new System.Drawing.Point(216, 56);
-            this.buttonMute.Name = "buttonMute";
-            this.buttonMute.Size = new System.Drawing.Size(26, 26);
-            this.buttonMute.TabIndex = 29;
-            this.buttonMute.UseVisualStyleBackColor = true;
-            this.buttonMute.Click += new System.EventHandler(this.buttonMute_Click);
-            // 
-            // buttonAutoplay
-            // 
-            this.buttonAutoplay.FlatAppearance.BorderSize = 0;
-            this.buttonAutoplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAutoplay.Image = global::Audio_Organiser.Properties.Resources.previous;
-            this.buttonAutoplay.Location = new System.Drawing.Point(169, 106);
-            this.buttonAutoplay.Name = "buttonAutoplay";
-            this.buttonAutoplay.Size = new System.Drawing.Size(26, 26);
-            this.buttonAutoplay.TabIndex = 30;
-            this.buttonAutoplay.UseVisualStyleBackColor = true;
-            this.buttonAutoplay.Click += new System.EventHandler(this.buttonAutoplay_Click);
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.buttonLoopList);
+            this.panel1.Controls.Add(this.currentSong);
+            this.panel1.Controls.Add(this.buttonLoopSong);
+            this.panel1.Controls.Add(this.currentArtist);
+            this.panel1.Controls.Add(this.buttonAutoplay);
+            this.panel1.Controls.Add(this.buttonMute);
+            this.panel1.Controls.Add(this.currentLength);
+            this.panel1.Controls.Add(this.currentTime);
+            this.panel1.Controls.Add(this.coverPictureBox);
+            this.panel1.Controls.Add(this.volumeBar);
+            this.panel1.Controls.Add(this.buttonStop);
+            this.panel1.Controls.Add(this.buttonPrevious);
+            this.panel1.Controls.Add(this.buttonNext);
+            this.panel1.Controls.Add(this.buttonPause);
+            this.panel1.Controls.Add(this.buttonPlay);
+            this.panel1.Location = new System.Drawing.Point(11, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(261, 179);
+            this.panel1.TabIndex = 33;
             // 
             // buttonLoopList
             // 
             this.buttonLoopList.FlatAppearance.BorderSize = 0;
             this.buttonLoopList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLoopList.Image = global::Audio_Organiser.Properties.Resources.previous;
+            this.buttonLoopList.Image = global::Audio_Organiser.Properties.Resources.loop_pl;
             this.buttonLoopList.Location = new System.Drawing.Point(197, 106);
             this.buttonLoopList.Name = "buttonLoopList";
             this.buttonLoopList.Size = new System.Drawing.Size(26, 26);
@@ -477,13 +477,37 @@
             // 
             this.buttonLoopSong.FlatAppearance.BorderSize = 0;
             this.buttonLoopSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLoopSong.Image = global::Audio_Organiser.Properties.Resources.previous;
+            this.buttonLoopSong.Image = global::Audio_Organiser.Properties.Resources.loop_s;
             this.buttonLoopSong.Location = new System.Drawing.Point(225, 106);
             this.buttonLoopSong.Name = "buttonLoopSong";
             this.buttonLoopSong.Size = new System.Drawing.Size(26, 26);
             this.buttonLoopSong.TabIndex = 32;
             this.buttonLoopSong.UseVisualStyleBackColor = true;
             this.buttonLoopSong.Click += new System.EventHandler(this.buttonLoopSong_Click);
+            // 
+            // buttonAutoplay
+            // 
+            this.buttonAutoplay.FlatAppearance.BorderSize = 0;
+            this.buttonAutoplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAutoplay.Image = global::Audio_Organiser.Properties.Resources.auto;
+            this.buttonAutoplay.Location = new System.Drawing.Point(169, 106);
+            this.buttonAutoplay.Name = "buttonAutoplay";
+            this.buttonAutoplay.Size = new System.Drawing.Size(26, 26);
+            this.buttonAutoplay.TabIndex = 30;
+            this.buttonAutoplay.UseVisualStyleBackColor = true;
+            this.buttonAutoplay.Click += new System.EventHandler(this.buttonAutoplay_Click);
+            // 
+            // buttonMute
+            // 
+            this.buttonMute.FlatAppearance.BorderSize = 0;
+            this.buttonMute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMute.Image = global::Audio_Organiser.Properties.Resources.mute_off;
+            this.buttonMute.Location = new System.Drawing.Point(216, 56);
+            this.buttonMute.Name = "buttonMute";
+            this.buttonMute.Size = new System.Drawing.Size(26, 26);
+            this.buttonMute.TabIndex = 29;
+            this.buttonMute.UseVisualStyleBackColor = true;
+            this.buttonMute.Click += new System.EventHandler(this.buttonMute_Click);
             // 
             // coverPictureBox
             // 
@@ -553,38 +577,6 @@
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
-            // logo
-            // 
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(0, 893);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(138, 127);
-            this.logo.TabIndex = 4;
-            this.logo.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.buttonLoopList);
-            this.panel1.Controls.Add(this.currentSong);
-            this.panel1.Controls.Add(this.buttonLoopSong);
-            this.panel1.Controls.Add(this.currentArtist);
-            this.panel1.Controls.Add(this.buttonAutoplay);
-            this.panel1.Controls.Add(this.buttonMute);
-            this.panel1.Controls.Add(this.currentLength);
-            this.panel1.Controls.Add(this.currentTime);
-            this.panel1.Controls.Add(this.coverPictureBox);
-            this.panel1.Controls.Add(this.volumeBar);
-            this.panel1.Controls.Add(this.buttonStop);
-            this.panel1.Controls.Add(this.buttonPrevious);
-            this.panel1.Controls.Add(this.buttonNext);
-            this.panel1.Controls.Add(this.buttonPause);
-            this.panel1.Controls.Add(this.buttonPlay);
-            this.panel1.Location = new System.Drawing.Point(11, 39);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 179);
-            this.panel1.TabIndex = 33;
-            // 
             // objectListViewSongs
             // 
             this.objectListViewSongs.AllColumns.Add(this.id);
@@ -616,8 +608,11 @@
             this.objectListViewSongs.Size = new System.Drawing.Size(882, 969);
             this.objectListViewSongs.TabIndex = 25;
             this.objectListViewSongs.UseCompatibleStateImageBehavior = false;
+            this.objectListViewSongs.UseHotControls = false;
             this.objectListViewSongs.View = System.Windows.Forms.View.Details;
+            this.objectListViewSongs.AfterSorting += new System.EventHandler<BrightIdeasSoftware.AfterSortingEventArgs>(this.objectListViewSongs_AfterSorting);
             this.objectListViewSongs.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.objectListViewSongs_ItemSelectionChanged);
+            this.objectListViewSongs.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.objectListViewSongs_MouseDoubleClick);
             // 
             // id
             // 
@@ -705,6 +700,15 @@
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // logo
+            // 
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(0, 893);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(138, 127);
+            this.logo.TabIndex = 4;
+            this.logo.TabStop = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,11 +737,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewSongs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
