@@ -112,3 +112,11 @@ C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio-Organiser\Audio_Organiser\obj\Debug\A
 C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.csproj.CopyComplete
 C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.exe
 C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio-Organiser\Audio_Organiser\obj\Debug\Audio_Organiser.pdb
+C:\Users\Rafal\Desktop\Shit\Inż\Audio-Organiser-master\Audio-Organiser\Audio_Organiser\bin\Debug\muzyka.mdf
+C:\Users\Rafal\Desktop\Shit\Inż\Audio-Organiser-master\Audio-Organiser\Audio_Organiser\bin\Debug\muzyka_log.ldf
+C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\muzyka.mdf
+C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\muzyka_log.ldf
+C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\NAudio.dll
+C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\ObjectListView.dll
+C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\NAudio.xml
+C:\Users\Rafal\Desktop\Shit\Inż\A_O\Audio_Organiser\bin\Debug\ObjectListView.xml
