@@ -66,5 +66,27 @@ namespace Audio_Organiser.Properties {
                 return ((string)(this["muzykaConnectionString3"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\muzyka.mdf;In" +
+            "tegrated Security=True;Connect Timeout=30")]
+        public string muzykaConnectionString4 {
+            get {
+                return ((string)(this["muzykaConnectionString4"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\teste2\\28_05_2020\\baza\\muz" +
+            "yka.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string muzykaConnectionString5 {
+            get {
+                return ((string)(this["muzykaConnectionString5"]));
+            }
+        }
     }
 }
