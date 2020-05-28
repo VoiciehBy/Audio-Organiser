@@ -32,10 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.vScrollBard = new System.Windows.Forms.VScrollBar();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.addToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.songToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.albumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.solidColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.whiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.steelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lightSkyBlueStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button1 = new System.Windows.Forms.Button();
@@ -82,6 +88,11 @@
             this.year = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.genre = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.buttonDel2 = new System.Windows.Forms.Button();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.texture0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.texture1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.texture3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
@@ -99,42 +110,97 @@
             // 
             // menuStrip
             // 
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.themesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1167, 24);
             this.menuStrip.TabIndex = 2;
             this.menuStrip.Text = "menuStrip1";
             // 
-            // addToolStripMenu
+            // themesToolStripMenuItem
             // 
-            this.addToolStripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.songToolStripMenuItem,
-            this.albumToolStripMenuItem});
-            this.addToolStripMenu.Name = "addToolStripMenu";
-            this.addToolStripMenu.Size = new System.Drawing.Size(41, 20);
-            this.addToolStripMenu.Text = "Add";
+            this.themesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.defaultToolStripMenuItem,
+            this.solidColorToolStripMenuItem,
+            this.textureToolStripMenuItem});
+            this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
+            this.themesToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.themesToolStripMenuItem.Text = "Themes";
             // 
-            // songToolStripMenuItem
+            // defaultToolStripMenuItem
             // 
-            this.songToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xdToolStripMenuItem});
-            this.songToolStripMenuItem.Name = "songToolStripMenuItem";
-            this.songToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.songToolStripMenuItem.Text = "Song";
-            this.songToolStripMenuItem.Click += new System.EventHandler(this.songToolStripMenuItem_Click);
+            this.defaultToolStripMenuItem.Checked = true;
+            this.defaultToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defaultToolStripMenuItem.Text = "Default";
+            this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
-            // xdToolStripMenuItem
+            // solidColorToolStripMenuItem
             // 
-            this.xdToolStripMenuItem.Name = "xdToolStripMenuItem";
-            this.xdToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
-            this.xdToolStripMenuItem.Text = "xd";
+            this.solidColorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.whiteToolStripMenuItem,
+            this.steelToolStripMenuItem,
+            this.lightSkyBlueStripMenuItem,
+            this.blueToolStripMenuItem,
+            this.greenToolStripMenuItem,
+            this.redToolStripMenuItem});
+            this.solidColorToolStripMenuItem.Name = "solidColorToolStripMenuItem";
+            this.solidColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.solidColorToolStripMenuItem.Text = "Solid Color";
             // 
-            // albumToolStripMenuItem
+            // whiteToolStripMenuItem
             // 
-            this.albumToolStripMenuItem.Name = "albumToolStripMenuItem";
-            this.albumToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.albumToolStripMenuItem.Text = "Album";
-            this.albumToolStripMenuItem.Click += new System.EventHandler(this.albumToolStripMenuItem_Click);
+            this.whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
+            this.whiteToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.whiteToolStripMenuItem.Text = "White";
+            this.whiteToolStripMenuItem.Click += new System.EventHandler(this.whiteToolStripMenuItem_Click);
+            // 
+            // steelToolStripMenuItem
+            // 
+            this.steelToolStripMenuItem.Name = "steelToolStripMenuItem";
+            this.steelToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.steelToolStripMenuItem.Text = "Steel";
+            this.steelToolStripMenuItem.Click += new System.EventHandler(this.steelToolStripMenuItem_Click);
+            // 
+            // lightSkyBlueStripMenuItem
+            // 
+            this.lightSkyBlueStripMenuItem.Name = "lightSkyBlueStripMenuItem";
+            this.lightSkyBlueStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.lightSkyBlueStripMenuItem.Text = "Light Sky Blue";
+            this.lightSkyBlueStripMenuItem.Click += new System.EventHandler(this.lightSkyBlueStripMenuItem_Click);
+            // 
+            // blueToolStripMenuItem
+            // 
+            this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
+            this.blueToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.blueToolStripMenuItem.Text = "Blue";
+            this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
+            // 
+            // greenToolStripMenuItem
+            // 
+            this.greenToolStripMenuItem.Name = "greenToolStripMenuItem";
+            this.greenToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.greenToolStripMenuItem.Text = "Green";
+            this.greenToolStripMenuItem.Click += new System.EventHandler(this.greenToolStripMenuItem_Click);
+            // 
+            // redToolStripMenuItem
+            // 
+            this.redToolStripMenuItem.Name = "redToolStripMenuItem";
+            this.redToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.redToolStripMenuItem.Text = "Red";
+            this.redToolStripMenuItem.Click += new System.EventHandler(this.redToolStripMenuItem_Click);
+            // 
+            // textureToolStripMenuItem
+            // 
+            this.textureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.texture0ToolStripMenuItem,
+            this.texture1ToolStripMenuItem,
+            this.texture3ToolStripMenuItem});
+            this.textureToolStripMenuItem.Name = "textureToolStripMenuItem";
+            this.textureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.textureToolStripMenuItem.Text = "Texture";
             // 
             // openFileDialog1
             // 
@@ -166,7 +232,7 @@
             this.volumeBar.Location = new System.Drawing.Point(105, 56);
             this.volumeBar.Maximum = 100;
             this.volumeBar.Name = "volumeBar";
-            this.volumeBar.Size = new System.Drawing.Size(104, 45);
+            this.volumeBar.Size = new System.Drawing.Size(104, 42);
             this.volumeBar.SmallChange = 10;
             this.volumeBar.TabIndex = 21;
             this.volumeBar.Value = 100;
@@ -586,12 +652,41 @@
             this.buttonDel2.UseVisualStyleBackColor = true;
             this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
             // 
+            // searchBox
+            // 
+            this.searchBox.Location = new System.Drawing.Point(980, 5);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(170, 20);
+            this.searchBox.TabIndex = 35;
+            // 
+            // texture0ToolStripMenuItem
+            // 
+            this.texture0ToolStripMenuItem.Name = "texture0ToolStripMenuItem";
+            this.texture0ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.texture0ToolStripMenuItem.Text = "Texture0";
+            this.texture0ToolStripMenuItem.Click += new System.EventHandler(this.texture0ToolStripMenuItem_Click);
+            // 
+            // texture1ToolStripMenuItem
+            // 
+            this.texture1ToolStripMenuItem.Name = "texture1ToolStripMenuItem";
+            this.texture1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.texture1ToolStripMenuItem.Text = "Texture1";
+            this.texture1ToolStripMenuItem.Click += new System.EventHandler(this.texture1ToolStripMenuItem_Click);
+            // 
+            // texture3ToolStripMenuItem
+            // 
+            this.texture3ToolStripMenuItem.Name = "texture3ToolStripMenuItem";
+            this.texture3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.texture3ToolStripMenuItem.Text = "Texture3";
+            this.texture3ToolStripMenuItem.Click += new System.EventHandler(this.texture3ToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1167, 775);
+            this.ClientSize = new System.Drawing.Size(1167, 753);
+            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.buttonDel2);
             this.Controls.Add(this.objectListViewSongs);
             this.Controls.Add(this.panel1);
@@ -608,6 +703,8 @@
             this.Name = "MainWindow";
             this.Text = "Audio Organiser";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -625,13 +722,18 @@
 
         private System.Windows.Forms.VScrollBar vScrollBard;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenu;
-        private System.Windows.Forms.ToolStripMenuItem songToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem albumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem solidColorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem whiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem steelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lightSkyBlueStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem greenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem redToolStripMenuItem;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.ToolStripMenuItem xdToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonPlay;
@@ -675,6 +777,11 @@
         private BrightIdeasSoftware.OLVColumn year;
         private BrightIdeasSoftware.OLVColumn genre;
         private System.Windows.Forms.Button buttonDel2;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.ToolStripMenuItem textureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem texture0ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem texture1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem texture3ToolStripMenuItem;
     }
 }
 

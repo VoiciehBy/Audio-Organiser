@@ -75,25 +75,117 @@ namespace Audio_Organiser
 
         }
 
-        private void songToolStripMenuItem_Click(object sender, EventArgs e)
+        private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = @"Biblioteki\Muzyka";
-            openFileDialog1.FileName = "";
-            openFileDialog1.ShowDialog();
-            if (openFileDialog1.FileName != "")
-            {
-                string source = openFileDialog1.FileName;
-                saveFileDialog1.FileName = source;
-                saveFileDialog1.ShowDialog();
-                string destination = saveFileDialog1.FileName;
-                string command = " /C COPY " + "\"" + source + "\"" + " " + "\"" + destination + "\"";
-                System.Diagnostics.Process.Start("CMD.exe", command);
-            }
+            BackColor = DefaultBackColor;
+            defaultToolStripMenuItem.Checked = true;
+
+            solidColorToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            lightSkyBlueStripMenuItem.Checked = false;
+            blueToolStripMenuItem.Checked = false;
+            greenToolStripMenuItem.Checked = false;
+            redToolStripMenuItem.Checked = false;
         }
 
-        private void albumToolStripMenuItem_Click(object sender, EventArgs e)
+        private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Do not work yet.");
+            BackColor = Color.White;
+            solidColorToolStripMenuItem.Checked = true;
+            whiteToolStripMenuItem.Checked = true;
+
+            defaultToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            lightSkyBlueStripMenuItem.Checked = false;
+            blueToolStripMenuItem.Checked = false;
+            greenToolStripMenuItem.Checked = false;
+            redToolStripMenuItem.Checked = false;
+        }
+
+        private void steelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.FromArgb(255,122,125,128);
+            solidColorToolStripMenuItem.Checked = true;
+            steelToolStripMenuItem.Checked = true;
+
+            defaultToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            lightSkyBlueStripMenuItem.Checked = false;
+            blueToolStripMenuItem.Checked = false;
+            greenToolStripMenuItem.Checked = false;
+            redToolStripMenuItem.Checked = false;
+        }
+
+        private void lightSkyBlueStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.LightSkyBlue;
+            solidColorToolStripMenuItem.Checked = true;
+            lightSkyBlueStripMenuItem.Checked = true;
+
+            defaultToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            blueToolStripMenuItem.Checked = false;
+            greenToolStripMenuItem.Checked = false;
+            redToolStripMenuItem.Checked = false;
+        }
+
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.Blue;
+            solidColorToolStripMenuItem.Checked = true;
+            blueToolStripMenuItem.Checked = true;
+
+            defaultToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            lightSkyBlueStripMenuItem.Checked = false;
+            greenToolStripMenuItem.Checked = false;
+            redToolStripMenuItem.Checked = false;
+        }
+
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+            BackColor = Color.Green;
+            solidColorToolStripMenuItem.Checked = true;
+            greenToolStripMenuItem.Checked = true;
+
+            defaultToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            lightSkyBlueStripMenuItem.Checked = false;
+            blueToolStripMenuItem.Checked = false;
+            redToolStripMenuItem.Checked = false;
+        }
+
+        private void redToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.Red;
+            solidColorToolStripMenuItem.Checked = true;
+            redToolStripMenuItem.Checked = true;
+
+            defaultToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            lightSkyBlueStripMenuItem.Checked = false;
+            blueToolStripMenuItem.Checked = false;
+            greenToolStripMenuItem.Checked = false;
+        }
+
+        private void texture0ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void texture1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void texture3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
