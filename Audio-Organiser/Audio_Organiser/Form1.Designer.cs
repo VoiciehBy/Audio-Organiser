@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.dodajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonAdd2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonDel = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonDel2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonClear = new System.Windows.Forms.ToolStripMenuItem();
             this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solidColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +55,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.volumeBar = new System.Windows.Forms.TrackBar();
             this.textBoxArtist = new System.Windows.Forms.TextBox();
             this.textBoxAlbum = new System.Windows.Forms.TextBox();
@@ -63,7 +69,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.textBoxYear = new System.Windows.Forms.TextBox();
-            this.buttonDel = new System.Windows.Forms.Button();
             this.currentTime = new System.Windows.Forms.Label();
             this.currentLength = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -89,12 +94,12 @@
             this.album = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.year = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.genre = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.buttonDel2 = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
-            this.buttonAdd2 = new System.Windows.Forms.Button();
-            this.buttonClear = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.buttonEditClear = new System.Windows.Forms.Button();
+            this.buttonEditSearch = new System.Windows.Forms.Button();
+            this.buttonSearchCancel = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -107,12 +112,68 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dodajToolStripMenuItem,
+            this.usuńToolStripMenuItem,
             this.themesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1172, 24);
             this.menuStrip.TabIndex = 2;
             this.menuStrip.Text = "menuStrip1";
+            // 
+            // dodajToolStripMenuItem
+            // 
+            this.dodajToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.button2,
+            this.buttonAdd2});
+            this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
+            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.dodajToolStripMenuItem.Text = "Dodaj";
+            // 
+            // button2
+            // 
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(217, 22);
+            this.button2.Text = "Dodaj pliki";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonAdd2
+            // 
+            this.buttonAdd2.Name = "buttonAdd2";
+            this.buttonAdd2.Size = new System.Drawing.Size(217, 22);
+            this.buttonAdd2.Text = "Dodaj pliki z całego folderu";
+            this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
+            // 
+            // usuńToolStripMenuItem
+            // 
+            this.usuńToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buttonDel,
+            this.buttonDel2,
+            this.buttonClear});
+            this.usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
+            this.usuńToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.usuńToolStripMenuItem.Text = "Usuń";
+            // 
+            // buttonDel
+            // 
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(146, 22);
+            this.buttonDel.Text = "Usuń z bazy";
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // buttonDel2
+            // 
+            this.buttonDel2.Name = "buttonDel2";
+            this.buttonDel2.Size = new System.Drawing.Size(146, 22);
+            this.buttonDel2.Text = "Usuń z dysku";
+            this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(146, 22);
+            this.buttonClear.Text = "Wyczyść bazę";
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // themesToolStripMenuItem
             // 
@@ -121,8 +182,8 @@
             this.solidColorToolStripMenuItem,
             this.textureToolStripMenuItem});
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
-            this.themesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.themesToolStripMenuItem.Text = "Themes";
+            this.themesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.themesToolStripMenuItem.Text = "Motywy";
             // 
             // defaultToolStripMenuItem
             // 
@@ -233,23 +294,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(88, 446);
+            this.button1.Location = new System.Drawing.Point(11, 447);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 12;
             this.button1.Text = "Edytuj";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(11, 495);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Dodaj pliki";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // volumeBar
             // 
@@ -387,16 +438,6 @@
             this.textBoxYear.Name = "textBoxYear";
             this.textBoxYear.Size = new System.Drawing.Size(154, 20);
             this.textBoxYear.TabIndex = 20;
-            // 
-            // buttonDel
-            // 
-            this.buttonDel.Location = new System.Drawing.Point(166, 495);
-            this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(103, 23);
-            this.buttonDel.TabIndex = 23;
-            this.buttonDel.Text = "Usuń z bazy";
-            this.buttonDel.UseVisualStyleBackColor = true;
-            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // currentTime
             // 
@@ -605,9 +646,10 @@
             this.objectListViewSongs.Name = "objectListViewSongs";
             this.objectListViewSongs.SelectAllOnControlA = false;
             this.objectListViewSongs.ShowGroups = false;
-            this.objectListViewSongs.Size = new System.Drawing.Size(882, 969);
+            this.objectListViewSongs.Size = new System.Drawing.Size(882, 758);
             this.objectListViewSongs.TabIndex = 25;
             this.objectListViewSongs.UseCompatibleStateImageBehavior = false;
+            this.objectListViewSongs.UseFiltering = true;
             this.objectListViewSongs.UseHotControls = false;
             this.objectListViewSongs.View = System.Windows.Forms.View.Details;
             this.objectListViewSongs.AfterSorting += new System.EventHandler<BrightIdeasSoftware.AfterSortingEventArgs>(this.objectListViewSongs_AfterSorting);
@@ -662,16 +704,6 @@
             this.genre.Text = "Gatunek";
             this.genre.Width = 129;
             // 
-            // buttonDel2
-            // 
-            this.buttonDel2.Location = new System.Drawing.Point(169, 538);
-            this.buttonDel2.Name = "buttonDel2";
-            this.buttonDel2.Size = new System.Drawing.Size(103, 23);
-            this.buttonDel2.TabIndex = 34;
-            this.buttonDel2.Text = "Usuń z dysku";
-            this.buttonDel2.UseVisualStyleBackColor = true;
-            this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
-            // 
             // searchBox
             // 
             this.searchBox.Location = new System.Drawing.Point(980, 5);
@@ -680,49 +712,57 @@
             this.searchBox.TabIndex = 35;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
-            // buttonAdd2
-            // 
-            this.buttonAdd2.Location = new System.Drawing.Point(11, 538);
-            this.buttonAdd2.Name = "buttonAdd2";
-            this.buttonAdd2.Size = new System.Drawing.Size(148, 23);
-            this.buttonAdd2.TabIndex = 37;
-            this.buttonAdd2.Text = "Dodaj pliki z całego folderu";
-            this.buttonAdd2.UseVisualStyleBackColor = true;
-            this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
-            // 
-            // buttonClear
-            // 
-            this.buttonClear.Location = new System.Drawing.Point(169, 584);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(100, 23);
-            this.buttonClear.TabIndex = 38;
-            this.buttonClear.Text = "Wyczyść bazę";
-            this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
-            // 
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(0, 893);
+            this.logo.Location = new System.Drawing.Point(0, 680);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(138, 127);
             this.logo.TabIndex = 4;
             this.logo.TabStop = false;
+            // 
+            // buttonEditClear
+            // 
+            this.buttonEditClear.Location = new System.Drawing.Point(106, 447);
+            this.buttonEditClear.Name = "buttonEditClear";
+            this.buttonEditClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditClear.TabIndex = 39;
+            this.buttonEditClear.Text = "Wyczyść";
+            this.buttonEditClear.UseVisualStyleBackColor = true;
+            this.buttonEditClear.Click += new System.EventHandler(this.buttonEditClear_Click);
+            // 
+            // buttonEditSearch
+            // 
+            this.buttonEditSearch.Location = new System.Drawing.Point(196, 447);
+            this.buttonEditSearch.Name = "buttonEditSearch";
+            this.buttonEditSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditSearch.TabIndex = 40;
+            this.buttonEditSearch.Text = "Szukaj";
+            this.buttonEditSearch.UseVisualStyleBackColor = true;
+            this.buttonEditSearch.Click += new System.EventHandler(this.buttonEditSearch_Click);
+            // 
+            // buttonSearchCancel
+            // 
+            this.buttonSearchCancel.Location = new System.Drawing.Point(167, 489);
+            this.buttonSearchCancel.Name = "buttonSearchCancel";
+            this.buttonSearchCancel.Size = new System.Drawing.Size(104, 23);
+            this.buttonSearchCancel.TabIndex = 41;
+            this.buttonSearchCancel.Text = "Pokaż wszystko";
+            this.buttonSearchCancel.UseVisualStyleBackColor = true;
+            this.buttonSearchCancel.Click += new System.EventHandler(this.buttonSearchCancel_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1172, 1020);
-            this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.buttonAdd2);
+            this.ClientSize = new System.Drawing.Size(1172, 806);
+            this.Controls.Add(this.buttonSearchCancel);
+            this.Controls.Add(this.buttonEditSearch);
+            this.Controls.Add(this.buttonEditClear);
             this.Controls.Add(this.searchBox);
-            this.Controls.Add(this.buttonDel2);
             this.Controls.Add(this.objectListViewSongs);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.buttonDel);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.logo);
@@ -753,7 +793,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonPlay;
         private System.Windows.Forms.Button buttonPause;
         private System.Windows.Forms.Button buttonNext;
@@ -772,7 +811,6 @@
         private System.Windows.Forms.Label labelFile;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox textBoxGenre;
-        private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.TextBox textBoxYear;
         private System.Windows.Forms.PictureBox coverPictureBox;
         private System.Windows.Forms.Label currentTime;
@@ -794,7 +832,6 @@
         private BrightIdeasSoftware.OLVColumn album;
         private BrightIdeasSoftware.OLVColumn year;
         private BrightIdeasSoftware.OLVColumn genre;
-        private System.Windows.Forms.Button buttonDel2;
 
         //VRB
         private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
@@ -812,9 +849,17 @@
         private System.Windows.Forms.ToolStripMenuItem texture2ToolStripMenuItem;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.ToolStripMenuItem mistyRoseToolStripMenuItem;
-        private System.Windows.Forms.Button buttonAdd2;
-        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button buttonEditClear;
+        private System.Windows.Forms.Button buttonEditSearch;
+        private System.Windows.Forms.ToolStripMenuItem dodajToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem button2;
+        private System.Windows.Forms.ToolStripMenuItem buttonAdd2;
+        private System.Windows.Forms.ToolStripMenuItem usuńToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buttonDel;
+        private System.Windows.Forms.ToolStripMenuItem buttonDel2;
+        private System.Windows.Forms.ToolStripMenuItem buttonClear;
+        private System.Windows.Forms.Button buttonSearchCancel;
         //VRB
 
     }

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 //player
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
+using BrightIdeasSoftware;
 
 namespace Audio_Organiser
 {
@@ -53,6 +54,10 @@ namespace Audio_Organiser
         int list_id = 0; //id pliku na liście
         string db_id; //id pliku w bazie
 
+        songsInf toSearch = new songsInf ( "", "", "", "", "", "", "", "" );
+
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -69,10 +74,17 @@ namespace Audio_Organiser
             List<songsInf> item = new List<songsInf>();
             foreach (Song s in DatabaseDC.Song)
             {
+
                 item.Add(new songsInf(s.id.ToString(), s.path, s.file, s.artist, s.title, s.album, s.year.ToString(), s.genre));
 
             }
             objectListViewSongs.SetObjects(item);
+            //color
+            if(audioFile != null)
+            {
+                objectListViewSongs.Items[list_id].ForeColor = Color.Red;
+                objectListViewSongs.Refresh();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -260,7 +272,42 @@ namespace Audio_Organiser
                 updateClear();
             }
         }
-        
+
+        private void buttonEditClear_Click(object sender, EventArgs e)
+        {
+            textBoxFile.Text = "";
+            textBoxArtist.Text = "";
+            textBoxTitle.Text = "";
+            textBoxAlbum.Text = "";
+            textBoxYear.Text = "";
+            textBoxGenre.Text = "";
+            objectListViewSongs.DeselectAll();
+            //objectListViewSongs.sea
+        }
+
+        private void buttonEditSearch_Click(object sender, EventArgs e)
+        {
+            TextMatchFilter filter1 = TextMatchFilter.Contains(objectListViewSongs, textBoxFile.Text);
+            filter1.Columns = new[] { this.file };
+            TextMatchFilter filter2 = TextMatchFilter.Contains(objectListViewSongs, textBoxArtist.Text);
+            filter2.Columns = new[] { this.artist };
+            TextMatchFilter filter3 = TextMatchFilter.Contains(objectListViewSongs, textBoxTitle.Text);
+            filter3.Columns = new[] { this.title };
+            TextMatchFilter filter4 = TextMatchFilter.Contains(objectListViewSongs, textBoxAlbum.Text);
+            filter4.Columns = new[] { this.album };
+            TextMatchFilter filter5 = TextMatchFilter.Contains(objectListViewSongs, textBoxYear.Text);
+            filter5.Columns = new[] { this.year };
+            TextMatchFilter filter6 = TextMatchFilter.Contains(objectListViewSongs, textBoxGenre.Text);
+            filter6.Columns = new[] { this.genre };
+
+            this.objectListViewSongs.ModelFilter = new CompositeAllFilter(new List<IModelFilter> { filter1, filter2, filter3, filter4, filter5, filter6 });
+        }
+
+        private void buttonSearchCancel_Click(object sender, EventArgs e)
+        {
+            this.objectListViewSongs.ModelFilter = null;
+        }
+
         //player
         private void buttonPlay_Click(object sender, EventArgs e)
         {
@@ -297,6 +344,9 @@ namespace Audio_Organiser
             paused = false;
             stopped = false;
             currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+            //color
+            objectListViewSongs.Items[list_id].ForeColor = Color.Red;
+            objectListViewSongs.Refresh();
         }
         private void ResumeSong()
         {
@@ -339,6 +389,9 @@ namespace Audio_Organiser
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
+            //color
+            objectListViewSongs.Items[list_id].ForeColor = Color.Black;
+
             if (objectListViewSongs.GetItemCount() == 0)
             {
                 return;
@@ -388,6 +441,9 @@ namespace Audio_Organiser
                     currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
                 }
                 currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+                //color
+                objectListViewSongs.Items[list_id].ForeColor = Color.Red;
+                objectListViewSongs.Refresh();
             }
             else
             {
@@ -397,6 +453,9 @@ namespace Audio_Organiser
 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
+            //color
+            objectListViewSongs.Items[list_id].ForeColor = Color.Black;
+
             if (objectListViewSongs.GetItemCount() == 0)
             {
                 return;
@@ -445,6 +504,9 @@ namespace Audio_Organiser
                     currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
                 }
                 currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+                //color
+                objectListViewSongs.Items[list_id].ForeColor = Color.Red;
+                objectListViewSongs.Refresh();
 
             }
             else
@@ -568,6 +630,9 @@ namespace Audio_Organiser
             {
                 if (outputDevice.PlaybackState == PlaybackState.Stopped && playing == true && paused == false && stopped == false)
                 {
+                    //color
+                    objectListViewSongs.Items[list_id].ForeColor = Color.Black;
+
                     int last = objectListViewSongs.GetItemCount() - 1;
                     if (looplist == false && list_id == last)
                     {
@@ -613,6 +678,9 @@ namespace Audio_Organiser
                             currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
                         }
                         currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+                        //color
+                        objectListViewSongs.Items[list_id].ForeColor = Color.Red;
+                        objectListViewSongs.Refresh();
                     }
                     else
                     {
@@ -682,6 +750,9 @@ namespace Audio_Organiser
 
         private void objectListViewSongs_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            //color
+            objectListViewSongs.Items[list_id].ForeColor = Color.Black;
+
             outputDevice?.Stop();
             if (audioFile != null)
             {
@@ -711,6 +782,9 @@ namespace Audio_Organiser
             paused = false;
             stopped = false;
             currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+            //color
+            objectListViewSongs.Items[list_id].ForeColor = Color.Red;
+            objectListViewSongs.Refresh();
         }
         private void currentLength_Click(object sender, EventArgs e)
         {
