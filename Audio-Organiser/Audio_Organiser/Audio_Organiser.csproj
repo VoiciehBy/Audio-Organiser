@@ -158,6 +158,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Leather.png" />
+    <None Include="Resources\Blue Web.png" />
+    <None Include="Resources\3D Green.png" />
+    <None Include="Resources\loop_s.png" />
+    <None Include="Resources\loop_pl.png" />
+    <None Include="Resources\auto.png" />
+    <None Include="Resources\mute_off.png" />
+    <None Include="Resources\mute_on.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="muzyka.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -165,11 +175,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>muzyka.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\loop_s.png" />
-    <None Include="Resources\loop_pl.png" />
-    <None Include="Resources\auto.png" />
-    <None Include="Resources\mute_off.png" />
-    <None Include="Resources\mute_on.png" />
+    <None Include="Resources\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

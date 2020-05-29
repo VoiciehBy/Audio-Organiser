@@ -790,8 +790,8 @@ namespace Audio_Organiser
         {
 
         }
-        //VRB_Events
 
+        //VRB_Events
         private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BackColor = DefaultBackColor;
@@ -805,12 +805,12 @@ namespace Audio_Organiser
             paoloVeronesesGreenToolStripMenuItem.Checked = false;
             lightSalmonToolStripMenuItem.Checked = false; 
             mistyRoseToolStripMenuItem.Checked = false;
+            textureToolStripMenuItem.Checked = false;
         }
 
         private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BackColor = Color.White;
-            //
             solidColorToolStripMenuItem.Checked = true;
             whiteToolStripMenuItem.Checked = true;
 
@@ -821,6 +821,7 @@ namespace Audio_Organiser
             paoloVeronesesGreenToolStripMenuItem.Checked = false;
             lightSalmonToolStripMenuItem.Checked = false; 
             mistyRoseToolStripMenuItem.Checked = false;
+            textureToolStripMenuItem.Checked = false;
         }
 
         private void steelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -836,6 +837,7 @@ namespace Audio_Organiser
             paoloVeronesesGreenToolStripMenuItem.Checked = false;
             lightSalmonToolStripMenuItem.Checked = false; 
             mistyRoseToolStripMenuItem.Checked = false;
+            textureToolStripMenuItem.Checked = false;
         }
 
         private void lightSkyBlueToolStripMenuItem_Click(object sender, EventArgs e)
@@ -851,6 +853,7 @@ namespace Audio_Organiser
             paoloVeronesesGreenToolStripMenuItem.Checked = false;
             lightSalmonToolStripMenuItem.Checked = false; 
             mistyRoseToolStripMenuItem.Checked = false;
+            textureToolStripMenuItem.Checked = false;
         }
 
         private void lightSteelBlueToolStripMenuItem_Click(object sender, EventArgs e)
@@ -866,6 +869,7 @@ namespace Audio_Organiser
             paoloVeronesesGreenToolStripMenuItem.Checked = false;
             lightSalmonToolStripMenuItem.Checked = false; 
             mistyRoseToolStripMenuItem.Checked = false;
+            textureToolStripMenuItem.Checked = false;
         }
 
         private void paoloVeronesesGreenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -881,6 +885,7 @@ namespace Audio_Organiser
             lightSteelBlueToolStripMenuItem.Checked = false;
             lightSalmonToolStripMenuItem.Checked = false;
             mistyRoseToolStripMenuItem.Checked = false;
+            textureToolStripMenuItem.Checked = false;
         }
 
         private void lightSalmonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -896,6 +901,7 @@ namespace Audio_Organiser
             lightSteelBlueToolStripMenuItem.Checked = false;
             paoloVeronesesGreenToolStripMenuItem.Checked = false;
             mistyRoseToolStripMenuItem.Checked = false;
+            textureToolStripMenuItem.Checked = false;
         }
 
         private void mistyRoseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -911,21 +917,65 @@ namespace Audio_Organiser
             lightSkyBlueToolStripMenuItem.Checked = false;
             lightSteelBlueToolStripMenuItem.Checked = false;
             paoloVeronesesGreenToolStripMenuItem.Checked = false;
+            textureToolStripMenuItem.Checked = false;
         }
 
-        private void texture0ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void freeDGreenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            BackgroundImage = global::Audio_Organiser.Properties.Resources._3D_Green;
+            textureToolStripMenuItem.Checked = true;
+            freeDGreenToolStripMenuItem.Checked = true;
 
+            blueWebToolStripMenuItem.Checked = false;
+            leatherToolStripMenuItem.Checked = false;
+            solidColorToolStripMenuItem.Checked = false;
+            lightSalmonToolStripMenuItem.Checked = false;
+            defaultToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            lightSkyBlueToolStripMenuItem.Checked = false;
+            lightSteelBlueToolStripMenuItem.Checked = false;
+            paoloVeronesesGreenToolStripMenuItem.Checked = false;
+            mistyRoseToolStripMenuItem.Checked = false;
         }
 
-        private void texture1ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void blueWebToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            BackgroundImage = global::Audio_Organiser.Properties.Resources.Blue_Web;
+            textureToolStripMenuItem.Checked = true;
+            blueWebToolStripMenuItem.Checked = true;
 
+            freeDGreenToolStripMenuItem.Checked = false;
+            leatherToolStripMenuItem.Checked = false;
+            solidColorToolStripMenuItem.Checked = false;
+            lightSalmonToolStripMenuItem.Checked = false;
+            defaultToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            lightSkyBlueToolStripMenuItem.Checked = false;
+            lightSteelBlueToolStripMenuItem.Checked = false;
+            paoloVeronesesGreenToolStripMenuItem.Checked = false;
+            mistyRoseToolStripMenuItem.Checked = false;
         }
 
-        private void texture2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void leatherToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            BackgroundImage = global::Audio_Organiser.Properties.Resources.Leather;
+            textureToolStripMenuItem.Checked = true;
+            leatherToolStripMenuItem.Checked = true;
 
+
+            freeDGreenToolStripMenuItem.Checked = false;
+            blueWebToolStripMenuItem.Checked = false;
+            solidColorToolStripMenuItem.Checked = false;
+            lightSalmonToolStripMenuItem.Checked = false;
+            defaultToolStripMenuItem.Checked = false;
+            whiteToolStripMenuItem.Checked = false;
+            steelToolStripMenuItem.Checked = false;
+            lightSkyBlueToolStripMenuItem.Checked = false;
+            lightSteelBlueToolStripMenuItem.Checked = false;
+            paoloVeronesesGreenToolStripMenuItem.Checked = false;
+mistyRoseToolStripMenuItem.Checked = false;
         }
 
         private void searchBox_TextChanged(object sender, EventArgs e)
