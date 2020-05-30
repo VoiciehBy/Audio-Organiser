@@ -1,4 +1,6 @@
-﻿namespace Audio_Organiser
+﻿using System.Drawing;
+
+namespace Audio_Organiser
 {
     partial class MainWindow
     {
@@ -65,6 +67,7 @@
             this.currentArtist = new System.Windows.Forms.Label();
             this.currentSong = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.prog = new System.Windows.Forms.TrackBar();
             this.buttonLoopList = new System.Windows.Forms.Button();
             this.buttonLoopSong = new System.Windows.Forms.Button();
             this.buttonAutoplay = new System.Windows.Forms.Button();
@@ -113,18 +116,20 @@
             this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.textBoxYear = new System.Windows.Forms.TextBox();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.prog = new System.Windows.Forms.TrackBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonPlAdd = new System.Windows.Forms.Button();
+            this.buttonPlUp = new System.Windows.Forms.Button();
             this.kontrolka1 = new Audio_Organiser.Kontrolka();
+            this.buttonPlDown = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.prog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewSongs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewPlaylist)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prog)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -421,6 +426,16 @@
             this.panel1.Size = new System.Drawing.Size(261, 179);
             this.panel1.TabIndex = 33;
             // 
+            // prog
+            // 
+            this.prog.BackColor = System.Drawing.Color.DarkGray;
+            this.prog.Enabled = false;
+            this.prog.Location = new System.Drawing.Point(57, 148);
+            this.prog.Name = "prog";
+            this.prog.Size = new System.Drawing.Size(144, 45);
+            this.prog.TabIndex = 33;
+            this.prog.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
             // buttonLoopList
             // 
             this.buttonLoopList.FlatAppearance.BorderSize = 0;
@@ -641,7 +656,7 @@
             // 
             // buttonPlClear
             // 
-            this.buttonPlClear.Location = new System.Drawing.Point(179, 710);
+            this.buttonPlClear.Location = new System.Drawing.Point(197, 710);
             this.buttonPlClear.Name = "buttonPlClear";
             this.buttonPlClear.Size = new System.Drawing.Size(75, 23);
             this.buttonPlClear.TabIndex = 50;
@@ -651,7 +666,7 @@
             // 
             // buttonPlDel
             // 
-            this.buttonPlDel.Location = new System.Drawing.Point(36, 710);
+            this.buttonPlDel.Location = new System.Drawing.Point(11, 710);
             this.buttonPlDel.Name = "buttonPlDel";
             this.buttonPlDel.Size = new System.Drawing.Size(75, 23);
             this.buttonPlDel.TabIndex = 49;
@@ -915,22 +930,34 @@
             this.logo.TabIndex = 59;
             this.logo.TabStop = false;
             // 
-            // prog
-            // 
-            this.prog.BackColor = System.Drawing.Color.DarkGray;
-            this.prog.Enabled = false;
-            this.prog.Location = new System.Drawing.Point(57, 148);
-            this.prog.Name = "prog";
-            this.prog.Size = new System.Drawing.Size(144, 45);
-            this.prog.TabIndex = 33;
-            this.prog.TickStyle = System.Windows.Forms.TickStyle.None;
-            // 
             // toolTip1
             // 
             this.toolTip1.AutomaticDelay = 1000;
             this.toolTip1.AutoPopDelay = 10000;
             this.toolTip1.InitialDelay = 1000;
             this.toolTip1.ReshowDelay = 1000;
+            // 
+            // buttonPlAdd
+            // 
+            this.buttonPlAdd.Location = new System.Drawing.Point(894, 554);
+            this.buttonPlAdd.Name = "buttonPlAdd";
+            this.buttonPlAdd.Size = new System.Drawing.Size(147, 23);
+            this.buttonPlAdd.TabIndex = 60;
+            this.buttonPlAdd.Text = "Dodaj wszystko do playlisty";
+            this.buttonPlAdd.UseVisualStyleBackColor = true;
+            this.buttonPlAdd.Click += new System.EventHandler(this.buttonPlAdd_Click);
+            // 
+            // buttonPlUp
+            // 
+            this.buttonPlUp.FlatAppearance.BorderSize = 0;
+            this.buttonPlUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPlUp.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlUp.Image")));
+            this.buttonPlUp.Location = new System.Drawing.Point(149, 710);
+            this.buttonPlUp.Name = "buttonPlUp";
+            this.buttonPlUp.Size = new System.Drawing.Size(26, 26);
+            this.buttonPlUp.TabIndex = 61;
+            this.buttonPlUp.UseVisualStyleBackColor = true;
+            this.buttonPlUp.Click += new System.EventHandler(this.buttonPlUp_Click);
             // 
             // kontrolka1
             // 
@@ -939,9 +966,22 @@
             this.kontrolka1.GradientRadius = 55;
             this.kontrolka1.Location = new System.Drawing.Point(0, 12);
             this.kontrolka1.Name = "kontrolka1";
-            this.kontrolka1.Size = new System.Drawing.Size(1182, 726);
+            this.kontrolka1.Size = new System.Drawing.Size(1182, 20);
             this.kontrolka1.TabIndex = 42;
             this.kontrolka1.Visible = false;
+            // 
+            // buttonPlDown
+            // 
+            this.buttonPlDown.FlatAppearance.BorderSize = 0;
+            this.buttonPlDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPlDown.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlDown.Image")));
+            this.buttonPlDown.Image.RotateFlip(RotateFlipType.Rotate180FlipX);
+            this.buttonPlDown.Location = new System.Drawing.Point(108, 710);
+            this.buttonPlDown.Name = "buttonPlDown";
+            this.buttonPlDown.Size = new System.Drawing.Size(26, 26);
+            this.buttonPlDown.TabIndex = 62;
+            this.buttonPlDown.UseVisualStyleBackColor = true;
+            this.buttonPlDown.Click += new System.EventHandler(this.buttonPlDown_Click);
             // 
             // MainWindow
             // 
@@ -949,6 +989,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1182, 739);
+            this.Controls.Add(this.buttonPlDown);
+            this.Controls.Add(this.buttonPlUp);
+            this.Controls.Add(this.buttonPlAdd);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.buttonSearchCancel);
             this.Controls.Add(this.buttonEditSearch);
@@ -974,13 +1017,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.prog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewSongs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewPlaylist)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1077,6 +1120,9 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.TrackBar prog;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button buttonPlAdd;
+        private System.Windows.Forms.Button buttonPlUp;
+        private System.Windows.Forms.Button buttonPlDown;
     }
 }
 

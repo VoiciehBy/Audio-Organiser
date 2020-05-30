@@ -111,12 +111,6 @@ namespace Audio_Organiser
 
             }
             objectListViewSongs.SetObjects(item);
-            //color
-            if (audioFile != null)
-            {
-                objectListViewPlaylist.Items[list_id].ForeColor = Color.Red;
-                objectListViewPlaylist.Refresh();
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -129,6 +123,8 @@ namespace Audio_Organiser
             string s = Path.GetExtension(s2);
             if (s == ".mp3" || s == ".wav")
             {
+                foreach (ListViewItem item in objectListViewSongs.Items)
+                    if (s2 == item.SubItems[1].Text) return;
                 var f = TagLib.File.Create(s2);
                 Song newSong = new Song();
                 newSong.file = Path.GetFileNameWithoutExtension(s2);
@@ -361,11 +357,55 @@ namespace Audio_Organiser
             }
         }
 
-
         private void buttonPlClear_Click(object sender, EventArgs e)
         {
             objectListViewPlaylist.Objects = null;
             RefreshPlaylistID(0);
+        }
+
+        private void buttonPlAdd_Click(object sender, EventArgs e)
+        {
+            foreach (object item in objectListViewSongs.Objects)
+            {
+                objectListViewPlaylist.AddObject(item);
+            }
+        }
+
+        private void buttonPlUp_Click(object sender, EventArgs e)
+        {
+            if (objectListViewPlaylist.SelectedItems.Count == 0) return;
+            int index = objectListViewPlaylist.SelectedIndices[0];
+            if (index == 0) return;
+            int index2 = index-1;
+            ListViewItem item = objectListViewPlaylist.Items[index];
+            ListViewItem item2 = objectListViewPlaylist.Items[index2];
+            objectListViewPlaylist.Items.Remove(item);
+            objectListViewPlaylist.Items.Remove(item2);
+            objectListViewPlaylist.Items.Insert(index2, item);
+            objectListViewPlaylist.Items[index2].SubItems[2].Text = (index2+1).ToString();
+            objectListViewPlaylist.Items.Insert(index, item2);
+            objectListViewPlaylist.Items[index].SubItems[2].Text = (index+1).ToString();
+            if (index == list_id) list_id--;
+            else if (index == list_id + 1) list_id++;
+        }
+
+        private void buttonPlDown_Click(object sender, EventArgs e)
+        {
+
+            if (objectListViewPlaylist.SelectedItems.Count == 0) return;
+            int index = objectListViewPlaylist.SelectedIndices[0];
+            if (index == objectListViewPlaylist.Items.Count - 1) return;
+            int index2 = index + 1;
+            ListViewItem item = objectListViewPlaylist.Items[index];
+            ListViewItem item2 = objectListViewPlaylist.Items[index2];
+            objectListViewPlaylist.Items.Remove(item);
+            objectListViewPlaylist.Items.Remove(item2);
+            objectListViewPlaylist.Items.Insert(index, item2);
+            objectListViewPlaylist.Items[index].SubItems[2].Text = (index + 1).ToString();
+            objectListViewPlaylist.Items.Insert(index2, item);
+            objectListViewPlaylist.Items[index2].SubItems[2].Text = (index2 + 1).ToString();
+            if (index == list_id) list_id++;
+            else if (index == list_id-1) list_id--;
         }
 
         //player
@@ -775,6 +815,7 @@ namespace Audio_Organiser
                     else
                     {
                         //nie ma pliku w tej sciezce
+                        return;
                     }
                 }
             }
@@ -821,6 +862,7 @@ namespace Audio_Organiser
                     else
                     {
                         //nie ma pliku w tej sciezce
+                        return;
                     }
                 }
             }
@@ -857,7 +899,8 @@ namespace Audio_Organiser
             }
             else
             {
-                //brak pliku w sciezce
+                //nie ma pliku w tej sciezce
+                return;
             }
 
             db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
@@ -1249,6 +1292,7 @@ namespace Audio_Organiser
             uncheckSolidColors();
             uncheckTextures();
         }
+
 
         /*private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
