@@ -113,6 +113,8 @@
             this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.textBoxYear = new System.Windows.Forms.TextBox();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.prog = new System.Windows.Forms.TrackBar();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.kontrolka1 = new Audio_Organiser.Kontrolka();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
@@ -122,6 +124,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewPlaylist)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prog)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -354,21 +357,22 @@
             // currentTime
             // 
             this.currentTime.AutoSize = true;
-            this.currentTime.Location = new System.Drawing.Point(102, 37);
+            this.currentTime.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.currentTime.Location = new System.Drawing.Point(3, 150);
             this.currentTime.Name = "currentTime";
-            this.currentTime.Size = new System.Drawing.Size(49, 13);
+            this.currentTime.Size = new System.Drawing.Size(56, 17);
             this.currentTime.TabIndex = 25;
             this.currentTime.Text = "00:00:00";
             // 
             // currentLength
             // 
             this.currentLength.AutoSize = true;
-            this.currentLength.Location = new System.Drawing.Point(147, 37);
+            this.currentLength.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.currentLength.Location = new System.Drawing.Point(200, 150);
             this.currentLength.Name = "currentLength";
-            this.currentLength.Size = new System.Drawing.Size(57, 13);
+            this.currentLength.Size = new System.Drawing.Size(56, 17);
             this.currentLength.TabIndex = 26;
-            this.currentLength.Text = "/ 00:00:00";
-            this.currentLength.Click += new System.EventHandler(this.currentLength_Click);
+            this.currentLength.Text = "00:00:00";
             // 
             // timer
             // 
@@ -377,23 +381,26 @@
             // currentArtist
             // 
             this.currentArtist.AutoEllipsis = true;
+            this.currentArtist.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.currentArtist.Location = new System.Drawing.Point(102, 6);
             this.currentArtist.Name = "currentArtist";
-            this.currentArtist.Size = new System.Drawing.Size(150, 13);
+            this.currentArtist.Size = new System.Drawing.Size(150, 20);
             this.currentArtist.TabIndex = 27;
             // 
             // currentSong
             // 
             this.currentSong.AutoEllipsis = true;
-            this.currentSong.Location = new System.Drawing.Point(102, 20);
+            this.currentSong.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.currentSong.Location = new System.Drawing.Point(103, 26);
             this.currentSong.Name = "currentSong";
-            this.currentSong.Size = new System.Drawing.Size(150, 13);
+            this.currentSong.Size = new System.Drawing.Size(150, 18);
             this.currentSong.TabIndex = 28;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.prog);
             this.panel1.Controls.Add(this.buttonLoopList);
             this.panel1.Controls.Add(this.currentSong);
             this.panel1.Controls.Add(this.buttonLoopSong);
@@ -425,6 +432,7 @@
             this.buttonLoopList.TabIndex = 31;
             this.buttonLoopList.UseVisualStyleBackColor = true;
             this.buttonLoopList.Click += new System.EventHandler(this.buttonLoopList_Click);
+            this.buttonLoopList.MouseHover += new System.EventHandler(this.buttonLoopList_MouseHover);
             // 
             // buttonLoopSong
             // 
@@ -437,6 +445,7 @@
             this.buttonLoopSong.TabIndex = 32;
             this.buttonLoopSong.UseVisualStyleBackColor = true;
             this.buttonLoopSong.Click += new System.EventHandler(this.buttonLoopSong_Click);
+            this.buttonLoopSong.MouseHover += new System.EventHandler(this.buttonLoopSong_MouseHover);
             // 
             // buttonAutoplay
             // 
@@ -449,6 +458,7 @@
             this.buttonAutoplay.TabIndex = 30;
             this.buttonAutoplay.UseVisualStyleBackColor = true;
             this.buttonAutoplay.Click += new System.EventHandler(this.buttonAutoplay_Click);
+            this.buttonAutoplay.MouseHover += new System.EventHandler(this.buttonAutoplay_MouseHover);
             // 
             // buttonMute
             // 
@@ -461,6 +471,7 @@
             this.buttonMute.TabIndex = 29;
             this.buttonMute.UseVisualStyleBackColor = true;
             this.buttonMute.Click += new System.EventHandler(this.buttonMute_Click);
+            this.buttonMute.MouseHover += new System.EventHandler(this.buttonMute_MouseHover);
             // 
             // coverPictureBox
             // 
@@ -481,6 +492,7 @@
             this.buttonStop.TabIndex = 20;
             this.buttonStop.UseVisualStyleBackColor = true;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
+            this.buttonStop.MouseHover += new System.EventHandler(this.buttonStop_MouseHover);
             // 
             // buttonPrevious
             // 
@@ -493,6 +505,7 @@
             this.buttonPrevious.TabIndex = 19;
             this.buttonPrevious.UseVisualStyleBackColor = true;
             this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
+            this.buttonPrevious.MouseHover += new System.EventHandler(this.buttonPrevious_MouseHover);
             // 
             // buttonNext
             // 
@@ -505,6 +518,7 @@
             this.buttonNext.TabIndex = 18;
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            this.buttonNext.MouseHover += new System.EventHandler(this.buttonNext_MouseHover);
             // 
             // buttonPause
             // 
@@ -517,6 +531,7 @@
             this.buttonPause.TabIndex = 17;
             this.buttonPause.UseVisualStyleBackColor = true;
             this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
+            this.buttonPause.MouseHover += new System.EventHandler(this.buttonPause_MouseHover);
             // 
             // buttonPlay
             // 
@@ -529,6 +544,7 @@
             this.buttonPlay.TabIndex = 16;
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+            this.buttonPlay.MouseHover += new System.EventHandler(this.buttonPlay_MouseHover);
             // 
             // objectListViewSongs
             // 
@@ -558,13 +574,12 @@
             this.objectListViewSongs.Name = "objectListViewSongs";
             this.objectListViewSongs.SelectAllOnControlA = false;
             this.objectListViewSongs.ShowGroups = false;
-            this.objectListViewSongs.Size = new System.Drawing.Size(882, 194);
+            this.objectListViewSongs.Size = new System.Drawing.Size(882, 506);
             this.objectListViewSongs.TabIndex = 25;
             this.objectListViewSongs.UseCompatibleStateImageBehavior = false;
             this.objectListViewSongs.UseFiltering = true;
             this.objectListViewSongs.UseHotControls = false;
             this.objectListViewSongs.View = System.Windows.Forms.View.Details;
-            this.objectListViewSongs.AfterSorting += new System.EventHandler<BrightIdeasSoftware.AfterSortingEventArgs>(this.objectListViewSongs_AfterSorting);
             this.objectListViewSongs.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.objectListViewSongs_ItemSelectionChanged);
             this.objectListViewSongs.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.objectListViewSongs_MouseDoubleClick);
             // 
@@ -626,7 +641,7 @@
             // 
             // buttonPlClear
             // 
-            this.buttonPlClear.Location = new System.Drawing.Point(179, 733);
+            this.buttonPlClear.Location = new System.Drawing.Point(179, 710);
             this.buttonPlClear.Name = "buttonPlClear";
             this.buttonPlClear.Size = new System.Drawing.Size(75, 23);
             this.buttonPlClear.TabIndex = 50;
@@ -636,7 +651,7 @@
             // 
             // buttonPlDel
             // 
-            this.buttonPlDel.Location = new System.Drawing.Point(20, 733);
+            this.buttonPlDel.Location = new System.Drawing.Point(36, 710);
             this.buttonPlDel.Name = "buttonPlDel";
             this.buttonPlDel.Size = new System.Drawing.Size(75, 23);
             this.buttonPlDel.TabIndex = 49;
@@ -663,13 +678,15 @@
             this.objectListViewPlaylist.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListViewPlaylist.FullRowSelect = true;
             this.objectListViewPlaylist.HideSelection = false;
-            this.objectListViewPlaylist.Location = new System.Drawing.Point(13, 224);
+            this.objectListViewPlaylist.Location = new System.Drawing.Point(11, 224);
             this.objectListViewPlaylist.Name = "objectListViewPlaylist";
             this.objectListViewPlaylist.ShowGroups = false;
-            this.objectListViewPlaylist.Size = new System.Drawing.Size(259, 480);
+            this.objectListViewPlaylist.Size = new System.Drawing.Size(261, 480);
             this.objectListViewPlaylist.TabIndex = 48;
             this.objectListViewPlaylist.UseCompatibleStateImageBehavior = false;
+            this.objectListViewPlaylist.UseHotControls = false;
             this.objectListViewPlaylist.View = System.Windows.Forms.View.Details;
+            this.objectListViewPlaylist.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.objectListViewPlaylist_MouseDoubleClick);
             // 
             // Id_p
             // 
@@ -725,7 +742,7 @@
             // 
             // buttonSearchCancel
             // 
-            this.buttonSearchCancel.Location = new System.Drawing.Point(1059, 482);
+            this.buttonSearchCancel.Location = new System.Drawing.Point(1056, 554);
             this.buttonSearchCancel.Name = "buttonSearchCancel";
             this.buttonSearchCancel.Size = new System.Drawing.Size(104, 23);
             this.buttonSearchCancel.TabIndex = 55;
@@ -735,7 +752,7 @@
             // 
             // buttonEditSearch
             // 
-            this.buttonEditSearch.Location = new System.Drawing.Point(1059, 439);
+            this.buttonEditSearch.Location = new System.Drawing.Point(543, 581);
             this.buttonEditSearch.Name = "buttonEditSearch";
             this.buttonEditSearch.Size = new System.Drawing.Size(75, 23);
             this.buttonEditSearch.TabIndex = 54;
@@ -745,7 +762,7 @@
             // 
             // buttonEditClear
             // 
-            this.buttonEditClear.Location = new System.Drawing.Point(967, 439);
+            this.buttonEditClear.Location = new System.Drawing.Point(543, 610);
             this.buttonEditClear.Name = "buttonEditClear";
             this.buttonEditClear.Size = new System.Drawing.Size(75, 23);
             this.buttonEditClear.TabIndex = 53;
@@ -755,7 +772,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(865, 439);
+            this.button1.Location = new System.Drawing.Point(543, 554);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 52;
@@ -780,7 +797,7 @@
             this.tableLayoutPanel1.Controls.Add(this.textBoxArtist, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxGenre, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(865, 239);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(278, 551);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -890,21 +907,39 @@
             // 
             // logo
             // 
+            this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(1044, 672);
+            this.logo.Location = new System.Drawing.Point(1044, 614);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(138, 127);
             this.logo.TabIndex = 59;
             this.logo.TabStop = false;
+            // 
+            // prog
+            // 
+            this.prog.BackColor = System.Drawing.Color.DarkGray;
+            this.prog.Enabled = false;
+            this.prog.Location = new System.Drawing.Point(57, 148);
+            this.prog.Name = "prog";
+            this.prog.Size = new System.Drawing.Size(144, 45);
+            this.prog.TabIndex = 33;
+            this.prog.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 1000;
+            this.toolTip1.AutoPopDelay = 10000;
+            this.toolTip1.InitialDelay = 1000;
+            this.toolTip1.ReshowDelay = 1000;
             // 
             // kontrolka1
             // 
             this.kontrolka1.Color1 = System.Drawing.Color.Empty;
             this.kontrolka1.Color2 = System.Drawing.Color.Empty;
             this.kontrolka1.GradientRadius = 55;
-            this.kontrolka1.Location = new System.Drawing.Point(0, 18);
+            this.kontrolka1.Location = new System.Drawing.Point(0, 12);
             this.kontrolka1.Name = "kontrolka1";
-            this.kontrolka1.Size = new System.Drawing.Size(1182, 781);
+            this.kontrolka1.Size = new System.Drawing.Size(1182, 726);
             this.kontrolka1.TabIndex = 42;
             this.kontrolka1.Visible = false;
             // 
@@ -913,7 +948,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1182, 798);
+            this.ClientSize = new System.Drawing.Size(1182, 739);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.buttonSearchCancel);
             this.Controls.Add(this.buttonEditSearch);
@@ -945,6 +980,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1039,6 +1075,8 @@
         private System.Windows.Forms.TextBox textBoxGenre;
         private System.Windows.Forms.TextBox textBoxYear;
         private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.TrackBar prog;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

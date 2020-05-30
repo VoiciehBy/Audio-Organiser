@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="muzyka" Class="DatabaseMusicDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\muzyka.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="Audio_Organiser.Properties.Settings" SettingsPropertyName="muzykaConnectionString4" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\teste2\30052020gigaupdate\baza\muzyka.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="Audio_Organiser.Properties.Settings" SettingsPropertyName="muzykaConnectionString6" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Song" Member="Song">
     <Type Name="Song">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

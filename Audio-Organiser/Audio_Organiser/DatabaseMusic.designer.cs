@@ -36,7 +36,7 @@ namespace Audio_Organiser
     #endregion
 		
 		public DatabaseMusicDataContext() : 
-				base(global::Audio_Organiser.Properties.Settings.Default.muzykaConnectionString4, mappingSource)
+				base(global::Audio_Organiser.Properties.Settings.Default.muzykaConnectionString6, mappingSource)
 		{
 			OnCreated();
 		}

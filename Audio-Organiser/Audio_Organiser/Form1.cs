@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 using BrightIdeasSoftware;
+using System.Text.RegularExpressions;
 
 namespace Audio_Organiser
 {
@@ -53,6 +54,8 @@ namespace Audio_Organiser
         bool looplist = false; //czy zapetlenie listy
         int list_id = 0; //id pliku na liście
         string db_id; //id pliku w bazie
+
+        songsInf toSearch = new songsInf("", "", "", "", "", "", "", "");
 
 
         public MainWindow()
@@ -111,9 +114,14 @@ namespace Audio_Organiser
             //color
             if (audioFile != null)
             {
-                objectListViewSongs.Items[list_id].ForeColor = Color.Red;
-                objectListViewSongs.Refresh();
+                objectListViewPlaylist.Items[list_id].ForeColor = Color.Red;
+                objectListViewPlaylist.Refresh();
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void addF(string s2)
@@ -344,6 +352,7 @@ namespace Audio_Organiser
             {
                 index = objectListViewPlaylist.SelectedIndices[0];
                 objectListViewPlaylist.RemoveObject(objectListViewPlaylist.GetModelObject(objectListViewPlaylist.SelectedIndices[0]));
+                RefreshPlaylistID(index);
             }
             if (objectListViewPlaylist.GetItemCount() > 0)
             {
@@ -352,20 +361,33 @@ namespace Audio_Organiser
             }
         }
 
+
         private void buttonPlClear_Click(object sender, EventArgs e)
         {
             objectListViewPlaylist.Objects = null;
+            RefreshPlaylistID(0);
         }
 
         //player
         private void buttonPlay_Click(object sender, EventArgs e)
         {
-            if (objectListViewSongs.GetItemCount() == 0)
+            if (objectListViewPlaylist.GetItemCount() == 0)
             {
+                if (audioFile != null)
+                {
+                    if (playing == true)
+                    {
+                        audioFile.Position = 0;
+                        return;
+                    }
+                    ResumeSong();
+                }
                 return;
             }
             if (playing == true)
             {
+                audioFile.Position = 0;
+                progressBar_Init();
                 return;
             }
             if (paused == true)
@@ -375,27 +397,30 @@ namespace Audio_Organiser
             }
             if (audioFile == null)
             {
-                if (File.Exists(objectListViewSongs.Items[list_id].SubItems[1].Text))
+                if (File.Exists(objectListViewPlaylist.Items[list_id].SubItems[1].Text))
                 {
-                    audioFile = new AudioFileReader(objectListViewSongs.Items[list_id].SubItems[1].Text);
+                    audioFile = new AudioFileReader(objectListViewPlaylist.Items[list_id].SubItems[1].Text);
                 }
                 else
                 {
                     //brak pliku w sciezce
                 }
             }
-            db_id = objectListViewSongs.Items[list_id].SubItems[0].Text;
+            db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
             outputDevice.Init(audioFile);
             UpdatePlayerInfo(list_id);
             LoadCoverArt(audioFile.FileName);
             outputDevice.Play();
+            progressBar_Init();
             playing = true;
             paused = false;
             stopped = false;
-            currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+            currentLength.Text = (audioFile.TotalTime).ToString().Substring(0, 8);
+            //
+
             //color
-            objectListViewSongs.Items[list_id].ForeColor = Color.Red;
-            objectListViewSongs.Refresh();
+            objectListViewPlaylist.Items[list_id].ForeColor = Color.Red;
+            objectListViewPlaylist.Refresh();
         }
         private void ResumeSong()
         {
@@ -438,14 +463,13 @@ namespace Audio_Organiser
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            //color
-            objectListViewSongs.Items[list_id].ForeColor = Color.Black;
-
-            if (objectListViewSongs.GetItemCount() == 0)
+            if (objectListViewPlaylist.GetItemCount() == 0)
             {
                 return;
             }
-            int last = objectListViewSongs.GetItemCount() - 1;
+            //color
+            objectListViewPlaylist.Items[list_id].ForeColor = Color.Black;
+            int last = objectListViewPlaylist.GetItemCount() - 1;
             if (looplist == false && list_id == last)
             {
                 return;
@@ -471,11 +495,11 @@ namespace Audio_Organiser
             {
                 list_id++;
             }
-            if (File.Exists(objectListViewSongs.Items[list_id].SubItems[1].Text))
+            if (File.Exists(objectListViewPlaylist.Items[list_id].SubItems[1].Text))
             {
-                audioFile = new AudioFileReader(objectListViewSongs.Items[list_id].SubItems[1].Text);
+                audioFile = new AudioFileReader(objectListViewPlaylist.Items[list_id].SubItems[1].Text);
 
-                db_id = objectListViewSongs.Items[list_id].SubItems[0].Text;
+                db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
                 outputDevice.Init(audioFile);
                 UpdatePlayerInfo(list_id);
                 LoadCoverArt(audioFile.FileName);
@@ -489,10 +513,12 @@ namespace Audio_Organiser
                 {
                     currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
                 }
-                currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+                currentLength.Text = (audioFile.TotalTime).ToString().Substring(0, 8);
+                //
+                progressBar_Init();
                 //color
-                objectListViewSongs.Items[list_id].ForeColor = Color.Red;
-                objectListViewSongs.Refresh();
+                objectListViewPlaylist.Items[list_id].ForeColor = Color.Red;
+                objectListViewPlaylist.Refresh();
             }
             else
             {
@@ -502,13 +528,12 @@ namespace Audio_Organiser
 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
-            //color
-            objectListViewSongs.Items[list_id].ForeColor = Color.Black;
-
-            if (objectListViewSongs.GetItemCount() == 0)
+            if (objectListViewPlaylist.GetItemCount() == 0)
             {
                 return;
             }
+            //color
+            objectListViewPlaylist.Items[list_id].ForeColor = Color.Black;
             if (looplist == false && list_id == 0)
             {
                 return;
@@ -528,17 +553,17 @@ namespace Audio_Organiser
             //
             if (looplist == true && list_id == 0)
             {
-                list_id = objectListViewSongs.GetItemCount() - 1;
+                list_id = objectListViewPlaylist.GetItemCount() - 1;
             }
             else
             {
                 list_id--;
             }
-            if (File.Exists(objectListViewSongs.Items[list_id].SubItems[1].Text))
+            if (File.Exists(objectListViewPlaylist.Items[list_id].SubItems[1].Text))
             {
-                audioFile = new AudioFileReader(objectListViewSongs.Items[list_id].SubItems[1].Text);
+                audioFile = new AudioFileReader(objectListViewPlaylist.Items[list_id].SubItems[1].Text);
 
-                db_id = objectListViewSongs.Items[list_id].SubItems[0].Text;
+                db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
                 outputDevice.Init(audioFile);
                 UpdatePlayerInfo(list_id);
                 LoadCoverArt(audioFile.FileName);
@@ -552,10 +577,12 @@ namespace Audio_Organiser
                 {
                     currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
                 }
-                currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+                currentLength.Text = (audioFile.TotalTime).ToString().Substring(0, 8);
+                //
+                progressBar_Init();
                 //color
-                objectListViewSongs.Items[list_id].ForeColor = Color.Red;
-                objectListViewSongs.Refresh();
+                objectListViewPlaylist.Items[list_id].ForeColor = Color.Red;
+                objectListViewPlaylist.Refresh();
 
             }
             else
@@ -567,8 +594,15 @@ namespace Audio_Organiser
 
         private void UpdatePlayerInfo(int id)
         {
-            currentArtist.Text = objectListViewSongs.Items[id].SubItems[4].Text;
-            currentSong.Text = objectListViewSongs.Items[id].SubItems[3].Text;
+            currentArtist.Text = objectListViewPlaylist.Items[id].SubItems[4].Text;
+            if (objectListViewPlaylist.Items[id].SubItems[5].Text == "")
+            {
+                currentSong.Text = objectListViewPlaylist.Items[id].SubItems[3].Text;
+            }
+            else
+            {
+                currentSong.Text = objectListViewPlaylist.Items[id].SubItems[5].Text;
+            }
         }
 
         private void LoadCoverArt(string pf) //pf = playing file 
@@ -675,14 +709,19 @@ namespace Audio_Organiser
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            //testbar.Text = prog.Value.ToString();
             if (autoplay == true)
             {
                 if (outputDevice.PlaybackState == PlaybackState.Stopped && playing == true && paused == false && stopped == false)
                 {
                     //color
-                    objectListViewSongs.Items[list_id].ForeColor = Color.Black;
+                    if (objectListViewPlaylist.GetItemCount() == 0)
+                    {
+                        return;
+                    }
+                    objectListViewPlaylist.Items[list_id].ForeColor = Color.Black;
 
-                    int last = objectListViewSongs.GetItemCount() - 1;
+                    int last = objectListViewPlaylist.GetItemCount() - 1;
                     if (looplist == false && list_id == last)
                     {
                         return;
@@ -708,11 +747,11 @@ namespace Audio_Organiser
                     {
                         list_id++;
                     }
-                    if (File.Exists(objectListViewSongs.Items[list_id].SubItems[1].Text))
+                    if (File.Exists(objectListViewPlaylist.Items[list_id].SubItems[1].Text))
                     {
-                        audioFile = new AudioFileReader(objectListViewSongs.Items[list_id].SubItems[1].Text);
+                        audioFile = new AudioFileReader(objectListViewPlaylist.Items[list_id].SubItems[1].Text);
 
-                        db_id = objectListViewSongs.Items[list_id].SubItems[0].Text;
+                        db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
                         outputDevice.Init(audioFile);
                         UpdatePlayerInfo(list_id);
                         LoadCoverArt(audioFile.FileName);
@@ -726,10 +765,12 @@ namespace Audio_Organiser
                         {
                             currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
                         }
-                        currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+                        currentLength.Text = (audioFile.TotalTime).ToString().Substring(0, 8);
+                        //
+                        progressBar_Init();
                         //color
-                        objectListViewSongs.Items[list_id].ForeColor = Color.Red;
-                        objectListViewSongs.Refresh();
+                        objectListViewPlaylist.Items[list_id].ForeColor = Color.Red;
+                        objectListViewPlaylist.Refresh();
                     }
                     else
                     {
@@ -753,11 +794,15 @@ namespace Audio_Organiser
                         paused = false;
                     }
                     //
-                    if (File.Exists(objectListViewSongs.Items[list_id].SubItems[1].Text))
+                    if (objectListViewPlaylist.GetItemCount() == 0)
                     {
-                        audioFile = new AudioFileReader(objectListViewSongs.Items[list_id].SubItems[1].Text);
+                        return;
+                    }
+                    if (File.Exists(objectListViewPlaylist.Items[list_id].SubItems[1].Text))
+                    {
+                        audioFile = new AudioFileReader(objectListViewPlaylist.Items[list_id].SubItems[1].Text);
 
-                        db_id = objectListViewSongs.Items[list_id].SubItems[0].Text;
+                        db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
                         outputDevice.Init(audioFile);
                         if (stopped == false)
                         {
@@ -769,7 +814,9 @@ namespace Audio_Organiser
                         {
                             currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
                         }
-                        currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+                        currentLength.Text = (audioFile.TotalTime).ToString().Substring(0, 8);
+                        //
+                        progressBar_Init();
                     }
                     else
                     {
@@ -780,27 +827,18 @@ namespace Audio_Organiser
 
             if (playing == true)
             {
-                currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
-            }
-        }
-
-        private void objectListViewSongs_AfterSorting(object sender, BrightIdeasSoftware.AfterSortingEventArgs e)
-        {
-            //po posortowaniu list_id odtwarzanego utworu może się zmienić
-            for (int i = 0; i < objectListViewSongs.GetItemCount(); i++)
-            {
-                if (objectListViewSongs.Items[i].SubItems[0].Text == db_id)
+                if (currentTime.Text != (audioFile.CurrentTime).ToString().Substring(0, 8))
                 {
-                    list_id = objectListViewSongs.Items[i].Index;
-                    break;
+                    currentTime.Text = (audioFile.CurrentTime).ToString().Substring(0, 8);
+                    if (prog.Value != prog.Maximum) prog.Value += 1;
                 }
             }
         }
 
         private void objectListViewPlaylist_MouseDoubleClick(object sender, MouseEventArgs e)
-        {/*
+        {
             //color
-            objectListViewSongs.Items[list_id].ForeColor = Color.Black;
+            objectListViewPlaylist.Items[list_id].ForeColor = Color.Black;
 
             outputDevice?.Stop();
             if (audioFile != null)
@@ -812,17 +850,17 @@ namespace Audio_Organiser
             paused = false;
             stopped = true;
 
-            list_id = objectListViewSongs.SelectedIndices[0];
-            if (File.Exists(objectListViewSongs.Items[list_id].SubItems[1].Text))
+            list_id = objectListViewPlaylist.SelectedIndices[0];
+            if (File.Exists(objectListViewPlaylist.Items[list_id].SubItems[1].Text))
             {
-                audioFile = new AudioFileReader(objectListViewSongs.SelectedItems[0].SubItems[1].Text);
+                audioFile = new AudioFileReader(objectListViewPlaylist.SelectedItems[0].SubItems[1].Text);
             }
             else
             {
                 //brak pliku w sciezce
             }
 
-            db_id = objectListViewSongs.Items[list_id].SubItems[0].Text;
+            db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
             outputDevice.Init(audioFile);
             UpdatePlayerInfo(list_id);
             LoadCoverArt(audioFile.FileName);
@@ -830,14 +868,112 @@ namespace Audio_Organiser
             playing = true;
             paused = false;
             stopped = false;
-            currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
+            currentLength.Text = (audioFile.TotalTime).ToString().Substring(0, 8);
+            //
+            progressBar_Init();
             //color
-            objectListViewSongs.Items[list_id].ForeColor = Color.Red;
-            objectListViewSongs.Refresh();*/
+            objectListViewPlaylist.Items[list_id].ForeColor = Color.Red;
+            objectListViewPlaylist.Refresh();
         }
-        private void currentLength_Click(object sender, EventArgs e)
-        {
 
+        private void RefreshPlaylistID(int index)
+        {
+            if (index <= list_id && list_id != 0)
+            {
+                list_id--;
+            }
+            if (objectListViewPlaylist.GetItemCount() == 0)
+            {
+                list_id = 0;
+            }
+        }
+
+        //prog
+        private void progressBar_Init()
+        {
+            prog.Value = 0;
+            //oblicz wartosc dla maximum
+            string h = (audioFile.TotalTime).ToString().Substring(0, 2);
+            string m = (audioFile.TotalTime).ToString().Substring(3, 2);
+            string s = (audioFile.TotalTime).ToString().Substring(6, 2);
+
+            int result = Int16.Parse(h) * 3600 + Int16.Parse(m) * 60 + Int16.Parse(s) * 1;
+
+            prog.Maximum = result;
+        }
+
+        //player info
+        private void buttonPrevious_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonPrevious, "Previous");
+        }
+
+        private void buttonPlay_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonPlay, "Play");
+        }
+
+        private void buttonPause_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonPause, "Pause");
+        }
+
+        private void buttonStop_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonStop, "Stop");
+        }
+
+        private void buttonNext_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonNext, "Next");
+        }
+
+        private void buttonAutoplay_MouseHover(object sender, EventArgs e)
+        {
+            if (autoplay == false)
+            {
+                toolTip1.SetToolTip(buttonAutoplay, "Enable autoplay");
+            }
+            else
+            {
+                toolTip1.SetToolTip(buttonAutoplay, "Disable autoplay");
+            }
+        }
+
+        private void buttonLoopList_MouseHover(object sender, EventArgs e)
+        {
+            if (looplist == false)
+            {
+                toolTip1.SetToolTip(buttonLoopList, "Enable playlist loop");
+            }
+            else
+            {
+                toolTip1.SetToolTip(buttonLoopList, "Disable playlist loop");
+            }
+        }
+
+        private void buttonLoopSong_MouseHover(object sender, EventArgs e)
+        {
+            if (loopsong == false)
+            {
+                toolTip1.SetToolTip(buttonLoopSong, "Repeat track");
+            }
+            else
+            {
+                toolTip1.SetToolTip(buttonLoopSong, "Disable repeat");
+            }
+        }
+
+        private void buttonMute_MouseHover(object sender, EventArgs e)
+        {
+            if (muted == false)
+            {
+                toolTip1.SetToolTip(buttonMute, "Mute audio");
+            }
+            else
+            {
+                toolTip1.SetToolTip(buttonMute, "Unmute audio");
+            }
         }
 
         //VRB_Events
