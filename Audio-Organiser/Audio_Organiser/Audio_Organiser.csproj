@@ -78,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AudioPlayer.cs" />
+    <Compile Include="DatabaseMusic.cs">
+      <DependentUpon>DatabaseMusic.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseMusic.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +92,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kontrolka.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -148,7 +152,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 i x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -158,9 +162,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Leather.png" />
-    <None Include="Resources\Blue Web.png" />
-    <None Include="Resources\3D Green.png" />
     <None Include="Resources\loop_s.png" />
     <None Include="Resources\loop_pl.png" />
     <None Include="Resources\auto.png" />
@@ -175,6 +176,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>muzyka.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Leather.png" />
+    <None Include="Resources\Blue Web.png" />
+    <None Include="Resources\3D Green.png" />
     <None Include="Resources\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
