@@ -58,21 +58,7 @@
             this.gradient2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
             this.volumeBar = new System.Windows.Forms.TrackBar();
-            this.textBoxArtist = new System.Windows.Forms.TextBox();
-            this.textBoxAlbum = new System.Windows.Forms.TextBox();
-            this.labelGenre = new System.Windows.Forms.Label();
-            this.labelYear = new System.Windows.Forms.Label();
-            this.labelAlbum = new System.Windows.Forms.Label();
-            this.textBoxFile = new System.Windows.Forms.TextBox();
-            this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.labelArtist = new System.Windows.Forms.Label();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.labelFile = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxGenre = new System.Windows.Forms.TextBox();
-            this.textBoxYear = new System.Windows.Forms.TextBox();
             this.currentTime = new System.Windows.Forms.Label();
             this.currentLength = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -98,19 +84,43 @@
             this.album = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.year = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.genre = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.searchBox = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.logo = new System.Windows.Forms.PictureBox();
-            this.buttonEditClear = new System.Windows.Forms.Button();
-            this.buttonEditSearch = new System.Windows.Forms.Button();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.buttonPlClear = new System.Windows.Forms.Button();
+            this.buttonPlDel = new System.Windows.Forms.Button();
+            this.objectListViewPlaylist = new BrightIdeasSoftware.ObjectListView();
+            this.Id_p = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Path_p = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Id_auto = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.File_p = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Artist_p = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Title_p = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.buttonSearchCancel = new System.Windows.Forms.Button();
+            this.buttonEditSearch = new System.Windows.Forms.Button();
+            this.buttonEditClear = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelFile = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelArtist = new System.Windows.Forms.Label();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
+            this.textBoxFile = new System.Windows.Forms.TextBox();
+            this.labelAlbum = new System.Windows.Forms.Label();
+            this.labelYear = new System.Windows.Forms.Label();
+            this.labelGenre = new System.Windows.Forms.Label();
+            this.textBoxAlbum = new System.Windows.Forms.TextBox();
+            this.textBoxArtist = new System.Windows.Forms.TextBox();
+            this.textBoxGenre = new System.Windows.Forms.TextBox();
+            this.textBoxYear = new System.Windows.Forms.TextBox();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.kontrolka1 = new Audio_Organiser.Kontrolka();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewSongs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListViewPlaylist)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +132,7 @@
             this.themesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1172, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1182, 24);
             this.menuStrip.TabIndex = 2;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -132,20 +142,20 @@
             this.button2,
             this.buttonAdd2});
             this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
-            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.dodajToolStripMenuItem.Text = "Dodaj";
             // 
             // button2
             // 
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 22);
+            this.button2.Size = new System.Drawing.Size(217, 22);
             this.button2.Text = "Dodaj pliki";
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonAdd2
             // 
             this.buttonAdd2.Name = "buttonAdd2";
-            this.buttonAdd2.Size = new System.Drawing.Size(202, 22);
+            this.buttonAdd2.Size = new System.Drawing.Size(217, 22);
             this.buttonAdd2.Text = "Dodaj pliki z całego folderu";
             this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
             // 
@@ -156,27 +166,27 @@
             this.buttonDel2,
             this.buttonClear});
             this.usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
-            this.usuńToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.usuńToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.usuńToolStripMenuItem.Text = "Usuń";
             // 
             // buttonDel
             // 
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(142, 22);
+            this.buttonDel.Size = new System.Drawing.Size(146, 22);
             this.buttonDel.Text = "Usuń z bazy";
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonDel2
             // 
             this.buttonDel2.Name = "buttonDel2";
-            this.buttonDel2.Size = new System.Drawing.Size(142, 22);
+            this.buttonDel2.Size = new System.Drawing.Size(146, 22);
             this.buttonDel2.Text = "Usuń z dysku";
             this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
             // 
             // buttonClear
             // 
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(142, 22);
+            this.buttonClear.Size = new System.Drawing.Size(146, 22);
             this.buttonClear.Text = "Wyczyść bazę";
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
@@ -188,7 +198,7 @@
             this.textureToolStripMenuItem,
             this.gradientToolStripMenuItem});
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
-            this.themesToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.themesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.themesToolStripMenuItem.Text = "Motywy";
             // 
             // defaultToolStripMenuItem
@@ -196,7 +206,7 @@
             this.defaultToolStripMenuItem.Checked = true;
             this.defaultToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.defaultToolStripMenuItem.Text = "Default";
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
@@ -211,55 +221,55 @@
             this.lightSalmonToolStripMenuItem,
             this.mistyRoseToolStripMenuItem});
             this.solidColorToolStripMenuItem.Name = "solidColorToolStripMenuItem";
-            this.solidColorToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.solidColorToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.solidColorToolStripMenuItem.Text = "Solid Color";
             // 
             // whiteToolStripMenuItem
             // 
             this.whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            this.whiteToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.whiteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.whiteToolStripMenuItem.Text = "White";
             this.whiteToolStripMenuItem.Click += new System.EventHandler(this.whiteToolStripMenuItem_Click);
             // 
             // steelToolStripMenuItem
             // 
             this.steelToolStripMenuItem.Name = "steelToolStripMenuItem";
-            this.steelToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.steelToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.steelToolStripMenuItem.Text = "Steel";
             this.steelToolStripMenuItem.Click += new System.EventHandler(this.steelToolStripMenuItem_Click);
             // 
             // lightSkyBlueToolStripMenuItem
             // 
             this.lightSkyBlueToolStripMenuItem.Name = "lightSkyBlueToolStripMenuItem";
-            this.lightSkyBlueToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.lightSkyBlueToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.lightSkyBlueToolStripMenuItem.Text = "Light Sky Blue";
             this.lightSkyBlueToolStripMenuItem.Click += new System.EventHandler(this.lightSkyBlueToolStripMenuItem_Click);
             // 
             // lightSteelBlueToolStripMenuItem
             // 
             this.lightSteelBlueToolStripMenuItem.Name = "lightSteelBlueToolStripMenuItem";
-            this.lightSteelBlueToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.lightSteelBlueToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.lightSteelBlueToolStripMenuItem.Text = "Light Steel Blue";
             this.lightSteelBlueToolStripMenuItem.Click += new System.EventHandler(this.lightSteelBlueToolStripMenuItem_Click);
             // 
             // paoloVeronesesGreenToolStripMenuItem
             // 
             this.paoloVeronesesGreenToolStripMenuItem.Name = "paoloVeronesesGreenToolStripMenuItem";
-            this.paoloVeronesesGreenToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.paoloVeronesesGreenToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.paoloVeronesesGreenToolStripMenuItem.Text = "Paolo Veronese\'s Green";
             this.paoloVeronesesGreenToolStripMenuItem.Click += new System.EventHandler(this.paoloVeronesesGreenToolStripMenuItem_Click);
             // 
             // lightSalmonToolStripMenuItem
             // 
             this.lightSalmonToolStripMenuItem.Name = "lightSalmonToolStripMenuItem";
-            this.lightSalmonToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.lightSalmonToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.lightSalmonToolStripMenuItem.Text = "Light Salmon";
             this.lightSalmonToolStripMenuItem.Click += new System.EventHandler(this.lightSalmonToolStripMenuItem_Click);
             // 
             // mistyRoseToolStripMenuItem
             // 
             this.mistyRoseToolStripMenuItem.Name = "mistyRoseToolStripMenuItem";
-            this.mistyRoseToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.mistyRoseToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.mistyRoseToolStripMenuItem.Text = "Misty Rose";
             this.mistyRoseToolStripMenuItem.Click += new System.EventHandler(this.mistyRoseToolStripMenuItem_Click);
             // 
@@ -270,27 +280,27 @@
             this.blueWebToolStripMenuItem,
             this.leatherToolStripMenuItem});
             this.textureToolStripMenuItem.Name = "textureToolStripMenuItem";
-            this.textureToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.textureToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.textureToolStripMenuItem.Text = "Texture";
             // 
             // freeDGreenToolStripMenuItem
             // 
             this.freeDGreenToolStripMenuItem.Name = "freeDGreenToolStripMenuItem";
-            this.freeDGreenToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.freeDGreenToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.freeDGreenToolStripMenuItem.Text = "3D Green";
             this.freeDGreenToolStripMenuItem.Click += new System.EventHandler(this.freeDGreenToolStripMenuItem_Click);
             // 
             // blueWebToolStripMenuItem
             // 
             this.blueWebToolStripMenuItem.Name = "blueWebToolStripMenuItem";
-            this.blueWebToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.blueWebToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.blueWebToolStripMenuItem.Text = "Blue Web";
             this.blueWebToolStripMenuItem.Click += new System.EventHandler(this.blueWebToolStripMenuItem_Click);
             // 
             // leatherToolStripMenuItem
             // 
             this.leatherToolStripMenuItem.Name = "leatherToolStripMenuItem";
-            this.leatherToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.leatherToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.leatherToolStripMenuItem.Text = "Leather";
             this.leatherToolStripMenuItem.Click += new System.EventHandler(this.leatherToolStripMenuItem_Click);
             // 
@@ -301,27 +311,27 @@
             this.gradient1ToolStripMenuItem,
             this.gradient2ToolStripMenuItem});
             this.gradientToolStripMenuItem.Name = "gradientToolStripMenuItem";
-            this.gradientToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.gradientToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.gradientToolStripMenuItem.Text = "Gradient";
             // 
             // gradient0ToolStripMenuItem
             // 
             this.gradient0ToolStripMenuItem.Name = "gradient0ToolStripMenuItem";
-            this.gradient0ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.gradient0ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.gradient0ToolStripMenuItem.Text = "Gradient0";
             this.gradient0ToolStripMenuItem.Click += new System.EventHandler(this.gradient0ToolStripMenuItem_Click);
             // 
             // gradient1ToolStripMenuItem
             // 
             this.gradient1ToolStripMenuItem.Name = "gradient1ToolStripMenuItem";
-            this.gradient1ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.gradient1ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.gradient1ToolStripMenuItem.Text = "Gradient1";
             this.gradient1ToolStripMenuItem.Click += new System.EventHandler(this.gradient1ToolStripMenuItem_Click);
             // 
             // gradient2ToolStripMenuItem
             // 
             this.gradient2ToolStripMenuItem.Name = "gradient2ToolStripMenuItem";
-            this.gradient2ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.gradient2ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.gradient2ToolStripMenuItem.Text = "Gradient2";
             this.gradient2ToolStripMenuItem.Click += new System.EventHandler(this.gradient2ToolStripMenuItem_Click);
             // 
@@ -329,152 +339,17 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(11, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Edytuj";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // volumeBar
             // 
             this.volumeBar.LargeChange = 10;
             this.volumeBar.Location = new System.Drawing.Point(105, 56);
             this.volumeBar.Maximum = 100;
             this.volumeBar.Name = "volumeBar";
-            this.volumeBar.Size = new System.Drawing.Size(104, 42);
+            this.volumeBar.Size = new System.Drawing.Size(104, 45);
             this.volumeBar.SmallChange = 10;
             this.volumeBar.TabIndex = 21;
             this.volumeBar.Value = 100;
             this.volumeBar.Scroll += new System.EventHandler(this.volumeBar_Scroll);
-            // 
-            // textBoxArtist
-            // 
-            this.textBoxArtist.Location = new System.Drawing.Point(102, 33);
-            this.textBoxArtist.Name = "textBoxArtist";
-            this.textBoxArtist.Size = new System.Drawing.Size(154, 20);
-            this.textBoxArtist.TabIndex = 12;
-            // 
-            // textBoxAlbum
-            // 
-            this.textBoxAlbum.Location = new System.Drawing.Point(102, 93);
-            this.textBoxAlbum.Name = "textBoxAlbum";
-            this.textBoxAlbum.Size = new System.Drawing.Size(154, 20);
-            this.textBoxAlbum.TabIndex = 17;
-            // 
-            // labelGenre
-            // 
-            this.labelGenre.AutoSize = true;
-            this.labelGenre.Location = new System.Drawing.Point(3, 150);
-            this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(48, 13);
-            this.labelGenre.TabIndex = 16;
-            this.labelGenre.Text = "Gatunek";
-            // 
-            // labelYear
-            // 
-            this.labelYear.AutoSize = true;
-            this.labelYear.Location = new System.Drawing.Point(3, 120);
-            this.labelYear.Name = "labelYear";
-            this.labelYear.Size = new System.Drawing.Size(27, 13);
-            this.labelYear.TabIndex = 15;
-            this.labelYear.Text = "Rok";
-            // 
-            // labelAlbum
-            // 
-            this.labelAlbum.AutoSize = true;
-            this.labelAlbum.Location = new System.Drawing.Point(3, 90);
-            this.labelAlbum.Name = "labelAlbum";
-            this.labelAlbum.Size = new System.Drawing.Size(36, 13);
-            this.labelAlbum.TabIndex = 14;
-            this.labelAlbum.Text = "Album";
-            // 
-            // textBoxFile
-            // 
-            this.textBoxFile.Location = new System.Drawing.Point(102, 3);
-            this.textBoxFile.Name = "textBoxFile";
-            this.textBoxFile.Size = new System.Drawing.Size(154, 20);
-            this.textBoxFile.TabIndex = 11;
-            // 
-            // textBoxTitle
-            // 
-            this.textBoxTitle.Location = new System.Drawing.Point(102, 63);
-            this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(154, 20);
-            this.textBoxTitle.TabIndex = 13;
-            // 
-            // labelArtist
-            // 
-            this.labelArtist.AutoSize = true;
-            this.labelArtist.Location = new System.Drawing.Point(3, 30);
-            this.labelArtist.Name = "labelArtist";
-            this.labelArtist.Size = new System.Drawing.Size(70, 26);
-            this.labelArtist.TabIndex = 9;
-            this.labelArtist.Text = "Wykonawca albumu";
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(3, 60);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(32, 13);
-            this.labelTitle.TabIndex = 10;
-            this.labelTitle.Text = "Tytuł";
-            // 
-            // labelFile
-            // 
-            this.labelFile.AutoSize = true;
-            this.labelFile.Location = new System.Drawing.Point(3, 0);
-            this.labelFile.Name = "labelFile";
-            this.labelFile.Size = new System.Drawing.Size(65, 13);
-            this.labelFile.TabIndex = 8;
-            this.labelFile.Text = "Nazwa pliku";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.3812F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.6188F));
-            this.tableLayoutPanel1.Controls.Add(this.labelFile, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelTitle, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.labelArtist, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxTitle, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxFile, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelAlbum, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.labelYear, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.labelGenre, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxAlbum, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxArtist, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxGenre, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 248);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(259, 182);
-            this.tableLayoutPanel1.TabIndex = 11;
-            // 
-            // textBoxGenre
-            // 
-            this.textBoxGenre.Location = new System.Drawing.Point(102, 153);
-            this.textBoxGenre.Name = "textBoxGenre";
-            this.textBoxGenre.Size = new System.Drawing.Size(154, 20);
-            this.textBoxGenre.TabIndex = 19;
-            // 
-            // textBoxYear
-            // 
-            this.textBoxYear.Location = new System.Drawing.Point(102, 123);
-            this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(154, 20);
-            this.textBoxYear.TabIndex = 20;
             // 
             // currentTime
             // 
@@ -683,7 +558,7 @@
             this.objectListViewSongs.Name = "objectListViewSongs";
             this.objectListViewSongs.SelectAllOnControlA = false;
             this.objectListViewSongs.ShowGroups = false;
-            this.objectListViewSongs.Size = new System.Drawing.Size(882, 758);
+            this.objectListViewSongs.Size = new System.Drawing.Size(882, 194);
             this.objectListViewSongs.TabIndex = 25;
             this.objectListViewSongs.UseCompatibleStateImageBehavior = false;
             this.objectListViewSongs.UseFiltering = true;
@@ -749,54 +624,287 @@
             this.searchBox.TabIndex = 35;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
-            // logo
+            // buttonPlClear
             // 
-            this.logo.BackColor = System.Drawing.Color.Transparent;
-            this.logo.Image = global::Audio_Organiser.Properties.Resources.Logo;
-            this.logo.Location = new System.Drawing.Point(0, 627);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(138, 127);
-            this.logo.TabIndex = 4;
-            this.logo.TabStop = false;
+            this.buttonPlClear.Location = new System.Drawing.Point(179, 733);
+            this.buttonPlClear.Name = "buttonPlClear";
+            this.buttonPlClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlClear.TabIndex = 50;
+            this.buttonPlClear.Text = "Wyczyść";
+            this.buttonPlClear.UseVisualStyleBackColor = true;
+            this.buttonPlClear.Click += new System.EventHandler(this.buttonPlClear_Click);
             // 
-            // buttonEditClear
+            // buttonPlDel
             // 
-            this.buttonEditClear.Location = new System.Drawing.Point(106, 447);
-            this.buttonEditClear.Name = "buttonEditClear";
-            this.buttonEditClear.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditClear.TabIndex = 39;
-            this.buttonEditClear.Text = "Wyczyść";
-            this.buttonEditClear.UseVisualStyleBackColor = true;
-            this.buttonEditClear.Click += new System.EventHandler(this.buttonEditClear_Click);
+            this.buttonPlDel.Location = new System.Drawing.Point(20, 733);
+            this.buttonPlDel.Name = "buttonPlDel";
+            this.buttonPlDel.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlDel.TabIndex = 49;
+            this.buttonPlDel.Text = "Usuń";
+            this.buttonPlDel.UseVisualStyleBackColor = true;
+            this.buttonPlDel.Click += new System.EventHandler(this.buttonPlDel_Click);
+            // 
+            // objectListViewPlaylist
+            // 
+            this.objectListViewPlaylist.AllColumns.Add(this.Id_p);
+            this.objectListViewPlaylist.AllColumns.Add(this.Path_p);
+            this.objectListViewPlaylist.AllColumns.Add(this.Id_auto);
+            this.objectListViewPlaylist.AllColumns.Add(this.File_p);
+            this.objectListViewPlaylist.AllColumns.Add(this.Artist_p);
+            this.objectListViewPlaylist.AllColumns.Add(this.Title_p);
+            this.objectListViewPlaylist.CellEditUseWholeCell = false;
+            this.objectListViewPlaylist.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Id_p,
+            this.Path_p,
+            this.Id_auto,
+            this.File_p,
+            this.Artist_p,
+            this.Title_p});
+            this.objectListViewPlaylist.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListViewPlaylist.FullRowSelect = true;
+            this.objectListViewPlaylist.HideSelection = false;
+            this.objectListViewPlaylist.Location = new System.Drawing.Point(13, 224);
+            this.objectListViewPlaylist.Name = "objectListViewPlaylist";
+            this.objectListViewPlaylist.ShowGroups = false;
+            this.objectListViewPlaylist.Size = new System.Drawing.Size(259, 480);
+            this.objectListViewPlaylist.TabIndex = 48;
+            this.objectListViewPlaylist.UseCompatibleStateImageBehavior = false;
+            this.objectListViewPlaylist.View = System.Windows.Forms.View.Details;
+            // 
+            // Id_p
+            // 
+            this.Id_p.AspectName = "id";
+            this.Id_p.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Id_p.Searchable = false;
+            this.Id_p.Sortable = false;
+            this.Id_p.Text = "Id_DB";
+            this.Id_p.UseFiltering = false;
+            this.Id_p.Width = 0;
+            // 
+            // Path_p
+            // 
+            this.Path_p.AspectName = "path";
+            this.Path_p.Searchable = false;
+            this.Path_p.Sortable = false;
+            this.Path_p.Text = "Ścieżka";
+            this.Path_p.UseFiltering = false;
+            this.Path_p.Width = 0;
+            // 
+            // Id_auto
+            // 
+            this.Id_auto.AspectName = "id_auto";
+            this.Id_auto.IsTileViewColumn = true;
+            this.Id_auto.Searchable = false;
+            this.Id_auto.Sortable = false;
+            this.Id_auto.Text = "Id";
+            this.Id_auto.UseFiltering = false;
+            // 
+            // File_p
+            // 
+            this.File_p.AspectName = "file";
+            this.File_p.Searchable = false;
+            this.File_p.Sortable = false;
+            this.File_p.Text = "Plik";
+            this.File_p.UseFiltering = false;
+            // 
+            // Artist_p
+            // 
+            this.Artist_p.AspectName = "artist";
+            this.Artist_p.Searchable = false;
+            this.Artist_p.Sortable = false;
+            this.Artist_p.Text = "Wykonawca";
+            this.Artist_p.UseFiltering = false;
+            // 
+            // Title_p
+            // 
+            this.Title_p.AspectName = "title";
+            this.Title_p.Searchable = false;
+            this.Title_p.Sortable = false;
+            this.Title_p.Text = "Tytuł";
+            this.Title_p.UseFiltering = false;
+            // 
+            // buttonSearchCancel
+            // 
+            this.buttonSearchCancel.Location = new System.Drawing.Point(1059, 482);
+            this.buttonSearchCancel.Name = "buttonSearchCancel";
+            this.buttonSearchCancel.Size = new System.Drawing.Size(104, 23);
+            this.buttonSearchCancel.TabIndex = 55;
+            this.buttonSearchCancel.Text = "Pokaż wszystko";
+            this.buttonSearchCancel.UseVisualStyleBackColor = true;
+            this.buttonSearchCancel.Click += new System.EventHandler(this.buttonSearchCancel_Click);
             // 
             // buttonEditSearch
             // 
-            this.buttonEditSearch.Location = new System.Drawing.Point(196, 447);
+            this.buttonEditSearch.Location = new System.Drawing.Point(1059, 439);
             this.buttonEditSearch.Name = "buttonEditSearch";
             this.buttonEditSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditSearch.TabIndex = 40;
+            this.buttonEditSearch.TabIndex = 54;
             this.buttonEditSearch.Text = "Szukaj";
             this.buttonEditSearch.UseVisualStyleBackColor = true;
             this.buttonEditSearch.Click += new System.EventHandler(this.buttonEditSearch_Click);
             // 
-            // buttonSearchCancel
+            // buttonEditClear
             // 
-            this.buttonSearchCancel.Location = new System.Drawing.Point(167, 489);
-            this.buttonSearchCancel.Name = "buttonSearchCancel";
-            this.buttonSearchCancel.Size = new System.Drawing.Size(104, 23);
-            this.buttonSearchCancel.TabIndex = 41;
-            this.buttonSearchCancel.Text = "Pokaż wszystko";
-            this.buttonSearchCancel.UseVisualStyleBackColor = true;
-            this.buttonSearchCancel.Click += new System.EventHandler(this.buttonSearchCancel_Click);
+            this.buttonEditClear.Location = new System.Drawing.Point(967, 439);
+            this.buttonEditClear.Name = "buttonEditClear";
+            this.buttonEditClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditClear.TabIndex = 53;
+            this.buttonEditClear.Text = "Wyczyść";
+            this.buttonEditClear.UseVisualStyleBackColor = true;
+            this.buttonEditClear.Click += new System.EventHandler(this.buttonEditClear_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(865, 439);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Edytuj";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.3812F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.6188F));
+            this.tableLayoutPanel1.Controls.Add(this.labelFile, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelTitle, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelArtist, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxTitle, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxFile, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelAlbum, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.labelYear, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.labelGenre, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxAlbum, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxArtist, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxGenre, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(865, 239);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(259, 182);
+            this.tableLayoutPanel1.TabIndex = 51;
+            // 
+            // labelFile
+            // 
+            this.labelFile.AutoSize = true;
+            this.labelFile.Location = new System.Drawing.Point(3, 0);
+            this.labelFile.Name = "labelFile";
+            this.labelFile.Size = new System.Drawing.Size(65, 13);
+            this.labelFile.TabIndex = 8;
+            this.labelFile.Text = "Nazwa pliku";
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(3, 60);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(32, 13);
+            this.labelTitle.TabIndex = 10;
+            this.labelTitle.Text = "Tytuł";
+            // 
+            // labelArtist
+            // 
+            this.labelArtist.AutoSize = true;
+            this.labelArtist.Location = new System.Drawing.Point(3, 30);
+            this.labelArtist.Name = "labelArtist";
+            this.labelArtist.Size = new System.Drawing.Size(70, 26);
+            this.labelArtist.TabIndex = 9;
+            this.labelArtist.Text = "Wykonawca albumu";
+            // 
+            // textBoxTitle
+            // 
+            this.textBoxTitle.Location = new System.Drawing.Point(102, 63);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(154, 20);
+            this.textBoxTitle.TabIndex = 13;
+            // 
+            // textBoxFile
+            // 
+            this.textBoxFile.Location = new System.Drawing.Point(102, 3);
+            this.textBoxFile.Name = "textBoxFile";
+            this.textBoxFile.Size = new System.Drawing.Size(154, 20);
+            this.textBoxFile.TabIndex = 11;
+            // 
+            // labelAlbum
+            // 
+            this.labelAlbum.AutoSize = true;
+            this.labelAlbum.Location = new System.Drawing.Point(3, 90);
+            this.labelAlbum.Name = "labelAlbum";
+            this.labelAlbum.Size = new System.Drawing.Size(36, 13);
+            this.labelAlbum.TabIndex = 14;
+            this.labelAlbum.Text = "Album";
+            // 
+            // labelYear
+            // 
+            this.labelYear.AutoSize = true;
+            this.labelYear.Location = new System.Drawing.Point(3, 120);
+            this.labelYear.Name = "labelYear";
+            this.labelYear.Size = new System.Drawing.Size(27, 13);
+            this.labelYear.TabIndex = 15;
+            this.labelYear.Text = "Rok";
+            // 
+            // labelGenre
+            // 
+            this.labelGenre.AutoSize = true;
+            this.labelGenre.Location = new System.Drawing.Point(3, 150);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(48, 13);
+            this.labelGenre.TabIndex = 16;
+            this.labelGenre.Text = "Gatunek";
+            // 
+            // textBoxAlbum
+            // 
+            this.textBoxAlbum.Location = new System.Drawing.Point(102, 93);
+            this.textBoxAlbum.Name = "textBoxAlbum";
+            this.textBoxAlbum.Size = new System.Drawing.Size(154, 20);
+            this.textBoxAlbum.TabIndex = 17;
+            // 
+            // textBoxArtist
+            // 
+            this.textBoxArtist.Location = new System.Drawing.Point(102, 33);
+            this.textBoxArtist.Name = "textBoxArtist";
+            this.textBoxArtist.Size = new System.Drawing.Size(154, 20);
+            this.textBoxArtist.TabIndex = 12;
+            // 
+            // textBoxGenre
+            // 
+            this.textBoxGenre.Location = new System.Drawing.Point(102, 153);
+            this.textBoxGenre.Name = "textBoxGenre";
+            this.textBoxGenre.Size = new System.Drawing.Size(154, 20);
+            this.textBoxGenre.TabIndex = 19;
+            // 
+            // textBoxYear
+            // 
+            this.textBoxYear.Location = new System.Drawing.Point(102, 123);
+            this.textBoxYear.Name = "textBoxYear";
+            this.textBoxYear.Size = new System.Drawing.Size(154, 20);
+            this.textBoxYear.TabIndex = 20;
+            // 
+            // logo
+            // 
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(1044, 672);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(138, 127);
+            this.logo.TabIndex = 59;
+            this.logo.TabStop = false;
             // 
             // kontrolka1
             // 
             this.kontrolka1.Color1 = System.Drawing.Color.Empty;
             this.kontrolka1.Color2 = System.Drawing.Color.Empty;
-            this.kontrolka1.GradientRadius = 0;
-            this.kontrolka1.Location = new System.Drawing.Point(0, 0);
+            this.kontrolka1.GradientRadius = 55;
+            this.kontrolka1.Location = new System.Drawing.Point(0, 18);
             this.kontrolka1.Name = "kontrolka1";
-            this.kontrolka1.Size = new System.Drawing.Size(1180, 780);
+            this.kontrolka1.Size = new System.Drawing.Size(1182, 781);
             this.kontrolka1.TabIndex = 42;
             this.kontrolka1.Visible = false;
             // 
@@ -805,16 +913,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1172, 753);
+            this.ClientSize = new System.Drawing.Size(1182, 798);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.buttonSearchCancel);
             this.Controls.Add(this.buttonEditSearch);
             this.Controls.Add(this.buttonEditClear);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.buttonPlClear);
+            this.Controls.Add(this.buttonPlDel);
+            this.Controls.Add(this.objectListViewPlaylist);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.objectListViewSongs);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.logo);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.kontrolka1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -822,15 +933,17 @@
             this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "Audio Organiser";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectListViewSongs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListViewPlaylist)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -839,29 +952,14 @@
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonPlay;
         private System.Windows.Forms.Button buttonPause;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonPrevious;
         private System.Windows.Forms.Button buttonStop;
         private System.Windows.Forms.TrackBar volumeBar;
-        private System.Windows.Forms.TextBox textBoxArtist;
-        private System.Windows.Forms.TextBox textBoxAlbum;
-        private System.Windows.Forms.Label labelGenre;
-        private System.Windows.Forms.Label labelYear;
-        private System.Windows.Forms.Label labelAlbum;
-        private System.Windows.Forms.TextBox textBoxFile;
-        private System.Windows.Forms.TextBox textBoxTitle;
-        private System.Windows.Forms.Label labelArtist;
-        private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Label labelFile;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBoxGenre;
-        private System.Windows.Forms.TextBox textBoxYear;
         private System.Windows.Forms.PictureBox coverPictureBox;
         private System.Windows.Forms.Label currentTime;
         private System.Windows.Forms.Label currentLength;
@@ -897,13 +995,10 @@
         private System.Windows.Forms.ToolStripMenuItem freeDGreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blueWebToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem leatherToolStripMenuItem;
-        private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.ToolStripMenuItem mistyRoseToolStripMenuItem;
         //VRB
 
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button buttonEditClear;
-        private System.Windows.Forms.Button buttonEditSearch;
         private System.Windows.Forms.ToolStripMenuItem dodajToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem button2;
         private System.Windows.Forms.ToolStripMenuItem buttonAdd2;
@@ -911,12 +1006,39 @@
         private System.Windows.Forms.ToolStripMenuItem buttonDel;
         private System.Windows.Forms.ToolStripMenuItem buttonDel2;
         private System.Windows.Forms.ToolStripMenuItem buttonClear;
-        private System.Windows.Forms.Button buttonSearchCancel;
         private System.Windows.Forms.ToolStripMenuItem gradientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradient0ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradient1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradient2ToolStripMenuItem;
+        private System.Windows.Forms.TextBox searchBox;
         private Kontrolka kontrolka1;
+        private System.Windows.Forms.Button buttonPlClear;
+        private System.Windows.Forms.Button buttonPlDel;
+        private BrightIdeasSoftware.ObjectListView objectListViewPlaylist;
+        private BrightIdeasSoftware.OLVColumn Id_p;
+        private BrightIdeasSoftware.OLVColumn Path_p;
+        private BrightIdeasSoftware.OLVColumn Id_auto;
+        private BrightIdeasSoftware.OLVColumn File_p;
+        private BrightIdeasSoftware.OLVColumn Artist_p;
+        private BrightIdeasSoftware.OLVColumn Title_p;
+        private System.Windows.Forms.Button buttonSearchCancel;
+        private System.Windows.Forms.Button buttonEditSearch;
+        private System.Windows.Forms.Button buttonEditClear;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label labelFile;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelArtist;
+        private System.Windows.Forms.TextBox textBoxTitle;
+        private System.Windows.Forms.TextBox textBoxFile;
+        private System.Windows.Forms.Label labelAlbum;
+        private System.Windows.Forms.Label labelYear;
+        private System.Windows.Forms.Label labelGenre;
+        private System.Windows.Forms.TextBox textBoxAlbum;
+        private System.Windows.Forms.TextBox textBoxArtist;
+        private System.Windows.Forms.TextBox textBoxGenre;
+        private System.Windows.Forms.TextBox textBoxYear;
+        private System.Windows.Forms.PictureBox logo;
     }
 }
 

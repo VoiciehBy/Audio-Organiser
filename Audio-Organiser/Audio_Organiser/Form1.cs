@@ -54,9 +54,6 @@ namespace Audio_Organiser
         int list_id = 0; //id pliku na liście
         string db_id; //id pliku w bazie
 
-        songsInf toSearch = new songsInf("", "", "", "", "", "", "", "");
-
-
 
         public MainWindow()
         {
@@ -66,6 +63,38 @@ namespace Audio_Organiser
             outputDevice.Volume = 1f;
             outputDevice?.Stop();
             LoadMusic();
+            objectListViewPlaylist.FormatRow += delegate (object sender, FormatRowEventArgs args)
+            {
+                args.Item.SubItems[2].Text = (args.RowIndex + 1).ToString();
+            };
+            string s;
+            if (!File.Exists("playlist.txt")) return;
+            using (StreamReader sr = new StreamReader("playlist.txt"))
+            {
+                while ((s = sr.ReadLine()) != null)
+                {
+                    foreach (ListViewItem item in objectListViewSongs.Items)
+                    {
+                        if (s == item.SubItems[0].Text)
+                        {
+                            objectListViewPlaylist.AddObject(objectListViewSongs.GetModelObject(item.Index));
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            using (StreamWriter file =
+                new StreamWriter("playlist.txt"))
+            {
+                foreach (ListViewItem item in objectListViewPlaylist.Items)
+                {
+                    file.WriteLine(item.SubItems[0].Text);
+                }
+            }
         }
 
         private void LoadMusic()
@@ -85,11 +114,6 @@ namespace Audio_Organiser
                 objectListViewSongs.Items[list_id].ForeColor = Color.Red;
                 objectListViewSongs.Refresh();
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void addF(string s2)
@@ -306,6 +330,31 @@ namespace Audio_Organiser
         private void buttonSearchCancel_Click(object sender, EventArgs e)
         {
             this.objectListViewSongs.ModelFilter = null;
+        }
+
+        private void objectListViewSongs_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            objectListViewPlaylist.AddObject(objectListViewSongs.GetModelObject(objectListViewSongs.SelectedIndices[0]));
+        }
+
+        private void buttonPlDel_Click(object sender, EventArgs e)
+        {
+            int index = -1;
+            if (objectListViewPlaylist.SelectedItems.Count > 0)
+            {
+                index = objectListViewPlaylist.SelectedIndices[0];
+                objectListViewPlaylist.RemoveObject(objectListViewPlaylist.GetModelObject(objectListViewPlaylist.SelectedIndices[0]));
+            }
+            if (objectListViewPlaylist.GetItemCount() > 0)
+            {
+                if (index == objectListViewPlaylist.GetItemCount()) index--;
+                objectListViewPlaylist.SelectObject(objectListViewPlaylist.GetModelObject(index));
+            }
+        }
+
+        private void buttonPlClear_Click(object sender, EventArgs e)
+        {
+            objectListViewPlaylist.Objects = null;
         }
 
         //player
@@ -748,8 +797,8 @@ namespace Audio_Organiser
             }
         }
 
-        private void objectListViewSongs_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
+        private void objectListViewPlaylist_MouseDoubleClick(object sender, MouseEventArgs e)
+        {/*
             //color
             objectListViewSongs.Items[list_id].ForeColor = Color.Black;
 
@@ -784,7 +833,7 @@ namespace Audio_Organiser
             currentLength.Text = "/ " + (audioFile.TotalTime).ToString().Substring(0, 8);
             //color
             objectListViewSongs.Items[list_id].ForeColor = Color.Red;
-            objectListViewSongs.Refresh();
+            objectListViewSongs.Refresh();*/
         }
         private void currentLength_Click(object sender, EventArgs e)
         {
