@@ -52,6 +52,10 @@
             this.freeDGreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueWebToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leatherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradient0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradient1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradient2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button1 = new System.Windows.Forms.Button();
@@ -100,6 +104,7 @@
             this.buttonEditClear = new System.Windows.Forms.Button();
             this.buttonEditSearch = new System.Windows.Forms.Button();
             this.buttonSearchCancel = new System.Windows.Forms.Button();
+            this.kontrolka1 = new Audio_Organiser.Kontrolka();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -180,7 +185,8 @@
             this.themesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.defaultToolStripMenuItem,
             this.solidColorToolStripMenuItem,
-            this.textureToolStripMenuItem});
+            this.textureToolStripMenuItem,
+            this.gradientToolStripMenuItem});
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
             this.themesToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.themesToolStripMenuItem.Text = "Motywy";
@@ -287,6 +293,37 @@
             this.leatherToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.leatherToolStripMenuItem.Text = "Leather";
             this.leatherToolStripMenuItem.Click += new System.EventHandler(this.leatherToolStripMenuItem_Click);
+            // 
+            // gradientToolStripMenuItem
+            // 
+            this.gradientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gradient0ToolStripMenuItem,
+            this.gradient1ToolStripMenuItem,
+            this.gradient2ToolStripMenuItem});
+            this.gradientToolStripMenuItem.Name = "gradientToolStripMenuItem";
+            this.gradientToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.gradientToolStripMenuItem.Text = "Gradient";
+            // 
+            // gradient0ToolStripMenuItem
+            // 
+            this.gradient0ToolStripMenuItem.Name = "gradient0ToolStripMenuItem";
+            this.gradient0ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.gradient0ToolStripMenuItem.Text = "Gradient0";
+            this.gradient0ToolStripMenuItem.Click += new System.EventHandler(this.gradient0ToolStripMenuItem_Click);
+            // 
+            // gradient1ToolStripMenuItem
+            // 
+            this.gradient1ToolStripMenuItem.Name = "gradient1ToolStripMenuItem";
+            this.gradient1ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.gradient1ToolStripMenuItem.Text = "Gradient1";
+            this.gradient1ToolStripMenuItem.Click += new System.EventHandler(this.gradient1ToolStripMenuItem_Click);
+            // 
+            // gradient2ToolStripMenuItem
+            // 
+            this.gradient2ToolStripMenuItem.Name = "gradient2ToolStripMenuItem";
+            this.gradient2ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.gradient2ToolStripMenuItem.Text = "Gradient2";
+            this.gradient2ToolStripMenuItem.Click += new System.EventHandler(this.gradient2ToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -714,6 +751,7 @@
             // 
             // logo
             // 
+            this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.Image = global::Audio_Organiser.Properties.Resources.Logo;
             this.logo.Location = new System.Drawing.Point(0, 627);
             this.logo.Name = "logo";
@@ -751,6 +789,17 @@
             this.buttonSearchCancel.UseVisualStyleBackColor = true;
             this.buttonSearchCancel.Click += new System.EventHandler(this.buttonSearchCancel_Click);
             // 
+            // kontrolka1
+            // 
+            this.kontrolka1.Color1 = System.Drawing.Color.Empty;
+            this.kontrolka1.Color2 = System.Drawing.Color.Empty;
+            this.kontrolka1.GradientRadius = 0;
+            this.kontrolka1.Location = new System.Drawing.Point(0, 0);
+            this.kontrolka1.Name = "kontrolka1";
+            this.kontrolka1.Size = new System.Drawing.Size(1180, 780);
+            this.kontrolka1.TabIndex = 42;
+            this.kontrolka1.Visible = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,6 +816,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.kontrolka1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
@@ -849,6 +899,8 @@
         private System.Windows.Forms.ToolStripMenuItem leatherToolStripMenuItem;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.ToolStripMenuItem mistyRoseToolStripMenuItem;
+        //VRB
+
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button buttonEditClear;
         private System.Windows.Forms.Button buttonEditSearch;
@@ -860,8 +912,11 @@
         private System.Windows.Forms.ToolStripMenuItem buttonDel2;
         private System.Windows.Forms.ToolStripMenuItem buttonClear;
         private System.Windows.Forms.Button buttonSearchCancel;
-        //VRB
-
+        private System.Windows.Forms.ToolStripMenuItem gradientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gradient0ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gradient1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gradient2ToolStripMenuItem;
+        private Kontrolka kontrolka1;
     }
 }
 
