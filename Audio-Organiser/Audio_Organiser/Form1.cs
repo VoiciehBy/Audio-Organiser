@@ -1457,20 +1457,22 @@ namespace Audio_Organiser
      
         void moveButtonsEtc(int x,int y)
         {
+            int z = x - 25;
             buttonPlAdd.Location = new System.Drawing.Point(995 + x, 554 + y);
             buttonSearchCancel.Location = new System.Drawing.Point(1148 + x, 554 + y);
             buttonDbCheck.Location = new System.Drawing.Point(1148 + x, 581 + y);
             logo.Location = new System.Drawing.Point(1126 + x, 606 + y);
-            objectListViewSongs.Size = new System.Drawing.Size(974 + x - 25, 506);
+            objectListViewSongs.Size = new System.Drawing.Size(974 + z, 506);
         }
 
         void moveButtonsEtc(int x, int y,int z,int z1)
         {
+            int a = x - 160;
             buttonPlAdd.Location = new System.Drawing.Point(995 + x, 554 + y);
             buttonSearchCancel.Location = new System.Drawing.Point(1148 + z, 554 + z1);
-            buttonDbCheck.Location = new System.Drawing.Point(1148 + z, 581 + z1);
-            logo.Location = new System.Drawing.Point(1126 + z, 606 + z1);
-            objectListViewSongs.Size = new System.Drawing.Size(974 + x - 160, 506);
+            buttonDbCheck.Location = new System.Drawing.Point(1148 + z, 581 + z1);           
+            objectListViewSongs.Size = new System.Drawing.Size(974 + a, 506);
+            logo.Visible = false;
         }
 
         private void resolutionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1502,8 +1504,7 @@ namespace Audio_Organiser
                 {
                     Width = 800;
                     Height = 768;
-                    moveButtonsEtc(-350, 0,-503, 25);
-                    logo.Visible = false;
+                    moveButtonsEtc(-350, 0,-503, 29);                   
                     makeResUIVisibleDueToB(false);
                 }
             }
