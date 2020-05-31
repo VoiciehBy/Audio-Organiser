@@ -14,6 +14,7 @@ using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 using BrightIdeasSoftware;
 using System.Text.RegularExpressions;
+using System.Security.Permissions;
 
 namespace Audio_Organiser
 {
@@ -210,11 +211,9 @@ namespace Audio_Organiser
                             MessageBox.Show("Plik otwarty w innym programie, bądź odtwarzany w playerze.");
                             return;
                         }
-
                         if (pathh != path2) File.Move(pathh, path2);
-                        MessageBox.Show(pathh + path2);
                     }
-                    else MessageBox.Show("Plik o ścieżce zapisanej w bazie nie istnieje. " + pathh + path2);
+                    else MessageBox.Show("Plik o ścieżce zapisanej w bazie nie istnieje.");
                     DatabaseDC.ExecuteCommand("UPDATE Song SET [file]=N'" + textBoxFile.Text + "', artist=N'" + textBoxArtist.Text + "', title=N'" + textBoxTitle.Text + "', album=N'" + textBoxAlbum.Text + "', year='" + textBoxYear.Text + "', genre=N'" + textBoxGenre.Text + "', path=N'" + path2 + "' WHERE id='" + objectListViewSongs.SelectedItems[0].SubItems[0].Text + "';");
                 }
                 else
@@ -292,11 +291,14 @@ namespace Audio_Organiser
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Czy na pewno chcesz wyczyścić całą bazę danych?", "Ostrzeżenie",
+            if (MessageBox.Show("Czy na pewno chcesz usunąć elementy widoczne na liście?", "Ostrzeżenie",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
             {
-                DatabaseDC.ExecuteCommand("DELETE FROM Song;");
+                foreach(object item in objectListViewSongs.FilteredObjects)
+                {
+                    DatabaseDC.ExecuteCommand("DELETE FROM Song WHERE id = '" + objectListViewSongs.Items[objectListViewSongs.IndexOf(item)].SubItems[0].Text + "';");
+                }
                 updateClear();
             }
         }
@@ -365,7 +367,7 @@ namespace Audio_Organiser
 
         private void buttonPlAdd_Click(object sender, EventArgs e)
         {
-            foreach (object item in objectListViewSongs.Objects)
+            foreach (object item in objectListViewSongs.FilteredObjects)
             {
                 objectListViewPlaylist.AddObject(item);
             }
@@ -406,6 +408,63 @@ namespace Audio_Organiser
             objectListViewPlaylist.Items[index2].SubItems[2].Text = (index2 + 1).ToString();
             if (index == list_id) list_id++;
             else if (index == list_id-1) list_id--;
+        }
+
+        private void buttonMove_Click(object sender, EventArgs e)
+        {
+            if (objectListViewSongs.SelectedItems.Count == 0) return;
+            int index = objectListViewSongs.SelectedIndices[0];
+            string path = objectListViewSongs.Items[index].SubItems[1].Text;
+            if (audioFile != null && path == audioFile.FileName)
+            {
+                MessageBox.Show("Plik jest aktualnie odtwarzany.");
+                return;
+            }
+            if(!File.Exists(path))
+            {
+                MessageBox.Show("Plik nie istnieje.");
+                return;
+            }
+            string filename = objectListViewSongs.Items[index].SubItems[2].Text;
+            saveFileDialog1.FileName = Path.GetFileName(path);
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string path2 = saveFileDialog1.FileName;
+                File.Move(path, path2);
+                DatabaseDC.ExecuteCommand("UPDATE Song SET [file]=N'" + Path.GetFileNameWithoutExtension(path2) + "', path=N'" + path2 + "' WHERE id='" + objectListViewSongs.SelectedItems[0].SubItems[0].Text + "';");
+                DatabaseDC.SubmitChanges();
+                DatabaseDC = null;
+                DatabaseDC = new DatabaseMusicDataContext();
+                LoadMusic();
+            }
+        }
+
+        private void playlistCheck()
+        {
+            int exist = 0;
+            foreach(ListViewItem item in objectListViewPlaylist.Items)
+            {
+                foreach(ListViewItem item2 in objectListViewSongs.Items)
+                {
+                    if (item.SubItems[0].Text != item2.SubItems[0].Text) continue;
+                    else
+                    {
+                        exist = 1;
+                        item.SubItems[1].Text = item2.SubItems[1].Text;
+                        item.SubItems[3].Text = item2.SubItems[2].Text;
+                        item.SubItems[4].Text = item2.SubItems[3].Text;
+                        item.SubItems[5].Text = item2.SubItems[4].Text;
+                        break;
+                    }
+                }
+                if (exist != 1) item.Remove();
+                exist = 0;
+            }
+        }
+
+        private void buttonPlUpdate_Click(object sender, EventArgs e)
+        {
+            playlistCheck();
         }
 
         //player
@@ -1306,7 +1365,6 @@ namespace Audio_Organiser
             uncheckSolidColors();
             uncheckTextures();
         }
-
 
         /*private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {

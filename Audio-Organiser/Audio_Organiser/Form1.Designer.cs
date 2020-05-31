@@ -120,6 +120,8 @@ namespace Audio_Organiser
             this.buttonPlAdd = new System.Windows.Forms.Button();
             this.buttonPlUp = new System.Windows.Forms.Button();
             this.buttonPlDown = new System.Windows.Forms.Button();
+            this.buttonMove = new System.Windows.Forms.Button();
+            this.buttonPlUpdate = new System.Windows.Forms.Button();
             this.kontrolka1 = new Audio_Organiser.Kontrolka();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
@@ -180,22 +182,22 @@ namespace Audio_Organiser
             // buttonDel
             // 
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(146, 22);
+            this.buttonDel.Size = new System.Drawing.Size(180, 22);
             this.buttonDel.Text = "Usuń z bazy";
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonDel2
             // 
             this.buttonDel2.Name = "buttonDel2";
-            this.buttonDel2.Size = new System.Drawing.Size(146, 22);
+            this.buttonDel2.Size = new System.Drawing.Size(180, 22);
             this.buttonDel2.Text = "Usuń z dysku";
             this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
             // 
             // buttonClear
             // 
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(146, 22);
-            this.buttonClear.Text = "Wyczyść bazę";
+            this.buttonClear.Size = new System.Drawing.Size(180, 22);
+            this.buttonClear.Text = "Wyczyść widoczne";
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // themesToolStripMenuItem
@@ -656,7 +658,7 @@ namespace Audio_Organiser
             // 
             // buttonPlClear
             // 
-            this.buttonPlClear.Location = new System.Drawing.Point(197, 710);
+            this.buttonPlClear.Location = new System.Drawing.Point(11, 739);
             this.buttonPlClear.Name = "buttonPlClear";
             this.buttonPlClear.Size = new System.Drawing.Size(75, 23);
             this.buttonPlClear.TabIndex = 50;
@@ -977,6 +979,26 @@ namespace Audio_Organiser
             this.buttonPlDown.Click += new System.EventHandler(this.buttonPlDown_Click);
             this.buttonPlDown.MouseHover += new System.EventHandler(this.buttonPlDown_MouseHover);
             // 
+            // buttonMove
+            // 
+            this.buttonMove.Location = new System.Drawing.Point(803, 554);
+            this.buttonMove.Name = "buttonMove";
+            this.buttonMove.Size = new System.Drawing.Size(75, 23);
+            this.buttonMove.TabIndex = 63;
+            this.buttonMove.Text = "Przenieś plik";
+            this.buttonMove.UseVisualStyleBackColor = true;
+            this.buttonMove.Click += new System.EventHandler(this.buttonMove_Click);
+            // 
+            // buttonPlUpdate
+            // 
+            this.buttonPlUpdate.Location = new System.Drawing.Point(200, 713);
+            this.buttonPlUpdate.Name = "buttonPlUpdate";
+            this.buttonPlUpdate.Size = new System.Drawing.Size(65, 23);
+            this.buttonPlUpdate.TabIndex = 64;
+            this.buttonPlUpdate.Text = "Aktualizuj";
+            this.buttonPlUpdate.UseVisualStyleBackColor = true;
+            this.buttonPlUpdate.Click += new System.EventHandler(this.buttonPlUpdate_Click);
+            // 
             // kontrolka1
             // 
             this.kontrolka1.Color1 = System.Drawing.Color.Empty;
@@ -993,7 +1015,9 @@ namespace Audio_Organiser
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1182, 739);
+            this.ClientSize = new System.Drawing.Size(1182, 768);
+            this.Controls.Add(this.buttonPlUpdate);
+            this.Controls.Add(this.buttonMove);
             this.Controls.Add(this.buttonPlDown);
             this.Controls.Add(this.buttonPlUp);
             this.Controls.Add(this.buttonPlAdd);
@@ -1128,6 +1152,8 @@ namespace Audio_Organiser
         private System.Windows.Forms.Button buttonPlAdd;
         private System.Windows.Forms.Button buttonPlUp;
         private System.Windows.Forms.Button buttonPlDown;
+        private System.Windows.Forms.Button buttonMove;
+        private System.Windows.Forms.Button buttonPlUpdate;
     }
 }
 
