@@ -55,11 +55,10 @@ namespace Audio_Organiser
         bool autoplay = false; //czy autoodtwarzanie
         bool loopsong = false; //czy zapetlenienie piosenki
         bool looplist = false; //czy zapetlenie listy
-        int list_id = 0; //id pliku na liście
+        int list_id = -1; //id pliku na liście
         string db_id; //id pliku w bazie
 
         songsInf toSearch = new songsInf("", "", "", "", "", "", "", "");
-
 
         public MainWindow()
         {
@@ -91,6 +90,7 @@ namespace Audio_Organiser
             }
         }
 
+        //Rafał
         private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
             using (StreamWriter file =
@@ -128,16 +128,23 @@ namespace Audio_Organiser
             {
                 foreach (ListViewItem item in objectListViewSongs.Items)
                     if (s2 == item.SubItems[1].Text) return;
-                var f = TagLib.File.Create(s2);
-                Song newSong = new Song();
-                newSong.file = Path.GetFileNameWithoutExtension(s2);
-                if (Array.Exists(f.Tag.Performers, element => element.Length > 0)) newSong.artist = f.Tag.Performers[0];
-                newSong.title = f.Tag.Title;
-                newSong.album = f.Tag.Album;
-                newSong.year = (int?)f.Tag.Year;
-                newSong.genre = f.Tag.FirstGenre;
-                newSong.path = s2;
-                DatabaseDC.Song.InsertOnSubmit(newSong);
+                try
+                {
+                    var f = TagLib.File.Create(s2);
+                    Song newSong = new Song();
+                    newSong.file = Path.GetFileNameWithoutExtension(s2);
+                    if (Array.Exists(f.Tag.Performers, element => element.Length > 0)) newSong.artist = f.Tag.Performers[0];
+                    newSong.title = f.Tag.Title;
+                    newSong.album = f.Tag.Album;
+                    newSong.year = (int?)f.Tag.Year;
+                    newSong.genre = f.Tag.FirstGenre;
+                    newSong.path = s2;
+                    DatabaseDC.Song.InsertOnSubmit(newSong);
+                }
+                catch
+                {
+                    return;
+                }
                 DatabaseDC.SubmitChanges();
                 DatabaseDC = null;
                 DatabaseDC = new DatabaseMusicDataContext();
@@ -163,7 +170,7 @@ namespace Audio_Organiser
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                var ext = new List<string> { ".mp3", ".wav" , ".wma"};
+                var ext = new List<string> { ".mp3", ".wav", ".wma" };
                 var allFiles = Directory.GetFiles(folderBrowserDialog1.SelectedPath, "*.*", SearchOption.AllDirectories).Where(s => ext.Contains(Path.GetExtension(s).ToLowerInvariant()));
                 foreach (var s2 in allFiles)
                 {
@@ -242,9 +249,9 @@ namespace Audio_Organiser
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
-            if (playingNow(objectListViewSongs.SelectedItem.SubItems[1].Text)) return;
             if (objectListViewSongs.SelectedItems.Count > 0)
             {
+                if (playingNow(objectListViewSongs.SelectedItem.SubItems[1].Text)) return;
                 if (MessageBox.Show("Czy na pewno chcesz usunąć ten wpis z bazy danych?", "Ostrzeżenie",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
                     MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
@@ -257,9 +264,9 @@ namespace Audio_Organiser
 
         private void buttonDel2_Click(object sender, EventArgs e)
         {
-            if (playingNow(objectListViewSongs.SelectedItem.SubItems[1].Text)) return;
             if (objectListViewSongs.SelectedItems.Count > 0)
             {
+                if (playingNow(objectListViewSongs.SelectedItem.SubItems[1].Text)) return;
                 if (File.Exists(objectListViewSongs.SelectedItems[0].SubItems[1].Text))
                 {
                     if (MessageBox.Show("Czy na pewno chcesz usunąć ten plik z dysku?", "Ostrzeżenie",
@@ -465,13 +472,16 @@ namespace Audio_Organiser
 
         private void playlistCheck()
         {
-            int exist = 0;
+            int exist = 0, count = 0;
+            IModelFilter tmp = this.objectListViewSongs.ModelFilter;
+            this.objectListViewSongs.ModelFilter = null;
             foreach (ListViewItem item in objectListViewPlaylist.Items)
             {
+                item.SubItems[2].Text = (Int32.Parse(item.SubItems[2].Text) - count).ToString();
+                exist = 0;
                 foreach (ListViewItem item2 in objectListViewSongs.Items)
                 {
-                    if (item.SubItems[0].Text != item2.SubItems[0].Text) continue;
-                    else
+                    if (item.SubItems[0].Text == item2.SubItems[0].Text)
                     {
                         exist = 1;
                         item.SubItems[1].Text = item2.SubItems[1].Text;
@@ -481,12 +491,19 @@ namespace Audio_Organiser
                         break;
                     }
                 }
-                if (exist != 1) item.Remove();
-                exist = 0;
+                if (exist != 1)
+                {
+                    if (item.Index < list_id)
+                    {
+                        list_id--;
+                    }
+                    item.Remove();
+                    count++;
+                }
             }
-            objectListViewPlaylist.Refresh();
+            this.objectListViewSongs.ModelFilter = tmp;
         }
-        
+
         private void playlistCheck2(ListViewItem item2)
         {
             foreach (ListViewItem item in objectListViewPlaylist.Items)
@@ -504,11 +521,16 @@ namespace Audio_Organiser
 
         private void playlistCheck3(ListViewItem item2)
         {
+            int exist = 0, count = 0;
             foreach (ListViewItem item in objectListViewPlaylist.Items)
             {
+                item.SubItems[2].Text = (Int32.Parse(item.SubItems[2].Text) - count).ToString();
+                exist = 0;
                 if (item.SubItems[0].Text != item2.SubItems[0].Text) continue;
                 else
                 {
+                    count++;
+                    exist = 1;
                     item.Remove();
                     continue;
                 }
@@ -518,9 +540,9 @@ namespace Audio_Organiser
         private void buttonDbCheck_Click(object sender, EventArgs e)
         {
             List<IModelFilter> filter = new List<IModelFilter>();
-            foreach(ListViewItem item in objectListViewSongs.Items)
+            foreach (ListViewItem item in objectListViewSongs.Items)
             {
-                if(!File.Exists(item.SubItems[1].Text))
+                if (!File.Exists(item.SubItems[1].Text))
                 {
                     TextMatchFilter filter1 = TextMatchFilter.Contains(objectListViewSongs, item.SubItems[0].Text);
                     filter1.Columns = new[] { this.id };
@@ -555,9 +577,10 @@ namespace Audio_Organiser
             }
         }
 
-        //player
+        //Dominik
         private void buttonPlay_Click(object sender, EventArgs e)
         {
+            if (list_id == -1) list_id = 0;
             if (objectListViewPlaylist.GetItemCount() == 0)
             {
                 if (audioFile != null)
@@ -651,6 +674,7 @@ namespace Audio_Organiser
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
+            if (list_id == -1) list_id = 0;
             if (objectListViewPlaylist.GetItemCount() == 0)
             {
                 return;
@@ -717,6 +741,7 @@ namespace Audio_Organiser
 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
+            if (list_id == -1) list_id = 0;
             if (objectListViewPlaylist.GetItemCount() == 0)
             {
                 return;
@@ -1034,6 +1059,7 @@ namespace Audio_Organiser
         private void objectListViewPlaylist_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             //color
+            if (list_id == -1) list_id = 0;
             objectListViewPlaylist.Items[list_id].ForeColor = Color.Black;
 
             outputDevice?.Stop();
@@ -1183,7 +1209,7 @@ namespace Audio_Organiser
             toolTip1.SetToolTip(buttonPlDown, "Move selected item downwards");
         }
 
-        //VRB_Events
+        //Wojtek
         public void uncheckSolidColors()
         {
             defaultToolStripMenuItem.Checked = false;
@@ -1208,6 +1234,7 @@ namespace Audio_Organiser
 
         public void uncheckGradient()
         {
+            logo.Visible = true;
             kontrolka1.Visible = false;
             gradientToolStripMenuItem.Checked = false;
             gradient0ToolStripMenuItem.Checked = false;
@@ -1409,6 +1436,7 @@ namespace Audio_Organiser
             kontrolka1.Visible = true;
             kontrolka1.Color1 = Color.White;
             kontrolka1.Color2 = Color.Red;
+            logo.Visible = false;
             gradientToolStripMenuItem.Checked = true;
             gradient0ToolStripMenuItem.Checked = true;
 
@@ -1426,8 +1454,8 @@ namespace Audio_Organiser
             kontrolka1.Visible = true;
             kontrolka1.Color1 = Color.LightSkyBlue;
             kontrolka1.Color2 = Color.DarkViolet;
+            logo.Visible = false;
             gradient1ToolStripMenuItem.Checked = true;
-
             gradient0ToolStripMenuItem.Checked = false;
             gradient2ToolStripMenuItem.Checked = false;
 
@@ -1442,8 +1470,8 @@ namespace Audio_Organiser
             kontrolka1.Visible = true;
             kontrolka1.Color1 = Color.Green;
             kontrolka1.Color2 = Color.Pink;
+            logo.Visible = false;
             gradient2ToolStripMenuItem.Checked = true;
-
             gradient0ToolStripMenuItem.Checked = false;
             gradient1ToolStripMenuItem.Checked = false;
 
@@ -1464,7 +1492,7 @@ namespace Audio_Organiser
             buttonDbCheck.Location = new System.Drawing.Point(1148 + x, 581 + y);
             logo.Location = new System.Drawing.Point(1126 + x, 606 + y);
             objectListViewSongs.Size = new System.Drawing.Size(974 + x, 506);
-            logo.Visible = true;
+            if (kontrolka1.Visible == false) logo.Visible = true;
         }
 
         void moveButtonsEtc(int x, int y, int z, int z1)
@@ -1511,6 +1539,7 @@ namespace Audio_Organiser
                     resizeColumns(0, 0, 110, 85, 100, 80, 50, 60);
                     makeResUIVisibleDueToB(false);
                 }
+
             }
         }
 
@@ -1525,11 +1554,5 @@ namespace Audio_Organiser
             year.Width = x6;
             genre.Width = x7;
         }
-
-        /*private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-{
-kontrolka1.GradientRadius = Decimal.ToDouble(numericUpDown1.Value)*Math.Pow(10, Decimal.ToInt32(numericUpDown1.Value));          
-}*/
-        //VRB_Events
     }
 }      
