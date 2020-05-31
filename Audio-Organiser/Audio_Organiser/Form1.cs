@@ -15,6 +15,8 @@ using NAudio.Wave.SampleProviders;
 using BrightIdeasSoftware;
 using System.Text.RegularExpressions;
 using System.Security.Permissions;
+using System.Security.Cryptography.X509Certificates;
+using System.Drawing.Text;
 
 namespace Audio_Organiser
 {
@@ -1457,20 +1459,20 @@ namespace Audio_Organiser
      
         void moveButtonsEtc(int x,int y)
         {
-            int z = x - 25;
             buttonPlAdd.Location = new System.Drawing.Point(995 + x, 554 + y);
             buttonSearchCancel.Location = new System.Drawing.Point(1148 + x, 554 + y);
             buttonDbCheck.Location = new System.Drawing.Point(1148 + x, 581 + y);
             logo.Location = new System.Drawing.Point(1126 + x, 606 + y);
-            objectListViewSongs.Size = new System.Drawing.Size(974 + z, 506);
+            objectListViewSongs.Size = new System.Drawing.Size(974 + x, 506);
+            logo.Visible = true;
         }
 
-        void moveButtonsEtc(int x, int y,int z,int z1)
+        void moveButtonsEtc(int x, int y, int z, int z1)
         {
-            int a = x - 160;
-            buttonPlAdd.Location = new System.Drawing.Point(995 + x, 554 + y);
-            buttonSearchCancel.Location = new System.Drawing.Point(1148 + z, 554 + z1);
-            buttonDbCheck.Location = new System.Drawing.Point(1148 + z, 581 + z1);           
+            int a = x - 135;
+            buttonPlAdd.Location = new System.Drawing.Point(995 + x - 24, 554 + y);
+            buttonSearchCancel.Location = new System.Drawing.Point(1148 + z + 20, 554 + z1);
+            buttonDbCheck.Location = new System.Drawing.Point(1148 + z + 20, 581 + z1);           
             objectListViewSongs.Size = new System.Drawing.Size(974 + a, 506);
             logo.Visible = false;
         }
@@ -1490,6 +1492,7 @@ namespace Audio_Organiser
                     Width = 1280;
                     Height = 768;
                     moveButtonsEtc(0,0);
+                    resizeColumns(0, 0, 272, 189, 164, 137, 59, 149);
                     makeResUIVisibleDueToB(false);
                 }
                 else if (resolutionsBox.SelectedItem == resolutionsBox.Items[1])
@@ -1497,17 +1500,30 @@ namespace Audio_Organiser
                     Width = 1024;
                     Height = 768;
                     moveButtonsEtc(-250, 0);
+                    resizeColumns(0, 0, 150, 135, 145, 140, 60, 90);
                     makeResUIVisibleDueToB(false);
                 }
-
                 else if (resolutionsBox.SelectedItem == resolutionsBox.Items[2])
                 {
                     Width = 800;
                     Height = 768;
-                    moveButtonsEtc(-350, 0,-503, 29);                   
+                    moveButtonsEtc(-350, 0, -503, 29);
+                    resizeColumns(0, 0, 110, 85, 100, 80, 50, 60);
                     makeResUIVisibleDueToB(false);
                 }
             }
+        }
+
+        private void resizeColumns(int x0, int x1, int x2, int x3, int x4, int x5, int x6, int x7)
+        {
+            id.Width = x0;
+            path.Width = x1;
+            file.Width = x2;
+            artist.Width = x3;
+            title.Width = x4;
+            album.Width = x5;
+            year.Width = x6;
+            genre.Width = x7;
         }
 
         /*private void numericUpDown1_ValueChanged(object sender, EventArgs e)
