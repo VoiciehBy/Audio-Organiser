@@ -89,7 +89,6 @@ namespace Audio_Organiser
             this.year = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.genre = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.searchBox = new System.Windows.Forms.TextBox();
             this.buttonPlClear = new System.Windows.Forms.Button();
             this.buttonPlDel = new System.Windows.Forms.Button();
             this.objectListViewPlaylist = new BrightIdeasSoftware.ObjectListView();
@@ -122,11 +121,13 @@ namespace Audio_Organiser
             this.buttonPlUp = new System.Windows.Forms.Button();
             this.buttonPlDown = new System.Windows.Forms.Button();
             this.buttonMove = new System.Windows.Forms.Button();
-            this.buttonPlUpdate = new System.Windows.Forms.Button();
+            this.buttonDbCheck = new System.Windows.Forms.Button();
             this.resolutionPanel = new System.Windows.Forms.Panel();
             this.resolutionsBox = new System.Windows.Forms.ListBox();
             this.resolutionLabel = new System.Windows.Forms.Label();
             this.kontrolka1 = new Audio_Organiser.Kontrolka();
+            this.buttonAddFile = new System.Windows.Forms.Button();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -188,21 +189,21 @@ namespace Audio_Organiser
             // buttonDel
             // 
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(172, 22);
+            this.buttonDel.Size = new System.Drawing.Size(180, 22);
             this.buttonDel.Text = "Usuń z bazy";
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonDel2
             // 
             this.buttonDel2.Name = "buttonDel2";
-            this.buttonDel2.Size = new System.Drawing.Size(172, 22);
+            this.buttonDel2.Size = new System.Drawing.Size(180, 22);
             this.buttonDel2.Text = "Usuń z dysku";
             this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
             // 
             // buttonClear
             // 
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(172, 22);
+            this.buttonClear.Size = new System.Drawing.Size(180, 22);
             this.buttonClear.Text = "Wyczyść widoczne";
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
@@ -604,7 +605,7 @@ namespace Audio_Organiser
             this.objectListViewSongs.Name = "objectListViewSongs";
             this.objectListViewSongs.SelectAllOnControlA = false;
             this.objectListViewSongs.ShowGroups = false;
-            this.objectListViewSongs.Size = new System.Drawing.Size(738, 506);
+            this.objectListViewSongs.Size = new System.Drawing.Size(974, 506);
             this.objectListViewSongs.TabIndex = 25;
             this.objectListViewSongs.UseCompatibleStateImageBehavior = false;
             this.objectListViewSongs.UseFiltering = true;
@@ -629,25 +630,25 @@ namespace Audio_Organiser
             // 
             this.file.AspectName = "file";
             this.file.Text = "Nazwa pliku";
-            this.file.Width = 173;
+            this.file.Width = 272;
             // 
             // artist
             // 
             this.artist.AspectName = "artist";
             this.artist.Text = "Wykonawcy uczestniczący";
-            this.artist.Width = 147;
+            this.artist.Width = 189;
             // 
             // title
             // 
             this.title.AspectName = "title";
             this.title.Text = "Tytuł";
-            this.title.Width = 132;
+            this.title.Width = 164;
             // 
             // album
             // 
             this.album.AspectName = "album";
             this.album.Text = "Album";
-            this.album.Width = 74;
+            this.album.Width = 137;
             // 
             // year
             // 
@@ -661,17 +662,9 @@ namespace Audio_Organiser
             this.genre.Text = "Gatunek";
             this.genre.Width = 149;
             // 
-            // searchBox
-            // 
-            this.searchBox.Location = new System.Drawing.Point(900, 5);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(115, 20);
-            this.searchBox.TabIndex = 35;
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            // 
             // buttonPlClear
             // 
-            this.buttonPlClear.Location = new System.Drawing.Point(11, 739);
+            this.buttonPlClear.Location = new System.Drawing.Point(197, 700);
             this.buttonPlClear.Name = "buttonPlClear";
             this.buttonPlClear.Size = new System.Drawing.Size(75, 23);
             this.buttonPlClear.TabIndex = 50;
@@ -681,7 +674,7 @@ namespace Audio_Organiser
             // 
             // buttonPlDel
             // 
-            this.buttonPlDel.Location = new System.Drawing.Point(11, 710);
+            this.buttonPlDel.Location = new System.Drawing.Point(11, 700);
             this.buttonPlDel.Name = "buttonPlDel";
             this.buttonPlDel.Size = new System.Drawing.Size(75, 23);
             this.buttonPlDel.TabIndex = 49;
@@ -711,7 +704,7 @@ namespace Audio_Organiser
             this.objectListViewPlaylist.Location = new System.Drawing.Point(11, 224);
             this.objectListViewPlaylist.Name = "objectListViewPlaylist";
             this.objectListViewPlaylist.ShowGroups = false;
-            this.objectListViewPlaylist.Size = new System.Drawing.Size(261, 480);
+            this.objectListViewPlaylist.Size = new System.Drawing.Size(261, 470);
             this.objectListViewPlaylist.TabIndex = 48;
             this.objectListViewPlaylist.UseCompatibleStateImageBehavior = false;
             this.objectListViewPlaylist.UseHotControls = false;
@@ -754,7 +747,7 @@ namespace Audio_Organiser
             this.File_p.Sortable = false;
             this.File_p.Text = "Plik";
             this.File_p.UseFiltering = false;
-            this.File_p.Width = 52;
+            this.File_p.Width = 77;
             // 
             // Artist_p
             // 
@@ -772,11 +765,11 @@ namespace Audio_Organiser
             this.Title_p.Sortable = false;
             this.Title_p.Text = "Tytuł";
             this.Title_p.UseFiltering = false;
-            this.Title_p.Width = 102;
+            this.Title_p.Width = 74;
             // 
             // buttonSearchCancel
             // 
-            this.buttonSearchCancel.Location = new System.Drawing.Point(912, 554);
+            this.buttonSearchCancel.Location = new System.Drawing.Point(1148, 551);
             this.buttonSearchCancel.Name = "buttonSearchCancel";
             this.buttonSearchCancel.Size = new System.Drawing.Size(104, 23);
             this.buttonSearchCancel.TabIndex = 55;
@@ -796,7 +789,7 @@ namespace Audio_Organiser
             // 
             // buttonEditClear
             // 
-            this.buttonEditClear.Location = new System.Drawing.Point(543, 610);
+            this.buttonEditClear.Location = new System.Drawing.Point(543, 554);
             this.buttonEditClear.Name = "buttonEditClear";
             this.buttonEditClear.Size = new System.Drawing.Size(75, 23);
             this.buttonEditClear.TabIndex = 53;
@@ -806,7 +799,7 @@ namespace Audio_Organiser
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(543, 554);
+            this.button1.Location = new System.Drawing.Point(543, 610);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 52;
@@ -943,7 +936,7 @@ namespace Audio_Organiser
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(877, 614);
+            this.logo.Location = new System.Drawing.Point(1126, 606);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(138, 127);
             this.logo.TabIndex = 59;
@@ -958,7 +951,7 @@ namespace Audio_Organiser
             // 
             // buttonPlAdd
             // 
-            this.buttonPlAdd.Location = new System.Drawing.Point(745, 554);
+            this.buttonPlAdd.Location = new System.Drawing.Point(995, 551);
             this.buttonPlAdd.Name = "buttonPlAdd";
             this.buttonPlAdd.Size = new System.Drawing.Size(147, 23);
             this.buttonPlAdd.TabIndex = 60;
@@ -971,7 +964,7 @@ namespace Audio_Organiser
             this.buttonPlUp.FlatAppearance.BorderSize = 0;
             this.buttonPlUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPlUp.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlUp.Image")));
-            this.buttonPlUp.Location = new System.Drawing.Point(149, 710);
+            this.buttonPlUp.Location = new System.Drawing.Point(140, 700);
             this.buttonPlUp.Name = "buttonPlUp";
             this.buttonPlUp.Size = new System.Drawing.Size(26, 26);
             this.buttonPlUp.TabIndex = 61;
@@ -984,7 +977,7 @@ namespace Audio_Organiser
             this.buttonPlDown.FlatAppearance.BorderSize = 0;
             this.buttonPlDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPlDown.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlDown.Image")));
-            this.buttonPlDown.Location = new System.Drawing.Point(108, 710);
+            this.buttonPlDown.Location = new System.Drawing.Point(108, 700);
             this.buttonPlDown.Name = "buttonPlDown";
             this.buttonPlDown.Size = new System.Drawing.Size(26, 26);
             this.buttonPlDown.TabIndex = 62;
@@ -994,7 +987,7 @@ namespace Audio_Organiser
             // 
             // buttonMove
             // 
-            this.buttonMove.Location = new System.Drawing.Point(653, 554);
+            this.buttonMove.Location = new System.Drawing.Point(543, 639);
             this.buttonMove.Name = "buttonMove";
             this.buttonMove.Size = new System.Drawing.Size(75, 23);
             this.buttonMove.TabIndex = 63;
@@ -1002,15 +995,15 @@ namespace Audio_Organiser
             this.buttonMove.UseVisualStyleBackColor = true;
             this.buttonMove.Click += new System.EventHandler(this.buttonMove_Click);
             // 
-            // buttonPlUpdate
+            // buttonDbCheck
             // 
-            this.buttonPlUpdate.Location = new System.Drawing.Point(200, 713);
-            this.buttonPlUpdate.Name = "buttonPlUpdate";
-            this.buttonPlUpdate.Size = new System.Drawing.Size(65, 23);
-            this.buttonPlUpdate.TabIndex = 64;
-            this.buttonPlUpdate.Text = "Aktualizuj";
-            this.buttonPlUpdate.UseVisualStyleBackColor = true;
-            this.buttonPlUpdate.Click += new System.EventHandler(this.buttonPlUpdate_Click);
+            this.buttonDbCheck.Location = new System.Drawing.Point(1148, 580);
+            this.buttonDbCheck.Name = "buttonDbCheck";
+            this.buttonDbCheck.Size = new System.Drawing.Size(104, 23);
+            this.buttonDbCheck.TabIndex = 64;
+            this.buttonDbCheck.Text = "Sprawdź bazę";
+            this.buttonDbCheck.UseVisualStyleBackColor = true;
+            this.buttonDbCheck.Click += new System.EventHandler(this.buttonDbCheck_Click);
             // 
             // resolutionPanel
             // 
@@ -1060,14 +1053,29 @@ namespace Audio_Organiser
             this.kontrolka1.TabIndex = 42;
             this.kontrolka1.Visible = false;
             // 
+            // buttonAddFile
+            // 
+            this.buttonAddFile.Location = new System.Drawing.Point(543, 668);
+            this.buttonAddFile.Name = "buttonAddFile";
+            this.buttonAddFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddFile.TabIndex = 66;
+            this.buttonAddFile.Text = "Zmień plik";
+            this.buttonAddFile.UseVisualStyleBackColor = true;
+            this.buttonAddFile.Click += new System.EventHandler(this.buttonAddFile_Click);
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1264, 730);
+            this.Controls.Add(this.buttonAddFile);
             this.Controls.Add(this.resolutionPanel);
-            this.Controls.Add(this.buttonPlUpdate);
+            this.Controls.Add(this.buttonDbCheck);
             this.Controls.Add(this.buttonMove);
             this.Controls.Add(this.buttonPlDown);
             this.Controls.Add(this.buttonPlUp);
@@ -1081,7 +1089,6 @@ namespace Audio_Organiser
             this.Controls.Add(this.buttonPlClear);
             this.Controls.Add(this.buttonPlDel);
             this.Controls.Add(this.objectListViewPlaylist);
-            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.kontrolka1);
@@ -1162,7 +1169,6 @@ namespace Audio_Organiser
         private System.Windows.Forms.ToolStripMenuItem gradient0ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradient1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradient2ToolStripMenuItem;
-        private System.Windows.Forms.TextBox searchBox;
         private Kontrolka kontrolka1;
         private System.Windows.Forms.ListBox resolutionsBox;
         private System.Windows.Forms.Panel resolutionPanel;
@@ -1210,7 +1216,9 @@ namespace Audio_Organiser
         private System.Windows.Forms.Button buttonPlUp;
         private System.Windows.Forms.Button buttonPlDown;
         private System.Windows.Forms.Button buttonMove;
-        private System.Windows.Forms.Button buttonPlUpdate;
+        private System.Windows.Forms.Button buttonDbCheck;
+        private System.Windows.Forms.Button buttonAddFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
 

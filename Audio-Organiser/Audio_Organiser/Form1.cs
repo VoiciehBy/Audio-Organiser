@@ -122,7 +122,7 @@ namespace Audio_Organiser
         private void addF(string s2)
         {
             string s = Path.GetExtension(s2);
-            if (s == ".mp3" || s == ".wav")
+            if (s == ".mp3" || s == ".wav" || s == ".wma")
             {
                 foreach (ListViewItem item in objectListViewSongs.Items)
                     if (s2 == item.SubItems[1].Text) return;
@@ -146,7 +146,7 @@ namespace Audio_Organiser
 
         private void button2_Click(object sender, EventArgs e)                          //Add1
         {
-            openFileDialog1.Filter = "Music Files(*.mp3; *.wav)|*.mp3; *.wav";
+            openFileDialog1.Filter = "Music Files(*.mp3; *.wav; *.wma)|*.mp3; *.wav; *.wma";
             openFileDialog1.Multiselect = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -161,7 +161,7 @@ namespace Audio_Organiser
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                var ext = new List<string> { ".mp3", ".wav" };
+                var ext = new List<string> { ".mp3", ".wav" , ".wma"};
                 var allFiles = Directory.GetFiles(folderBrowserDialog1.SelectedPath, "*.*", SearchOption.AllDirectories).Where(s => ext.Contains(Path.GetExtension(s).ToLowerInvariant()));
                 foreach (var s2 in allFiles)
                 {
@@ -181,6 +181,15 @@ namespace Audio_Organiser
                 textBoxYear.Text = objectListViewSongs.SelectedItems[0].SubItems[6].Text;
                 textBoxGenre.Text = objectListViewSongs.SelectedItems[0].SubItems[7].Text;
             }
+            else
+            {
+                textBoxFile.Text = "";
+                textBoxArtist.Text = "";
+                textBoxTitle.Text = "";
+                textBoxAlbum.Text = "";
+                textBoxYear.Text = "";
+                textBoxGenre.Text = "";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -188,6 +197,7 @@ namespace Audio_Organiser
             if (objectListViewSongs.SelectedItems.Count > 0)
             {
                 Refresh();
+                int index = objectListViewSongs.SelectedIndices[0];
                 string pathh = objectListViewSongs.SelectedItems[0].SubItems[1].Text;
                 string path2 = pathh.Remove(pathh.LastIndexOf("\\") + 1) + textBoxFile.Text + Path.GetExtension(pathh);
                 if (!File.Exists(path2) || pathh == path2)
@@ -223,16 +233,19 @@ namespace Audio_Organiser
                     DatabaseDC.ExecuteCommand("UPDATE Song SET artist=N'" + textBoxArtist.Text + "', title=N'" + textBoxTitle.Text + "', album=N'" + textBoxAlbum.Text + "', year='" + textBoxYear.Text + "', genre=N'" + textBoxGenre.Text + "' WHERE id='" + objectListViewSongs.SelectedItems[0].SubItems[0].Text + "';");
                 }
                 updateClear();
+                objectListViewSongs.SelectObject(objectListViewSongs.GetModelObject(index));
+                playlistCheck2(objectListViewSongs.Items[index]);
             }
         }
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
+            if (playingNow(objectListViewSongs.SelectedItem.SubItems[1].Text)) return;
             if (objectListViewSongs.SelectedItems.Count > 0)
             {
                 if (MessageBox.Show("Czy na pewno chcesz usunąć ten wpis z bazy danych?", "Ostrzeżenie",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
-                    MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+                    MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
                 {
                     dbDel();
                 }
@@ -242,6 +255,7 @@ namespace Audio_Organiser
 
         private void buttonDel2_Click(object sender, EventArgs e)
         {
+            if (playingNow(objectListViewSongs.SelectedItem.SubItems[1].Text)) return;
             if (objectListViewSongs.SelectedItems.Count > 0)
             {
                 if (File.Exists(objectListViewSongs.SelectedItems[0].SubItems[1].Text))
@@ -267,6 +281,7 @@ namespace Audio_Organiser
         {
             DatabaseDC.ExecuteCommand("DELETE FROM Song WHERE id='" + objectListViewSongs.SelectedItems[0].SubItems[0].Text + "';");
             int index = objectListViewSongs.SelectedIndices[0];
+            playlistCheck3(objectListViewSongs.Items[index]);
             updateClear();
             if (objectListViewSongs.GetItemCount() > 0)
             {
@@ -293,13 +308,14 @@ namespace Audio_Organiser
         {
             if (MessageBox.Show("Czy na pewno chcesz usunąć elementy widoczne na liście?", "Ostrzeżenie",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
-                MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
+                MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
             {
                 foreach (object item in objectListViewSongs.FilteredObjects)
                 {
                     DatabaseDC.ExecuteCommand("DELETE FROM Song WHERE id = '" + objectListViewSongs.Items[objectListViewSongs.IndexOf(item)].SubItems[0].Text + "';");
                 }
                 updateClear();
+                playlistCheck();
             }
         }
 
@@ -312,7 +328,6 @@ namespace Audio_Organiser
             textBoxYear.Text = "";
             textBoxGenre.Text = "";
             objectListViewSongs.DeselectAll();
-            //objectListViewSongs.sea
         }
 
         private void buttonEditSearch_Click(object sender, EventArgs e)
@@ -415,11 +430,7 @@ namespace Audio_Organiser
             if (objectListViewSongs.SelectedItems.Count == 0) return;
             int index = objectListViewSongs.SelectedIndices[0];
             string path = objectListViewSongs.Items[index].SubItems[1].Text;
-            if (audioFile != null && path == audioFile.FileName)
-            {
-                MessageBox.Show("Plik jest aktualnie odtwarzany.");
-                return;
-            }
+            if (playingNow(path)) return;
             if (!File.Exists(path))
             {
                 MessageBox.Show("Plik nie istnieje.");
@@ -437,6 +448,17 @@ namespace Audio_Organiser
                 DatabaseDC = new DatabaseMusicDataContext();
                 LoadMusic();
             }
+            playlistCheck2(objectListViewSongs.Items[index]);
+        }
+
+        private bool playingNow(string path)
+        {
+            if (audioFile != null && path == audioFile.FileName)
+            {
+                MessageBox.Show("Plik jest aktualnie odtwarzany.");
+                return true;
+            }
+            return false;
         }
 
         private void playlistCheck()
@@ -460,11 +482,75 @@ namespace Audio_Organiser
                 if (exist != 1) item.Remove();
                 exist = 0;
             }
+            objectListViewPlaylist.Refresh();
+        }
+        
+        private void playlistCheck2(ListViewItem item2)
+        {
+            foreach (ListViewItem item in objectListViewPlaylist.Items)
+            {
+                if (item.SubItems[0].Text != item2.SubItems[0].Text) continue;
+                else
+                {
+                    item.SubItems[1].Text = item2.SubItems[1].Text;
+                    item.SubItems[3].Text = item2.SubItems[2].Text;
+                    item.SubItems[4].Text = item2.SubItems[3].Text;
+                    item.SubItems[5].Text = item2.SubItems[4].Text;
+                }
+            }
         }
 
-        private void buttonPlUpdate_Click(object sender, EventArgs e)
+        private void playlistCheck3(ListViewItem item2)
         {
-            playlistCheck();
+            foreach (ListViewItem item in objectListViewPlaylist.Items)
+            {
+                if (item.SubItems[0].Text != item2.SubItems[0].Text) continue;
+                else
+                {
+                    item.Remove();
+                    continue;
+                }
+            }
+        }
+
+        private void buttonDbCheck_Click(object sender, EventArgs e)
+        {
+            List<IModelFilter> filter = new List<IModelFilter>();
+            foreach(ListViewItem item in objectListViewSongs.Items)
+            {
+                if(!File.Exists(item.SubItems[1].Text))
+                {
+                    TextMatchFilter filter1 = TextMatchFilter.Contains(objectListViewSongs, item.SubItems[0].Text);
+                    filter1.Columns = new[] { this.id };
+                    filter.Add(filter1);
+                }
+            }
+            this.objectListViewSongs.ModelFilter = new CompositeAnyFilter(filter);
+            if (MessageBox.Show("Wyświetlono wpisy z błędnymi ścieżkami.", "Informacja",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Cancel)
+            {
+                this.objectListViewSongs.ModelFilter = null;
+            }
+        }
+
+        private void buttonAddFile_Click(object sender, EventArgs e)
+        {
+            if (objectListViewSongs.SelectedItems.Count == 0) return;
+            openFileDialog2.Filter = "Music Files(*.mp3; *.wav; *.wma)|*.mp3; *.wav; *.wma";
+            int index = objectListViewSongs.SelectedIndices[0];
+            string path = objectListViewSongs.Items[index].SubItems[1].Text;
+            if (playingNow(path)) return;
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                string path2 = openFileDialog2.FileName;
+                DatabaseDC.ExecuteCommand("UPDATE Song SET [file]=N'" + Path.GetFileNameWithoutExtension(path2) + "', path=N'" + path2 + "' WHERE id='" + objectListViewSongs.SelectedItems[0].SubItems[0].Text + "';");
+                DatabaseDC.SubmitChanges();
+                DatabaseDC = null;
+                DatabaseDC = new DatabaseMusicDataContext();
+                LoadMusic();
+                playlistCheck2(objectListViewSongs.Items[index]);
+            }
         }
 
         //player
@@ -502,7 +588,8 @@ namespace Audio_Organiser
                 }
                 else
                 {
-                    //brak pliku w sciezce
+                    MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                    return;
                 }
             }
             db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
@@ -621,7 +708,8 @@ namespace Audio_Organiser
             }
             else
             {
-                //nie ma pliku w tej sciezce
+                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                return;
             }
         }
 
@@ -686,7 +774,8 @@ namespace Audio_Organiser
             }
             else
             {
-                //nie ma pliku w tej sciezce
+                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                return;
             }
 
         }
@@ -873,7 +962,7 @@ namespace Audio_Organiser
                     }
                     else
                     {
-                        //nie ma pliku w tej sciezce
+                        MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                         return;
                     }
                 }
@@ -924,7 +1013,7 @@ namespace Audio_Organiser
                     }
                     else
                     {
-                        //nie ma pliku w tej sciezce
+                        MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                         return;
                     }
                 }
@@ -962,7 +1051,7 @@ namespace Audio_Organiser
             }
             else
             {
-                //nie ma pliku w tej sciezce
+                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                 return;
             }
 
@@ -1309,12 +1398,6 @@ namespace Audio_Organiser
 
             uncheckSolidColors();
             uncheckGradient();
-        }
-
-        private void searchBox_TextChanged(object sender, EventArgs e)
-        {
-            /*string str = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,@"..\..\baza\muzyka.mdf");
-            MessageBox.Show(str);*/
         }
 
         private void gradient0ToolStripMenuItem_Click(object sender, EventArgs e)
