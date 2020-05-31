@@ -119,8 +119,8 @@ namespace Audio_Organiser
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.buttonPlAdd = new System.Windows.Forms.Button();
             this.buttonPlUp = new System.Windows.Forms.Button();
-            this.kontrolka1 = new Audio_Organiser.Kontrolka();
             this.buttonPlDown = new System.Windows.Forms.Button();
+            this.kontrolka1 = new Audio_Organiser.Kontrolka();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -614,37 +614,37 @@ namespace Audio_Organiser
             // 
             this.file.AspectName = "file";
             this.file.Text = "Nazwa pliku";
-            this.file.Width = 330;
+            this.file.Width = 270;
             // 
             // artist
             // 
             this.artist.AspectName = "artist";
             this.artist.Text = "Wykonawcy uczestniczący";
-            this.artist.Width = 150;
+            this.artist.Width = 186;
             // 
             // title
             // 
             this.title.AspectName = "title";
             this.title.Text = "Tytuł";
-            this.title.Width = 105;
+            this.title.Width = 132;
             // 
             // album
             // 
             this.album.AspectName = "album";
             this.album.Text = "Album";
-            this.album.Width = 100;
+            this.album.Width = 111;
             // 
             // year
             // 
             this.year.AspectName = "year";
             this.year.Text = "Rok";
-            this.year.Width = 50;
+            this.year.Width = 47;
             // 
             // genre
             // 
             this.genre.AspectName = "genre";
             this.genre.Text = "Gatunek";
-            this.genre.Width = 129;
+            this.genre.Width = 134;
             // 
             // searchBox
             // 
@@ -730,6 +730,7 @@ namespace Audio_Organiser
             this.Id_auto.Sortable = false;
             this.Id_auto.Text = "Id";
             this.Id_auto.UseFiltering = false;
+            this.Id_auto.Width = 22;
             // 
             // File_p
             // 
@@ -738,6 +739,7 @@ namespace Audio_Organiser
             this.File_p.Sortable = false;
             this.File_p.Text = "Plik";
             this.File_p.UseFiltering = false;
+            this.File_p.Width = 52;
             // 
             // Artist_p
             // 
@@ -746,6 +748,7 @@ namespace Audio_Organiser
             this.Artist_p.Sortable = false;
             this.Artist_p.Text = "Wykonawca";
             this.Artist_p.UseFiltering = false;
+            this.Artist_p.Width = 84;
             // 
             // Title_p
             // 
@@ -754,6 +757,7 @@ namespace Audio_Organiser
             this.Title_p.Sortable = false;
             this.Title_p.Text = "Tytuł";
             this.Title_p.UseFiltering = false;
+            this.Title_p.Width = 102;
             // 
             // buttonSearchCancel
             // 
@@ -958,6 +962,20 @@ namespace Audio_Organiser
             this.buttonPlUp.TabIndex = 61;
             this.buttonPlUp.UseVisualStyleBackColor = true;
             this.buttonPlUp.Click += new System.EventHandler(this.buttonPlUp_Click);
+            this.buttonPlUp.MouseHover += new System.EventHandler(this.buttonPlUp_MouseHover);
+            // 
+            // buttonPlDown
+            // 
+            this.buttonPlDown.FlatAppearance.BorderSize = 0;
+            this.buttonPlDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPlDown.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlDown.Image")));
+            this.buttonPlDown.Location = new System.Drawing.Point(108, 710);
+            this.buttonPlDown.Name = "buttonPlDown";
+            this.buttonPlDown.Size = new System.Drawing.Size(26, 26);
+            this.buttonPlDown.TabIndex = 62;
+            this.buttonPlDown.UseVisualStyleBackColor = true;
+            this.buttonPlDown.Click += new System.EventHandler(this.buttonPlDown_Click);
+            this.buttonPlDown.MouseHover += new System.EventHandler(this.buttonPlDown_MouseHover);
             // 
             // kontrolka1
             // 
@@ -969,19 +987,6 @@ namespace Audio_Organiser
             this.kontrolka1.Size = new System.Drawing.Size(1182, 20);
             this.kontrolka1.TabIndex = 42;
             this.kontrolka1.Visible = false;
-            // 
-            // buttonPlDown
-            // 
-            this.buttonPlDown.FlatAppearance.BorderSize = 0;
-            this.buttonPlDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlDown.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlDown.Image")));
-            this.buttonPlDown.Image.RotateFlip(RotateFlipType.Rotate180FlipX);
-            this.buttonPlDown.Location = new System.Drawing.Point(108, 710);
-            this.buttonPlDown.Name = "buttonPlDown";
-            this.buttonPlDown.Size = new System.Drawing.Size(26, 26);
-            this.buttonPlDown.TabIndex = 62;
-            this.buttonPlDown.UseVisualStyleBackColor = true;
-            this.buttonPlDown.Click += new System.EventHandler(this.buttonPlDown_Click);
             // 
             // MainWindow
             // 

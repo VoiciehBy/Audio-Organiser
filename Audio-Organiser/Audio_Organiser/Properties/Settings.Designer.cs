@@ -99,5 +99,16 @@ namespace Audio_Organiser.Properties {
                 return ((string)(this["muzykaConnectionString6"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\teste2\\31052020start\\baza\\" +
+            "muzyka.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string muzykaConnectionString7 {
+            get {
+                return ((string)(this["muzykaConnectionString7"]));
+            }
+        }
     }
 }

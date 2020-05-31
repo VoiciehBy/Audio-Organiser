@@ -845,6 +845,10 @@ namespace Audio_Organiser
 
                         db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
                         outputDevice.Init(audioFile);
+                        UpdatePlayerInfo(list_id);
+                        LoadCoverArt(audioFile.FileName);
+                        objectListViewPlaylist.Items[list_id].ForeColor = Color.Red;
+                        objectListViewPlaylist.Refresh();
                         if (stopped == false)
                         {
                             outputDevice.Play();
@@ -1017,6 +1021,16 @@ namespace Audio_Organiser
             {
                 toolTip1.SetToolTip(buttonMute, "Unmute audio");
             }
+        }
+
+        private void buttonPlUp_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonPlUp, "Move selected item upwards");
+        }
+
+        private void buttonPlDown_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(buttonPlDown, "Move selected item downwards");
         }
 
         //VRB_Events
