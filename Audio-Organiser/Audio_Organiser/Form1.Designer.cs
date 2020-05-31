@@ -334,21 +334,21 @@ namespace Audio_Organiser
             // gradient0ToolStripMenuItem
             // 
             this.gradient0ToolStripMenuItem.Name = "gradient0ToolStripMenuItem";
-            this.gradient0ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.gradient0ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gradient0ToolStripMenuItem.Text = "Gradient0";
             this.gradient0ToolStripMenuItem.Click += new System.EventHandler(this.gradient0ToolStripMenuItem_Click);
             // 
             // gradient1ToolStripMenuItem
             // 
             this.gradient1ToolStripMenuItem.Name = "gradient1ToolStripMenuItem";
-            this.gradient1ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.gradient1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gradient1ToolStripMenuItem.Text = "Gradient1";
             this.gradient1ToolStripMenuItem.Click += new System.EventHandler(this.gradient1ToolStripMenuItem_Click);
             // 
             // gradient2ToolStripMenuItem
             // 
             this.gradient2ToolStripMenuItem.Name = "gradient2ToolStripMenuItem";
-            this.gradient2ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.gradient2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gradient2ToolStripMenuItem.Text = "Gradient2";
             this.gradient2ToolStripMenuItem.Click += new System.EventHandler(this.gradient2ToolStripMenuItem_Click);
             // 

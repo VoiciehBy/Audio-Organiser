@@ -1445,7 +1445,6 @@ namespace Audio_Organiser
             logo.Visible = false;
             gradientToolStripMenuItem.Checked = true;
             gradient0ToolStripMenuItem.Checked = true;
-
             gradient1ToolStripMenuItem.Checked = false;
             gradient2ToolStripMenuItem.Checked = false;
 
@@ -1461,6 +1460,7 @@ namespace Audio_Organiser
             kontrolka1.Color1 = Color.LightSkyBlue;
             kontrolka1.Color2 = Color.DarkViolet;
             logo.Visible = false;
+            gradientToolStripMenuItem.Checked = true;
             gradient1ToolStripMenuItem.Checked = true;
             gradient0ToolStripMenuItem.Checked = false;
             gradient2ToolStripMenuItem.Checked = false;
@@ -1477,6 +1477,7 @@ namespace Audio_Organiser
             kontrolka1.Color1 = Color.Green;
             kontrolka1.Color2 = Color.Pink;
             logo.Visible = false;
+            gradientToolStripMenuItem.Checked = true;
             gradient2ToolStripMenuItem.Checked = true;
             gradient0ToolStripMenuItem.Checked = false;
             gradient1ToolStripMenuItem.Checked = false;
