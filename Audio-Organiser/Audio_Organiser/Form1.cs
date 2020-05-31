@@ -591,6 +591,8 @@ namespace Audio_Organiser
                     if (playing == true)
                     {
                         audioFile.Position = 0;
+                        progressBar_Init();
+                        prog.Value = 0;
                         return;
                     }
                     ResumeSong();
@@ -601,6 +603,7 @@ namespace Audio_Organiser
             {
                 audioFile.Position = 0;
                 progressBar_Init();
+                prog.Value = 0;
                 return;
             }
             if (paused == true)
