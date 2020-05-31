@@ -295,7 +295,7 @@ namespace Audio_Organiser
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
             {
-                foreach(object item in objectListViewSongs.FilteredObjects)
+                foreach (object item in objectListViewSongs.FilteredObjects)
                 {
                     DatabaseDC.ExecuteCommand("DELETE FROM Song WHERE id = '" + objectListViewSongs.Items[objectListViewSongs.IndexOf(item)].SubItems[0].Text + "';");
                 }
@@ -378,15 +378,15 @@ namespace Audio_Organiser
             if (objectListViewPlaylist.SelectedItems.Count == 0) return;
             int index = objectListViewPlaylist.SelectedIndices[0];
             if (index == 0) return;
-            int index2 = index-1;
+            int index2 = index - 1;
             ListViewItem item = objectListViewPlaylist.Items[index];
             ListViewItem item2 = objectListViewPlaylist.Items[index2];
             objectListViewPlaylist.Items.Remove(item);
             objectListViewPlaylist.Items.Remove(item2);
             objectListViewPlaylist.Items.Insert(index2, item);
-            objectListViewPlaylist.Items[index2].SubItems[2].Text = (index2+1).ToString();
+            objectListViewPlaylist.Items[index2].SubItems[2].Text = (index2 + 1).ToString();
             objectListViewPlaylist.Items.Insert(index, item2);
-            objectListViewPlaylist.Items[index].SubItems[2].Text = (index+1).ToString();
+            objectListViewPlaylist.Items[index].SubItems[2].Text = (index + 1).ToString();
             if (index == list_id) list_id--;
             else if (index == list_id + 1) list_id++;
         }
@@ -407,7 +407,7 @@ namespace Audio_Organiser
             objectListViewPlaylist.Items.Insert(index2, item);
             objectListViewPlaylist.Items[index2].SubItems[2].Text = (index2 + 1).ToString();
             if (index == list_id) list_id++;
-            else if (index == list_id-1) list_id--;
+            else if (index == list_id - 1) list_id--;
         }
 
         private void buttonMove_Click(object sender, EventArgs e)
@@ -420,7 +420,7 @@ namespace Audio_Organiser
                 MessageBox.Show("Plik jest aktualnie odtwarzany.");
                 return;
             }
-            if(!File.Exists(path))
+            if (!File.Exists(path))
             {
                 MessageBox.Show("Plik nie istnieje.");
                 return;
@@ -442,9 +442,9 @@ namespace Audio_Organiser
         private void playlistCheck()
         {
             int exist = 0;
-            foreach(ListViewItem item in objectListViewPlaylist.Items)
+            foreach (ListViewItem item in objectListViewPlaylist.Items)
             {
-                foreach(ListViewItem item2 in objectListViewSongs.Items)
+                foreach (ListViewItem item2 in objectListViewSongs.Items)
                 {
                     if (item.SubItems[0].Text != item2.SubItems[0].Text) continue;
                     else
@@ -1365,12 +1365,49 @@ namespace Audio_Organiser
             uncheckSolidColors();
             uncheckTextures();
         }
+        void makeResUIVisibleDueToB(bool b)
+        {
+            resolutionPanel.Visible = b;
+            resolutionPanel.Visible = b;
+            resolutionsBox.Visible = b;
+        }
+
+        private void resolutionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Wybierz rozdzielczość:");
+            makeResUIVisibleDueToB(true);
+        }
+
+        private void resolutionsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (resolutionsBox.Visible)
+            {
+                if (resolutionsBox.SelectedItem == resolutionsBox.Items[0])
+                {
+                    Width = 1280;
+                    Height = 768;
+                    makeResUIVisibleDueToB(false);
+                }
+                else if (resolutionsBox.SelectedItem == resolutionsBox.Items[1])
+                {
+                    Width = 1024;
+                    Height = 768;
+                    makeResUIVisibleDueToB(false);
+                }
+
+                else if (resolutionsBox.SelectedItem == resolutionsBox.Items[2])
+                {
+                    Width = 800;
+                    Height = 768;
+                    makeResUIVisibleDueToB(false);
+                }
+            }
+        }
 
         /*private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            kontrolka1.GradientRadius = Decimal.ToDouble(numericUpDown1.Value)*Math.Pow(10, Decimal.ToInt32(numericUpDown1.Value));          
-        }*/
+{
+kontrolka1.GradientRadius = Decimal.ToDouble(numericUpDown1.Value)*Math.Pow(10, Decimal.ToInt32(numericUpDown1.Value));          
+}*/
         //VRB_Events
-
     }
-}
+}      
