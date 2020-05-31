@@ -539,6 +539,7 @@ namespace Audio_Organiser
 
         private void buttonDbCheck_Click(object sender, EventArgs e)
         {
+            bool ok = true;
             List<IModelFilter> filter = new List<IModelFilter>();
             foreach (ListViewItem item in objectListViewSongs.Items)
             {
@@ -547,8 +548,10 @@ namespace Audio_Organiser
                     TextMatchFilter filter1 = TextMatchFilter.Contains(objectListViewSongs, item.SubItems[0].Text);
                     filter1.Columns = new[] { this.id };
                     filter.Add(filter1);
+                    ok = false;
                 }
             }
+            if (ok) return;
             this.objectListViewSongs.ModelFilter = new CompositeAnyFilter(filter);
             if (MessageBox.Show("Wyświetlono wpisy z błędnymi ścieżkami.", "Informacja",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Information,
