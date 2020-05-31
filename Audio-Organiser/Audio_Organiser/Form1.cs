@@ -503,6 +503,8 @@ namespace Audio_Organiser
                 else
                 {
                     //brak pliku w sciezce
+                    MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                    return;
                 }
             }
             db_id = objectListViewPlaylist.Items[list_id].SubItems[0].Text;
@@ -622,6 +624,8 @@ namespace Audio_Organiser
             else
             {
                 //nie ma pliku w tej sciezce
+                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                return;
             }
         }
 
@@ -687,6 +691,8 @@ namespace Audio_Organiser
             else
             {
                 //nie ma pliku w tej sciezce
+                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                return;
             }
 
         }
@@ -874,6 +880,7 @@ namespace Audio_Organiser
                     else
                     {
                         //nie ma pliku w tej sciezce
+                        MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                         return;
                     }
                 }
@@ -925,6 +932,7 @@ namespace Audio_Organiser
                     else
                     {
                         //nie ma pliku w tej sciezce
+                        MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                         return;
                     }
                 }
@@ -963,6 +971,7 @@ namespace Audio_Organiser
             else
             {
                 //nie ma pliku w tej sciezce
+                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                 return;
             }
 
