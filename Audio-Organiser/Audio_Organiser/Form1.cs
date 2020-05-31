@@ -1454,6 +1454,22 @@ namespace Audio_Organiser
             resolutionPanel.Visible = b;
             resolutionsBox.Visible = b;
         }
+     
+        void moveButtonsEtc(int x,int y)
+        {
+            buttonPlAdd.Location = new System.Drawing.Point(995 + x, 551 + y);
+            buttonSearchCancel.Location = new System.Drawing.Point(1148 + x, 551 + y);
+            buttonDbCheck.Location = new System.Drawing.Point(1148 + x, 580 + y);
+            logo.Location = new System.Drawing.Point(1126 + x, 606 + y);
+        }
+
+        void moveButtonsEtc(int x, int y,int z,int z1)
+        {
+            buttonPlAdd.Location = new System.Drawing.Point(995 + x, 551 + y);
+            buttonSearchCancel.Location = new System.Drawing.Point(1148 + z, 551 + z1);
+            buttonDbCheck.Location = new System.Drawing.Point(1148 + z, 580 + z1);
+            logo.Location = new System.Drawing.Point(1126 + z, 606 + z1);
+        }
 
         private void resolutionToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1469,12 +1485,14 @@ namespace Audio_Organiser
                 {
                     Width = 1280;
                     Height = 768;
+                    moveButtonsEtc(0,0);
                     makeResUIVisibleDueToB(false);
                 }
                 else if (resolutionsBox.SelectedItem == resolutionsBox.Items[1])
                 {
                     Width = 1024;
                     Height = 768;
+                    moveButtonsEtc(-250, 0);
                     makeResUIVisibleDueToB(false);
                 }
 
@@ -1482,6 +1500,7 @@ namespace Audio_Organiser
                 {
                     Width = 800;
                     Height = 768;
+                    moveButtonsEtc(-350, 0,-503, 25);
                     makeResUIVisibleDueToB(false);
                 }
             }
