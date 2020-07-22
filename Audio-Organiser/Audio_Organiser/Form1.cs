@@ -1,22 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 //player
 using NAudio.Wave;
-using NAudio.Wave.SampleProviders;
 using BrightIdeasSoftware;
-using System.Text.RegularExpressions;
-using System.Security.Permissions;
-using System.Security.Cryptography.X509Certificates;
-using System.Drawing.Text;
 
 namespace Audio_Organiser
 {
@@ -45,6 +36,21 @@ namespace Audio_Organiser
             }
         }
         DatabaseMusicDataContext DatabaseDC = new DatabaseMusicDataContext();
+        //translation
+        string areYouSure = "Czy na pewno chcesz";
+        string fFile = " plik ";
+        string fCapFile = "Plik ";
+        string fFile1 = " pliku ";
+        string delete = " usunąć ";
+        string cannotFindFile = " Nie można znaleźć pliku:\n";
+        string fileDontExist = "Plik nie istnieje ";
+        string tThis = " ten ";
+        string thisEntry = " ten wpis ";
+        string fromDB = " z bazy danych ";
+        string fileIsPlayed = "Plik jest aktualnie odtwarzany.";
+        string fromDisc = " z dysku ";
+        string selectResolution = "Wybierz rozdzielczość:";
+
         //player
         private WaveOutEvent outputDevice;
         private AudioFileReader audioFile;
@@ -150,7 +156,7 @@ namespace Audio_Organiser
                 DatabaseDC = new DatabaseMusicDataContext();
                 LoadMusic();
             }
-            else MessageBox.Show("Zły format pliku. Tylko mp3 i wav.");
+            else MessageBox.Show("Zły format" + fFile1 + ". Tylko mp3 i wav.");
         }
 
         private void button2_Click(object sender, EventArgs e)                          //Add1
@@ -227,18 +233,18 @@ namespace Audio_Organiser
                         }
                         catch
                         {
-                            MessageBox.Show("Plik otwarty w innym programie, bądź odtwarzany w playerze.");
+                            MessageBox.Show(fCapFile + "otwarty w innym programie, bądź odtwarzany w playerze.");
                             return;
                         }
                         if (pathh != path2) File.Move(pathh, path2);
                     }
-                    else MessageBox.Show("Plik o ścieżce zapisanej w bazie nie istnieje.");
+                    else MessageBox.Show(fCapFile + "o ścieżce zapisanej w bazie nie istnieje.");
                     DatabaseDC.ExecuteCommand("UPDATE Song SET [file]=N'" + textBoxFile.Text + "', artist=N'" + textBoxArtist.Text + "', title=N'" + textBoxTitle.Text + "', album=N'" + textBoxAlbum.Text + "', year='" + textBoxYear.Text + "', genre=N'" + textBoxGenre.Text + "', path=N'" + path2 + "' WHERE id='" + objectListViewSongs.SelectedItems[0].SubItems[0].Text + "';");
                 }
                 else
                 {
                     if (File.Exists(pathh)) MessageBox.Show("Plik o podanej nazwie docelowej już istnieje.");
-                    else MessageBox.Show("Plik o ścieżce zapisanej w bazie nie istnieje oraz plik o podanej nazwie docelowej już istnieje.");
+                    else MessageBox.Show(fCapFile + "o ścieżce zapisanej w bazie nie istnieje oraz" + fFile + "o podanej nazwie docelowej już istnieje.");
                     DatabaseDC.ExecuteCommand("UPDATE Song SET artist=N'" + textBoxArtist.Text + "', title=N'" + textBoxTitle.Text + "', album=N'" + textBoxAlbum.Text + "', year='" + textBoxYear.Text + "', genre=N'" + textBoxGenre.Text + "' WHERE id='" + objectListViewSongs.SelectedItems[0].SubItems[0].Text + "';");
                 }
                 updateClear();
@@ -252,7 +258,7 @@ namespace Audio_Organiser
             if (objectListViewSongs.SelectedItems.Count > 0)
             {
                 if (playingNow(objectListViewSongs.SelectedItem.SubItems[1].Text)) return;
-                if (MessageBox.Show("Czy na pewno chcesz usunąć ten wpis z bazy danych?", "Ostrzeżenie",
+                if (MessageBox.Show(areYouSure + delete + thisEntry + fromDB + "?", "Ostrzeżenie",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
                     MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
                 {
@@ -269,12 +275,12 @@ namespace Audio_Organiser
                 if (playingNow(objectListViewSongs.SelectedItem.SubItems[1].Text)) return;
                 if (File.Exists(objectListViewSongs.SelectedItems[0].SubItems[1].Text))
                 {
-                    if (MessageBox.Show("Czy na pewno chcesz usunąć ten plik z dysku?", "Ostrzeżenie",
+                    if (MessageBox.Show(areYouSure + delete + tThis + fFile + fromDisc + "?", "Ostrzeżenie",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
                     MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
                     {
                         File.Delete(objectListViewSongs.SelectedItems[0].SubItems[1].Text);
-                        if (MessageBox.Show("Czy chcesz usunąć ten wpis z bazy danych?", "Pytanie",
+                        if (MessageBox.Show("Czy chcesz" + delete + thisEntry + fromDB + "?", "Pytanie",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                         MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
                         {
@@ -282,7 +288,7 @@ namespace Audio_Organiser
                         }
                     }
                 }
-                else MessageBox.Show("Plik nie istnieje");
+                else MessageBox.Show(fileDontExist);
             }
         }
 
@@ -315,7 +321,7 @@ namespace Audio_Organiser
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Czy na pewno chcesz usunąć elementy widoczne na liście?", "Ostrzeżenie",
+            if (MessageBox.Show(areYouSure + delete + "elementy widoczne na liście?", "Ostrzeżenie",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
             {
@@ -442,7 +448,7 @@ namespace Audio_Organiser
             if (playingNow(path)) return;
             if (!File.Exists(path))
             {
-                MessageBox.Show("Plik nie istnieje.");
+                MessageBox.Show(fileDontExist);
                 return;
             }
             string filename = objectListViewSongs.Items[index].SubItems[2].Text;
@@ -464,7 +470,7 @@ namespace Audio_Organiser
         {
             if (audioFile != null && path == audioFile.FileName)
             {
-                MessageBox.Show("Plik jest aktualnie odtwarzany.");
+                MessageBox.Show(fileIsPlayed);
                 return true;
             }
             return false;
@@ -619,7 +625,7 @@ namespace Audio_Organiser
                 }
                 else
                 {
-                    MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                    MessageBox.Show(cannotFindFile + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                     return;
                 }
             }
@@ -740,7 +746,7 @@ namespace Audio_Organiser
             }
             else
             {
-                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                MessageBox.Show(cannotFindFile + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                 return;
             }
         }
@@ -807,7 +813,7 @@ namespace Audio_Organiser
             }
             else
             {
-                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                MessageBox.Show(cannotFindFile + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                 return;
             }
 
@@ -995,7 +1001,7 @@ namespace Audio_Organiser
                     }
                     else
                     {
-                        MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                        MessageBox.Show(cannotFindFile + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                         return;
                     }
                 }
@@ -1046,7 +1052,7 @@ namespace Audio_Organiser
                     }
                     else
                     {
-                        MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                        MessageBox.Show(cannotFindFile + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                         return;
                     }
                 }
@@ -1085,7 +1091,7 @@ namespace Audio_Organiser
             }
             else
             {
-                MessageBox.Show("Nie można znaleźć pliku:\n" + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
+                MessageBox.Show(cannotFindFile + objectListViewPlaylist.Items[list_id].SubItems[1].Text + "\nUsuń go z listy odtwarzacza i spróbuj ponownie.");
                 return;
             }
 
@@ -1514,7 +1520,7 @@ namespace Audio_Organiser
 
         private void resolutionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Wybierz rozdzielczość:");
+            MessageBox.Show(selectResolution);
             makeResUIVisibleDueToB(true);
         }
 
