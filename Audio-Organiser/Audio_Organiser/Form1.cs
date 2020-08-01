@@ -1,13 +1,13 @@
+using BrightIdeasSoftware;
+//player
+using NAudio.Wave;
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-//player
-using NAudio.Wave;
-using BrightIdeasSoftware;
 
 namespace Audio_Organiser
 {
@@ -36,26 +36,8 @@ namespace Audio_Organiser
             }
         }
         DatabaseMusicDataContext DatabaseDC = new DatabaseMusicDataContext();
-		
-        //translation   		
-		public static string badFormat = "Zły format pliku. Tylko mp3 i wav.";
-		public static string fileIsOpenOr = "Plik jest otwarty w innym programie, bądź odtwarzany w playerze.";
-        public static string fileWithGivenPath = "Plik o ścieżce zapisanej w bazie nie istnieje ";
-        public static string fileWithGivenName = "Plik o podanej nazwie docelowej już istnieje.";
-        public static string fWGPAWGN = fileWithGivenPath + "oraz plik o podanej nazwie docelowej już istnieje.";
-        public static string warning = "Ostrzeżenie";      
-		public static string areYouSureDel = "Czy na pewno chcesz usunąć ten wpis z bazy danych?";
-        public static string areYouSureDel1 = "Czy na pewno chcesz usunąć ten plik z dysku?";
-		public static string question = "Pytanie";
-        public static string doYouWant = "Czy chcesz usunąć ten wpis z bazy danych?";
-        public static string fileDontExist = "Plik nie istnieje.";
-		public static string wantDelItems = "Czy na pewno chcesz usunąć elementy widoczne na liście?";
-        public static string fileIsPlayed = "Plik jest aktualnie odtwarzany.";	
-		public static string info = "Informacja";
-		public static string showedEntryWithWrongPathes = "Wyświetlono wpisy z błędnymi ścieżkami.";	   
-		public static string cannotFindFile = "Nie można znaleźć pliku:\n";
-		public static string delFromListAndTryAgain = "\nUsuń go z listy odtwarzacza i spróbuj ponownie.";
-		public static string selectResolution = "Wybierz rozdzielczość:";
+
+        
 
         //player
         private WaveOutEvent outputDevice;
@@ -1503,8 +1485,8 @@ namespace Audio_Organiser
             resolutionPanel.Visible = b;
             resolutionsBox.Visible = b;
         }
-     
-        void moveButtonsEtc(int x,int y)
+
+        void moveButtonsEtc(int x, int y)
         {
             buttonPlAdd.Location = new System.Drawing.Point(995 + x, 554 + y);
             buttonSearchCancel.Location = new System.Drawing.Point(1148 + x, 554 + y);
@@ -1519,7 +1501,7 @@ namespace Audio_Organiser
             int a = x - 135;
             buttonPlAdd.Location = new System.Drawing.Point(995 + x - 24, 554 + y);
             buttonSearchCancel.Location = new System.Drawing.Point(1148 + z + 20, 554 + z1);
-            buttonDbCheck.Location = new System.Drawing.Point(1148 + z + 20, 581 + z1);           
+            buttonDbCheck.Location = new System.Drawing.Point(1148 + z + 20, 581 + z1);
             objectListViewSongs.Size = new System.Drawing.Size(974 + a, 506);
             logo.Visible = false;
         }
@@ -1538,7 +1520,7 @@ namespace Audio_Organiser
                 {
                     Width = 1280;
                     Height = 768;
-                    moveButtonsEtc(0,0);
+                    moveButtonsEtc(0, 0);
                     resizeColumns(0, 0, 272, 189, 164, 137, 59, 149);
                     makeResUIVisibleDueToB(false);
                 }
@@ -1574,4 +1556,4 @@ namespace Audio_Organiser
             genre.Width = x7;
         }
     }
-}      
+}
