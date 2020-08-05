@@ -35,7 +35,7 @@ namespace Audio_Organiser
             this.dodajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonAdd2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDel = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDel2 = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonClear = new System.Windows.Forms.ToolStripMenuItem();
@@ -143,7 +143,7 @@ namespace Audio_Organiser
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dodajToolStripMenuItem,
-            this.usuńToolStripMenuItem,
+            this.usunToolStripMenuItem,
             this.themesToolStripMenuItem,
             this.resolutionToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -175,15 +175,15 @@ namespace Audio_Organiser
             this.buttonAdd2.Text = buttonAdd2Text;
             this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
             // 
-            // usuńToolStripMenuItem
+            // usunToolStripMenuItem
             // 
-            this.usuńToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usunToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buttonDel,
             this.buttonDel2,
             this.buttonClear});
-            this.usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
-            this.usuńToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.usuńToolStripMenuItem.Text = usuńToolStripMenuItemText;
+            this.usunToolStripMenuItem.Name = "usunToolStripMenuItem";
+            this.usunToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.usunToolStripMenuItem.Text = usunToolStripMenuItemText;
             // 
             // buttonDel
             // 
@@ -1178,7 +1178,7 @@ namespace Audio_Organiser
         private System.Windows.Forms.ToolStripMenuItem dodajToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem button2;
         private System.Windows.Forms.ToolStripMenuItem buttonAdd2;
-        private System.Windows.Forms.ToolStripMenuItem usuńToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usunToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buttonDel;
         private System.Windows.Forms.ToolStripMenuItem buttonDel2;
         private System.Windows.Forms.ToolStripMenuItem buttonClear;

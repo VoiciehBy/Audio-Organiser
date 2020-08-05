@@ -26,7 +26,7 @@ namespace Audio_Organiser
         static string dodajToolStripMenuItemText = "Dodaj";
         static string button2Text = "Dodaj pliki";
         static string buttonAdd2Text = "Dodaj pliki z ca³ego folderu";
-        static string usuñToolStripMenuItemText = "Usuñ";
+        static string usunToolStripMenuItemText = "Usuñ";
         static string buttonDelText = "Usuñ z bazy";
         static string buttonDel2Text = "Usuñ z dysku";
         static string buttonClearText = "Usuñ widoczne z bazy";
