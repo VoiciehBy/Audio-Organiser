@@ -1487,7 +1487,7 @@ namespace Audio_Organiser
             buttonDbCheck.Location = new System.Drawing.Point(1148 + x, 581 + y);
             logo.Location = new System.Drawing.Point(1126 + x, 606 + y);
             objectListViewSongs.Size = new System.Drawing.Size(974 + x, 506);
-            if (kontrolka1.Visible == false) logo.Visible = true;
+            logo.Visible = true;
         }
 
         public void moveButtonsEtc(int x, int y, int z, int z1)
