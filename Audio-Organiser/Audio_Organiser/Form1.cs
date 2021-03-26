@@ -1479,14 +1479,8 @@ namespace Audio_Organiser
             uncheckSolidColors();
             uncheckTextures();
         }
-        void makeResUIVisibleDueToB(bool b)
-        {
-            resolutionPanel.Visible = b;
-            resolutionPanel.Visible = b;
-            resolutionsBox.Visible = b;
-        }
 
-        void moveButtonsEtc(int x, int y)
+        public void moveButtonsEtc(int x, int y)
         {
             buttonPlAdd.Location = new System.Drawing.Point(995 + x, 554 + y);
             buttonSearchCancel.Location = new System.Drawing.Point(1148 + x, 554 + y);
@@ -1496,7 +1490,7 @@ namespace Audio_Organiser
             if (kontrolka1.Visible == false) logo.Visible = true;
         }
 
-        void moveButtonsEtc(int x, int y, int z, int z1)
+        public void moveButtonsEtc(int x, int y, int z, int z1)
         {
             int a = x - 135;
             buttonPlAdd.Location = new System.Drawing.Point(995 + x - 24, 554 + y);
@@ -1508,43 +1502,12 @@ namespace Audio_Organiser
 
         private void resolutionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(selectResolution);
-            makeResUIVisibleDueToB(true);
+            Form2 f = new Form2();
+            f.Show();
+            this.Hide();
         }
 
-        private void resolutionsBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (resolutionsBox.Visible)
-            {
-                if (resolutionsBox.SelectedItem == resolutionsBox.Items[0])
-                {
-                    Width = 1280;
-                    Height = 768;
-                    moveButtonsEtc(0, 0);
-                    resizeColumns(0, 0, 272, 189, 164, 137, 59, 149);
-                    makeResUIVisibleDueToB(false);
-                }
-                else if (resolutionsBox.SelectedItem == resolutionsBox.Items[1])
-                {
-                    Width = 1024;
-                    Height = 768;
-                    moveButtonsEtc(-250, 0);
-                    resizeColumns(0, 0, 150, 135, 145, 140, 60, 90);
-                    makeResUIVisibleDueToB(false);
-                }
-                else if (resolutionsBox.SelectedItem == resolutionsBox.Items[2])
-                {
-                    Width = 800;
-                    Height = 768;
-                    moveButtonsEtc(-350, 0, -503, 29);
-                    resizeColumns(0, 0, 110, 85, 100, 80, 50, 60);
-                    makeResUIVisibleDueToB(false);
-                }
-
-            }
-        }
-
-        private void resizeColumns(int x0, int x1, int x2, int x3, int x4, int x5, int x6, int x7)
+        public void resizeColumns(int x0, int x1, int x2, int x3, int x4, int x5, int x6, int x7)
         {
             id.Width = x0;
             path.Width = x1;
