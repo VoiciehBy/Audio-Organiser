@@ -124,7 +124,6 @@ namespace Audio_Organiser
             this.buttonDbCheck = new System.Windows.Forms.Button();
             this.buttonAddFile = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.kontrolka1 = new Audio_Organiser.GradientController();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -138,16 +137,14 @@ namespace Audio_Organiser
             // 
             // menuStrip
             // 
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dodajToolStripMenuItem,
             this.usunToolStripMenuItem,
             this.themesToolStripMenuItem,
             this.resolutionToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1264, 24);
-            this.menuStrip.TabIndex = 2;
-            this.menuStrip.Text = "menuStrip1";
             // 
             // dodajToolStripMenuItem
             // 
@@ -155,21 +152,18 @@ namespace Audio_Organiser
             this.button2,
             this.buttonAdd2});
             this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
-            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.dodajToolStripMenuItem.Text = "Dodaj";
+            resources.ApplyResources(this.dodajToolStripMenuItem, "dodajToolStripMenuItem");
             // 
             // button2
             // 
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 22);
-            this.button2.Text = "Dodaj pliki";
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonAdd2
             // 
             this.buttonAdd2.Name = "buttonAdd2";
-            this.buttonAdd2.Size = new System.Drawing.Size(217, 22);
-            this.buttonAdd2.Text = "Dodaj pliki z całego folderu";
+            resources.ApplyResources(this.buttonAdd2, "buttonAdd2");
             this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
             // 
             // usunToolStripMenuItem
@@ -179,28 +173,24 @@ namespace Audio_Organiser
             this.buttonDel2,
             this.buttonClear});
             this.usunToolStripMenuItem.Name = "usunToolStripMenuItem";
-            this.usunToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.usunToolStripMenuItem.Text = "Usuń";
+            resources.ApplyResources(this.usunToolStripMenuItem, "usunToolStripMenuItem");
             // 
             // buttonDel
             // 
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(189, 22);
-            this.buttonDel.Text = "Usuń z bazy";
+            resources.ApplyResources(this.buttonDel, "buttonDel");
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonDel2
             // 
             this.buttonDel2.Name = "buttonDel2";
-            this.buttonDel2.Size = new System.Drawing.Size(189, 22);
-            this.buttonDel2.Text = "Usuń z dysku";
+            resources.ApplyResources(this.buttonDel2, "buttonDel2");
             this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
             // 
             // buttonClear
             // 
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(189, 22);
-            this.buttonClear.Text = "Usuń widoczne z bazy";
+            resources.ApplyResources(this.buttonClear, "buttonClear");
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // themesToolStripMenuItem
@@ -211,16 +201,14 @@ namespace Audio_Organiser
             this.textureToolStripMenuItem,
             this.gradientToolStripMenuItem});
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
-            this.themesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.themesToolStripMenuItem.Text = "Motywy";
+            resources.ApplyResources(this.themesToolStripMenuItem, "themesToolStripMenuItem");
             // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Checked = true;
             this.defaultToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.defaultToolStripMenuItem.Text = "Domyślny";
+            resources.ApplyResources(this.defaultToolStripMenuItem, "defaultToolStripMenuItem");
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // solidColorToolStripMenuItem
@@ -234,56 +222,48 @@ namespace Audio_Organiser
             this.lightSalmonToolStripMenuItem,
             this.mistyRoseToolStripMenuItem});
             this.solidColorToolStripMenuItem.Name = "solidColorToolStripMenuItem";
-            this.solidColorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.solidColorToolStripMenuItem.Text = "Jednolity Kolor";
+            resources.ApplyResources(this.solidColorToolStripMenuItem, "solidColorToolStripMenuItem");
             // 
             // whiteToolStripMenuItem
             // 
             this.whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            this.whiteToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.whiteToolStripMenuItem.Text = "Biały";
+            resources.ApplyResources(this.whiteToolStripMenuItem, "whiteToolStripMenuItem");
             this.whiteToolStripMenuItem.Click += new System.EventHandler(this.whiteToolStripMenuItem_Click);
             // 
             // steelToolStripMenuItem
             // 
             this.steelToolStripMenuItem.Name = "steelToolStripMenuItem";
-            this.steelToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.steelToolStripMenuItem.Text = "Stalowy";
+            resources.ApplyResources(this.steelToolStripMenuItem, "steelToolStripMenuItem");
             this.steelToolStripMenuItem.Click += new System.EventHandler(this.steelToolStripMenuItem_Click);
             // 
             // lightSkyBlueToolStripMenuItem
             // 
             this.lightSkyBlueToolStripMenuItem.Name = "lightSkyBlueToolStripMenuItem";
-            this.lightSkyBlueToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.lightSkyBlueToolStripMenuItem.Text = "Jasny Podniebny Błękit";
+            resources.ApplyResources(this.lightSkyBlueToolStripMenuItem, "lightSkyBlueToolStripMenuItem");
             this.lightSkyBlueToolStripMenuItem.Click += new System.EventHandler(this.lightSkyBlueToolStripMenuItem_Click);
             // 
             // lightSteelBlueToolStripMenuItem
             // 
             this.lightSteelBlueToolStripMenuItem.Name = "lightSteelBlueToolStripMenuItem";
-            this.lightSteelBlueToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.lightSteelBlueToolStripMenuItem.Text = "Jasny Stalowy Błękit";
+            resources.ApplyResources(this.lightSteelBlueToolStripMenuItem, "lightSteelBlueToolStripMenuItem");
             this.lightSteelBlueToolStripMenuItem.Click += new System.EventHandler(this.lightSteelBlueToolStripMenuItem_Click);
             // 
             // paoloVeronesesGreenToolStripMenuItem
             // 
             this.paoloVeronesesGreenToolStripMenuItem.Name = "paoloVeronesesGreenToolStripMenuItem";
-            this.paoloVeronesesGreenToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.paoloVeronesesGreenToolStripMenuItem.Text = "Zieleń Paolo Veronese\'a";
+            resources.ApplyResources(this.paoloVeronesesGreenToolStripMenuItem, "paoloVeronesesGreenToolStripMenuItem");
             this.paoloVeronesesGreenToolStripMenuItem.Click += new System.EventHandler(this.paoloVeronesesGreenToolStripMenuItem_Click);
             // 
             // lightSalmonToolStripMenuItem
             // 
             this.lightSalmonToolStripMenuItem.Name = "lightSalmonToolStripMenuItem";
-            this.lightSalmonToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.lightSalmonToolStripMenuItem.Text = "Jasny Łososiowy";
+            resources.ApplyResources(this.lightSalmonToolStripMenuItem, "lightSalmonToolStripMenuItem");
             this.lightSalmonToolStripMenuItem.Click += new System.EventHandler(this.lightSalmonToolStripMenuItem_Click);
             // 
             // mistyRoseToolStripMenuItem
             // 
             this.mistyRoseToolStripMenuItem.Name = "mistyRoseToolStripMenuItem";
-            this.mistyRoseToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.mistyRoseToolStripMenuItem.Text = "Mglisty Róż";
+            resources.ApplyResources(this.mistyRoseToolStripMenuItem, "mistyRoseToolStripMenuItem");
             this.mistyRoseToolStripMenuItem.Click += new System.EventHandler(this.mistyRoseToolStripMenuItem_Click);
             // 
             // textureToolStripMenuItem
@@ -293,28 +273,24 @@ namespace Audio_Organiser
             this.blueWebToolStripMenuItem,
             this.leatherToolStripMenuItem});
             this.textureToolStripMenuItem.Name = "textureToolStripMenuItem";
-            this.textureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.textureToolStripMenuItem.Text = "Tekstura";
+            resources.ApplyResources(this.textureToolStripMenuItem, "textureToolStripMenuItem");
             // 
             // freeDGreenToolStripMenuItem
             // 
             this.freeDGreenToolStripMenuItem.Name = "freeDGreenToolStripMenuItem";
-            this.freeDGreenToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.freeDGreenToolStripMenuItem.Text = "3D Green";
+            resources.ApplyResources(this.freeDGreenToolStripMenuItem, "freeDGreenToolStripMenuItem");
             this.freeDGreenToolStripMenuItem.Click += new System.EventHandler(this.freeDGreenToolStripMenuItem_Click);
             // 
             // blueWebToolStripMenuItem
             // 
             this.blueWebToolStripMenuItem.Name = "blueWebToolStripMenuItem";
-            this.blueWebToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.blueWebToolStripMenuItem.Text = "Blue Web";
+            resources.ApplyResources(this.blueWebToolStripMenuItem, "blueWebToolStripMenuItem");
             this.blueWebToolStripMenuItem.Click += new System.EventHandler(this.blueWebToolStripMenuItem_Click);
             // 
             // leatherToolStripMenuItem
             // 
             this.leatherToolStripMenuItem.Name = "leatherToolStripMenuItem";
-            this.leatherToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.leatherToolStripMenuItem.Text = "Leather";
+            resources.ApplyResources(this.leatherToolStripMenuItem, "leatherToolStripMenuItem");
             this.leatherToolStripMenuItem.Click += new System.EventHandler(this.leatherToolStripMenuItem_Click);
             // 
             // gradientToolStripMenuItem
@@ -324,35 +300,30 @@ namespace Audio_Organiser
             this.gradient1ToolStripMenuItem,
             this.gradient2ToolStripMenuItem});
             this.gradientToolStripMenuItem.Name = "gradientToolStripMenuItem";
-            this.gradientToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gradientToolStripMenuItem.Text = "Gradient";
+            resources.ApplyResources(this.gradientToolStripMenuItem, "gradientToolStripMenuItem");
             // 
             // gradient0ToolStripMenuItem
             // 
             this.gradient0ToolStripMenuItem.Name = "gradient0ToolStripMenuItem";
-            this.gradient0ToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
-            this.gradient0ToolStripMenuItem.Text = "#1";
+            resources.ApplyResources(this.gradient0ToolStripMenuItem, "gradient0ToolStripMenuItem");
             this.gradient0ToolStripMenuItem.Click += new System.EventHandler(this.gradient0ToolStripMenuItem_Click);
             // 
             // gradient1ToolStripMenuItem
             // 
             this.gradient1ToolStripMenuItem.Name = "gradient1ToolStripMenuItem";
-            this.gradient1ToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
-            this.gradient1ToolStripMenuItem.Text = "#2";
+            resources.ApplyResources(this.gradient1ToolStripMenuItem, "gradient1ToolStripMenuItem");
             this.gradient1ToolStripMenuItem.Click += new System.EventHandler(this.gradient1ToolStripMenuItem_Click);
             // 
             // gradient2ToolStripMenuItem
             // 
             this.gradient2ToolStripMenuItem.Name = "gradient2ToolStripMenuItem";
-            this.gradient2ToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
-            this.gradient2ToolStripMenuItem.Text = "#3";
+            resources.ApplyResources(this.gradient2ToolStripMenuItem, "gradient2ToolStripMenuItem");
             this.gradient2ToolStripMenuItem.Click += new System.EventHandler(this.gradient2ToolStripMenuItem_Click);
             // 
             // resolutionToolStripMenuItem
             // 
             this.resolutionToolStripMenuItem.Name = "resolutionToolStripMenuItem";
-            this.resolutionToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.resolutionToolStripMenuItem.Text = "Rozdzielczość";
+            resources.ApplyResources(this.resolutionToolStripMenuItem, "resolutionToolStripMenuItem");
             this.resolutionToolStripMenuItem.Click += new System.EventHandler(this.resolutionToolStripMenuItem_Click);
             // 
             // openFileDialog1
@@ -362,34 +333,22 @@ namespace Audio_Organiser
             // volumeBar
             // 
             this.volumeBar.LargeChange = 10;
-            this.volumeBar.Location = new System.Drawing.Point(105, 56);
+            resources.ApplyResources(this.volumeBar, "volumeBar");
             this.volumeBar.Maximum = 100;
             this.volumeBar.Name = "volumeBar";
-            this.volumeBar.Size = new System.Drawing.Size(104, 45);
             this.volumeBar.SmallChange = 10;
-            this.volumeBar.TabIndex = 21;
             this.volumeBar.Value = 100;
             this.volumeBar.Scroll += new System.EventHandler(this.volumeBar_Scroll);
             // 
             // currentTime
             // 
-            this.currentTime.AutoSize = true;
-            this.currentTime.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.currentTime.Location = new System.Drawing.Point(3, 150);
+            resources.ApplyResources(this.currentTime, "currentTime");
             this.currentTime.Name = "currentTime";
-            this.currentTime.Size = new System.Drawing.Size(56, 17);
-            this.currentTime.TabIndex = 25;
-            this.currentTime.Text = "00:00:00";
             // 
             // currentLength
             // 
-            this.currentLength.AutoSize = true;
-            this.currentLength.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.currentLength.Location = new System.Drawing.Point(200, 150);
+            resources.ApplyResources(this.currentLength, "currentLength");
             this.currentLength.Name = "currentLength";
-            this.currentLength.Size = new System.Drawing.Size(56, 17);
-            this.currentLength.TabIndex = 26;
-            this.currentLength.Text = "00:00:00";
             // 
             // timer
             // 
@@ -398,20 +357,14 @@ namespace Audio_Organiser
             // currentArtist
             // 
             this.currentArtist.AutoEllipsis = true;
-            this.currentArtist.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.currentArtist.Location = new System.Drawing.Point(102, 6);
+            resources.ApplyResources(this.currentArtist, "currentArtist");
             this.currentArtist.Name = "currentArtist";
-            this.currentArtist.Size = new System.Drawing.Size(150, 20);
-            this.currentArtist.TabIndex = 27;
             // 
             // currentSong
             // 
             this.currentSong.AutoEllipsis = true;
-            this.currentSong.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.currentSong.Location = new System.Drawing.Point(103, 26);
+            resources.ApplyResources(this.currentSong, "currentSong");
             this.currentSong.Name = "currentSong";
-            this.currentSong.Size = new System.Drawing.Size(150, 18);
-            this.currentSong.TabIndex = 28;
             // 
             // panel1
             // 
@@ -433,30 +386,22 @@ namespace Audio_Organiser
             this.panel1.Controls.Add(this.buttonNext);
             this.panel1.Controls.Add(this.buttonPause);
             this.panel1.Controls.Add(this.buttonPlay);
-            this.panel1.Location = new System.Drawing.Point(11, 39);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 179);
-            this.panel1.TabIndex = 33;
             // 
             // prog
             // 
             this.prog.BackColor = System.Drawing.Color.DarkGray;
-            this.prog.Enabled = false;
-            this.prog.Location = new System.Drawing.Point(57, 148);
+            resources.ApplyResources(this.prog, "prog");
             this.prog.Name = "prog";
-            this.prog.Size = new System.Drawing.Size(144, 45);
-            this.prog.TabIndex = 33;
             this.prog.TickStyle = System.Windows.Forms.TickStyle.None;
             // 
             // buttonLoopList
             // 
             this.buttonLoopList.FlatAppearance.BorderSize = 0;
-            this.buttonLoopList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.buttonLoopList, "buttonLoopList");
             this.buttonLoopList.Image = global::Audio_Organiser.Properties.Resources.loop_pl;
-            this.buttonLoopList.Location = new System.Drawing.Point(197, 106);
             this.buttonLoopList.Name = "buttonLoopList";
-            this.buttonLoopList.Size = new System.Drawing.Size(26, 26);
-            this.buttonLoopList.TabIndex = 31;
             this.buttonLoopList.UseVisualStyleBackColor = true;
             this.buttonLoopList.Click += new System.EventHandler(this.buttonLoopList_Click);
             this.buttonLoopList.MouseHover += new System.EventHandler(this.buttonLoopList_MouseHover);
@@ -464,12 +409,9 @@ namespace Audio_Organiser
             // buttonLoopSong
             // 
             this.buttonLoopSong.FlatAppearance.BorderSize = 0;
-            this.buttonLoopSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.buttonLoopSong, "buttonLoopSong");
             this.buttonLoopSong.Image = global::Audio_Organiser.Properties.Resources.loop_s;
-            this.buttonLoopSong.Location = new System.Drawing.Point(225, 106);
             this.buttonLoopSong.Name = "buttonLoopSong";
-            this.buttonLoopSong.Size = new System.Drawing.Size(26, 26);
-            this.buttonLoopSong.TabIndex = 32;
             this.buttonLoopSong.UseVisualStyleBackColor = true;
             this.buttonLoopSong.Click += new System.EventHandler(this.buttonLoopSong_Click);
             this.buttonLoopSong.MouseHover += new System.EventHandler(this.buttonLoopSong_MouseHover);
@@ -477,12 +419,9 @@ namespace Audio_Organiser
             // buttonAutoplay
             // 
             this.buttonAutoplay.FlatAppearance.BorderSize = 0;
-            this.buttonAutoplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.buttonAutoplay, "buttonAutoplay");
             this.buttonAutoplay.Image = global::Audio_Organiser.Properties.Resources.auto;
-            this.buttonAutoplay.Location = new System.Drawing.Point(169, 106);
             this.buttonAutoplay.Name = "buttonAutoplay";
-            this.buttonAutoplay.Size = new System.Drawing.Size(26, 26);
-            this.buttonAutoplay.TabIndex = 30;
             this.buttonAutoplay.UseVisualStyleBackColor = true;
             this.buttonAutoplay.Click += new System.EventHandler(this.buttonAutoplay_Click);
             this.buttonAutoplay.MouseHover += new System.EventHandler(this.buttonAutoplay_MouseHover);
@@ -490,33 +429,25 @@ namespace Audio_Organiser
             // buttonMute
             // 
             this.buttonMute.FlatAppearance.BorderSize = 0;
-            this.buttonMute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.buttonMute, "buttonMute");
             this.buttonMute.Image = global::Audio_Organiser.Properties.Resources.mute_off;
-            this.buttonMute.Location = new System.Drawing.Point(216, 56);
             this.buttonMute.Name = "buttonMute";
-            this.buttonMute.Size = new System.Drawing.Size(26, 26);
-            this.buttonMute.TabIndex = 29;
             this.buttonMute.UseVisualStyleBackColor = true;
             this.buttonMute.Click += new System.EventHandler(this.buttonMute_Click);
             this.buttonMute.MouseHover += new System.EventHandler(this.buttonMute_MouseHover);
             // 
             // coverPictureBox
             // 
-            this.coverPictureBox.Location = new System.Drawing.Point(-1, 0);
+            resources.ApplyResources(this.coverPictureBox, "coverPictureBox");
             this.coverPictureBox.Name = "coverPictureBox";
-            this.coverPictureBox.Size = new System.Drawing.Size(100, 100);
-            this.coverPictureBox.TabIndex = 24;
             this.coverPictureBox.TabStop = false;
             // 
             // buttonStop
             // 
             this.buttonStop.FlatAppearance.BorderSize = 0;
-            this.buttonStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.buttonStop, "buttonStop");
             this.buttonStop.Image = global::Audio_Organiser.Properties.Resources.stop;
-            this.buttonStop.Location = new System.Drawing.Point(85, 106);
             this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(26, 26);
-            this.buttonStop.TabIndex = 20;
             this.buttonStop.UseVisualStyleBackColor = true;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             this.buttonStop.MouseHover += new System.EventHandler(this.buttonStop_MouseHover);
@@ -524,12 +455,9 @@ namespace Audio_Organiser
             // buttonPrevious
             // 
             this.buttonPrevious.FlatAppearance.BorderSize = 0;
-            this.buttonPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.buttonPrevious, "buttonPrevious");
             this.buttonPrevious.Image = global::Audio_Organiser.Properties.Resources.previous;
-            this.buttonPrevious.Location = new System.Drawing.Point(1, 106);
             this.buttonPrevious.Name = "buttonPrevious";
-            this.buttonPrevious.Size = new System.Drawing.Size(26, 26);
-            this.buttonPrevious.TabIndex = 19;
             this.buttonPrevious.UseVisualStyleBackColor = true;
             this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
             this.buttonPrevious.MouseHover += new System.EventHandler(this.buttonPrevious_MouseHover);
@@ -537,12 +465,9 @@ namespace Audio_Organiser
             // buttonNext
             // 
             this.buttonNext.FlatAppearance.BorderSize = 0;
-            this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.buttonNext, "buttonNext");
             this.buttonNext.Image = global::Audio_Organiser.Properties.Resources.next;
-            this.buttonNext.Location = new System.Drawing.Point(113, 106);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(26, 26);
-            this.buttonNext.TabIndex = 18;
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             this.buttonNext.MouseHover += new System.EventHandler(this.buttonNext_MouseHover);
@@ -550,12 +475,9 @@ namespace Audio_Organiser
             // buttonPause
             // 
             this.buttonPause.FlatAppearance.BorderSize = 0;
-            this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.buttonPause, "buttonPause");
             this.buttonPause.Image = global::Audio_Organiser.Properties.Resources.pause;
-            this.buttonPause.Location = new System.Drawing.Point(57, 106);
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(26, 26);
-            this.buttonPause.TabIndex = 17;
             this.buttonPause.UseVisualStyleBackColor = true;
             this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
             this.buttonPause.MouseHover += new System.EventHandler(this.buttonPause_MouseHover);
@@ -563,12 +485,8 @@ namespace Audio_Organiser
             // buttonPlay
             // 
             this.buttonPlay.FlatAppearance.BorderSize = 0;
-            this.buttonPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlay.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlay.Image")));
-            this.buttonPlay.Location = new System.Drawing.Point(29, 106);
+            resources.ApplyResources(this.buttonPlay, "buttonPlay");
             this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(26, 26);
-            this.buttonPlay.TabIndex = 16;
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             this.buttonPlay.MouseHover += new System.EventHandler(this.buttonPlay_MouseHover);
@@ -596,13 +514,11 @@ namespace Audio_Organiser
             this.objectListViewSongs.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListViewSongs.FullRowSelect = true;
             this.objectListViewSongs.HideSelection = false;
-            this.objectListViewSongs.Location = new System.Drawing.Point(278, 39);
+            resources.ApplyResources(this.objectListViewSongs, "objectListViewSongs");
             this.objectListViewSongs.MultiSelect = false;
             this.objectListViewSongs.Name = "objectListViewSongs";
             this.objectListViewSongs.SelectAllOnControlA = false;
             this.objectListViewSongs.ShowGroups = false;
-            this.objectListViewSongs.Size = new System.Drawing.Size(974, 506);
-            this.objectListViewSongs.TabIndex = 25;
             this.objectListViewSongs.UseCompatibleStateImageBehavior = false;
             this.objectListViewSongs.UseFiltering = true;
             this.objectListViewSongs.UseHotControls = false;
@@ -613,68 +529,54 @@ namespace Audio_Organiser
             // id
             // 
             this.id.AspectName = "id";
-            this.id.Text = "Id";
-            this.id.Width = 0;
+            resources.ApplyResources(this.id, "id");
             // 
             // path
             // 
             this.path.AspectName = "path";
-            this.path.Text = "Scieżka";
-            this.path.Width = 0;
+            resources.ApplyResources(this.path, "path");
             // 
             // file
             // 
             this.file.AspectName = "file";
-            this.file.Text = "Nazwa pliku";
-            this.file.Width = 272;
+            resources.ApplyResources(this.file, "file");
             // 
             // artist
             // 
             this.artist.AspectName = "artist";
-            this.artist.Text = "Wykonawcy uczestniczący";
-            this.artist.Width = 189;
+            resources.ApplyResources(this.artist, "artist");
             // 
             // title
             // 
             this.title.AspectName = "title";
-            this.title.Text = "Tytuł";
-            this.title.Width = 164;
+            resources.ApplyResources(this.title, "title");
             // 
             // album
             // 
             this.album.AspectName = "album";
-            this.album.Text = "Album";
-            this.album.Width = 137;
+            resources.ApplyResources(this.album, "album");
             // 
             // year
             // 
             this.year.AspectName = "year";
-            this.year.Text = "Rok";
-            this.year.Width = 59;
+            resources.ApplyResources(this.year, "year");
             // 
             // genre
             // 
             this.genre.AspectName = "genre";
-            this.genre.Text = "Gatunek";
-            this.genre.Width = 149;
+            resources.ApplyResources(this.genre, "genre");
             // 
             // buttonPlClear
             // 
-            this.buttonPlClear.Location = new System.Drawing.Point(197, 700);
+            resources.ApplyResources(this.buttonPlClear, "buttonPlClear");
             this.buttonPlClear.Name = "buttonPlClear";
-            this.buttonPlClear.Size = new System.Drawing.Size(75, 23);
-            this.buttonPlClear.TabIndex = 50;
-            this.buttonPlClear.Text = "Wyczyść";
             this.buttonPlClear.UseVisualStyleBackColor = true;
             this.buttonPlClear.Click += new System.EventHandler(this.buttonPlClear_Click);
             // 
             // buttonPlDel
             // 
-            this.buttonPlDel.Location = new System.Drawing.Point(11, 700);
+            resources.ApplyResources(this.buttonPlDel, "buttonPlDel");
             this.buttonPlDel.Name = "buttonPlDel";
-            this.buttonPlDel.Size = new System.Drawing.Size(75, 23);
-            this.buttonPlDel.TabIndex = 49;
-            this.buttonPlDel.Text = "Usuń";
             this.buttonPlDel.UseVisualStyleBackColor = true;
             this.buttonPlDel.Click += new System.EventHandler(this.buttonPlDel_Click);
             // 
@@ -697,11 +599,9 @@ namespace Audio_Organiser
             this.objectListViewPlaylist.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListViewPlaylist.FullRowSelect = true;
             this.objectListViewPlaylist.HideSelection = false;
-            this.objectListViewPlaylist.Location = new System.Drawing.Point(11, 224);
+            resources.ApplyResources(this.objectListViewPlaylist, "objectListViewPlaylist");
             this.objectListViewPlaylist.Name = "objectListViewPlaylist";
             this.objectListViewPlaylist.ShowGroups = false;
-            this.objectListViewPlaylist.Size = new System.Drawing.Size(261, 470);
-            this.objectListViewPlaylist.TabIndex = 48;
             this.objectListViewPlaylist.UseCompatibleStateImageBehavior = false;
             this.objectListViewPlaylist.UseHotControls = false;
             this.objectListViewPlaylist.View = System.Windows.Forms.View.Details;
@@ -713,18 +613,16 @@ namespace Audio_Organiser
             this.Id_p.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Id_p.Searchable = false;
             this.Id_p.Sortable = false;
-            this.Id_p.Text = "Id_DB";
+            resources.ApplyResources(this.Id_p, "Id_p");
             this.Id_p.UseFiltering = false;
-            this.Id_p.Width = 0;
             // 
             // Path_p
             // 
             this.Path_p.AspectName = "path";
             this.Path_p.Searchable = false;
             this.Path_p.Sortable = false;
-            this.Path_p.Text = "Ścieżka";
+            resources.ApplyResources(this.Path_p, "Path_p");
             this.Path_p.UseFiltering = false;
-            this.Path_p.Width = 0;
             // 
             // Id_auto
             // 
@@ -732,82 +630,64 @@ namespace Audio_Organiser
             this.Id_auto.IsTileViewColumn = true;
             this.Id_auto.Searchable = false;
             this.Id_auto.Sortable = false;
-            this.Id_auto.Text = "Id";
+            resources.ApplyResources(this.Id_auto, "Id_auto");
             this.Id_auto.UseFiltering = false;
-            this.Id_auto.Width = 22;
             // 
             // File_p
             // 
             this.File_p.AspectName = "file";
             this.File_p.Searchable = false;
             this.File_p.Sortable = false;
-            this.File_p.Text = "Plik";
+            resources.ApplyResources(this.File_p, "File_p");
             this.File_p.UseFiltering = false;
-            this.File_p.Width = 77;
             // 
             // Artist_p
             // 
             this.Artist_p.AspectName = "artist";
             this.Artist_p.Searchable = false;
             this.Artist_p.Sortable = false;
-            this.Artist_p.Text = "Wykonawca";
+            resources.ApplyResources(this.Artist_p, "Artist_p");
             this.Artist_p.UseFiltering = false;
-            this.Artist_p.Width = 84;
             // 
             // Title_p
             // 
             this.Title_p.AspectName = "title";
             this.Title_p.Searchable = false;
             this.Title_p.Sortable = false;
-            this.Title_p.Text = "Tytuł";
+            resources.ApplyResources(this.Title_p, "Title_p");
             this.Title_p.UseFiltering = false;
-            this.Title_p.Width = 74;
             // 
             // buttonSearchCancel
             // 
-            this.buttonSearchCancel.Location = new System.Drawing.Point(1148, 554);
+            resources.ApplyResources(this.buttonSearchCancel, "buttonSearchCancel");
             this.buttonSearchCancel.Name = "buttonSearchCancel";
-            this.buttonSearchCancel.Size = new System.Drawing.Size(104, 23);
-            this.buttonSearchCancel.TabIndex = 55;
-            this.buttonSearchCancel.Text = "Pokaż wszystko";
             this.buttonSearchCancel.UseVisualStyleBackColor = true;
             this.buttonSearchCancel.Click += new System.EventHandler(this.buttonSearchCancel_Click);
             // 
             // buttonEditSearch
             // 
-            this.buttonEditSearch.Location = new System.Drawing.Point(543, 581);
+            resources.ApplyResources(this.buttonEditSearch, "buttonEditSearch");
             this.buttonEditSearch.Name = "buttonEditSearch";
-            this.buttonEditSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditSearch.TabIndex = 54;
-            this.buttonEditSearch.Text = "Szukaj";
             this.buttonEditSearch.UseVisualStyleBackColor = true;
             this.buttonEditSearch.Click += new System.EventHandler(this.buttonEditSearch_Click);
             // 
             // buttonEditClear
             // 
-            this.buttonEditClear.Location = new System.Drawing.Point(543, 554);
+            resources.ApplyResources(this.buttonEditClear, "buttonEditClear");
             this.buttonEditClear.Name = "buttonEditClear";
-            this.buttonEditClear.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditClear.TabIndex = 53;
-            this.buttonEditClear.Text = "Wyczyść";
             this.buttonEditClear.UseVisualStyleBackColor = true;
             this.buttonEditClear.Click += new System.EventHandler(this.buttonEditClear_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(543, 610);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Edytuj";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.3812F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.6188F));
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.labelFile, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelTitle, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelArtist, 0, 1);
@@ -820,122 +700,73 @@ namespace Audio_Organiser
             this.tableLayoutPanel1.Controls.Add(this.textBoxArtist, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxGenre, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(278, 551);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(259, 182);
-            this.tableLayoutPanel1.TabIndex = 51;
             // 
             // labelFile
             // 
-            this.labelFile.AutoSize = true;
-            this.labelFile.Location = new System.Drawing.Point(3, 0);
+            resources.ApplyResources(this.labelFile, "labelFile");
             this.labelFile.Name = "labelFile";
-            this.labelFile.Size = new System.Drawing.Size(65, 13);
-            this.labelFile.TabIndex = 8;
-            this.labelFile.Text = "Nazwa pliku";
             // 
             // labelTitle
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(3, 60);
+            resources.ApplyResources(this.labelTitle, "labelTitle");
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(32, 13);
-            this.labelTitle.TabIndex = 10;
-            this.labelTitle.Text = "Tytuł";
             // 
             // labelArtist
             // 
-            this.labelArtist.AutoSize = true;
-            this.labelArtist.Location = new System.Drawing.Point(3, 30);
+            resources.ApplyResources(this.labelArtist, "labelArtist");
             this.labelArtist.Name = "labelArtist";
-            this.labelArtist.Size = new System.Drawing.Size(70, 26);
-            this.labelArtist.TabIndex = 9;
-            this.labelArtist.Text = "Wykonawca albumu";
             // 
             // textBoxTitle
             // 
-            this.textBoxTitle.Location = new System.Drawing.Point(102, 63);
+            resources.ApplyResources(this.textBoxTitle, "textBoxTitle");
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(154, 20);
-            this.textBoxTitle.TabIndex = 13;
             // 
             // textBoxFile
             // 
-            this.textBoxFile.Location = new System.Drawing.Point(102, 3);
+            resources.ApplyResources(this.textBoxFile, "textBoxFile");
             this.textBoxFile.Name = "textBoxFile";
-            this.textBoxFile.Size = new System.Drawing.Size(154, 20);
-            this.textBoxFile.TabIndex = 11;
             // 
             // labelAlbum
             // 
-            this.labelAlbum.AutoSize = true;
-            this.labelAlbum.Location = new System.Drawing.Point(3, 90);
+            resources.ApplyResources(this.labelAlbum, "labelAlbum");
             this.labelAlbum.Name = "labelAlbum";
-            this.labelAlbum.Size = new System.Drawing.Size(36, 13);
-            this.labelAlbum.TabIndex = 14;
-            this.labelAlbum.Text = "Album";
             // 
             // labelYear
             // 
-            this.labelYear.AutoSize = true;
-            this.labelYear.Location = new System.Drawing.Point(3, 120);
+            resources.ApplyResources(this.labelYear, "labelYear");
             this.labelYear.Name = "labelYear";
-            this.labelYear.Size = new System.Drawing.Size(27, 13);
-            this.labelYear.TabIndex = 15;
-            this.labelYear.Text = "Rok";
             // 
             // labelGenre
             // 
-            this.labelGenre.AutoSize = true;
-            this.labelGenre.Location = new System.Drawing.Point(3, 150);
+            resources.ApplyResources(this.labelGenre, "labelGenre");
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(48, 13);
-            this.labelGenre.TabIndex = 16;
-            this.labelGenre.Text = "Gatunek";
             // 
             // textBoxAlbum
             // 
-            this.textBoxAlbum.Location = new System.Drawing.Point(102, 93);
+            resources.ApplyResources(this.textBoxAlbum, "textBoxAlbum");
             this.textBoxAlbum.Name = "textBoxAlbum";
-            this.textBoxAlbum.Size = new System.Drawing.Size(154, 20);
-            this.textBoxAlbum.TabIndex = 17;
             // 
             // textBoxArtist
             // 
-            this.textBoxArtist.Location = new System.Drawing.Point(102, 33);
+            resources.ApplyResources(this.textBoxArtist, "textBoxArtist");
             this.textBoxArtist.Name = "textBoxArtist";
-            this.textBoxArtist.Size = new System.Drawing.Size(154, 20);
-            this.textBoxArtist.TabIndex = 12;
             // 
             // textBoxGenre
             // 
-            this.textBoxGenre.Location = new System.Drawing.Point(102, 153);
+            resources.ApplyResources(this.textBoxGenre, "textBoxGenre");
             this.textBoxGenre.Name = "textBoxGenre";
-            this.textBoxGenre.Size = new System.Drawing.Size(154, 20);
-            this.textBoxGenre.TabIndex = 19;
             // 
             // textBoxYear
             // 
-            this.textBoxYear.Location = new System.Drawing.Point(102, 123);
+            resources.ApplyResources(this.textBoxYear, "textBoxYear");
             this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(154, 20);
-            this.textBoxYear.TabIndex = 20;
             // 
             // logo
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(1126, 606);
+            resources.ApplyResources(this.logo, "logo");
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(138, 127);
-            this.logo.TabIndex = 59;
             this.logo.TabStop = false;
             // 
             // toolTip1
@@ -947,23 +778,16 @@ namespace Audio_Organiser
             // 
             // buttonPlAdd
             // 
-            this.buttonPlAdd.Location = new System.Drawing.Point(995, 554);
+            resources.ApplyResources(this.buttonPlAdd, "buttonPlAdd");
             this.buttonPlAdd.Name = "buttonPlAdd";
-            this.buttonPlAdd.Size = new System.Drawing.Size(147, 23);
-            this.buttonPlAdd.TabIndex = 60;
-            this.buttonPlAdd.Text = "Dodaj widoczne do playlisty";
             this.buttonPlAdd.UseVisualStyleBackColor = true;
             this.buttonPlAdd.Click += new System.EventHandler(this.buttonPlAdd_Click);
             // 
             // buttonPlUp
             // 
             this.buttonPlUp.FlatAppearance.BorderSize = 0;
-            this.buttonPlUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlUp.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlUp.Image")));
-            this.buttonPlUp.Location = new System.Drawing.Point(140, 700);
+            resources.ApplyResources(this.buttonPlUp, "buttonPlUp");
             this.buttonPlUp.Name = "buttonPlUp";
-            this.buttonPlUp.Size = new System.Drawing.Size(26, 26);
-            this.buttonPlUp.TabIndex = 61;
             this.buttonPlUp.UseVisualStyleBackColor = true;
             this.buttonPlUp.Click += new System.EventHandler(this.buttonPlUp_Click);
             this.buttonPlUp.MouseHover += new System.EventHandler(this.buttonPlUp_MouseHover);
@@ -971,43 +795,30 @@ namespace Audio_Organiser
             // buttonPlDown
             // 
             this.buttonPlDown.FlatAppearance.BorderSize = 0;
-            this.buttonPlDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlDown.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlDown.Image")));
-            this.buttonPlDown.Location = new System.Drawing.Point(108, 700);
+            resources.ApplyResources(this.buttonPlDown, "buttonPlDown");
             this.buttonPlDown.Name = "buttonPlDown";
-            this.buttonPlDown.Size = new System.Drawing.Size(26, 26);
-            this.buttonPlDown.TabIndex = 62;
             this.buttonPlDown.UseVisualStyleBackColor = true;
             this.buttonPlDown.Click += new System.EventHandler(this.buttonPlDown_Click);
             this.buttonPlDown.MouseHover += new System.EventHandler(this.buttonPlDown_MouseHover);
             // 
             // buttonMove
             // 
-            this.buttonMove.Location = new System.Drawing.Point(543, 639);
+            resources.ApplyResources(this.buttonMove, "buttonMove");
             this.buttonMove.Name = "buttonMove";
-            this.buttonMove.Size = new System.Drawing.Size(75, 23);
-            this.buttonMove.TabIndex = 63;
-            this.buttonMove.Text = "Przenieś plik";
             this.buttonMove.UseVisualStyleBackColor = true;
             this.buttonMove.Click += new System.EventHandler(this.buttonMove_Click);
             // 
             // buttonDbCheck
             // 
-            this.buttonDbCheck.Location = new System.Drawing.Point(1148, 581);
+            resources.ApplyResources(this.buttonDbCheck, "buttonDbCheck");
             this.buttonDbCheck.Name = "buttonDbCheck";
-            this.buttonDbCheck.Size = new System.Drawing.Size(104, 23);
-            this.buttonDbCheck.TabIndex = 64;
-            this.buttonDbCheck.Text = "Sprawdź bazę";
             this.buttonDbCheck.UseVisualStyleBackColor = true;
             this.buttonDbCheck.Click += new System.EventHandler(this.buttonDbCheck_Click);
             // 
             // buttonAddFile
             // 
-            this.buttonAddFile.Location = new System.Drawing.Point(543, 668);
+            resources.ApplyResources(this.buttonAddFile, "buttonAddFile");
             this.buttonAddFile.Name = "buttonAddFile";
-            this.buttonAddFile.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddFile.TabIndex = 66;
-            this.buttonAddFile.Text = "Zmień plik";
             this.buttonAddFile.UseVisualStyleBackColor = true;
             this.buttonAddFile.Click += new System.EventHandler(this.buttonAddFile_Click);
             // 
@@ -1015,23 +826,10 @@ namespace Audio_Organiser
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             // 
-            // kontrolka1
-            // 
-            this.kontrolka1.Color1 = System.Drawing.Color.Empty;
-            this.kontrolka1.Color2 = System.Drawing.Color.Empty;
-            this.kontrolka1.GradientRadius = 55;
-            this.kontrolka1.Location = new System.Drawing.Point(0, 12);
-            this.kontrolka1.Name = "kontrolka1";
-            this.kontrolka1.Size = new System.Drawing.Size(1264, 721);
-            this.kontrolka1.TabIndex = 42;
-            this.kontrolka1.Visible = false;
-            // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1264, 730);
             this.Controls.Add(this.buttonAddFile);
             this.Controls.Add(this.buttonDbCheck);
             this.Controls.Add(this.buttonMove);
@@ -1049,13 +847,10 @@ namespace Audio_Organiser
             this.Controls.Add(this.objectListViewPlaylist);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip);
-            this.Controls.Add(this.kontrolka1);
             this.Controls.Add(this.objectListViewSongs);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "Audio Organiser";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
