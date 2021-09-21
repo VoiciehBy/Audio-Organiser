@@ -58,6 +58,7 @@ namespace Audio_Organiser
             this.gradient0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradient1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradient2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontrolka1 = new GradientController();
             this.resolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
