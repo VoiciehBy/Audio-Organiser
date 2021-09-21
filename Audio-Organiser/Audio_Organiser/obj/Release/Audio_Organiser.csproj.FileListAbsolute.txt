@@ -72,3 +72,6 @@ C:\Users\geral\Downloads\Audio-Organiser\Audio-Organiser\Audio_Organiser\obj\Rel
 C:\Users\geral\Downloads\Audio-Organiser\Audio-Organiser\Audio_Organiser\obj\Release\Audio_Organiser.csproj.CopyComplete
 C:\Users\geral\Downloads\Audio-Organiser\Audio-Organiser\Audio_Organiser\obj\Release\Audio_Organiser.exe
 C:\Users\geral\Downloads\Audio-Organiser\Audio-Organiser\Audio_Organiser\obj\Release\Audio_Organiser.pdb
+C:\Users\geral\Downloads\Audio-Organiser\Audio-Organiser\Audio_Organiser\bin\Release\pl-PL\Audio_Organiser.resources.dll
+C:\Users\geral\Downloads\Audio-Organiser\Audio-Organiser\Audio_Organiser\obj\Release\Audio_Organiser.MainWindow.pl-PL.resources
+C:\Users\geral\Downloads\Audio-Organiser\Audio-Organiser\Audio_Organiser\obj\Release\pl-PL\Audio_Organiser.resources.dll

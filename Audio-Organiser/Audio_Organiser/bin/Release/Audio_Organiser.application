@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Audio_Organiser.exe.manifest" size="13259">
+    <dependentAssembly dependencyType="install" codebase="Audio_Organiser.exe.manifest" size="13932">
       <assemblyIdentity name="Audio_Organiser.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jEUfQHcAyRg5MqsLPIR1/Z2uK76MOIfaHtBTMmbD3Yk=</dsig:DigestValue>
+        <dsig:DigestValue>LtXtT/4FdXpzdyn3NjhAaOvvnB9dxfE2YUjbwJNhUF8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

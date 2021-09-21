@@ -42,14 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Audio_Organiser.exe" size="1421280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Audio_Organiser.exe" size="1424864">
       <assemblyIdentity name="Audio_Organiser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/MLf50FrPnEimIDK4rvJlqvQMJJV8bD6PO9C9DSCboU=</dsig:DigestValue>
+        <dsig:DigestValue>JNx76FurH3PoEWeBFToBPTblNqoW0dliMW6okejksv4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl-PL\Audio_Organiser.resources.dll" size="422912">
+      <assemblyIdentity name="Audio_Organiser.resources" version="1.0.0.0" language="pl-PL" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>JUT3Q2L3bpBiLSm1cTZGh18KGFSYNPaegWlsXwgyrTA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
