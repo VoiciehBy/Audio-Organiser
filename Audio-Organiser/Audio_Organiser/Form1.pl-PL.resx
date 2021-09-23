@@ -117,240 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 22</value>
-  </data>
-  <data name="buttonAdd2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 22</value>
-  </data>
-  <data name="dodajToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="buttonDel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
-  </data>
-  <data name="buttonDel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
-  </data>
-  <data name="buttonClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
-  </data>
-  <data name="usunToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
-  </data>
-  <data name="defaultToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="whiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="steelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="lightSkyBlueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="lightSteelBlueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="paoloVeronesesGreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="lightSalmonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="mistyRoseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="solidColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="freeDGreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="blueWebToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="leatherToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="textureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="gradient0ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 22</value>
-  </data>
-  <data name="gradient1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 22</value>
-  </data>
-  <data name="gradient2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 22</value>
-  </data>
-  <data name="gradientToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="themesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
-  </data>
-  <data name="resolutionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 20</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 2, 0, 2</value>
+    <value>5, 2, 0, 2</value>
   </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 24</value>
+  <data name="volumeBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="menuStrip.ToolTip" xml:space="preserve">
-    <value />
+  <data name="currentTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
-  <data name="kontrolka1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="currentLength.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
-  <data name="kontrolka1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
+  <data name="currentArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="kontrolka1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="currentSong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
-  <data name="kontrolka1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="prog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="volumeBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 56</value>
+  <data name="buttonLoopList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="volumeBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 45</value>
+  <data name="buttonLoopSong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="volumeBar.ToolTip" xml:space="preserve">
-    <value />
+  <data name="buttonAutoplay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="currentTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 150</value>
+  <data name="buttonMute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="currentTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
+  <data name="coverPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="currentTime.ToolTip" xml:space="preserve">
-    <value />
+  <data name="buttonStop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="currentLength.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 150</value>
+  <data name="buttonPrevious.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="currentLength.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
+  <data name="buttonNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="currentLength.ToolTip" xml:space="preserve">
-    <value />
+  <data name="buttonPause.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="currentArtist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 6</value>
-  </data>
-  <data name="currentArtist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 20</value>
-  </data>
-  <data name="currentArtist.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="currentSong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 26</value>
-  </data>
-  <data name="currentSong.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 18</value>
-  </data>
-  <data name="currentSong.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="prog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 148</value>
-  </data>
-  <data name="prog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 45</value>
-  </data>
-  <data name="prog.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonLoopList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 106</value>
-  </data>
-  <data name="buttonLoopList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonLoopList.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonLoopSong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 106</value>
-  </data>
-  <data name="buttonLoopSong.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonLoopSong.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonAutoplay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 106</value>
-  </data>
-  <data name="buttonAutoplay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonAutoplay.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonMute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 56</value>
-  </data>
-  <data name="buttonMute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonMute.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="coverPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 100</value>
-  </data>
-  <data name="coverPictureBox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonStop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 106</value>
-  </data>
-  <data name="buttonStop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonStop.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPrevious.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 106</value>
-  </data>
-  <data name="buttonPrevious.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonPrevious.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 106</value>
-  </data>
-  <data name="buttonNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonNext.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 106</value>
-  </data>
-  <data name="buttonPause.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonPause.ToolTip" xml:space="preserve">
-    <value />
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonPlay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKM+VkUso
@@ -366,218 +182,128 @@
         RLJz9fE0ZhW8n4AIPOjv1gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 106</value>
+  <data name="buttonPlay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="buttonPlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="buttonPlay.ToolTip" xml:space="preserve">
-    <value />
+  <data name="objectListViewSongs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 39</value>
+  <data name="buttonPlClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 179</value>
+  <data name="buttonPlDel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="objectListViewPlaylist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="objectListViewSongs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>278, 39</value>
+  <data name="buttonSearchCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="buttonEditSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="objectListViewSongs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>974, 506</value>
+  <data name="buttonEditClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="objectListViewSongs.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPlClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 700</value>
-  </data>
-  <data name="buttonPlClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonPlClear.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPlDel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 700</value>
-  </data>
-  <data name="buttonPlDel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonPlDel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="objectListViewPlaylist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 224</value>
-  </data>
-  <data name="resource.Text1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="objectListViewPlaylist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 470</value>
-  </data>
-  <data name="objectListViewPlaylist.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonSearchCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1148, 554</value>
-  </data>
-  <data name="buttonSearchCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
-  </data>
-  <data name="buttonSearchCancel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonEditSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 581</value>
-  </data>
-  <data name="buttonEditSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonEditSearch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonEditClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 554</value>
-  </data>
-  <data name="buttonEditClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonEditClear.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 610</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="labelFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+    <value>5, 0</value>
   </data>
-  <data name="labelFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
-  </data>
-  <data name="labelFile.ToolTip" xml:space="preserve">
-    <value />
+  <data name="labelFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="labelTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 60</value>
+    <value>5, 74</value>
   </data>
-  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 13</value>
-  </data>
-  <data name="labelTitle.ToolTip" xml:space="preserve">
-    <value />
+  <data name="labelTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="labelArtist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 30</value>
+    <value>5, 37</value>
   </data>
-  <data name="labelArtist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 26</value>
-  </data>
-  <data name="labelArtist.ToolTip" xml:space="preserve">
-    <value />
+  <data name="labelArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="textBoxTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 63</value>
+    <value>137, 79</value>
+  </data>
+  <data name="textBoxTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBoxTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
-  </data>
-  <data name="textBoxTitle.ToolTip" xml:space="preserve">
-    <value />
+    <value>201, 22</value>
   </data>
   <data name="textBoxFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 3</value>
+    <value>137, 5</value>
+  </data>
+  <data name="textBoxFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBoxFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
-  </data>
-  <data name="textBoxFile.ToolTip" xml:space="preserve">
-    <value />
+    <value>201, 22</value>
   </data>
   <data name="labelAlbum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 90</value>
+    <value>5, 111</value>
   </data>
-  <data name="labelAlbum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="labelAlbum.ToolTip" xml:space="preserve">
-    <value />
+  <data name="labelAlbum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="labelYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 120</value>
+    <value>5, 148</value>
   </data>
-  <data name="labelYear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 13</value>
-  </data>
-  <data name="labelYear.ToolTip" xml:space="preserve">
-    <value />
+  <data name="labelYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="labelGenre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 150</value>
+    <value>5, 185</value>
   </data>
-  <data name="labelGenre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="labelGenre.ToolTip" xml:space="preserve">
-    <value />
+  <data name="labelGenre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="textBoxAlbum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 93</value>
+    <value>137, 116</value>
+  </data>
+  <data name="textBoxAlbum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBoxAlbum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
-  </data>
-  <data name="textBoxAlbum.ToolTip" xml:space="preserve">
-    <value />
+    <value>201, 22</value>
   </data>
   <data name="textBoxArtist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 33</value>
+    <value>137, 42</value>
+  </data>
+  <data name="textBoxArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBoxArtist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
-  </data>
-  <data name="textBoxArtist.ToolTip" xml:space="preserve">
-    <value />
+    <value>201, 22</value>
   </data>
   <data name="textBoxGenre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 153</value>
+    <value>137, 190</value>
+  </data>
+  <data name="textBoxGenre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBoxGenre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
-  </data>
-  <data name="textBoxGenre.ToolTip" xml:space="preserve">
-    <value />
+    <value>201, 22</value>
   </data>
   <data name="textBoxYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 123</value>
+    <value>137, 153</value>
+  </data>
+  <data name="textBoxYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBoxYear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
+    <value>201, 22</value>
   </data>
-  <data name="textBoxYear.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>278, 551</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 182</value>
-  </data>
-  <data name="tableLayoutPanel1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="tableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -864,23 +590,11 @@
         rkJggg==
 </value>
   </data>
-  <data name="logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1126, 606</value>
+  <data name="logo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 127</value>
-  </data>
-  <data name="logo.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPlAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>995, 554</value>
-  </data>
-  <data name="buttonPlAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 23</value>
-  </data>
-  <data name="buttonPlAdd.ToolTip" xml:space="preserve">
-    <value />
+  <data name="buttonPlAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="buttonPlUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -897,14 +611,8 @@
         O7wV2411EOGpONRDktYvbIGACI8RoKIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonPlUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 700</value>
-  </data>
-  <data name="buttonPlUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
-  </data>
-  <data name="buttonPlUp.ToolTip" xml:space="preserve">
-    <value />
+  <data name="buttonPlUp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="buttonPlDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -921,47 +629,20 @@
         DlFF2Q6+omUHX9G2g5mX7GDmxC5yA1Q4gAjaPiEBAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="buttonPlDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 700</value>
+  <data name="buttonPlDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="buttonPlDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
+  <data name="buttonMove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="buttonPlDown.ToolTip" xml:space="preserve">
-    <value />
+  <data name="buttonDbCheck.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="buttonMove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 639</value>
-  </data>
-  <data name="buttonMove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonMove.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonDbCheck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1148, 581</value>
-  </data>
-  <data name="buttonDbCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
-  </data>
-  <data name="buttonDbCheck.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonAddFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 668</value>
-  </data>
-  <data name="buttonAddFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonAddFile.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="buttonAddFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 687</value>
+    <value>1685, 846</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -7135,7 +6816,7 @@
         /////+AAAAf/////+AAAH///////AAD///////////////////////////////////8=
 </value>
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
 </root>

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Audio_Organiser.exe" size="1424864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Audio_Organiser.exe" size="1423840">
       <assemblyIdentity name="Audio_Organiser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yJHHgek11JAMC0n12tnNQzl/83qi/kOPrm5tURdMY78=</dsig:DigestValue>
+        <dsig:DigestValue>6Brptfnjtx/0H26mbgWDqFupyFxgbSq4xA5wH/7Faf8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>y5ZKmS2yzj5pXJdzr86mLxREQRXYHI81/iEsjeU448w=</dsig:DigestValue>
+        <dsig:DigestValue>EnwxrGeXB3V/PF2PRbfui1WZx1ydDNUY099S6EeLBzg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
