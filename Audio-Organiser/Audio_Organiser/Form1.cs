@@ -1420,13 +1420,14 @@ namespace Audio_Organiser
 
         private void testButtonToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string projectRootPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\"));
             string songNameOrUrl = "don't stop me now";
-            string parameters = "\"ytsearch:" + songNameOrUrl + "\" -x --audio-format \"mp3\" --embed-thumbnail --add-metadata";
-            Process downloading = new Process();
-            downloading.StartInfo.FileName = "C:\\Users\\geral\\Downloads\\Audio-Organiser\\Audio-Organiser\\Audio_Organiser\\youtube-dl.exe";
-            downloading.StartInfo.Arguments = parameters;
+            string output = projectRootPath + "\\songs\\" + "%(title)s.%(ext)s";
+            string arguments = "-o " + output + " \"ytsearch:" + songNameOrUrl + "\" -x --audio-format \"mp3\" --embed-thumbnail --add-metadata";
+            Process downloading = new Process();  
+            downloading.StartInfo.FileName = projectRootPath + "youtube-dl.exe";
+            downloading.StartInfo.Arguments = arguments;
             downloading.Start();
-            //System.Diagnostics.Process.Start("youtube-dl", parameters);
         }
     }
 }
