@@ -58,8 +58,8 @@ namespace Audio_Organiser
             this.gradient0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradient1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradient2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kontrolka1 = new GradientController();
             this.resolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontrolka1 = new Audio_Organiser.GradientController();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.volumeBar = new System.Windows.Forms.TrackBar();
@@ -125,6 +125,7 @@ namespace Audio_Organiser
             this.buttonDbCheck = new System.Windows.Forms.Button();
             this.buttonAddFile = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.testButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -138,82 +139,85 @@ namespace Audio_Organiser
             // 
             // menuStrip
             // 
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dodajToolStripMenuItem,
             this.usunToolStripMenuItem,
             this.themesToolStripMenuItem,
-            this.resolutionToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip, "menuStrip");
+            this.resolutionToolStripMenuItem,
+            this.testButtonToolStripMenuItem});
             this.menuStrip.Name = "menuStrip";
+            this.toolTip1.SetToolTip(this.menuStrip, resources.GetString("menuStrip.ToolTip"));
             // 
             // dodajToolStripMenuItem
             // 
+            resources.ApplyResources(this.dodajToolStripMenuItem, "dodajToolStripMenuItem");
             this.dodajToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.button2,
             this.buttonAdd2});
             this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
-            resources.ApplyResources(this.dodajToolStripMenuItem, "dodajToolStripMenuItem");
             // 
             // button2
             // 
-            this.button2.Name = "button2";
             resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonAdd2
             // 
-            this.buttonAdd2.Name = "buttonAdd2";
             resources.ApplyResources(this.buttonAdd2, "buttonAdd2");
+            this.buttonAdd2.Name = "buttonAdd2";
             this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
             // 
             // usunToolStripMenuItem
             // 
+            resources.ApplyResources(this.usunToolStripMenuItem, "usunToolStripMenuItem");
             this.usunToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buttonDel,
             this.buttonDel2,
             this.buttonClear});
             this.usunToolStripMenuItem.Name = "usunToolStripMenuItem";
-            resources.ApplyResources(this.usunToolStripMenuItem, "usunToolStripMenuItem");
             // 
             // buttonDel
             // 
-            this.buttonDel.Name = "buttonDel";
             resources.ApplyResources(this.buttonDel, "buttonDel");
+            this.buttonDel.Name = "buttonDel";
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonDel2
             // 
-            this.buttonDel2.Name = "buttonDel2";
             resources.ApplyResources(this.buttonDel2, "buttonDel2");
+            this.buttonDel2.Name = "buttonDel2";
             this.buttonDel2.Click += new System.EventHandler(this.buttonDel2_Click);
             // 
             // buttonClear
             // 
-            this.buttonClear.Name = "buttonClear";
             resources.ApplyResources(this.buttonClear, "buttonClear");
+            this.buttonClear.Name = "buttonClear";
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // themesToolStripMenuItem
             // 
+            resources.ApplyResources(this.themesToolStripMenuItem, "themesToolStripMenuItem");
             this.themesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.defaultToolStripMenuItem,
             this.solidColorToolStripMenuItem,
             this.textureToolStripMenuItem,
             this.gradientToolStripMenuItem});
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
-            resources.ApplyResources(this.themesToolStripMenuItem, "themesToolStripMenuItem");
             // 
             // defaultToolStripMenuItem
             // 
+            resources.ApplyResources(this.defaultToolStripMenuItem, "defaultToolStripMenuItem");
             this.defaultToolStripMenuItem.Checked = true;
             this.defaultToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            resources.ApplyResources(this.defaultToolStripMenuItem, "defaultToolStripMenuItem");
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // solidColorToolStripMenuItem
             // 
+            resources.ApplyResources(this.solidColorToolStripMenuItem, "solidColorToolStripMenuItem");
             this.solidColorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.whiteToolStripMenuItem,
             this.steelToolStripMenuItem,
@@ -223,121 +227,135 @@ namespace Audio_Organiser
             this.lightSalmonToolStripMenuItem,
             this.mistyRoseToolStripMenuItem});
             this.solidColorToolStripMenuItem.Name = "solidColorToolStripMenuItem";
-            resources.ApplyResources(this.solidColorToolStripMenuItem, "solidColorToolStripMenuItem");
             // 
             // whiteToolStripMenuItem
             // 
-            this.whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
             resources.ApplyResources(this.whiteToolStripMenuItem, "whiteToolStripMenuItem");
+            this.whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
             this.whiteToolStripMenuItem.Click += new System.EventHandler(this.whiteToolStripMenuItem_Click);
             // 
             // steelToolStripMenuItem
             // 
-            this.steelToolStripMenuItem.Name = "steelToolStripMenuItem";
             resources.ApplyResources(this.steelToolStripMenuItem, "steelToolStripMenuItem");
+            this.steelToolStripMenuItem.Name = "steelToolStripMenuItem";
             this.steelToolStripMenuItem.Click += new System.EventHandler(this.steelToolStripMenuItem_Click);
             // 
             // lightSkyBlueToolStripMenuItem
             // 
-            this.lightSkyBlueToolStripMenuItem.Name = "lightSkyBlueToolStripMenuItem";
             resources.ApplyResources(this.lightSkyBlueToolStripMenuItem, "lightSkyBlueToolStripMenuItem");
+            this.lightSkyBlueToolStripMenuItem.Name = "lightSkyBlueToolStripMenuItem";
             this.lightSkyBlueToolStripMenuItem.Click += new System.EventHandler(this.lightSkyBlueToolStripMenuItem_Click);
             // 
             // lightSteelBlueToolStripMenuItem
             // 
-            this.lightSteelBlueToolStripMenuItem.Name = "lightSteelBlueToolStripMenuItem";
             resources.ApplyResources(this.lightSteelBlueToolStripMenuItem, "lightSteelBlueToolStripMenuItem");
+            this.lightSteelBlueToolStripMenuItem.Name = "lightSteelBlueToolStripMenuItem";
             this.lightSteelBlueToolStripMenuItem.Click += new System.EventHandler(this.lightSteelBlueToolStripMenuItem_Click);
             // 
             // paoloVeronesesGreenToolStripMenuItem
             // 
-            this.paoloVeronesesGreenToolStripMenuItem.Name = "paoloVeronesesGreenToolStripMenuItem";
             resources.ApplyResources(this.paoloVeronesesGreenToolStripMenuItem, "paoloVeronesesGreenToolStripMenuItem");
+            this.paoloVeronesesGreenToolStripMenuItem.Name = "paoloVeronesesGreenToolStripMenuItem";
             this.paoloVeronesesGreenToolStripMenuItem.Click += new System.EventHandler(this.paoloVeronesesGreenToolStripMenuItem_Click);
             // 
             // lightSalmonToolStripMenuItem
             // 
-            this.lightSalmonToolStripMenuItem.Name = "lightSalmonToolStripMenuItem";
             resources.ApplyResources(this.lightSalmonToolStripMenuItem, "lightSalmonToolStripMenuItem");
+            this.lightSalmonToolStripMenuItem.Name = "lightSalmonToolStripMenuItem";
             this.lightSalmonToolStripMenuItem.Click += new System.EventHandler(this.lightSalmonToolStripMenuItem_Click);
             // 
             // mistyRoseToolStripMenuItem
             // 
-            this.mistyRoseToolStripMenuItem.Name = "mistyRoseToolStripMenuItem";
             resources.ApplyResources(this.mistyRoseToolStripMenuItem, "mistyRoseToolStripMenuItem");
+            this.mistyRoseToolStripMenuItem.Name = "mistyRoseToolStripMenuItem";
             this.mistyRoseToolStripMenuItem.Click += new System.EventHandler(this.mistyRoseToolStripMenuItem_Click);
             // 
             // textureToolStripMenuItem
             // 
+            resources.ApplyResources(this.textureToolStripMenuItem, "textureToolStripMenuItem");
             this.textureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.freeDGreenToolStripMenuItem,
             this.blueWebToolStripMenuItem,
             this.leatherToolStripMenuItem});
             this.textureToolStripMenuItem.Name = "textureToolStripMenuItem";
-            resources.ApplyResources(this.textureToolStripMenuItem, "textureToolStripMenuItem");
             // 
             // freeDGreenToolStripMenuItem
             // 
-            this.freeDGreenToolStripMenuItem.Name = "freeDGreenToolStripMenuItem";
             resources.ApplyResources(this.freeDGreenToolStripMenuItem, "freeDGreenToolStripMenuItem");
+            this.freeDGreenToolStripMenuItem.Name = "freeDGreenToolStripMenuItem";
             this.freeDGreenToolStripMenuItem.Click += new System.EventHandler(this.freeDGreenToolStripMenuItem_Click);
             // 
             // blueWebToolStripMenuItem
             // 
-            this.blueWebToolStripMenuItem.Name = "blueWebToolStripMenuItem";
             resources.ApplyResources(this.blueWebToolStripMenuItem, "blueWebToolStripMenuItem");
+            this.blueWebToolStripMenuItem.Name = "blueWebToolStripMenuItem";
             this.blueWebToolStripMenuItem.Click += new System.EventHandler(this.blueWebToolStripMenuItem_Click);
             // 
             // leatherToolStripMenuItem
             // 
-            this.leatherToolStripMenuItem.Name = "leatherToolStripMenuItem";
             resources.ApplyResources(this.leatherToolStripMenuItem, "leatherToolStripMenuItem");
+            this.leatherToolStripMenuItem.Name = "leatherToolStripMenuItem";
             this.leatherToolStripMenuItem.Click += new System.EventHandler(this.leatherToolStripMenuItem_Click);
             // 
             // gradientToolStripMenuItem
             // 
+            resources.ApplyResources(this.gradientToolStripMenuItem, "gradientToolStripMenuItem");
             this.gradientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gradient0ToolStripMenuItem,
             this.gradient1ToolStripMenuItem,
             this.gradient2ToolStripMenuItem});
             this.gradientToolStripMenuItem.Name = "gradientToolStripMenuItem";
-            resources.ApplyResources(this.gradientToolStripMenuItem, "gradientToolStripMenuItem");
             // 
             // gradient0ToolStripMenuItem
             // 
-            this.gradient0ToolStripMenuItem.Name = "gradient0ToolStripMenuItem";
             resources.ApplyResources(this.gradient0ToolStripMenuItem, "gradient0ToolStripMenuItem");
+            this.gradient0ToolStripMenuItem.Name = "gradient0ToolStripMenuItem";
             this.gradient0ToolStripMenuItem.Click += new System.EventHandler(this.gradient0ToolStripMenuItem_Click);
             // 
             // gradient1ToolStripMenuItem
             // 
-            this.gradient1ToolStripMenuItem.Name = "gradient1ToolStripMenuItem";
             resources.ApplyResources(this.gradient1ToolStripMenuItem, "gradient1ToolStripMenuItem");
+            this.gradient1ToolStripMenuItem.Name = "gradient1ToolStripMenuItem";
             this.gradient1ToolStripMenuItem.Click += new System.EventHandler(this.gradient1ToolStripMenuItem_Click);
             // 
             // gradient2ToolStripMenuItem
             // 
-            this.gradient2ToolStripMenuItem.Name = "gradient2ToolStripMenuItem";
             resources.ApplyResources(this.gradient2ToolStripMenuItem, "gradient2ToolStripMenuItem");
+            this.gradient2ToolStripMenuItem.Name = "gradient2ToolStripMenuItem";
             this.gradient2ToolStripMenuItem.Click += new System.EventHandler(this.gradient2ToolStripMenuItem_Click);
             // 
             // resolutionToolStripMenuItem
             // 
-            this.resolutionToolStripMenuItem.Name = "resolutionToolStripMenuItem";
             resources.ApplyResources(this.resolutionToolStripMenuItem, "resolutionToolStripMenuItem");
+            this.resolutionToolStripMenuItem.Name = "resolutionToolStripMenuItem";
             this.resolutionToolStripMenuItem.Click += new System.EventHandler(this.resolutionToolStripMenuItem_Click);
+            // 
+            // kontrolka1
+            // 
+            resources.ApplyResources(this.kontrolka1, "kontrolka1");
+            this.kontrolka1.Color1 = System.Drawing.Color.Empty;
+            this.kontrolka1.Color2 = System.Drawing.Color.Empty;
+            this.kontrolka1.GradientRadius = 0;
+            this.kontrolka1.Name = "kontrolka1";
+            this.toolTip1.SetToolTip(this.kontrolka1, resources.GetString("kontrolka1.ToolTip"));
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
+            // 
+            // saveFileDialog1
+            // 
+            resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
             // 
             // volumeBar
             // 
-            this.volumeBar.LargeChange = 10;
             resources.ApplyResources(this.volumeBar, "volumeBar");
+            this.volumeBar.LargeChange = 10;
             this.volumeBar.Maximum = 100;
             this.volumeBar.Name = "volumeBar";
             this.volumeBar.SmallChange = 10;
+            this.toolTip1.SetToolTip(this.volumeBar, resources.GetString("volumeBar.ToolTip"));
             this.volumeBar.Value = 100;
             this.volumeBar.Scroll += new System.EventHandler(this.volumeBar_Scroll);
             // 
@@ -345,11 +363,13 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.currentTime, "currentTime");
             this.currentTime.Name = "currentTime";
+            this.toolTip1.SetToolTip(this.currentTime, resources.GetString("currentTime.ToolTip"));
             // 
             // currentLength
             // 
             resources.ApplyResources(this.currentLength, "currentLength");
             this.currentLength.Name = "currentLength";
+            this.toolTip1.SetToolTip(this.currentLength, resources.GetString("currentLength.ToolTip"));
             // 
             // timer
             // 
@@ -357,18 +377,21 @@ namespace Audio_Organiser
             // 
             // currentArtist
             // 
-            this.currentArtist.AutoEllipsis = true;
             resources.ApplyResources(this.currentArtist, "currentArtist");
+            this.currentArtist.AutoEllipsis = true;
             this.currentArtist.Name = "currentArtist";
+            this.toolTip1.SetToolTip(this.currentArtist, resources.GetString("currentArtist.ToolTip"));
             // 
             // currentSong
             // 
-            this.currentSong.AutoEllipsis = true;
             resources.ApplyResources(this.currentSong, "currentSong");
+            this.currentSong.AutoEllipsis = true;
             this.currentSong.Name = "currentSong";
+            this.toolTip1.SetToolTip(this.currentSong, resources.GetString("currentSong.ToolTip"));
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.prog);
@@ -387,52 +410,57 @@ namespace Audio_Organiser
             this.panel1.Controls.Add(this.buttonNext);
             this.panel1.Controls.Add(this.buttonPause);
             this.panel1.Controls.Add(this.buttonPlay);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            this.toolTip1.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             // 
             // prog
             // 
-            this.prog.BackColor = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.prog, "prog");
+            this.prog.BackColor = System.Drawing.Color.DarkGray;
             this.prog.Name = "prog";
             this.prog.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.toolTip1.SetToolTip(this.prog, resources.GetString("prog.ToolTip"));
             // 
             // buttonLoopList
             // 
-            this.buttonLoopList.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonLoopList, "buttonLoopList");
+            this.buttonLoopList.FlatAppearance.BorderSize = 0;
             this.buttonLoopList.Image = global::Audio_Organiser.Properties.Resources.loop_pl;
             this.buttonLoopList.Name = "buttonLoopList";
+            this.toolTip1.SetToolTip(this.buttonLoopList, resources.GetString("buttonLoopList.ToolTip"));
             this.buttonLoopList.UseVisualStyleBackColor = true;
             this.buttonLoopList.Click += new System.EventHandler(this.buttonLoopList_Click);
             this.buttonLoopList.MouseHover += new System.EventHandler(this.buttonLoopList_MouseHover);
             // 
             // buttonLoopSong
             // 
-            this.buttonLoopSong.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonLoopSong, "buttonLoopSong");
+            this.buttonLoopSong.FlatAppearance.BorderSize = 0;
             this.buttonLoopSong.Image = global::Audio_Organiser.Properties.Resources.loop_s;
             this.buttonLoopSong.Name = "buttonLoopSong";
+            this.toolTip1.SetToolTip(this.buttonLoopSong, resources.GetString("buttonLoopSong.ToolTip"));
             this.buttonLoopSong.UseVisualStyleBackColor = true;
             this.buttonLoopSong.Click += new System.EventHandler(this.buttonLoopSong_Click);
             this.buttonLoopSong.MouseHover += new System.EventHandler(this.buttonLoopSong_MouseHover);
             // 
             // buttonAutoplay
             // 
-            this.buttonAutoplay.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonAutoplay, "buttonAutoplay");
+            this.buttonAutoplay.FlatAppearance.BorderSize = 0;
             this.buttonAutoplay.Image = global::Audio_Organiser.Properties.Resources.auto;
             this.buttonAutoplay.Name = "buttonAutoplay";
+            this.toolTip1.SetToolTip(this.buttonAutoplay, resources.GetString("buttonAutoplay.ToolTip"));
             this.buttonAutoplay.UseVisualStyleBackColor = true;
             this.buttonAutoplay.Click += new System.EventHandler(this.buttonAutoplay_Click);
             this.buttonAutoplay.MouseHover += new System.EventHandler(this.buttonAutoplay_MouseHover);
             // 
             // buttonMute
             // 
-            this.buttonMute.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonMute, "buttonMute");
+            this.buttonMute.FlatAppearance.BorderSize = 0;
             this.buttonMute.Image = global::Audio_Organiser.Properties.Resources.mute_off;
             this.buttonMute.Name = "buttonMute";
+            this.toolTip1.SetToolTip(this.buttonMute, resources.GetString("buttonMute.ToolTip"));
             this.buttonMute.UseVisualStyleBackColor = true;
             this.buttonMute.Click += new System.EventHandler(this.buttonMute_Click);
             this.buttonMute.MouseHover += new System.EventHandler(this.buttonMute_MouseHover);
@@ -442,58 +470,65 @@ namespace Audio_Organiser
             resources.ApplyResources(this.coverPictureBox, "coverPictureBox");
             this.coverPictureBox.Name = "coverPictureBox";
             this.coverPictureBox.TabStop = false;
+            this.toolTip1.SetToolTip(this.coverPictureBox, resources.GetString("coverPictureBox.ToolTip"));
             // 
             // buttonStop
             // 
-            this.buttonStop.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonStop, "buttonStop");
+            this.buttonStop.FlatAppearance.BorderSize = 0;
             this.buttonStop.Image = global::Audio_Organiser.Properties.Resources.stop;
             this.buttonStop.Name = "buttonStop";
+            this.toolTip1.SetToolTip(this.buttonStop, resources.GetString("buttonStop.ToolTip"));
             this.buttonStop.UseVisualStyleBackColor = true;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             this.buttonStop.MouseHover += new System.EventHandler(this.buttonStop_MouseHover);
             // 
             // buttonPrevious
             // 
-            this.buttonPrevious.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonPrevious, "buttonPrevious");
+            this.buttonPrevious.FlatAppearance.BorderSize = 0;
             this.buttonPrevious.Image = global::Audio_Organiser.Properties.Resources.previous;
             this.buttonPrevious.Name = "buttonPrevious";
+            this.toolTip1.SetToolTip(this.buttonPrevious, resources.GetString("buttonPrevious.ToolTip"));
             this.buttonPrevious.UseVisualStyleBackColor = true;
             this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
             this.buttonPrevious.MouseHover += new System.EventHandler(this.buttonPrevious_MouseHover);
             // 
             // buttonNext
             // 
-            this.buttonNext.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonNext, "buttonNext");
+            this.buttonNext.FlatAppearance.BorderSize = 0;
             this.buttonNext.Image = global::Audio_Organiser.Properties.Resources.next;
             this.buttonNext.Name = "buttonNext";
+            this.toolTip1.SetToolTip(this.buttonNext, resources.GetString("buttonNext.ToolTip"));
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             this.buttonNext.MouseHover += new System.EventHandler(this.buttonNext_MouseHover);
             // 
             // buttonPause
             // 
-            this.buttonPause.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonPause, "buttonPause");
+            this.buttonPause.FlatAppearance.BorderSize = 0;
             this.buttonPause.Image = global::Audio_Organiser.Properties.Resources.pause;
             this.buttonPause.Name = "buttonPause";
+            this.toolTip1.SetToolTip(this.buttonPause, resources.GetString("buttonPause.ToolTip"));
             this.buttonPause.UseVisualStyleBackColor = true;
             this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
             this.buttonPause.MouseHover += new System.EventHandler(this.buttonPause_MouseHover);
             // 
             // buttonPlay
             // 
-            this.buttonPlay.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonPlay, "buttonPlay");
+            this.buttonPlay.FlatAppearance.BorderSize = 0;
             this.buttonPlay.Name = "buttonPlay";
+            this.toolTip1.SetToolTip(this.buttonPlay, resources.GetString("buttonPlay.ToolTip"));
             this.buttonPlay.UseVisualStyleBackColor = true;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             this.buttonPlay.MouseHover += new System.EventHandler(this.buttonPlay_MouseHover);
             // 
             // objectListViewSongs
             // 
+            resources.ApplyResources(this.objectListViewSongs, "objectListViewSongs");
             this.objectListViewSongs.AllColumns.Add(this.id);
             this.objectListViewSongs.AllColumns.Add(this.path);
             this.objectListViewSongs.AllColumns.Add(this.file);
@@ -515,11 +550,12 @@ namespace Audio_Organiser
             this.objectListViewSongs.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListViewSongs.FullRowSelect = true;
             this.objectListViewSongs.HideSelection = false;
-            resources.ApplyResources(this.objectListViewSongs, "objectListViewSongs");
             this.objectListViewSongs.MultiSelect = false;
             this.objectListViewSongs.Name = "objectListViewSongs";
+            this.objectListViewSongs.OverlayText.Text = resources.GetString("resource.Text");
             this.objectListViewSongs.SelectAllOnControlA = false;
             this.objectListViewSongs.ShowGroups = false;
+            this.toolTip1.SetToolTip(this.objectListViewSongs, resources.GetString("objectListViewSongs.ToolTip"));
             this.objectListViewSongs.UseCompatibleStateImageBehavior = false;
             this.objectListViewSongs.UseFiltering = true;
             this.objectListViewSongs.UseHotControls = false;
@@ -567,10 +603,15 @@ namespace Audio_Organiser
             this.genre.AspectName = "genre";
             resources.ApplyResources(this.genre, "genre");
             // 
+            // folderBrowserDialog1
+            // 
+            resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
+            // 
             // buttonPlClear
             // 
             resources.ApplyResources(this.buttonPlClear, "buttonPlClear");
             this.buttonPlClear.Name = "buttonPlClear";
+            this.toolTip1.SetToolTip(this.buttonPlClear, resources.GetString("buttonPlClear.ToolTip"));
             this.buttonPlClear.UseVisualStyleBackColor = true;
             this.buttonPlClear.Click += new System.EventHandler(this.buttonPlClear_Click);
             // 
@@ -578,11 +619,13 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.buttonPlDel, "buttonPlDel");
             this.buttonPlDel.Name = "buttonPlDel";
+            this.toolTip1.SetToolTip(this.buttonPlDel, resources.GetString("buttonPlDel.ToolTip"));
             this.buttonPlDel.UseVisualStyleBackColor = true;
             this.buttonPlDel.Click += new System.EventHandler(this.buttonPlDel_Click);
             // 
             // objectListViewPlaylist
             // 
+            resources.ApplyResources(this.objectListViewPlaylist, "objectListViewPlaylist");
             this.objectListViewPlaylist.AllColumns.Add(this.Id_p);
             this.objectListViewPlaylist.AllColumns.Add(this.Path_p);
             this.objectListViewPlaylist.AllColumns.Add(this.Id_auto);
@@ -600,9 +643,10 @@ namespace Audio_Organiser
             this.objectListViewPlaylist.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListViewPlaylist.FullRowSelect = true;
             this.objectListViewPlaylist.HideSelection = false;
-            resources.ApplyResources(this.objectListViewPlaylist, "objectListViewPlaylist");
             this.objectListViewPlaylist.Name = "objectListViewPlaylist";
+            this.objectListViewPlaylist.OverlayText.Text = resources.GetString("resource.Text1");
             this.objectListViewPlaylist.ShowGroups = false;
+            this.toolTip1.SetToolTip(this.objectListViewPlaylist, resources.GetString("objectListViewPlaylist.ToolTip"));
             this.objectListViewPlaylist.UseCompatibleStateImageBehavior = false;
             this.objectListViewPlaylist.UseHotControls = false;
             this.objectListViewPlaylist.View = System.Windows.Forms.View.Details;
@@ -611,57 +655,58 @@ namespace Audio_Organiser
             // Id_p
             // 
             this.Id_p.AspectName = "id";
+            resources.ApplyResources(this.Id_p, "Id_p");
             this.Id_p.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Id_p.Searchable = false;
             this.Id_p.Sortable = false;
-            resources.ApplyResources(this.Id_p, "Id_p");
             this.Id_p.UseFiltering = false;
             // 
             // Path_p
             // 
             this.Path_p.AspectName = "path";
+            resources.ApplyResources(this.Path_p, "Path_p");
             this.Path_p.Searchable = false;
             this.Path_p.Sortable = false;
-            resources.ApplyResources(this.Path_p, "Path_p");
             this.Path_p.UseFiltering = false;
             // 
             // Id_auto
             // 
             this.Id_auto.AspectName = "id_auto";
+            resources.ApplyResources(this.Id_auto, "Id_auto");
             this.Id_auto.IsTileViewColumn = true;
             this.Id_auto.Searchable = false;
             this.Id_auto.Sortable = false;
-            resources.ApplyResources(this.Id_auto, "Id_auto");
             this.Id_auto.UseFiltering = false;
             // 
             // File_p
             // 
             this.File_p.AspectName = "file";
+            resources.ApplyResources(this.File_p, "File_p");
             this.File_p.Searchable = false;
             this.File_p.Sortable = false;
-            resources.ApplyResources(this.File_p, "File_p");
             this.File_p.UseFiltering = false;
             // 
             // Artist_p
             // 
             this.Artist_p.AspectName = "artist";
+            resources.ApplyResources(this.Artist_p, "Artist_p");
             this.Artist_p.Searchable = false;
             this.Artist_p.Sortable = false;
-            resources.ApplyResources(this.Artist_p, "Artist_p");
             this.Artist_p.UseFiltering = false;
             // 
             // Title_p
             // 
             this.Title_p.AspectName = "title";
+            resources.ApplyResources(this.Title_p, "Title_p");
             this.Title_p.Searchable = false;
             this.Title_p.Sortable = false;
-            resources.ApplyResources(this.Title_p, "Title_p");
             this.Title_p.UseFiltering = false;
             // 
             // buttonSearchCancel
             // 
             resources.ApplyResources(this.buttonSearchCancel, "buttonSearchCancel");
             this.buttonSearchCancel.Name = "buttonSearchCancel";
+            this.toolTip1.SetToolTip(this.buttonSearchCancel, resources.GetString("buttonSearchCancel.ToolTip"));
             this.buttonSearchCancel.UseVisualStyleBackColor = true;
             this.buttonSearchCancel.Click += new System.EventHandler(this.buttonSearchCancel_Click);
             // 
@@ -669,6 +714,7 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.buttonEditSearch, "buttonEditSearch");
             this.buttonEditSearch.Name = "buttonEditSearch";
+            this.toolTip1.SetToolTip(this.buttonEditSearch, resources.GetString("buttonEditSearch.ToolTip"));
             this.buttonEditSearch.UseVisualStyleBackColor = true;
             this.buttonEditSearch.Click += new System.EventHandler(this.buttonEditSearch_Click);
             // 
@@ -676,6 +722,7 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.buttonEditClear, "buttonEditClear");
             this.buttonEditClear.Name = "buttonEditClear";
+            this.toolTip1.SetToolTip(this.buttonEditClear, resources.GetString("buttonEditClear.ToolTip"));
             this.buttonEditClear.UseVisualStyleBackColor = true;
             this.buttonEditClear.Click += new System.EventHandler(this.buttonEditClear_Click);
             // 
@@ -683,6 +730,7 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
+            this.toolTip1.SetToolTip(this.button1, resources.GetString("button1.ToolTip"));
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -702,73 +750,87 @@ namespace Audio_Organiser
             this.tableLayoutPanel1.Controls.Add(this.textBoxGenre, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.textBoxYear, 1, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.toolTip1.SetToolTip(this.tableLayoutPanel1, resources.GetString("tableLayoutPanel1.ToolTip"));
             // 
             // labelFile
             // 
             resources.ApplyResources(this.labelFile, "labelFile");
             this.labelFile.Name = "labelFile";
+            this.toolTip1.SetToolTip(this.labelFile, resources.GetString("labelFile.ToolTip"));
             // 
             // labelTitle
             // 
             resources.ApplyResources(this.labelTitle, "labelTitle");
             this.labelTitle.Name = "labelTitle";
+            this.toolTip1.SetToolTip(this.labelTitle, resources.GetString("labelTitle.ToolTip"));
             // 
             // labelArtist
             // 
             resources.ApplyResources(this.labelArtist, "labelArtist");
             this.labelArtist.Name = "labelArtist";
+            this.toolTip1.SetToolTip(this.labelArtist, resources.GetString("labelArtist.ToolTip"));
             // 
             // textBoxTitle
             // 
             resources.ApplyResources(this.textBoxTitle, "textBoxTitle");
             this.textBoxTitle.Name = "textBoxTitle";
+            this.toolTip1.SetToolTip(this.textBoxTitle, resources.GetString("textBoxTitle.ToolTip"));
             // 
             // textBoxFile
             // 
             resources.ApplyResources(this.textBoxFile, "textBoxFile");
             this.textBoxFile.Name = "textBoxFile";
+            this.toolTip1.SetToolTip(this.textBoxFile, resources.GetString("textBoxFile.ToolTip"));
             // 
             // labelAlbum
             // 
             resources.ApplyResources(this.labelAlbum, "labelAlbum");
             this.labelAlbum.Name = "labelAlbum";
+            this.toolTip1.SetToolTip(this.labelAlbum, resources.GetString("labelAlbum.ToolTip"));
             // 
             // labelYear
             // 
             resources.ApplyResources(this.labelYear, "labelYear");
             this.labelYear.Name = "labelYear";
+            this.toolTip1.SetToolTip(this.labelYear, resources.GetString("labelYear.ToolTip"));
             // 
             // labelGenre
             // 
             resources.ApplyResources(this.labelGenre, "labelGenre");
             this.labelGenre.Name = "labelGenre";
+            this.toolTip1.SetToolTip(this.labelGenre, resources.GetString("labelGenre.ToolTip"));
             // 
             // textBoxAlbum
             // 
             resources.ApplyResources(this.textBoxAlbum, "textBoxAlbum");
             this.textBoxAlbum.Name = "textBoxAlbum";
+            this.toolTip1.SetToolTip(this.textBoxAlbum, resources.GetString("textBoxAlbum.ToolTip"));
             // 
             // textBoxArtist
             // 
             resources.ApplyResources(this.textBoxArtist, "textBoxArtist");
             this.textBoxArtist.Name = "textBoxArtist";
+            this.toolTip1.SetToolTip(this.textBoxArtist, resources.GetString("textBoxArtist.ToolTip"));
             // 
             // textBoxGenre
             // 
             resources.ApplyResources(this.textBoxGenre, "textBoxGenre");
             this.textBoxGenre.Name = "textBoxGenre";
+            this.toolTip1.SetToolTip(this.textBoxGenre, resources.GetString("textBoxGenre.ToolTip"));
             // 
             // textBoxYear
             // 
             resources.ApplyResources(this.textBoxYear, "textBoxYear");
             this.textBoxYear.Name = "textBoxYear";
+            this.toolTip1.SetToolTip(this.textBoxYear, resources.GetString("textBoxYear.ToolTip"));
             // 
             // logo
             // 
-            this.logo.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.logo, "logo");
+            this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.Name = "logo";
             this.logo.TabStop = false;
+            this.toolTip1.SetToolTip(this.logo, resources.GetString("logo.ToolTip"));
             // 
             // toolTip1
             // 
@@ -781,23 +843,26 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.buttonPlAdd, "buttonPlAdd");
             this.buttonPlAdd.Name = "buttonPlAdd";
+            this.toolTip1.SetToolTip(this.buttonPlAdd, resources.GetString("buttonPlAdd.ToolTip"));
             this.buttonPlAdd.UseVisualStyleBackColor = true;
             this.buttonPlAdd.Click += new System.EventHandler(this.buttonPlAdd_Click);
             // 
             // buttonPlUp
             // 
-            this.buttonPlUp.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonPlUp, "buttonPlUp");
+            this.buttonPlUp.FlatAppearance.BorderSize = 0;
             this.buttonPlUp.Name = "buttonPlUp";
+            this.toolTip1.SetToolTip(this.buttonPlUp, resources.GetString("buttonPlUp.ToolTip"));
             this.buttonPlUp.UseVisualStyleBackColor = true;
             this.buttonPlUp.Click += new System.EventHandler(this.buttonPlUp_Click);
             this.buttonPlUp.MouseHover += new System.EventHandler(this.buttonPlUp_MouseHover);
             // 
             // buttonPlDown
             // 
-            this.buttonPlDown.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonPlDown, "buttonPlDown");
+            this.buttonPlDown.FlatAppearance.BorderSize = 0;
             this.buttonPlDown.Name = "buttonPlDown";
+            this.toolTip1.SetToolTip(this.buttonPlDown, resources.GetString("buttonPlDown.ToolTip"));
             this.buttonPlDown.UseVisualStyleBackColor = true;
             this.buttonPlDown.Click += new System.EventHandler(this.buttonPlDown_Click);
             this.buttonPlDown.MouseHover += new System.EventHandler(this.buttonPlDown_MouseHover);
@@ -806,6 +871,7 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.buttonMove, "buttonMove");
             this.buttonMove.Name = "buttonMove";
+            this.toolTip1.SetToolTip(this.buttonMove, resources.GetString("buttonMove.ToolTip"));
             this.buttonMove.UseVisualStyleBackColor = true;
             this.buttonMove.Click += new System.EventHandler(this.buttonMove_Click);
             // 
@@ -813,6 +879,7 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.buttonDbCheck, "buttonDbCheck");
             this.buttonDbCheck.Name = "buttonDbCheck";
+            this.toolTip1.SetToolTip(this.buttonDbCheck, resources.GetString("buttonDbCheck.ToolTip"));
             this.buttonDbCheck.UseVisualStyleBackColor = true;
             this.buttonDbCheck.Click += new System.EventHandler(this.buttonDbCheck_Click);
             // 
@@ -820,12 +887,20 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this.buttonAddFile, "buttonAddFile");
             this.buttonAddFile.Name = "buttonAddFile";
+            this.toolTip1.SetToolTip(this.buttonAddFile, resources.GetString("buttonAddFile.ToolTip"));
             this.buttonAddFile.UseVisualStyleBackColor = true;
             this.buttonAddFile.Click += new System.EventHandler(this.buttonAddFile_Click);
             // 
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
+            resources.ApplyResources(this.openFileDialog2, "openFileDialog2");
+            // 
+            // testButtonToolStripMenuItem
+            // 
+            resources.ApplyResources(this.testButtonToolStripMenuItem, "testButtonToolStripMenuItem");
+            this.testButtonToolStripMenuItem.Name = "testButtonToolStripMenuItem";
+            this.testButtonToolStripMenuItem.Click += new System.EventHandler(this.testButtonToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -852,6 +927,7 @@ namespace Audio_Organiser
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.Name = "MainWindow";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -968,6 +1044,7 @@ namespace Audio_Organiser
         private System.Windows.Forms.Button buttonDbCheck;
         private System.Windows.Forms.Button buttonAddFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.ToolStripMenuItem testButtonToolStripMenuItem;
     }
 }
 

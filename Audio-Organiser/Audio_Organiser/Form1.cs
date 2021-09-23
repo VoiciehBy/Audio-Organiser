@@ -4,6 +4,7 @@ using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -1415,6 +1416,17 @@ namespace Audio_Organiser
             album.Width = x5;
             year.Width = x6;
             genre.Width = x7;
+        }
+
+        private void testButtonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string songNameOrUrl = "don't stop me now";
+            string parameters = "\"ytsearch:" + songNameOrUrl + "\" -x --audio-format \"mp3\" --embed-thumbnail --add-metadata";
+            Process downloading = new Process();
+            downloading.StartInfo.FileName = "C:\\Users\\geral\\Downloads\\Audio-Organiser\\Audio-Organiser\\Audio_Organiser\\youtube-dl.exe";
+            downloading.StartInfo.Arguments = parameters;
+            downloading.Start();
+            //System.Diagnostics.Process.Start("youtube-dl", parameters);
         }
     }
 }

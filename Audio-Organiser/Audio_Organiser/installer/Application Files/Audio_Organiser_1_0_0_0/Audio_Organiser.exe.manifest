@@ -42,26 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Audio_Organiser.exe" size="1423840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Audio_Organiser.exe" size="1427424">
       <assemblyIdentity name="Audio_Organiser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6Brptfnjtx/0H26mbgWDqFupyFxgbSq4xA5wH/7Faf8=</dsig:DigestValue>
+        <dsig:DigestValue>3VQk8APjZZ6Oa3voKTb1e9V9enx2DDrpnblmp8ec7Qw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl-PL\Audio_Organiser.resources.dll" size="422912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl-PL\Audio_Organiser.resources.dll" size="410112">
       <assemblyIdentity name="Audio_Organiser.resources" version="1.0.0.0" language="pl-PL" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JA8UcjRla25RQ5jyO0LDLnMlnFqkgtBZIWf1/eAa4tU=</dsig:DigestValue>
+        <dsig:DigestValue>06KGAyzN6oNhMNQY4HWes1MGWUkO+S8u060DmRoj9uI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -221,13 +221,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Audio_Organiser.exe.config" size="910">
+  <file name="Audio_Organiser.exe.config" size="4733">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>w3zmDFap1I6YKsA+kc+/j/sVNVUlrwuftngZEqHKpJY=</dsig:DigestValue>
+      <dsig:DigestValue>pgFNCStDgcTl9Cv3Ea3nrRFlhh30xnJIujdXoB/g+5w=</dsig:DigestValue>
     </hash>
   </file>
   <file name="muzyka.mdf" size="8388608" writeableType="applicationData">
@@ -236,16 +236,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>AGp0CK6+EQ9CfsEa4F4+9NTwqsqS0uW8kT7FjFrjjVw=</dsig:DigestValue>
+      <dsig:DigestValue>iO9Oz6pTkB2mUxC37L6lgWLsTlPgNR2bHdK3+hXfCPQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="muzyka_log.ldf" size="8388608" writeableType="applicationData">
+  <file name="muzyka_log.ldf" size="516096" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7eYxuvDy2gPAq8UskQB0aR3Hz7Lo7OCHksI0gv9S2C0=</dsig:DigestValue>
+      <dsig:DigestValue>ZALa864nPzcQ8cpBffvEagFVyKeAcCNx3pnM8vhpIEQ=</dsig:DigestValue>
     </hash>
   </file>
-<publisherIdentity name="CN=DESKTOP-I794UK6\piotr" issuerKeyHash="bb662ea3e6ba4c20684c2c3e7222353eb5b04390" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>RtljJusthJFs9FgeMZU4da1d2+cznE7+V+BehORpY3s=</DigestValue></Reference></SignedInfo><SignatureValue>m00iEdlRxBqvBZjQNN4+JV8j2WOXdAvPvwvLzO3z4Rx3wb+wDnhqqMiY70vDcu02UgGBAD3wbDdkmJVbf1PzB2JRxbVWNcBvuJ56cNzN4QOsbFS9e+cHIM4FpeqaYj7HvHZBwSvpy5tm79qWH6HOVbJSffoshHzE+26auQHTILw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pFiuLCSVzUXJcmzhgeAV0ROpnsu0lDTzc5YwDw1CnckOQSHrGZv44hnRGd3MfuDCdM6LsPGT5WQ4PkWKnYmebNyUmfmocRTIon3s1RbqURXZQHMJLs8g88zTn/a9iOftj4DMmb1OZK+NQQ2jPKAbCEY63S1eHMqkw3ZycBLgWo0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7b6369e4845ee057fe4e9c33e7db5dad753895311e58f46c91842deb2663d946" Description="" Url=""><as:assemblyIdentity name="Audio_Organiser.exe" version="1.0.0.0" publicKeyToken="7f7dca3254480466" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-I794UK6\piotr</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>BHbtMtHm0byU7F7/t9v1739D6DxDNxXk8Svax7hF9uU=</DigestValue></Reference></SignedInfo><SignatureValue>O4UfbWG5kw5n0RNeF5hspY/tZveAuaiKnD/F6gqQLMPK4REl3zvtReIG+JWyah+9rJPo5JkqhnWe/0Npn5M9GVYKcVhhn8NBtiVgE2DQlsh/H4dJa3DTtthDDPhWi8gWM/ZImOXifagKUEfJL/bacmMhmwoYVzAC7p8L2hMXzMM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pFiuLCSVzUXJcmzhgeAV0ROpnsu0lDTzc5YwDw1CnckOQSHrGZv44hnRGd3MfuDCdM6LsPGT5WQ4PkWKnYmebNyUmfmocRTIon3s1RbqURXZQHMJLs8g88zTn/a9iOftj4DMmb1OZK+NQQ2jPKAbCEY63S1eHMqkw3ZycBLgWo0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQGHJmbJUu9ZFM7MxdkwYzljANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEkANwA5ADQAVQBLADYAXABwAGkAbwB0AHIwHhcNMjEwNDE3MTU0MDM3WhcNMjIwNDE3MjE0MDM3WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEkANwA5ADQAVQBLADYAXABwAGkAbwB0AHIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKRYriwklc1FyXJs4YHgFdETqZ7LtJQ083OWMA8NQp3JDkEh6xmb+OIZ0RndzH7gwnTOi7Dxk+VkOD5Fip2JnmzclJn5qHEUyKJ97NUW6lEV2UBzCS7PIPPM05/2vYjn7Y+AzJm9TmSvjUENozygGwhGOt0tXhzKpMN2cnAS4FqNAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAoM5BOfSWI/ZFD+rHFgk85jQIGMtJL9PNrKKlfijTplQOj11G79jV5/b8HSzHEJRDMtzs50+oijdxk5Skufugae8syrlxAi/jHpwPBpvPm/qCo/tTLKM0+51VZIOaxvD8Ho1x1p+H0yIXzncrGTH3hcqULFmjtMiu2KaHxi36oXA=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=DESKTOP-I794UK6\piotr" issuerKeyHash="bb662ea3e6ba4c20684c2c3e7222353eb5b04390" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>XC4aCj4MBFEGaKkmsgkdYlMacBWl2AlOgktrLDi5PJ0=</DigestValue></Reference></SignedInfo><SignatureValue>P3OIsiQEH6LVQPdbdVx3QZiFJAgo0b0qgwl7tDqIy5c8vT0bC1IgHYQMXqRPiKtY9Ii5mkFYA3p6xbWJASqH9aZMe8O4LxY2cu/taAGie7di8Mv8quBIBsOG8SyDvLhb99xaEmbFj0wkYchBWT/+4C8s1OS10U0WdfCq6Qtc7Z4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pFiuLCSVzUXJcmzhgeAV0ROpnsu0lDTzc5YwDw1CnckOQSHrGZv44hnRGd3MfuDCdM6LsPGT5WQ4PkWKnYmebNyUmfmocRTIon3s1RbqURXZQHMJLs8g88zTn/a9iOftj4DMmb1OZK+NQQ2jPKAbCEY63S1eHMqkw3ZycBLgWo0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9d3cb9382c6b4b824e09d8a515701a53621d09b226a9680651040c3e0a1a2e5c" Description="" Url=""><as:assemblyIdentity name="Audio_Organiser.exe" version="1.0.0.0" publicKeyToken="7f7dca3254480466" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-I794UK6\piotr</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>c756Epl5zxl0DBK0eMIsFGT4z3GnftfQ6u/bEIpY2Ak=</DigestValue></Reference></SignedInfo><SignatureValue>YEaQJ0fzujCpPTxsxEe5oELDq9Hmn47+tPPtFO5xAljuJVtrepuHR9ZaShpvlnt5CRzyTsLVzLPdsezLVZjKTBltVQ1WCC/GAoz+0QFHomgkfq8BtEhETijkliEuP2w6eHxev0trobmNopt/OzsIxLJPnep2XNteNWxkDXDQ2Ag=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pFiuLCSVzUXJcmzhgeAV0ROpnsu0lDTzc5YwDw1CnckOQSHrGZv44hnRGd3MfuDCdM6LsPGT5WQ4PkWKnYmebNyUmfmocRTIon3s1RbqURXZQHMJLs8g88zTn/a9iOftj4DMmb1OZK+NQQ2jPKAbCEY63S1eHMqkw3ZycBLgWo0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQGHJmbJUu9ZFM7MxdkwYzljANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEkANwA5ADQAVQBLADYAXABwAGkAbwB0AHIwHhcNMjEwNDE3MTU0MDM3WhcNMjIwNDE3MjE0MDM3WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEkANwA5ADQAVQBLADYAXABwAGkAbwB0AHIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKRYriwklc1FyXJs4YHgFdETqZ7LtJQ083OWMA8NQp3JDkEh6xmb+OIZ0RndzH7gwnTOi7Dxk+VkOD5Fip2JnmzclJn5qHEUyKJ97NUW6lEV2UBzCS7PIPPM05/2vYjn7Y+AzJm9TmSvjUENozygGwhGOt0tXhzKpMN2cnAS4FqNAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAoM5BOfSWI/ZFD+rHFgk85jQIGMtJL9PNrKKlfijTplQOj11G79jV5/b8HSzHEJRDMtzs50+oijdxk5Skufugae8syrlxAi/jHpwPBpvPm/qCo/tTLKM0+51VZIOaxvD8Ho1x1p+H0yIXzncrGTH3hcqULFmjtMiu2KaHxi36oXA=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
