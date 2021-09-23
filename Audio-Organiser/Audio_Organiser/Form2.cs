@@ -37,10 +37,5 @@ namespace Audio_Organiser
             this.Hide();
             mW.Show();
         }
-
-        private void resolutionLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
