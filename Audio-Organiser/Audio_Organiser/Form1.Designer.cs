@@ -36,6 +36,7 @@ namespace Audio_Organiser
             this.dodajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonAdd2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.YTDownloadButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDel = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDel2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -125,7 +126,6 @@ namespace Audio_Organiser
             this.buttonDbCheck = new System.Windows.Forms.Button();
             this.buttonAddFile = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.testButtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -145,8 +145,7 @@ namespace Audio_Organiser
             this.dodajToolStripMenuItem,
             this.usunToolStripMenuItem,
             this.themesToolStripMenuItem,
-            this.resolutionToolStripMenuItem,
-            this.testButtonToolStripMenuItem});
+            this.resolutionToolStripMenuItem});
             this.menuStrip.Name = "menuStrip";
             this.toolTip1.SetToolTip(this.menuStrip, resources.GetString("menuStrip.ToolTip"));
             // 
@@ -155,7 +154,8 @@ namespace Audio_Organiser
             resources.ApplyResources(this.dodajToolStripMenuItem, "dodajToolStripMenuItem");
             this.dodajToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.button2,
-            this.buttonAdd2});
+            this.buttonAdd2,
+            this.YTDownloadButtonToolStripMenuItem});
             this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
             // 
             // button2
@@ -169,6 +169,12 @@ namespace Audio_Organiser
             resources.ApplyResources(this.buttonAdd2, "buttonAdd2");
             this.buttonAdd2.Name = "buttonAdd2";
             this.buttonAdd2.Click += new System.EventHandler(this.buttonAdd2_Click);
+            // 
+            // YTDownloadButtonToolStripMenuItem
+            // 
+            resources.ApplyResources(this.YTDownloadButtonToolStripMenuItem, "YTDownloadButtonToolStripMenuItem");
+            this.YTDownloadButtonToolStripMenuItem.Name = "YTDownloadButtonToolStripMenuItem";
+            this.YTDownloadButtonToolStripMenuItem.Click += new System.EventHandler(this.YTDownloadButtonToolStripMenuItem_Click);
             // 
             // usunToolStripMenuItem
             // 
@@ -896,12 +902,6 @@ namespace Audio_Organiser
             this.openFileDialog2.FileName = "openFileDialog2";
             resources.ApplyResources(this.openFileDialog2, "openFileDialog2");
             // 
-            // testButtonToolStripMenuItem
-            // 
-            resources.ApplyResources(this.testButtonToolStripMenuItem, "testButtonToolStripMenuItem");
-            this.testButtonToolStripMenuItem.Name = "testButtonToolStripMenuItem";
-            this.testButtonToolStripMenuItem.Click += new System.EventHandler(this.testButtonToolStripMenuItem_Click);
-            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
@@ -1044,7 +1044,7 @@ namespace Audio_Organiser
         private System.Windows.Forms.Button buttonDbCheck;
         private System.Windows.Forms.Button buttonAddFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
-        private System.Windows.Forms.ToolStripMenuItem testButtonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem YTDownloadButtonToolStripMenuItem;
     }
 }
 

@@ -1417,11 +1417,11 @@ namespace Audio_Organiser
             genre.Width = x7;
         }
 
-        private void testButtonToolStripMenuItem_Click(object sender, EventArgs e)
+        private void YTDownloadButtonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3();
-            f.Show();
-            this.Hide();
+                Form3 f = new Form3();
+                f.Show();
+                this.Hide();
         }
     }
 }

@@ -117,203 +117,536 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="objectListViewPlaylist.ToolTip" xml:space="preserve">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonPlAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonMute.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;buttonDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="whiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="&gt;&gt;id.Name" xml:space="preserve">
+    <value>id</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;themesToolStripMenuItem.Name" xml:space="preserve">
+    <value>themesToolStripMenuItem</value>
+  </data>
+  <data name="steelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="&gt;&gt;labelFile.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="labelArtist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 34</value>
+  </data>
+  <data name="dodajToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 24</value>
+  </data>
+  <data name="buttonAutoplay.ToolTip" xml:space="preserve">
     <value />
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="objectListViewSongs.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;artist.Name" xml:space="preserve">
-    <value>artist</value>
+  <data name="labelFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonMute.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="textBoxAlbum.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;blueWebToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;testButtonToolStripMenuItem.Name" xml:space="preserve">
+    <value>testButtonToolStripMenuItem</value>
+  </data>
+  <data name="buttonEditSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;coverPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gradient0ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonLoopList.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="gradient2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 26</value>
+  </data>
+  <data name="themesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Motywy</value>
+  </data>
+  <data name="buttonPlClear.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="buttonPlDown.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
-  <data name="buttonPlClear.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="&gt;&gt;buttonSearchCancel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="button1.ToolTip" xml:space="preserve">
+  <data name="&gt;&gt;leatherToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonPlDel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Dodaj pliki</value>
+  </data>
+  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;textBoxFile.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;title.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="resource.Text1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="prog.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelGenre.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;buttonPlay.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonPause.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="gradientToolStripMenuItem.Text" xml:space="preserve">
+    <value>Gradient</value>
+  </data>
+  <data name="textBoxArtist.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;labelFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="logo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 156</value>
+  </data>
+  <data name="&gt;&gt;gradient2ToolStripMenuItem.Name" xml:space="preserve">
+    <value>gradient2ToolStripMenuItem</value>
+  </data>
+  <data name="kontrolka1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonMute.Parent" xml:space="preserve">
     <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;buttonStop.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 148</value>
-  </data>
-  <data name="textureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 26</value>
-  </data>
-  <data name="&gt;&gt;textBoxAlbum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonDbCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonDel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 26</value>
   </data>
-  <data name="buttonEditSearch.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;textureToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonPrevious.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;buttonPlDel.Name" xml:space="preserve">
+    <value>buttonPlDel</value>
+  </data>
+  <data name="&gt;&gt;coverPictureBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="labelArtist.Text" xml:space="preserve">
+    <value>Wykonawca albumu</value>
+  </data>
+  <data name="&gt;&gt;genre.Name" xml:space="preserve">
+    <value>genre</value>
+  </data>
+  <data name="defaultToolStripMenuItem.Text" xml:space="preserve">
+    <value>Domyślny</value>
+  </data>
+  <data name="prog.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="objectListViewSongs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 48</value>
+  </data>
+  <data name="&gt;&gt;buttonPlDel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;coverPictureBox.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="currentTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;currentTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;YTDownloadButtonToolStripMenuItem.Name" xml:space="preserve">
+    <value>YTDownloadButtonToolStripMenuItem</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 28</value>
   </data>
-  <data name="buttonStop.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;resolutionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="currentLength.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="gradient1ToolStripMenuItem.Text" xml:space="preserve">
+    <value>#2</value>
   </data>
-  <data name="buttonMove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="&gt;&gt;prog.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;Path_p.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  <data name="&gt;&gt;labelTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;year.Name" xml:space="preserve">
+    <value>year</value>
   </data>
-  <data name="objectListViewPlaylist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 276</value>
+  <data name="&gt;&gt;prog.Name" xml:space="preserve">
+    <value>prog</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1685, 898</value>
+  <data name="&gt;&gt;labelArtist.Name" xml:space="preserve">
+    <value>labelArtist</value>
   </data>
-  <data name="&gt;&gt;kontrolka1.Name" xml:space="preserve">
-    <value>kontrolka1</value>
+  <data name="&gt;&gt;buttonPlUp.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;buttonMove.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;paoloVeronesesGreenToolStripMenuItem.Name" xml:space="preserve">
+    <value>paoloVeronesesGreenToolStripMenuItem</value>
   </data>
-  <data name="currentLength.Text" xml:space="preserve">
-    <value>00:00:00</value>
+  <data name="prog.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="buttonEditClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>724, 682</value>
   </data>
   <data name="&gt;&gt;buttonStop.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;buttonMute.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;labelFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;album.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 17</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Edytuj</value>
+  <data name="&gt;&gt;currentSong.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;logo.Name" xml:space="preserve">
-    <value>logo</value>
+  <data name="artist.Text" xml:space="preserve">
+    <value>Wykonawcy uczestniczący</value>
   </data>
-  <data name="buttonPlDel.Text" xml:space="preserve">
-    <value>Usuń</value>
+  <data name="mistyRoseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mglisty Róż</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;buttonLoopSong.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="currentArtist.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 25</value>
   </data>
-  <data name="&gt;&gt;Artist_p.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  <data name="buttonPlAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1327, 682</value>
   </data>
-  <data name="&gt;&gt;labelAlbum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="prog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 56</value>
   </data>
-  <data name="currentTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 21</value>
+  <data name="blueWebToolStripMenuItem.Text" xml:space="preserve">
+    <value>Blue Web</value>
   </data>
-  <data name="textBoxGenre.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainWindow</value>
   </data>
-  <data name="currentSong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 678</value>
+  <data name="&gt;&gt;defaultToolStripMenuItem.Name" xml:space="preserve">
+    <value>defaultToolStripMenuItem</value>
   </data>
-  <data name="buttonMute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="&gt;&gt;buttonPlDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonDbCheck.Text" xml:space="preserve">
-    <value>Sprawdź bazę</value>
+  <data name="freeDGreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>3D Green</value>
   </data>
-  <data name="buttonPrevious.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="buttonDel.Text" xml:space="preserve">
+    <value>Usuń z bazy</value>
   </data>
-  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonLoopList.Name" xml:space="preserve">
-    <value>buttonLoopList</value>
-  </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonSearchCancel.ToolTip" xml:space="preserve">
-    <value />
+  <data name="logo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1501, 746</value>
   </data>
   <data name="&gt;&gt;buttonPause.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="labelGenre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 17</value>
+  <data name="&gt;&gt;buttonPlay.Name" xml:space="preserve">
+    <value>buttonPlay</value>
   </data>
-  <data name="&gt;&gt;logo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonAutoplay.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;buttonLoopList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buttonNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
   </data>
-  <data name="&gt;&gt;textBoxArtist.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="buttonStop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="Title_p.Text" xml:space="preserve">
-    <value>Tytuł</value>
-  </data>
-  <data name="&gt;&gt;buttonAddFile.Name" xml:space="preserve">
-    <value>buttonAddFile</value>
-  </data>
-  <data name="&gt;&gt;objectListViewSongs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="currentTime.Text" xml:space="preserve">
-    <value>00:00:00</value>
+  <data name="&gt;&gt;buttonLoopList.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;volumeBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;buttonPlAdd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;gradientToolStripMenuItem.Name" xml:space="preserve">
+    <value>gradientToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;labelYear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;labelGenre.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;labelTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="textBoxYear.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
-  <data name="buttonDbCheck.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="menuStrip.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 130</value>
+  <data name="whiteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Biały</value>
   </data>
-  <data name="buttonPlClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="YTDownloadButtonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 26</value>
   </data>
-  <data name="&gt;&gt;gradient1ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="labelAlbum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 111</value>
+  </data>
+  <data name="kontrolka1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;solidColorToolStripMenuItem.Name" xml:space="preserve">
+    <value>solidColorToolStripMenuItem</value>
+  </data>
+  <data name="Path_p.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonLoopList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;paoloVeronesesGreenToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="gradient0ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 26</value>
+  <data name="buttonPlay.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;buttonEditSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mistyRoseToolStripMenuItem.Name" xml:space="preserve">
+    <value>mistyRoseToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;logo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lightSteelBlueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="objectListViewPlaylist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 578</value>
+  </data>
+  <data name="textureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 26</value>
+  </data>
+  <data name="currentTime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonSearchCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="objectListViewSongs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1297, 622</value>
+  </data>
+  <data name="textBoxTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="labelGenre.Text" xml:space="preserve">
+    <value>Gatunek</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>724, 751</value>
+  </data>
+  <data name="&gt;&gt;buttonDbCheck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentArtist.Name" xml:space="preserve">
+    <value>currentArtist</value>
+  </data>
+  <data name="buttonMove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="&gt;&gt;buttonPrevious.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="tableLayoutPanel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;currentLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;coverPictureBox.Name" xml:space="preserve">
+    <value>coverPictureBox</value>
+  </data>
+  <data name="&gt;&gt;currentArtist.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonPlDel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="mistyRoseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="buttonPause.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxAlbum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="buttonNext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;buttonMove.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBoxTitle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;buttonMove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxFile.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelGenre.Name" xml:space="preserve">
+    <value>labelGenre</value>
+  </data>
+  <data name="Path_p.Text" xml:space="preserve">
+    <value>Ścieżka</value>
+  </data>
+  <data name="&gt;&gt;textBoxGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="textBoxAlbum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="buttonPlClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="buttonLoopSong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 130</value>
+  </data>
+  <data name="&gt;&gt;logo.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="&gt;&gt;leatherToolStripMenuItem.Name" xml:space="preserve">
+    <value>leatherToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;buttonMute.Name" xml:space="preserve">
+    <value>buttonMute</value>
+  </data>
+  <data name="textBoxFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 4</value>
+  </data>
+  <data name="&gt;&gt;lightSteelBlueToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonLoopSong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
+  </data>
+  <data name="currentLength.Text" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
+  <data name="buttonLoopSong.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxAlbum.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;currentArtist.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;buttonPlUp.Name" xml:space="preserve">
+    <value>buttonPlUp</value>
+  </data>
+  <data name="&gt;&gt;labelArtist.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="steelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Stalowy</value>
+  </data>
+  <data name="&gt;&gt;id.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;buttonPlAdd.Name" xml:space="preserve">
+    <value>buttonPlAdd</value>
+  </data>
+  <data name="objectListViewPlaylist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 276</value>
+  </data>
+  <data name="&gt;&gt;volumeBar.Name" xml:space="preserve">
+    <value>volumeBar</value>
+  </data>
+  <data name="&gt;&gt;Title_p.Name" xml:space="preserve">
+    <value>Title_p</value>
+  </data>
+  <data name="&gt;&gt;buttonPlay.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="textBoxGenre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;Id_p.Name" xml:space="preserve">
+    <value>Id_p</value>
+  </data>
+  <data name="currentLength.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="buttonPlDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -330,755 +663,974 @@
         DlFF2Q6+omUHX9G2g5mX7GDmxC5yA1Q4gAjaPiEBAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;buttonLoopSong.Name" xml:space="preserve">
-    <value>buttonLoopSong</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="Id_auto.Text" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonLoopList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="prog.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="paoloVeronesesGreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
-  </data>
-  <data name="&gt;&gt;buttonPlDown.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;currentTime.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="blueWebToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 26</value>
-  </data>
-  <data name="mistyRoseToolStripMenuItem.Text" xml:space="preserve">
-    <value>Mglisty Róż</value>
-  </data>
-  <data name="buttonEditClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
-  </data>
-  <data name="textBoxArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;volumeBar.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;blueWebToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="buttonMute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 69</value>
-  </data>
-  <data name="&gt;&gt;buttonPlAdd.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="currentLength.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 185</value>
-  </data>
-  <data name="&gt;&gt;buttonStop.Name" xml:space="preserve">
-    <value>buttonStop</value>
-  </data>
-  <data name="&gt;&gt;year.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;buttonPlDel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 220</value>
-  </data>
-  <data name="&gt;&gt;currentSong.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonAddFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Audio Organiser</value>
-  </data>
-  <data name="buttonSearchCancel.Text" xml:space="preserve">
-    <value>Pokaż wszystko</value>
-  </data>
-  <data name="buttonNext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;labelArtist.Name" xml:space="preserve">
-    <value>labelArtist</value>
-  </data>
-  <data name="gradient1ToolStripMenuItem.Text" xml:space="preserve">
-    <value>#2</value>
-  </data>
-  <data name="&gt;&gt;currentLength.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mistyRoseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
-  </data>
-  <data name="labelGenre.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAlbum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 111</value>
-  </data>
-  <data name="File_p.Width" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 48</value>
-  </data>
-  <data name="gradient2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 26</value>
-  </data>
-  <data name="labelTitle.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
-    <value>saveFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;steelToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonPlClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 862</value>
-  </data>
-  <data name="&gt;&gt;freeDGreenToolStripMenuItem.Name" xml:space="preserve">
-    <value>freeDGreenToolStripMenuItem</value>
-  </data>
-  <data name="id.Text" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="&gt;&gt;buttonPrevious.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonAutoplay.Name" xml:space="preserve">
-    <value>buttonAutoplay</value>
-  </data>
-  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelTitle" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelArtist" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBoxTitle" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="textBoxFile" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelAlbum" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelYear" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelGenre" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBoxAlbum" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="textBoxArtist" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="textBoxGenre" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="textBoxYear" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,38,3812,Percent,61,6188" /&gt;&lt;Rows Styles="Absolute,37,Absolute,37,Absolute,37,Absolute,37,Absolute,37,Absolute,37" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="textBoxTitle.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAlbum.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;textBoxAlbum.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;buttonPlay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonPlDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="buttonStop.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="freeDGreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>3D Green</value>
-  </data>
-  <data name="buttonDbCheck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1531, 715</value>
-  </data>
-  <data name="labelArtist.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="lightSkyBlueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
-  </data>
-  <data name="&gt;&gt;buttonAutoplay.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textBoxAlbum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;labelArtist.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="currentArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 26</value>
-  </data>
-  <data name="&gt;&gt;year.Name" xml:space="preserve">
-    <value>year</value>
-  </data>
-  <data name="currentTime.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Impact, 9.75pt</value>
-  </data>
-  <data name="&gt;&gt;labelGenre.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;buttonPause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonClear.Text" xml:space="preserve">
-    <value>Usuń widoczne z bazy</value>
-  </data>
-  <data name="&gt;&gt;buttonNext.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1501, 746</value>
-  </data>
-  <data name="artist.Width" type="System.Int32, mscorlib">
-    <value>189</value>
-  </data>
-  <data name="&gt;&gt;textBoxGenre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;leatherToolStripMenuItem.Name" xml:space="preserve">
-    <value>leatherToolStripMenuItem</value>
-  </data>
-  <data name="buttonEditSearch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Artist_p.Text" xml:space="preserve">
-    <value>Wykonawca</value>
-  </data>
-  <data name="Artist_p.Width" type="System.Int32, mscorlib">
-    <value>84</value>
-  </data>
-  <data name="buttonLoopSong.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;labelTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textBoxArtist.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="buttonMove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
-  </data>
-  <data name="Id_p.Width" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;currentArtist.Name" xml:space="preserve">
-    <value>currentArtist</value>
-  </data>
-  <data name="&gt;&gt;buttonPlDel.Name" xml:space="preserve">
-    <value>buttonPlDel</value>
-  </data>
-  <data name="Id_auto.Width" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;buttonAdd2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxArtist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="&gt;&gt;Title_p.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;currentTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonPlDel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;currentArtist.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;title.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="resolutionToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rozdzielczość</value>
-  </data>
-  <data name="buttonMute.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="prog.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;gradient0ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lightSalmonToolStripMenuItem.Text" xml:space="preserve">
-    <value>Jasny Łososiowy</value>
-  </data>
-  <data name="currentTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="currentArtist.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Constantia, 12pt</value>
-  </data>
-  <data name="currentSong.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Constantia, 9pt</value>
-  </data>
-  <data name="labelYear.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="solidColorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Jednolity Kolor</value>
-  </data>
-  <data name="labelYear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 17</value>
-  </data>
-  <data name="&gt;&gt;buttonPlay.Name" xml:space="preserve">
-    <value>buttonPlay</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="textBoxTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="textBoxYear.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;buttonPlClear.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="buttonEditSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonMute.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="usunToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 24</value>
-  </data>
-  <data name="coverPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 0</value>
-  </data>
-  <data name="gradient1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 26</value>
-  </data>
-  <data name="labelArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;buttonSearchCancel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="Id_p.Text" xml:space="preserve">
-    <value>Id_DB</value>
-  </data>
-  <data name="labelFile.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
-  </data>
-  <data name="&gt;&gt;buttonAutoplay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonStop.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="currentTime.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;gradient2ToolStripMenuItem.Name" xml:space="preserve">
-    <value>gradient2ToolStripMenuItem</value>
-  </data>
-  <data name="whiteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Biały</value>
+  <data name="buttonPlAdd.Text" xml:space="preserve">
+    <value>Dodaj widoczne do playlisty</value>
   </data>
   <data name="gradientToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 26</value>
   </data>
-  <data name="textBoxFile.ToolTip" xml:space="preserve">
+  <data name="&gt;&gt;labelAlbum.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBoxYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="buttonSearchCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1531, 682</value>
+  </data>
+  <data name="&gt;&gt;usunToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonPlDown.Name" xml:space="preserve">
+    <value>buttonPlDown</value>
+  </data>
+  <data name="buttonPlClear.Text" xml:space="preserve">
+    <value>Wyczyść</value>
+  </data>
+  <data name="currentLength.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="buttonDel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 26</value>
+  <data name="labelGenre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;buttonMute.Name" xml:space="preserve">
-    <value>buttonMute</value>
+  <data name="buttonStop.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="buttonPlDel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 862</value>
+  <data name="buttonPrevious.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
   </data>
-  <data name="&gt;&gt;volumeBar.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;resolutionToolStripMenuItem.Name" xml:space="preserve">
+    <value>resolutionToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;buttonPlDel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="coverPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 123</value>
   </data>
-  <data name="labelArtist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 34</value>
+  <data name="artist.Width" type="System.Int32, mscorlib">
+    <value>189</value>
   </data>
-  <data name="buttonAutoplay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="&gt;&gt;year.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;buttonMove.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Id_auto.Width" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
-  <data name="&gt;&gt;Artist_p.Name" xml:space="preserve">
-    <value>Artist_p</value>
-  </data>
-  <data name="file.Text" xml:space="preserve">
+  <data name="labelFile.Text" xml:space="preserve">
     <value>Nazwa pliku</value>
   </data>
-  <data name="&gt;&gt;buttonLoopSong.Parent" xml:space="preserve">
+  <data name="textBoxYear.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="volumeBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;lightSkyBlueToolStripMenuItem.Name" xml:space="preserve">
+    <value>lightSkyBlueToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;lightSalmonToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="currentTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Impact, 9.75pt</value>
+  </data>
+  <data name="objectListViewPlaylist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 224</value>
+  </data>
+  <data name="buttonPrevious.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 130</value>
+  </data>
+  <data name="&gt;&gt;Id_auto.Name" xml:space="preserve">
+    <value>Id_auto</value>
+  </data>
+  <data name="textBoxAlbum.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;buttonLoopList.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="path.Text" xml:space="preserve">
-    <value>Scieżka</value>
+  <data name="&gt;&gt;lightSalmonToolStripMenuItem.Name" xml:space="preserve">
+    <value>lightSalmonToolStripMenuItem</value>
   </data>
-  <data name="textBoxGenre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+  <data name="buttonPause.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="&gt;&gt;objectListViewPlaylist.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="file.Text" xml:space="preserve">
+    <value>Nazwa pliku</value>
   </data>
-  <data name="buttonMove.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="currentLength.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Impact, 9.75pt</value>
-  </data>
-  <data name="&gt;&gt;labelYear.Name" xml:space="preserve">
-    <value>labelYear</value>
-  </data>
-  <data name="&gt;&gt;buttonClear.Name" xml:space="preserve">
-    <value>buttonClear</value>
-  </data>
-  <data name="&gt;&gt;Title_p.Name" xml:space="preserve">
-    <value>Title_p</value>
-  </data>
-  <data name="buttonPrevious.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 130</value>
-  </data>
-  <data name="&gt;&gt;buttonMove.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonLoopSong.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="textBoxFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="buttonEditClear.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;buttonLoopSong.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonAddFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelArtist.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="buttonStop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 130</value>
-  </data>
-  <data name="labelAlbum.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;textBoxYear.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="buttonSearchCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 28</value>
-  </data>
-  <data name="buttonAutoplay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 130</value>
-  </data>
-  <data name="currentLength.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 21</value>
-  </data>
-  <data name="buttonNext.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPlUp.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="objectListViewPlaylist.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="buttonAddFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="buttonPrevious.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;buttonPause.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;buttonPrevious.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;testButtonToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="genre.Text" xml:space="preserve">
-    <value>Gatunek</value>
-  </data>
-  <data name="&gt;&gt;textBoxYear.Name" xml:space="preserve">
-    <value>textBoxYear</value>
-  </data>
-  <data name="&gt;&gt;title.Name" xml:space="preserve">
-    <value>title</value>
-  </data>
-  <data name="&gt;&gt;labelFile.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;gradientToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;usunToolStripMenuItem.Name" xml:space="preserve">
-    <value>usunToolStripMenuItem</value>
-  </data>
-  <data name="labelGenre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 185</value>
-  </data>
-  <data name="&gt;&gt;objectListViewPlaylist.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;buttonPlClear.Name" xml:space="preserve">
-    <value>buttonPlClear</value>
-  </data>
-  <data name="&gt;&gt;paoloVeronesesGreenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonAdd2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 26</value>
-  </data>
-  <data name="blueWebToolStripMenuItem.Text" xml:space="preserve">
-    <value>Blue Web</value>
-  </data>
-  <data name="buttonLoopList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="volumeBar.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;whiteToolStripMenuItem.Name" xml:space="preserve">
-    <value>whiteToolStripMenuItem</value>
-  </data>
-  <data name="steelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="paoloVeronesesGreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 26</value>
   </data>
-  <data name="buttonPlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
+  <data name="title.Width" type="System.Int32, mscorlib">
+    <value>164</value>
   </data>
-  <data name="buttonPlUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
+  <data name="&gt;&gt;buttonSearchCancel.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="buttonPause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 130</value>
-  </data>
-  <data name="&gt;&gt;id.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;labelAlbum.Name" xml:space="preserve">
-    <value>labelAlbum</value>
-  </data>
-  <data name="buttonPlAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1327, 682</value>
-  </data>
-  <data name="textBoxFile.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="objectListViewSongs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonPlUp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="prog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 56</value>
-  </data>
-  <data name="Title_p.Width" type="System.Int32, mscorlib">
-    <value>74</value>
-  </data>
-  <data name="&gt;&gt;textBoxFile.Name" xml:space="preserve">
-    <value>textBoxFile</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="labelFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 0</value>
-  </data>
-  <data name="&gt;&gt;coverPictureBox.Name" xml:space="preserve">
-    <value>coverPictureBox</value>
-  </data>
-  <data name="textBoxAlbum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 115</value>
-  </data>
-  <data name="&gt;&gt;buttonAddFile.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelAlbum.Text" xml:space="preserve">
-    <value>Album</value>
-  </data>
-  <data name="textBoxYear.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;textBoxFile.Type" xml:space="preserve">
+  <data name="&gt;&gt;textBoxAlbum.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelAlbum.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="buttonPlDel.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="buttonAutoplay.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="buttonLoopSong.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;currentSong.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="buttonPlDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 862</value>
-  </data>
-  <data name="&gt;&gt;textBoxGenre.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="buttonEditClear.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonEditSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="&gt;&gt;mistyRoseToolStripMenuItem.Name" xml:space="preserve">
-    <value>mistyRoseToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;buttonPlClear.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;defaultToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelTitle.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textBoxTitle.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;logo.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="defaultToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 26</value>
   </data>
-  <data name="coverPictureBox.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;buttonPause.Name" xml:space="preserve">
+    <value>buttonPause</value>
   </data>
-  <data name="buttonPlClear.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="currentSong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="buttonPlDel.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 28</value>
   </data>
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="&gt;&gt;textBoxFile.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="album.Text" xml:space="preserve">
-    <value>Album</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Dodaj pliki</value>
-  </data>
-  <data name="labelYear.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelFile.Name" xml:space="preserve">
-    <value>labelFile</value>
-  </data>
-  <data name="buttonAutoplay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="&gt;&gt;buttonPlClear.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonMute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="steelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Stalowy</value>
-  </data>
-  <data name="&gt;&gt;buttonPlUp.Name" xml:space="preserve">
-    <value>buttonPlUp</value>
-  </data>
-  <data name="buttonLoopSong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonAddFile.ToolTip" xml:space="preserve">
+  <data name="labelTitle.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="Path_p.Text" xml:space="preserve">
-    <value>Ścieżka</value>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="objectListViewPlaylist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 578</value>
+  <data name="path.Width" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="buttonSearchCancel.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="buttonPlAdd.Text" xml:space="preserve">
-    <value>Dodaj widoczne do playlisty</value>
+  <data name="currentLength.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
-  <data name="&gt;&gt;lightSkyBlueToolStripMenuItem.Name" xml:space="preserve">
-    <value>lightSkyBlueToolStripMenuItem</value>
-  </data>
-  <data name="buttonAutoplay.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+  <data name="File_p.Text" xml:space="preserve">
+    <value>Plik</value>
   </data>
   <data name="kontrolka1.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 100</value>
   </data>
-  <data name="textureToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tekstura</value>
+  <data name="buttonEditClear.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
   </data>
-  <data name="labelFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lightSalmonToolStripMenuItem.Text" xml:space="preserve">
+    <value>Jasny Łososiowy</value>
+  </data>
+  <data name="buttonDbCheck.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;buttonNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="currentTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 21</value>
+  </data>
+  <data name="labelGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;buttonEditClear.Name" xml:space="preserve">
+    <value>buttonEditClear</value>
+  </data>
+  <data name="buttonPlay.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 74</value>
+  </data>
+  <data name="volumeBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 56</value>
+  </data>
+  <data name="&gt;&gt;currentLength.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="buttonLoopList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="blueWebToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="id.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;solidColorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonLoopSong.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;objectListViewPlaylist.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="leatherToolStripMenuItem.Text" xml:space="preserve">
+    <value>Leather</value>
+  </data>
+  <data name="&gt;&gt;volumeBar.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="textBoxArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="solidColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 26</value>
+  </data>
+  <data name="buttonPlDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="buttonAutoplay.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="testButtonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 24</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;textBoxAlbum.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="gradient0ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 26</value>
+  </data>
+  <data name="currentLength.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="buttonClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 26</value>
+  <data name="buttonAddFile.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
   </data>
-  <data name="lightSteelBlueToolStripMenuItem.Text" xml:space="preserve">
-    <value>Jasny Stalowy Błękit</value>
+  <data name="&gt;&gt;buttonStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBoxAlbum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+  <data name="&gt;&gt;Path_p.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="volumeBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 69</value>
+  </data>
+  <data name="buttonAutoplay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 130</value>
+  </data>
+  <data name="&gt;&gt;currentArtist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lightSalmonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="buttonPlClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 862</value>
+  </data>
+  <data name="labelGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
+  </data>
+  <data name="&gt;&gt;buttonPlUp.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;buttonAddFile.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;album.Name" xml:space="preserve">
     <value>album</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1685, 898</value>
+  </data>
+  <data name="&gt;&gt;buttonPlUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonSearchCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 28</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;buttonClear.Name" xml:space="preserve">
+    <value>buttonClear</value>
+  </data>
+  <data name="&gt;&gt;whiteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxArtist.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 220</value>
+  </data>
+  <data name="&gt;&gt;currentSong.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonPlDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="buttonLoopList.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="logo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;buttonStop.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;labelArtist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelAlbum.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="usunToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 24</value>
+  </data>
+  <data name="currentTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 185</value>
+  </data>
+  <data name="buttonAdd2.Text" xml:space="preserve">
+    <value>Dodaj pliki z całego folderu</value>
+  </data>
+  <data name="textBoxFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="lightSkyBlueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="pobierzZYTToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 26</value>
+  </data>
+  <data name="buttonEditSearch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;Id_auto.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="textBoxTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;labelGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;currentLength.Name" xml:space="preserve">
+    <value>currentLength</value>
+  </data>
+  <data name="logo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;artist.Name" xml:space="preserve">
+    <value>artist</value>
+  </data>
+  <data name="buttonStop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
+  </data>
+  <data name="&gt;&gt;path.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonSearchCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="labelGenre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="gradient1ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 26</value>
+  </data>
+  <data name="&gt;&gt;buttonAutoplay.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonPlAdd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonPlAdd.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;buttonNext.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="dodajToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="&gt;&gt;currentTime.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="textureToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tekstura</value>
+  </data>
+  <data name="buttonPlUp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="currentTime.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd2.Name" xml:space="preserve">
+    <value>buttonAdd2</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
+    <value>folderBrowserDialog1</value>
+  </data>
+  <data name="album.Text" xml:space="preserve">
+    <value>Album</value>
+  </data>
+  <data name="&gt;&gt;pobierzZYTToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonEditSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonMute.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonStop.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="resolutionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rozdzielczość</value>
+  </data>
+  <data name="buttonPlay.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Name" xml:space="preserve">
+    <value>textBoxFile</value>
+  </data>
+  <data name="&gt;&gt;lightSteelBlueToolStripMenuItem.Name" xml:space="preserve">
+    <value>lightSteelBlueToolStripMenuItem</value>
+  </data>
+  <data name="textBoxTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 78</value>
+  </data>
+  <data name="&gt;&gt;steelToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="kontrolka1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;textBoxArtist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;freeDGreenToolStripMenuItem.Name" xml:space="preserve">
+    <value>freeDGreenToolStripMenuItem</value>
+  </data>
+  <data name="buttonDel2.Text" xml:space="preserve">
+    <value>Usuń z dysku</value>
+  </data>
+  <data name="labelYear.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="coverPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;Artist_p.Name" xml:space="preserve">
+    <value>Artist_p</value>
+  </data>
+  <data name="buttonMove.Text" xml:space="preserve">
+    <value>Przenieś plik</value>
+  </data>
+  <data name="labelAlbum.Text" xml:space="preserve">
+    <value>Album</value>
+  </data>
+  <data name="Artist_p.Width" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="labelYear.Text" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="&gt;&gt;labelYear.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;blueWebToolStripMenuItem.Name" xml:space="preserve">
+    <value>blueWebToolStripMenuItem</value>
+  </data>
+  <data name="currentLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 185</value>
+  </data>
+  <data name="buttonLoopList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 130</value>
+  </data>
+  <data name="genre.Width" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="&gt;&gt;labelYear.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="currentTime.Text" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
+  <data name="&gt;&gt;pobierzZYTToolStripMenuItem.Name" xml:space="preserve">
+    <value>pobierzZYTToolStripMenuItem</value>
+  </data>
+  <data name="textBoxYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="currentSong.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="year.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="Title_p.Width" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;buttonSearchCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelYear.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Artist_p.Text" xml:space="preserve">
+    <value>Wykonawca</value>
+  </data>
+  <data name="paoloVeronesesGreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zieleń Paolo Veronese'a</value>
+  </data>
+  <data name="buttonAutoplay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;labelTitle.Name" xml:space="preserve">
+    <value>labelTitle</value>
+  </data>
+  <data name="labelTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;freeDGreenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonPlClear.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;logo.Name" xml:space="preserve">
+    <value>logo</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
+    <value>saveFileDialog1</value>
+  </data>
+  <data name="leatherToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="Title_p.Text" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gradient0ToolStripMenuItem.Name" xml:space="preserve">
+    <value>gradient0ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;buttonEditSearch.Name" xml:space="preserve">
+    <value>buttonEditSearch</value>
+  </data>
+  <data name="gradient2ToolStripMenuItem.Text" xml:space="preserve">
+    <value>#3</value>
+  </data>
+  <data name="&gt;&gt;textBoxYear.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="buttonPlUp.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="buttonDbCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 28</value>
+  </data>
+  <data name="Id_auto.Text" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="textBoxTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="buttonPlay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKM+VkUso
+        RFEcxn8zQySPZBbC4i6wMiUkSw2RojRGzWDh3jtmqLnXdO/IxlLZKguPjdfCxpqtha1SyqNkZWlFbKTr
+        f+6omdQop07n13fO93XOdyB4kDUtt6IbLDvvxEajWiI5o1U9U0kr9TQS0k03NzE1Eqfs+LgloNabiMri
+        f6MuteCaENCEB82ckxeeF+5fzecU7wiHzUU9JXwq3OXIBYXvlW4U+EVxxuegygw78diQcFhYy5SwUcLm
+        omMJ9wm3pyxb8oOJAqcUrym2sivmzz3VC2sX7OkppctsY5QxJphEw2CFJbLkichqi+ISk/1oGX+L758U
+        lyGuJUxxDLOMhe77UX/wu1s33dtTSKqNQuWT5711QNUWfG163ueh530dQegRLuyif/kABt5F3yxq7fvQ
+        sA5nl0XN2IbzDWh+yOmO7kshmcF0Gl5P5JuS0HQNNbOF3n72Ob6DuHQ1fgW7e9CZkey5Mu+uLu3tzzN+
+        f0S/AS+Ocox7ay2mAAAACXBIWXMAAC4iAAAuIgGq4t2SAAAAB3RJTUUH5AUbDhYy0ChlhwAAABl0RVh0
+        Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAABfSURBVDhPnZBRCsAgDEN7s/14cD+816xoxnBx
+        1gQeFGweVPMUJ7VBzT2QRRDIolkAwiJWfrMVsRJjKWLLf3xEbCnCI2KPEWSBfIL8icsiwkqNbRGRi4hc
+        RLJz9fE0ZhW8n4AIPOjv1gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;buttonLoopSong.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="buttonAddFile.Text" xml:space="preserve">
+    <value>Zmień plik</value>
+  </data>
+  <data name="&gt;&gt;buttonAddFile.Name" xml:space="preserve">
+    <value>buttonAddFile</value>
+  </data>
+  <data name="buttonSearchCancel.Text" xml:space="preserve">
+    <value>Pokaż wszystko</value>
+  </data>
+  <data name="&gt;&gt;zYouTubeToolStripMenuItem.Name" xml:space="preserve">
+    <value>zYouTubeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonMove.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="coverPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="buttonDbCheck.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="logo.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;prog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonPlDel.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;path.Name" xml:space="preserve">
+    <value>path</value>
+  </data>
+  <data name="buttonPlDown.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;File_p.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="buttonPrevious.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="labelAlbum.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;currentTime.Name" xml:space="preserve">
+    <value>currentTime</value>
+  </data>
+  <data name="&gt;&gt;buttonPlDown.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonLoopSong.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonAddFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="labelArtist.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 130</value>
+  </data>
+  <data name="file.Width" type="System.Int32, mscorlib">
+    <value>272</value>
+  </data>
+  <data name="&gt;&gt;labelAlbum.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="labelAlbum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonMove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;buttonAutoplay.Name" xml:space="preserve">
+    <value>buttonAutoplay</value>
+  </data>
+  <data name="&gt;&gt;buttonDel.Name" xml:space="preserve">
+    <value>buttonDel</value>
+  </data>
+  <data name="&gt;&gt;gradient2ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonNext.Name" xml:space="preserve">
+    <value>buttonNext</value>
+  </data>
+  <data name="&gt;&gt;labelFile.Name" xml:space="preserve">
+    <value>labelFile</value>
+  </data>
+  <data name="&gt;&gt;buttonDel2.Name" xml:space="preserve">
+    <value>buttonDel2</value>
+  </data>
+  <data name="buttonAddFile.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;textBoxTitle.Name" xml:space="preserve">
+    <value>textBoxTitle</value>
+  </data>
+  <data name="buttonEditClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="&gt;&gt;Title_p.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="buttonPlUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKM+VkUso
+        RFEcxn8zQySPZBbC4i6wMiUkSw2RojRGzWDh3jtmqLnXdO/IxlLZKguPjdfCxpqtha1SyqNkZWlFbKTr
+        f+6omdQop07n13fO93XOdyB4kDUtt6IbLDvvxEajWiI5o1U9U0kr9TQS0k03NzE1Eqfs+LgloNabiMri
+        f6MuteCaENCEB82ckxeeF+5fzecU7wiHzUU9JXwq3OXIBYXvlW4U+EVxxuegygw78diQcFhYy5SwUcLm
+        omMJ9wm3pyxb8oOJAqcUrym2sivmzz3VC2sX7OkppctsY5QxJphEw2CFJbLkichqi+ISk/1oGX+L758U
+        lyGuJUxxDLOMhe77UX/wu1s33dtTSKqNQuWT5711QNUWfG163ueh530dQegRLuyif/kABt5F3yxq7fvQ
+        sA5nl0XN2IbzDWh+yOmO7kshmcF0Gl5P5JuS0HQNNbOF3n72Ob6DuHQ1fgW7e9CZkey5Mu+uLu3tzzN+
+        f0S/AS+Ocox7ay2mAAAACXBIWXMAAC4iAAAuIgGq4t2SAAAAB3RJTUUH5AUbDhYy0ChlhwAAABl0RVh0
+        Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAABmSURBVDhPnY5BDoAwCAT7My8+3EP/pdYwBlOk
+        wCZzaUhn2mK7UF4XShvmUyhVDDMfpCu0HVIV2g7hCssOoQrLDssKzw5uhWeH34qIHcyKiB2miowdPhUZ
+        O7wV2411EOGpONRDktYvbIGACI8RoKIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;labelYear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonEditSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="buttonPlAdd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonPlUp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="labelYear.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="buttonPlAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;buttonDbCheck.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="year.Text" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="&gt;&gt;buttonClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>724, 715</value>
+  </data>
+  <data name="&gt;&gt;objectListViewPlaylist.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.ObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="buttonAddFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>724, 822</value>
+  </data>
+  <data name="zYouTubeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 26</value>
+  </data>
+  <data name="&gt;&gt;prog.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dodajToolStripMenuItem.Name" xml:space="preserve">
+    <value>dodajToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;buttonPrevious.Name" xml:space="preserve">
+    <value>buttonPrevious</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1685, 28</value>
+  </data>
+  <data name="labelTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="&gt;&gt;timer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="currentLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 21</value>
+  </data>
+  <data name="&gt;&gt;textBoxArtist.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;buttonPlDown.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonPlDel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 862</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelFile.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="tableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;dodajToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonPlay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentTime.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="buttonStop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;gradient1ToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxArtist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 41</value>
+  </data>
+  <data name="labelYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="textBoxFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textBoxYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 152</value>
+  </data>
+  <data name="&gt;&gt;buttonPlClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonEditClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
+  </data>
+  <data name="&gt;&gt;objectListViewSongs.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelTitle" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelArtist" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBoxTitle" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="textBoxFile" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelAlbum" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelYear" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelGenre" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBoxAlbum" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="textBoxArtist" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="textBoxGenre" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="textBoxYear" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,38,3812,Percent,61,6188" /&gt;&lt;Rows Styles="Absolute,37,Absolute,37,Absolute,37,Absolute,37,Absolute,37,Absolute,37" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog2.Name" xml:space="preserve">
+    <value>openFileDialog2</value>
+  </data>
+  <data name="&gt;&gt;YTDownloadButtonToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Id_p.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;zYouTubeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonEditSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="&gt;&gt;Id_p.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="Id_p.Text" xml:space="preserve">
+    <value>Id_DB</value>
+  </data>
+  <data name="&gt;&gt;currentSong.Name" xml:space="preserve">
+    <value>currentSong</value>
+  </data>
+  <data name="buttonDel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 26</value>
+  </data>
+  <data name="labelYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 148</value>
+  </data>
+  <data name="resolutionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 24</value>
+  </data>
+  <data name="&gt;&gt;buttonPause.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="currentArtist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="&gt;&gt;objectListViewSongs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonPlAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 28</value>
+  </data>
+  <data name="&gt;&gt;Path_p.Name" xml:space="preserve">
+    <value>Path_p</value>
+  </data>
+  <data name="labelYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 17</value>
+  </data>
+  <data name="buttonPlDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 862</value>
+  </data>
+  <data name="&gt;&gt;objectListViewSongs.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.ObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;testButtonToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="currentTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="buttonEditClear.Text" xml:space="preserve">
+    <value>Wyczyść</value>
+  </data>
+  <data name="labelTitle.Text" xml:space="preserve">
+    <value>Tytuł</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -7252,584 +7804,62 @@
         /////+AAAAf/////+AAAH///////AAD///////////////////////////////////8=
 </value>
   </data>
-  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 17</value>
-  </data>
-  <data name="textBoxGenre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="currentTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 185</value>
-  </data>
-  <data name="&gt;&gt;buttonPrevious.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;volumeBar.Name" xml:space="preserve">
-    <value>volumeBar</value>
-  </data>
-  <data name="labelAlbum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>724, 751</value>
-  </data>
-  <data name="volumeBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;buttonEditSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lightSteelBlueToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="logo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 224</value>
-  </data>
-  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="currentSong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 32</value>
-  </data>
-  <data name="buttonNext.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;prog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxTitle.Name" xml:space="preserve">
-    <value>textBoxTitle</value>
-  </data>
-  <data name="labelGenre.Text" xml:space="preserve">
-    <value>Gatunek</value>
-  </data>
-  <data name="kontrolka1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;labelAlbum.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textBoxTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;buttonLoopSong.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;prog.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1685, 28</value>
-  </data>
-  <data name="labelArtist.Text" xml:space="preserve">
-    <value>Wykonawca albumu</value>
-  </data>
-  <data name="&gt;&gt;genre.Name" xml:space="preserve">
-    <value>genre</value>
-  </data>
-  <data name="&gt;&gt;objectListViewSongs.Name" xml:space="preserve">
-    <value>objectListViewSongs</value>
-  </data>
-  <data name="&gt;&gt;dodajToolStripMenuItem.Name" xml:space="preserve">
-    <value>dodajToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;buttonPlUp.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;blueWebToolStripMenuItem.Name" xml:space="preserve">
-    <value>blueWebToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;currentLength.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="currentArtist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 7</value>
-  </data>
-  <data name="lightSalmonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
-  </data>
-  <data name="&gt;&gt;lightSalmonToolStripMenuItem.Name" xml:space="preserve">
-    <value>lightSalmonToolStripMenuItem</value>
-  </data>
-  <data name="buttonLoopList.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;buttonSearchCancel.Name" xml:space="preserve">
-    <value>buttonSearchCancel</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="coverPictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonPlDel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;buttonDel2.Name" xml:space="preserve">
-    <value>buttonDel2</value>
-  </data>
-  <data name="labelTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="buttonDel2.Text" xml:space="preserve">
-    <value>Usuń z dysku</value>
-  </data>
-  <data name="buttonPause.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="&gt;&gt;coverPictureBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="buttonPlDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;buttonMute.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;timer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="resolutionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 24</value>
-  </data>
-  <data name="&gt;&gt;path.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="buttonPlay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKM+VkUso
-        RFEcxn8zQySPZBbC4i6wMiUkSw2RojRGzWDh3jtmqLnXdO/IxlLZKguPjdfCxpqtha1SyqNkZWlFbKTr
-        f+6omdQop07n13fO93XOdyB4kDUtt6IbLDvvxEajWiI5o1U9U0kr9TQS0k03NzE1Eqfs+LgloNabiMri
-        f6MuteCaENCEB82ckxeeF+5fzecU7wiHzUU9JXwq3OXIBYXvlW4U+EVxxuegygw78diQcFhYy5SwUcLm
-        omMJ9wm3pyxb8oOJAqcUrym2sivmzz3VC2sX7OkppctsY5QxJphEw2CFJbLkichqi+ISk/1oGX+L758U
-        lyGuJUxxDLOMhe77UX/wu1s33dtTSKqNQuWT5711QNUWfG163ueh530dQegRLuyif/kABt5F3yxq7fvQ
-        sA5nl0XN2IbzDWh+yOmO7kshmcF0Gl5P5JuS0HQNNbOF3n72Ob6DuHQ1fgW7e9CZkey5Mu+uLu3tzzN+
-        f0S/AS+Ocox7ay2mAAAACXBIWXMAAC4iAAAuIgGq4t2SAAAAB3RJTUUH5AUbDhYy0ChlhwAAABl0RVh0
-        Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAABfSURBVDhPnZBRCsAgDEN7s/14cD+816xoxnBx
-        1gQeFGweVPMUJ7VBzT2QRRDIolkAwiJWfrMVsRJjKWLLf3xEbCnCI2KPEWSBfIL8icsiwkqNbRGRi4hc
-        RLJz9fE0ZhW8n4AIPOjv1gAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;currentLength.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;buttonPlUp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelYear.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="year.Text" xml:space="preserve">
-    <value>Rok</value>
-  </data>
-  <data name="&gt;&gt;buttonEditClear.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="textBoxGenre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 189</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonSearchCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1531, 682</value>
-  </data>
-  <data name="&gt;&gt;genre.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="labelFile.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;buttonDel.Name" xml:space="preserve">
-    <value>buttonDel</value>
-  </data>
-  <data name="&gt;&gt;themesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;objectListViewSongs.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 156</value>
-  </data>
-  <data name="buttonAddFile.Text" xml:space="preserve">
-    <value>Zmień plik</value>
-  </data>
-  <data name="labelYear.Text" xml:space="preserve">
-    <value>Rok</value>
-  </data>
-  <data name="&gt;&gt;currentArtist.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;Id_p.Name" xml:space="preserve">
-    <value>Id_p</value>
-  </data>
-  <data name="&gt;&gt;usunToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonDbCheck.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelGenre.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="path.Width" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="lightSkyBlueToolStripMenuItem.Text" xml:space="preserve">
     <value>Jasny Podniebny Błękit</value>
   </data>
-  <data name="textBoxFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="&gt;&gt;Id_p.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;textBoxGenre.Name" xml:space="preserve">
-    <value>textBoxGenre</value>
-  </data>
-  <data name="&gt;&gt;buttonPlay.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="currentLength.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;textBoxGenre.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;steelToolStripMenuItem.Name" xml:space="preserve">
-    <value>steelToolStripMenuItem</value>
-  </data>
-  <data name="objectListViewPlaylist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;File_p.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="buttonPause.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="currentSong.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 22</value>
-  </data>
-  <data name="&gt;&gt;buttonSearchCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog2.Name" xml:space="preserve">
-    <value>openFileDialog2</value>
-  </data>
-  <data name="leatherToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 26</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainWindow</value>
-  </data>
-  <data name="buttonPrevious.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="&gt;&gt;gradient2ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxYear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timer.Name" xml:space="preserve">
-    <value>timer</value>
-  </data>
-  <data name="objectListViewSongs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1297, 622</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="defaultToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 26</value>
-  </data>
-  <data name="volumeBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 69</value>
-  </data>
-  <data name="buttonPlDown.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="logo.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;buttonEditClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonDbCheck.Name" xml:space="preserve">
-    <value>buttonDbCheck</value>
-  </data>
-  <data name="buttonAddFile.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="objectListViewSongs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 48</value>
-  </data>
-  <data name="&gt;&gt;currentLength.Name" xml:space="preserve">
-    <value>currentLength</value>
-  </data>
-  <data name="&gt;&gt;labelGenre.Name" xml:space="preserve">
-    <value>labelGenre</value>
-  </data>
-  <data name="&gt;&gt;currentSong.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="title.Text" xml:space="preserve">
-    <value>Tytuł</value>
-  </data>
-  <data name="buttonPlUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>187, 862</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="currentSong.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;gradient0ToolStripMenuItem.Name" xml:space="preserve">
-    <value>gradient0ToolStripMenuItem</value>
-  </data>
-  <data name="textBoxAlbum.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPause.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;buttonMute.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;objectListViewPlaylist.Name" xml:space="preserve">
-    <value>objectListViewPlaylist</value>
-  </data>
-  <data name="whiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
-  </data>
-  <data name="buttonPlUp.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="&gt;&gt;buttonEditClear.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="paoloVeronesesGreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zieleń Paolo Veronese'a</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="gradient0ToolStripMenuItem.Text" xml:space="preserve">
-    <value>#1</value>
-  </data>
-  <data name="buttonDbCheck.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAlbum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
-  </data>
-  <data name="labelTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 74</value>
-  </data>
-  <data name="buttonDel.Text" xml:space="preserve">
-    <value>Usuń z bazy</value>
-  </data>
-  <data name="buttonPrevious.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="coverPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;currentTime.Name" xml:space="preserve">
-    <value>currentTime</value>
-  </data>
-  <data name="&gt;&gt;buttonEditClear.Name" xml:space="preserve">
-    <value>buttonEditClear</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="currentArtist.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="buttonPlUp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonLoopSong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 130</value>
-  </data>
-  <data name="menuStrip.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;buttonPlAdd.Name" xml:space="preserve">
-    <value>buttonPlAdd</value>
-  </data>
-  <data name="coverPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 123</value>
-  </data>
-  <data name="&gt;&gt;leatherToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="leatherToolStripMenuItem.Text" xml:space="preserve">
-    <value>Leather</value>
-  </data>
-  <data name="solidColorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 26</value>
-  </data>
-  <data name="buttonPrevious.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="file.Width" type="System.Int32, mscorlib">
-    <value>272</value>
-  </data>
-  <data name="&gt;&gt;buttonDbCheck.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="textBoxTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="&gt;&gt;currentArtist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelYear.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;buttonStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dodajToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
-  </data>
-  <data name="buttonPlDel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonEditClear.Text" xml:space="preserve">
-    <value>Wyczyść</value>
-  </data>
-  <data name="&gt;&gt;buttonPlDown.Name" xml:space="preserve">
-    <value>buttonPlDown</value>
-  </data>
-  <data name="&gt;&gt;labelYear.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;textBoxAlbum.Name" xml:space="preserve">
-    <value>textBoxAlbum</value>
-  </data>
-  <data name="&gt;&gt;Id_auto.Name" xml:space="preserve">
-    <value>Id_auto</value>
-  </data>
-  <data name="labelArtist.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;prog.Name" xml:space="preserve">
-    <value>prog</value>
-  </data>
-  <data name="buttonPlClear.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;gradientToolStripMenuItem.Name" xml:space="preserve">
-    <value>gradientToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;currentTime.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;Path_p.Name" xml:space="preserve">
-    <value>Path_p</value>
-  </data>
-  <data name="genre.Width" type="System.Int32, mscorlib">
-    <value>149</value>
-  </data>
-  <data name="&gt;&gt;coverPictureBox.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="defaultToolStripMenuItem.Text" xml:space="preserve">
-    <value>Domyślny</value>
-  </data>
-  <data name="labelArtist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 37</value>
-  </data>
-  <data name="&gt;&gt;buttonEditSearch.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="currentLength.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="currentTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;id.Name" xml:space="preserve">
-    <value>id</value>
-  </data>
-  <data name="buttonEditClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonAdd2.Text" xml:space="preserve">
-    <value>Dodaj pliki z całego folderu</value>
-  </data>
-  <data name="labelGenre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="textBoxFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 4</value>
-  </data>
-  <data name="buttonMute.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gradientToolStripMenuItem.Text" xml:space="preserve">
-    <value>Gradient</value>
-  </data>
-  <data name="currentLength.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 78</value>
+  <data name="textBoxFile.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;textBoxArtist.Name" xml:space="preserve">
     <value>textBoxArtist</value>
   </data>
-  <data name="currentSong.ToolTip" xml:space="preserve">
+  <data name="buttonPause.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;buttonSearchCancel.Name" xml:space="preserve">
+    <value>buttonSearchCancel</value>
+  </data>
+  <data name="&gt;&gt;kontrolka1.Name" xml:space="preserve">
+    <value>kontrolka1</value>
+  </data>
+  <data name="textBoxArtist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="objectListViewPlaylist.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="themesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Motywy</value>
+  <data name="buttonEditClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="buttonEditClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>724, 682</value>
+  <data name="&gt;&gt;file.Name" xml:space="preserve">
+    <value>file</value>
   </data>
-  <data name="objectListViewSongs.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="&gt;&gt;currentLength.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;paoloVeronesesGreenToolStripMenuItem.Name" xml:space="preserve">
-    <value>paoloVeronesesGreenToolStripMenuItem</value>
+  <data name="labelArtist.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;File_p.Name" xml:space="preserve">
-    <value>File_p</value>
+  <data name="&gt;&gt;buttonNext.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="currentSong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 32</value>
+  </data>
+  <data name="&gt;&gt;defaultToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonPlClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="labelFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 0</value>
+  </data>
+  <data name="&gt;&gt;buttonEditClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonPlAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -8116,490 +8146,490 @@
         rkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 678</value>
   </data>
-  <data name="&gt;&gt;buttonPlDown.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;textBoxAlbum.Name" xml:space="preserve">
+    <value>textBoxAlbum</value>
   </data>
-  <data name="buttonNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="&gt;&gt;buttonEditClear.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="testButtonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 24</value>
-  </data>
-  <data name="&gt;&gt;buttonPause.Name" xml:space="preserve">
-    <value>buttonPause</value>
-  </data>
-  <data name="buttonDbCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 28</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textureToolStripMenuItem.Name" xml:space="preserve">
-    <value>textureToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;labelGenre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonPause.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="kontrolka1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;solidColorToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonStop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 32</value>
-  </data>
-  <data name="gradient2ToolStripMenuItem.Text" xml:space="preserve">
-    <value>#3</value>
-  </data>
-  <data name="&gt;&gt;buttonNext.Name" xml:space="preserve">
-    <value>buttonNext</value>
-  </data>
-  <data name="&gt;&gt;logo.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="buttonAutoplay.ToolTip" xml:space="preserve">
+  <data name="labelGenre.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;defaultToolStripMenuItem.Name" xml:space="preserve">
-    <value>defaultToolStripMenuItem</value>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
   </data>
-  <data name="&gt;&gt;buttonPlUp.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="buttonMute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 69</value>
   </data>
-  <data name="&gt;&gt;lightSteelBlueToolStripMenuItem.Name" xml:space="preserve">
-    <value>lightSteelBlueToolStripMenuItem</value>
+  <data name="coverPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 0</value>
   </data>
-  <data name="labelArtist.ToolTip" xml:space="preserve">
+  <data name="lightSteelBlueToolStripMenuItem.Text" xml:space="preserve">
+    <value>Jasny Stalowy Błękit</value>
+  </data>
+  <data name="&gt;&gt;objectListViewPlaylist.Name" xml:space="preserve">
+    <value>objectListViewPlaylist</value>
+  </data>
+  <data name="&gt;&gt;title.Name" xml:space="preserve">
+    <value>title</value>
+  </data>
+  <data name="id.Text" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="buttonPlDel.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="volumeBar.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="textBoxArtist.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;labelTitle.Name" xml:space="preserve">
-    <value>labelTitle</value>
-  </data>
-  <data name="dodajToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dodaj</value>
-  </data>
-  <data name="prog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;lightSalmonToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonSearchCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="buttonMove.Text" xml:space="preserve">
-    <value>Przenieś plik</value>
-  </data>
-  <data name="labelFile.Text" xml:space="preserve">
-    <value>Nazwa pliku</value>
-  </data>
-  <data name="buttonMove.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="logo.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="labelYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="buttonPlAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 28</value>
-  </data>
-  <data name="&gt;&gt;coverPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="resource.Text1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;whiteToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonLoopList.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;buttonMove.Name" xml:space="preserve">
-    <value>buttonMove</value>
-  </data>
-  <data name="File_p.Text" xml:space="preserve">
-    <value>Plik</value>
-  </data>
-  <data name="&gt;&gt;file.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="currentArtist.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;textBoxFile.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
-  <data name="freeDGreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 26</value>
-  </data>
-  <data name="&gt;&gt;buttonPrevious.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="album.Width" type="System.Int32, mscorlib">
-    <value>137</value>
-  </data>
-  <data name="buttonDbCheck.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="buttonPlAdd.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="textBoxGenre.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="labelGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 185</value>
   </data>
   <data name="&gt;&gt;textBoxTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonPrevious.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lightSteelBlueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
-  </data>
-  <data name="buttonPlAdd.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;buttonDbCheck.Name" xml:space="preserve">
+    <value>buttonDbCheck</value>
   </data>
   <data name="&gt;&gt;artist.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="buttonEditSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>724, 715</value>
+  <data name="buttonLoopList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
   </data>
-  <data name="currentTime.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="buttonPlay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
   </data>
-  <data name="tableLayoutPanel1.ToolTip" xml:space="preserve">
+  <data name="currentSong.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;labelFile.Type" xml:space="preserve">
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 26</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="textBoxGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;steelToolStripMenuItem.Name" xml:space="preserve">
+    <value>steelToolStripMenuItem</value>
+  </data>
+  <data name="buttonNext.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;Artist_p.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;currentSong.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonPause.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="File_p.Width" type="System.Int32, mscorlib">
+    <value>77</value>
   </data>
-  <data name="&gt;&gt;textBoxAlbum.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
+  <data name="buttonLoopSong.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;buttonClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="currentArtist.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
-  <data name="&gt;&gt;buttonSearchCancel.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonPause.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBoxTitle.Parent" xml:space="preserve">
+  <data name="buttonDbCheck.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonPrevious.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;textBoxYear.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
-    <value>folderBrowserDialog1</value>
+  <data name="&gt;&gt;whiteToolStripMenuItem.Name" xml:space="preserve">
+    <value>whiteToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;resolutionToolStripMenuItem.Name" xml:space="preserve">
-    <value>resolutionToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;objectListViewPlaylist.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.ObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="labelAlbum.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="buttonLoopList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 130</value>
+  <data name="&gt;&gt;buttonEditSearch.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="buttonEditSearch.Text" xml:space="preserve">
     <value>Szukaj</value>
   </data>
-  <data name="&gt;&gt;buttonDel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonPlDown.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonPlDel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
-  </data>
-  <data name="&gt;&gt;buttonEditSearch.Name" xml:space="preserve">
-    <value>buttonEditSearch</value>
-  </data>
-  <data name="textBoxAlbum.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;kontrolka1.Type" xml:space="preserve">
-    <value>Audio_Organiser.GradientController, Audio_Organiser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="buttonPlUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKM+VkUso
-        RFEcxn8zQySPZBbC4i6wMiUkSw2RojRGzWDh3jtmqLnXdO/IxlLZKguPjdfCxpqtha1SyqNkZWlFbKTr
-        f+6omdQop07n13fO93XOdyB4kDUtt6IbLDvvxEajWiI5o1U9U0kr9TQS0k03NzE1Eqfs+LgloNabiMri
-        f6MuteCaENCEB82ckxeeF+5fzecU7wiHzUU9JXwq3OXIBYXvlW4U+EVxxuegygw78diQcFhYy5SwUcLm
-        omMJ9wm3pyxb8oOJAqcUrym2sivmzz3VC2sX7OkppctsY5QxJphEw2CFJbLkichqi+ISk/1oGX+L758U
-        lyGuJUxxDLOMhe77UX/wu1s33dtTSKqNQuWT5711QNUWfG163ueh530dQegRLuyif/kABt5F3yxq7fvQ
-        sA5nl0XN2IbzDWh+yOmO7kshmcF0Gl5P5JuS0HQNNbOF3n72Ob6DuHQ1fgW7e9CZkey5Mu+uLu3tzzN+
-        f0S/AS+Ocox7ay2mAAAACXBIWXMAAC4iAAAuIgGq4t2SAAAAB3RJTUUH5AUbDhYy0ChlhwAAABl0RVh0
-        Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAABmSURBVDhPnY5BDoAwCAT7My8+3EP/pdYwBlOk
-        wCZzaUhn2mK7UF4XShvmUyhVDDMfpCu0HVIV2g7hCssOoQrLDssKzw5uhWeH34qIHcyKiB2miowdPhUZ
-        O7wV2411EOGpONRDktYvbIGACI8RoKIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="buttonPlay.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;buttonDel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;testButtonToolStripMenuItem.Name" xml:space="preserve">
-    <value>testButtonToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;currentSong.Name" xml:space="preserve">
-    <value>currentSong</value>
-  </data>
-  <data name="&gt;&gt;mistyRoseToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="buttonPlay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;buttonLoopList.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;file.Name" xml:space="preserve">
-    <value>file</value>
-  </data>
-  <data name="artist.Text" xml:space="preserve">
-    <value>Wykonawcy uczestniczący</value>
-  </data>
-  <data name="&gt;&gt;buttonPrevious.Name" xml:space="preserve">
-    <value>buttonPrevious</value>
-  </data>
-  <data name="&gt;&gt;themesToolStripMenuItem.Name" xml:space="preserve">
-    <value>themesToolStripMenuItem</value>
-  </data>
-  <data name="buttonMove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>724, 786</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;prog.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 130</value>
-  </data>
-  <data name="&gt;&gt;path.Name" xml:space="preserve">
-    <value>path</value>
-  </data>
-  <data name="textBoxYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 152</value>
-  </data>
-  <data name="&gt;&gt;labelArtist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="prog.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;gradient1ToolStripMenuItem.Name" xml:space="preserve">
-    <value>gradient1ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;lightSkyBlueToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxYear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
-  </data>
-  <data name="&gt;&gt;resolutionToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="themesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 24</value>
-  </data>
-  <data name="labelTitle.Text" xml:space="preserve">
-    <value>Tytuł</value>
-  </data>
-  <data name="&gt;&gt;freeDGreenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonAddFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>724, 822</value>
-  </data>
-  <data name="&gt;&gt;objectListViewSongs.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.ObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="id.Width" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="buttonPlClear.Text" xml:space="preserve">
-    <value>Wyczyść</value>
-  </data>
-  <data name="&gt;&gt;solidColorToolStripMenuItem.Name" xml:space="preserve">
-    <value>solidColorToolStripMenuItem</value>
-  </data>
-  <data name="kontrolka1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;buttonPlDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonAutoplay.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;buttonAddFile.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonDbCheck.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;buttonLoopList.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="prog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="buttonLoopSong.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
   </data>
-  <data name="labelGenre.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="buttonSearchCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
-  </data>
-  <data name="&gt;&gt;Id_auto.Type" xml:space="preserve">
+  <data name="&gt;&gt;genre.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="title.Width" type="System.Int32, mscorlib">
-    <value>164</value>
+  <data name="&gt;&gt;logo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelFile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;buttonPlay.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="labelFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 17</value>
+  <data name="path.Text" xml:space="preserve">
+    <value>Scieżka</value>
   </data>
-  <data name="&gt;&gt;labelFile.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="buttonPlClear.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
-  <data name="Path_p.Width" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="buttonLoopList.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;buttonAddFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxArtist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 41</value>
-  </data>
-  <data name="buttonPlay.ToolTip" xml:space="preserve">
-    <value />
+  <data name="labelAlbum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="usunToolStripMenuItem.Text" xml:space="preserve">
     <value>Usuń</value>
   </data>
-  <data name="buttonPlAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="objectListViewPlaylist.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="buttonStop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 130</value>
+  </data>
+  <data name="labelTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="solidColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Jednolity Kolor</value>
+  </data>
+  <data name="&gt;&gt;textBoxGenre.Name" xml:space="preserve">
+    <value>textBoxGenre</value>
+  </data>
+  <data name="&gt;&gt;buttonAutoplay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBoxGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 189</value>
+  </data>
+  <data name="button1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelYear.Name" xml:space="preserve">
+    <value>labelYear</value>
+  </data>
+  <data name="&gt;&gt;dodajToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonLoopSong.Name" xml:space="preserve">
+    <value>buttonLoopSong</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="buttonAutoplay.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="buttonEditClear.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;buttonLoopList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="currentArtist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 7</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="labelArtist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 37</value>
+  </data>
+  <data name="buttonPause.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
+  </data>
+  <data name="textBoxTitle.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;usunToolStripMenuItem.Name" xml:space="preserve">
+    <value>usunToolStripMenuItem</value>
+  </data>
+  <data name="buttonMove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>724, 786</value>
+  </data>
+  <data name="buttonAddFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="buttonPlDel.Text" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="currentSong.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Constantia, 9pt</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonMove.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="genre.Text" xml:space="preserve">
+    <value>Gatunek</value>
+  </data>
+  <data name="buttonPlay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;textBoxTitle.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;timer.Name" xml:space="preserve">
+    <value>timer</value>
+  </data>
+  <data name="&gt;&gt;textBoxYear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;volumeBar.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonMute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="textBoxAlbum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 115</value>
+  </data>
+  <data name="freeDGreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="&gt;&gt;gradientToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;file.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="&gt;&gt;kontrolka1.Type" xml:space="preserve">
+    <value>Audio_Organiser.GradientController, Audio_Organiser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonLoopList.Name" xml:space="preserve">
+    <value>buttonLoopList</value>
+  </data>
+  <data name="buttonDbCheck.Text" xml:space="preserve">
+    <value>Sprawdź bazę</value>
+  </data>
+  <data name="buttonNext.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lightSkyBlueToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelAlbum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 17</value>
+  </data>
+  <data name="&gt;&gt;buttonMove.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonPlay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 130</value>
+  </data>
+  <data name="&gt;&gt;buttonAddFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonDbCheck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1531, 715</value>
+  </data>
+  <data name="buttonMute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
+  </data>
+  <data name="currentArtist.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelAlbum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxYear.Name" xml:space="preserve">
+    <value>textBoxYear</value>
+  </data>
+  <data name="buttonPlUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>187, 862</value>
+  </data>
+  <data name="&gt;&gt;mistyRoseToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;File_p.Name" xml:space="preserve">
+    <value>File_p</value>
+  </data>
+  <data name="labelFile.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="buttonPlDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
+  </data>
+  <data name="objectListViewSongs.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="coverPictureBox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="themesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="buttonPlUp.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonMute.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;objectListViewSongs.Name" xml:space="preserve">
+    <value>objectListViewSongs</value>
+  </data>
+  <data name="&gt;&gt;buttonPrevious.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonStop.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="volumeBar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelAlbum.Name" xml:space="preserve">
+    <value>labelAlbum</value>
+  </data>
+  <data name="&gt;&gt;buttonPlClear.Name" xml:space="preserve">
+    <value>buttonPlClear</value>
+  </data>
+  <data name="&gt;&gt;textureToolStripMenuItem.Name" xml:space="preserve">
+    <value>textureToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;labelTitle.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;textBoxFile.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="labelArtist.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="buttonPlDown.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="currentSong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="currentArtist.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Constantia, 12pt</value>
+  </data>
+  <data name="&gt;&gt;themesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gradient0ToolStripMenuItem.Text" xml:space="preserve">
+    <value>#1</value>
+  </data>
+  <data name="album.Width" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="&gt;&gt;textBoxGenre.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Audio Organiser</value>
+  </data>
+  <data name="buttonPlUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
+  </data>
+  <data name="&gt;&gt;objectListViewPlaylist.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;buttonLoopSong.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;textBoxArtist.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="title.Text" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 48</value>
+  </data>
+  <data name="&gt;&gt;gradient1ToolStripMenuItem.Name" xml:space="preserve">
+    <value>gradient1ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;album.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  </data>
+  <data name="volumeBar.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;textBoxGenre.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="buttonMute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="buttonAdd2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 26</value>
+  </data>
+  <data name="buttonClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 26</value>
+  </data>
+  <data name="buttonClear.Text" xml:space="preserve">
+    <value>Usuń widoczne z bazy</value>
+  </data>
+  <data name="textBoxGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 22</value>
+  </data>
+  <data name="&gt;&gt;buttonStop.Name" xml:space="preserve">
+    <value>buttonStop</value>
+  </data>
+  <data name="buttonPause.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 130</value>
   </data>
   <data name="prog.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 182</value>
   </data>
-  <data name="volumeBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 56</value>
+  <data name="currentLength.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Impact, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;buttonPlAdd.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="textBoxGenre.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="labelGenre.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="objectListViewSongs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="buttonPlay.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="&gt;&gt;buttonMove.Name" xml:space="preserve">
+    <value>buttonMove</value>
   </data>
-  <data name="&gt;&gt;buttonAdd2.Name" xml:space="preserve">
-    <value>buttonAdd2</value>
+  <data name="buttonAutoplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
   </data>
-  <data name="textBoxArtist.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;textureToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="year.Width" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxArtist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonNext.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;textBoxYear.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonEditSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
     <value>pl-PL</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>254, 15</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
     <value>56</value>
-  </metadata>
-  <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>390, 15</value>
-  </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>124, 15</value>
-  </metadata>
-  <metadata name="openFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="openFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>901, 20</value>
-  </metadata>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>22, 15</value>
-  </metadata>
-  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>639, 15</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>804, 20</value>
-  </metadata>
+  </data>
+  <data name="YTDownloadButtonToolStripMenuItem.Text" xml:space="preserve">
+    <value>Z YouTube</value>
+  </data>
 </root>
