@@ -57,7 +57,8 @@ namespace Audio_Organiser
         public MainWindow()
         {
             InitializeComponent();
-            FormManager.mW = this;
+            FormManager.mW = this;//VRB
+            fixDefaultResolution();//VRB
             timer.Start();
             outputDevice = new WaveOutEvent();
             outputDevice.Volume = 1f;
@@ -111,7 +112,7 @@ namespace Audio_Organiser
             objectListViewSongs.SetObjects(item);
         }
 
-        private void addF(string s2)
+        public void addF(string s2)
         {
             string s = Path.GetExtension(s2);
             if (s == ".mp3" || s == ".wav" || s == ".wma")
@@ -1423,6 +1424,14 @@ namespace Audio_Organiser
                 Form3 f = new Form3();
                 f.Show();
                 this.Hide();
+        }
+
+        private void fixDefaultResolution()
+        {
+            this.Width = 1280;
+            this.Height = 768;
+            this.moveButtonsEtc(0, 0);
+            this.resizeColumns(0, 0, 272, 189, 164, 137, 59, 149);
         }
     }
 }

@@ -20,11 +20,15 @@ namespace Audio_Organiser
             string arguments = "-o " + output + " \"ytsearch:" + songNameOrUrl + "\" -x --audio-format \"mp3\" --embed-thumbnail --add-metadata";
             Process downloading = new Process();
             downloading.StartInfo.FileName = projectRootPath + "youtube-dl.exe";
+            downloading.StartInfo.CreateNoWindow = true;
             downloading.StartInfo.Arguments = arguments;
             downloading.Start();
-            MainWindow mW = FormManager.mW;
+            downloading.WaitForExit();
+            MainWindow mainWindow = FormManager.mW;
+            string[] filePaths = Directory.GetFiles(projectRootPath + "\\songs\\");
+            foreach(string filePath in filePaths) mainWindow.addF(filePath);
             this.Close();
-            mW.Show();
+            mainWindow.Show();
         }
     }
 }
