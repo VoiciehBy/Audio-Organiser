@@ -4,7 +4,6 @@ using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -1420,14 +1419,9 @@ namespace Audio_Organiser
 
         private void testButtonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string projectRootPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\"));
-            string songNameOrUrl = "don't stop me now";
-            string output = projectRootPath + "\\songs\\" + "%(title)s.%(ext)s";
-            string arguments = "-o " + output + " \"ytsearch:" + songNameOrUrl + "\" -x --audio-format \"mp3\" --embed-thumbnail --add-metadata";
-            Process downloading = new Process();  
-            downloading.StartInfo.FileName = projectRootPath + "youtube-dl.exe";
-            downloading.StartInfo.Arguments = arguments;
-            downloading.Start();
+            Form3 f = new Form3();
+            f.Show();
+            this.Hide();
         }
     }
 }
