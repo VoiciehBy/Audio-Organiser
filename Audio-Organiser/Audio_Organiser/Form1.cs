@@ -57,6 +57,7 @@ namespace Audio_Organiser
         public MainWindow()
         {
             InitializeComponent();
+            FormManager.mW = this;
             timer.Start();
             outputDevice = new WaveOutEvent();
             outputDevice.Volume = 1f;

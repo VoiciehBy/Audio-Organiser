@@ -12,7 +12,7 @@ namespace Audio_Organiser
 
         private void ResolutionBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MainWindow mW = new MainWindow();
+            MainWindow mW = FormManager.mW;
             if (resolutionBox.SelectedItem == resolutionBox.Items[0])
             {
                 mW.Width = 1280;
@@ -34,7 +34,7 @@ namespace Audio_Organiser
                 mW.moveButtonsEtc(-350, 0, -503, 29);
                 mW.resizeColumns(0, 0, 110, 85, 100, 80, 50, 60);
             }
-            this.Hide();
+            this.Close();
             mW.Show();
         }
     }

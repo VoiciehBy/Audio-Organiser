@@ -22,7 +22,8 @@ namespace Audio_Organiser
             downloading.StartInfo.FileName = projectRootPath + "youtube-dl.exe";
             downloading.StartInfo.Arguments = arguments;
             downloading.Start();
-            MainWindow mW = new MainWindow();
+            MainWindow mW = FormManager.mW;
+            this.Close();
             mW.Show();
         }
     }
