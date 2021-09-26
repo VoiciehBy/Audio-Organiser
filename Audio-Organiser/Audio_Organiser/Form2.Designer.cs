@@ -38,9 +38,9 @@ namespace Audio_Organiser
             // 
             // resolutionPanel
             // 
-            resources.ApplyResources(this.resolutionPanel, "resolutionPanel");
             this.resolutionPanel.Controls.Add(this.resolutionBox);
             this.resolutionPanel.Controls.Add(this.resolutionLabel);
+            resources.ApplyResources(this.resolutionPanel, "resolutionPanel");
             this.resolutionPanel.Name = "resolutionPanel";
             // 
             // resolutionBox
@@ -63,6 +63,7 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ControlBox = false;
             this.Controls.Add(this.resolutionPanel);
             this.Name = "Form2";
             this.resolutionPanel.ResumeLayout(false);

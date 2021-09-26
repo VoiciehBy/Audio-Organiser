@@ -56,6 +56,7 @@ namespace Audio_Organiser
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ControlBox = false;
             this.Controls.Add(this.linkLabel);
             this.Controls.Add(this.linkTextBox);
             this.Controls.Add(this.downloadButton);
