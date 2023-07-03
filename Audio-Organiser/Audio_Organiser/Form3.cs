@@ -25,6 +25,8 @@ namespace Audio_Organiser
             downloading.Start();
             downloading.WaitForExit();
             MainWindow mainWindow = FormManager.mW;
+            if (Directory.Exists(projectRootPath + "\\songs\\") == false)
+                Directory.CreateDirectory(projectRootPath + "\\songs\\");
             string[] filePaths = Directory.GetFiles(projectRootPath + "\\songs\\");
             foreach(string filePath in filePaths) mainWindow.addF(filePath);
             this.Close();
