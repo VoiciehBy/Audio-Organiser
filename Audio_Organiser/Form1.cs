@@ -1382,21 +1382,21 @@ namespace Audio_Organiser
 
         public void moveButtonsEtc(int x, int y)
         {
-            buttonPlAdd.Location = new System.Drawing.Point(995 + x, 554 + y);
-            buttonSearchCancel.Location = new System.Drawing.Point(1148 + x, 554 + y);
-            buttonDbCheck.Location = new System.Drawing.Point(1148 + x, 581 + y);
-            logo.Location = new System.Drawing.Point(1126 + x, 606 + y);
-            objectListViewSongs.Size = new System.Drawing.Size(974 + x, 506);
+            buttonPlAdd.Location = new Point(995 + x, 554 + y);
+            buttonSearchCancel.Location = new Point(1148 + x, 554 + y);
+            buttonDbCheck.Location = new Point(1148 + x, 581 + y);
+            logo.Location = new Point(1126 + x, 606 + y);
+            objectListViewSongs.Size = new Size(974 + x, 506);
             logo.Visible = true;
         }
 
         public void moveButtonsEtc(int x, int y, int z, int z1)
         {
             int a = x - 135;
-            buttonPlAdd.Location = new System.Drawing.Point(995 + x - 24, 554 + y);
-            buttonSearchCancel.Location = new System.Drawing.Point(1148 + z + 20, 554 + z1);
-            buttonDbCheck.Location = new System.Drawing.Point(1148 + z + 20, 581 + z1);
-            objectListViewSongs.Size = new System.Drawing.Size(974 + a, 506);
+            buttonPlAdd.Location = new Point(995 + x - 24, 554 + y);
+            buttonSearchCancel.Location = new Point(1148 + z + 20, 554 + z1);
+            buttonDbCheck.Location = new Point(1148 + z + 20, 581 + z1);
+            objectListViewSongs.Size = new Size(974 + a, 506);
             logo.Visible = false;
         }
 
@@ -1421,9 +1421,9 @@ namespace Audio_Organiser
 
         private void YTDownloadButtonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                Form3 f = new Form3();
-                f.Show();
-                this.Hide();
+            Form3 f = new Form3();
+            f.Show();
+            this.Hide();
         }
 
         private void fixDefaultResolution()
