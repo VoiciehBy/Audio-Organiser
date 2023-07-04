@@ -388,5 +388,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 #
-./songs
- 
+Audio_Organiser/installer/*
